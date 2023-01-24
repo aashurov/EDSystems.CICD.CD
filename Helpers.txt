@@ -7,7 +7,7 @@
 	git remote add origin https://github.com/aashurov/EDSystems.CICD.CD.git
 	git push -u origin main
 	//This line for ssh
-	git push git@github.com:aashurov/aashurov-EDSystems.CICD.CD.git   
+	git push git@github.com:aashurov/EDSystems.CICD.CD.git   
 	git remote set-url origin git@github.com:aashurov/EDSystems.CICD.CD.git
 	------------------------------------------
 2. Set ssh sgent for github account 
@@ -68,8 +68,8 @@
 
 9860
 
-ExecStart=/usr/bin/dotnet /var/www/EDSystems.WebApi.dll
-ExecStart=/var/www/EDSystems.WebApi.dll
+ExecStart=/usr/bin/dotnet /var/www/edsystems/EDSystems.WebApi.dll
+ExecStart=/var/www/edsystems/EDSystems.WebApi.dll
 
 sudo systemctl daemon-reload
 sudo systemctl restart edsystems.backend.service
@@ -86,7 +86,7 @@ edsystems-ec2-2
 For Connecting to EC2 Instances
 	- chmod 400 ~/.ssh/EDSystems-Key.pem
 	- ssh -i "~/.ssh/EDSystems-Key.pem" ec2-user@ec2-3-89-251-183.compute-1.amazonaws.com
-
+ssh -i "~/.ssh/EDSystems-Key.pem" ec2-user@ec2-54-84-39-32.compute-1.amazonaws.com
 // Code Deploy
 edsystems-cdd
 	//Deployment Group for Code Deploy
@@ -107,4 +107,8 @@ edsystems-cdp
 
 //Amazon S3 Bucket
 edsystems-s3
+
+sg-0bcddb7540c6dab37
+
+sg-02cfbd91a1fa0ca70
 

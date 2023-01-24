@@ -27,10 +27,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{313AC6AA-A49A-4C73-A6B4-A28F1BC68C42}"
 	ProjectSection(SolutionItems) = preProject
-		deploy-scripts\before_install.sh = deploy-scripts\before_install.sh
-		deploy-scripts\edsystems.backend.service = deploy-scripts\edsystems.backend.service
-		deploy-scripts\start_app.sh = deploy-scripts\start_app.sh
-		deploy-scripts\stop_app.sh = deploy-scripts\stop_app.sh
+		scripts\before_install.sh = scripts\before_install.sh
+		scripts\edsystems.backend.service = scripts\edsystems.backend.service
+		scripts\start_app.sh = scripts\start_app.sh
+		scripts\stop_app.sh = scripts\stop_app.sh
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "app", "app", "{42FC3E47-75E0-48A4-B1BB-B659C2204977}"
