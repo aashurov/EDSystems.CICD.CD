@@ -1,0 +1,21 @@
+---
+version: 0
+os: linux
+files:
+  - source: app
+    destination: /var/www/edsystems
+  - source: scripts/edsystems.backend.service
+    destination: /etc/systemd/system
+hooks:
+  BeforeInstall:
+    - location: scripts/before_install.sh
+      timeout: 120
+      runas: root
+  ApplicationStop:
+    - location: scripts/stop_app.sh
+      timeout: 120
+      runas: root
+  ApplicationStart:
+    - location: scripts/start_app.sh
+      timeout: 120
+      runas: root

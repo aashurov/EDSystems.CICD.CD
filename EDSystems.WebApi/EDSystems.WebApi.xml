@@ -1,0 +1,2716 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EDSystems.WebApi</name>
+    </assembly>
+    <members>
+        <member name="T:EDSystems.WebApi.Controllers.AccountController">
+            <summary>
+            Accounts
+            </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.AccountController.#ctor(AutoMapper.IMapper)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.AccountController.GetAll">
+            <summary>
+            Get the list of accounts
+            </summary>
+            <remarks>
+            Sample request:
+            GET /accounts
+            </remarks>
+            <returns>
+            Return AccountListVm
+            </returns>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.AccountController.GetAllWithPagination">
+            <summary>
+            Get the list of accounts with pagination
+            </summary>
+            <remarks>
+            Sample request:
+            GET /accounts
+            </remarks>
+            <returns>
+            Return AccountListVm
+            </returns>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.AccountController.Get(System.Int32)">
+            <summary>
+            Get Branch by Id
+            </summary>
+            <remarks>
+            </remarks>
+            <param name="Id">Branch Id (int)</param>
+            <returns>
+            Return BranchDetailsVm
+            </returns>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.AccountController.Create(EDSystems.WebApi.Models.Account.CreateAccountDto)">
+            <summary>
+            Create Branch
+            </summary>
+            <remarks>
+            </remarks>
+            <returns>
+            Return Id (int)
+            </returns>
+            <param name="createAccountDto">CreateAcocuntDto object</param>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.AccountController.Update(EDSystems.WebApi.Models.Account.UpdateAccountDto)">
+            <summary>
+            Update Branch by Id
+            </summary>
+            <param name="updateAccountDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.AccountController.Delete(System.Int32)">
+            <summary>
+            Delete Branch by Id
+            </summary>
+            <remarks>
+            </remarks>
+            <param name="Id">Id of the Branch</param>
+            <returns>
+            Returns NoContent
+            </returns>
+            <responce code="204">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="T:EDSystems.WebApi.Controllers.AccountHistoryController">
+            <summary>
+            Accounts
+            </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.AccountHistoryController.#ctor(AutoMapper.IMapper)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.AccountHistoryController.GetAll">
+            <summary>
+            Get the list of branches
+            </summary>
+            <remarks>
+            Sample request:
+            GET /note
+            </remarks>
+            <returns>
+            Return BranchListVm
+            </returns>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.AccountHistoryController.GetAllWithPagination">
+            <summary>
+            Get the list of branches with pagination
+            </summary>
+            <remarks>
+            Sample request:
+            GET /note
+            </remarks>
+            <returns>
+            Return BranchListVm
+            </returns>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.AccountHistoryController.Get(System.Int32)">
+            <summary>
+            Get Branch by Id
+            </summary>
+            <remarks>
+            </remarks>
+            <param name="Id">Branch Id (int)</param>
+            <returns>
+            Return BranchDetailsVm
+            </returns>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="T:EDSystems.WebApi.Controllers.AuthenticationController">
+            <summary>
+            AuthUser
+            </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.AuthenticationController.#ctor(Microsoft.AspNetCore.Identity.UserManager{EDSystems.Domain.Entities.UserEntities.User},Microsoft.Extensions.Configuration.IConfiguration,AutoMapper.IMapper,Microsoft.IdentityModel.Tokens.TokenValidationParameters,EDSystems.Application.Interfaces.IEDSystemsDbContext,Microsoft.AspNetCore.Identity.RoleManager{EDSystems.Domain.Entities.UserEntities.Role})">
+            <summary>
+            Constructor
+            </summary>
+            <param name="userManager"></param>
+            <param name="configuration"></param>
+            <param name="mapper"></param>
+            <param name="tokenValidationParams"></param>
+            <param name="iEDSystemsDbContext"></param>
+            <param name="roleManager"></param>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.AuthenticationController.Register(EDSystems.WebApi.Models.AuthManager.UserRegisterDto)">
+            <summary>
+            Register
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.AuthenticationController.Login(EDSystems.WebApi.Models.AuthManager.UserLoginDto)">
+            <summary>
+            Login
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.AuthenticationController.RefreshToken(EDSystems.WebApi.Models.AuthManager.TokenRequest)">
+            <summary>
+            Refresh Token
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:EDSystems.WebApi.Controllers.BaseController">
+            <summary>
+            BaseController
+            </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Controllers.BaseController.Mediator">
+            <summary>
+            IMediator
+            </summary>
+        </member>
+        <member name="T:EDSystems.WebApi.Controllers.BranchController">
+            <summary>
+            Branches
+            </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.BranchController.#ctor(AutoMapper.IMapper)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.BranchController.GetAll">
+            <summary>
+            Get the list of branches
+            </summary>
+            <remarks>
+            Sample request:
+            GET api/Branch
+            </remarks>
+            <returns>
+            Return BranchListVm
+            </returns>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination">
+            <summary>
+            Get the list of branches with pagination
+            </summary>
+            <remarks>
+            Sample request:
+            GET api/Branch
+            </remarks>
+            <returns>
+            Return BranchListVm
+            </returns>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.BranchController.Get(System.Int32)">
+            <summary>
+            Get Branch by Id
+            </summary>
+            <remarks>
+            </remarks>
+            <param name="Id">Branch Id (int)</param>
+            <returns>
+            Return BranchDetailsVm
+            </returns>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.BranchController.Create(EDSystems.WebApi.Models.Branches.CreateBranchDto)">
+            <summary>
+            Create Branch
+            </summary>
+            <remarks>
+            </remarks>
+            <returns>
+            Return Id (int)
+            </returns>
+            <param name="createNoteDto">CreateBranchDto object</param>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.BranchController.Update(EDSystems.WebApi.Models.Branches.UpdateBranchDto)">
+            <summary>
+            Update Branch by Id
+            </summary>
+            <param name="updateBranchDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.BranchController.Delete(System.Int32)">
+            <summary>
+            Delete Branch by Id
+            </summary>
+            <remarks>
+            </remarks>
+            <param name="Id">Id of the Branch</param>
+            <returns>
+            Returns NoContent
+            </returns>
+            <responce code="204">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.BranchController.DeleteBranches(EDSystems.WebApi.Models.Branches.DeleteBranchesDto)">
+            <summary>
+            Delete list of Branches by Id
+            </summary>
+            <remarks>
+            </remarks>
+            <param name="deleteBranchesDto">Id of the Branch</param>
+            <returns>
+            Returns NoContent
+            </returns>
+            <responce code="204">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="T:EDSystems.WebApi.Controllers.ClaimsController">
+            <summary>
+            User Manager
+            </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.ClaimsController.#ctor(AutoMapper.IMapper)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.ClaimsController.GetAll(EDSystems.WebApi.Models.UserClaim.GetClaimList.GetUserClaimDto)">
+            <summary>
+            Get the lists of Claims
+            </summary>
+            <remarks>
+            Sample request:
+            GET /Claims
+            </remarks>
+            <returns>
+            Return UserListVm
+            </returns>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.ClaimsController.AddToClaim(EDSystems.WebApi.Models.UserClaim.GetClaimList.AddToClaimDto)">
+            <summary>
+            Get the lists of Claims
+            </summary>
+            <remarks>
+            Sample request:
+            GET /Claims
+            </remarks>
+            <returns>
+            Return UserListVm
+            </returns>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="T:EDSystems.WebApi.Controllers.ExchangeRateController">
+            <summary>
+            Class
+            </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.ExchangeRateController.#ctor(EDSystems.Application.Interfaces.IGetExchangeRateService)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="getExchangeRateService"></param>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.ExchangeRateController.GetRub">
+            <summary>
+            Gets Exchange Rate of Rubl
+            </summary>
+            <remarks>
+            </remarks>
+            <returns>
+            </returns>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.ExchangeRateController.GetUsd">
+            <summary>
+            Gets Exchange Rate of Usd
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:EDSystems.WebApi.Controllers.ParcelController">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.ParcelController.#ctor(AutoMapper.IMapper)">
+            <summary>
+            Contructor
+            </summary>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.ParcelController.AddParcelImage(EDSystems.WebApi.Models.Parcel.AddParcelImageDto)">
+            <summary>
+            Add Parcel Image ONE
+            </summary>
+            <remarks>
+            </remarks>
+            <returns>
+            Return NoContent
+            </returns>
+            <param name="addParcelImageDto">AddParcelImageDto object</param>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.ParcelController.AddParcelImages(EDSystems.WebApi.Models.Parcel.AddParcelImagesDto)">
+            <summary>
+            Add Parcel Images Many
+            </summary>
+            <remarks>
+            </remarks>
+            <returns>
+            Return NoContent
+            </returns>
+            <param name="addParcelImagesDto">AddParcelImageDto object</param>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.ParcelController.AddParcelSound(EDSystems.WebApi.Models.Parcel.AddParcelSoundDto)">
+            <summary>
+            Add Parcel Sound ONE
+            </summary>
+            <remarks>
+            </remarks>
+            <returns>
+            Return NoContent
+            </returns>
+            <param name="addParcelSoundDto">AddParcelSoundDto object</param>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.ParcelController.AddParcelSounds(EDSystems.WebApi.Models.Parcel.AddParcelSoundsDto)">
+            <summary>
+            Add Parcel Sounds Many
+            </summary>
+            <remarks>
+            </remarks>
+            <returns>
+            Return NoContent
+            </returns>
+            <param name="addParcelSoundsDto">AddParcelSoundsDto object</param>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.ParcelController.AddParcelStatus(EDSystems.WebApi.Models.Parcel.AddParcelStatusDto)">
+            <summary>
+            Add Parcel Status
+            </summary>
+            <remarks>
+            </remarks>
+            <returns>
+            Return NoContent
+            </returns>
+            <param name="addParcelStatus">AddParcelStatusDto object</param>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.ParcelController.Create(EDSystems.WebApi.Models.Parcel.CreateParcelDto)">
+            <summary>
+            Create Parcel
+            </summary>
+            <remarks>
+            </remarks>
+            <returns>
+            Return Id (int)
+            </returns>
+            <param name="createParcelDto">CreateParcelDto object</param>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.ParcelController.Delete(System.Int32)">
+            <summary>
+            Delete Parcel by Id
+            </summary>
+            <remarks>
+            </remarks>
+            <param name="Id">Id of the note</param>
+            <returns>
+            Returns NoContent
+            </returns>
+            <responce code="204">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.ParcelController.DeleteParcelImage(EDSystems.WebApi.Models.Parcel.DeleteParcelImageDto)">
+            <summary>
+            Delete one of parcel image
+            </summary>
+            <remarks>
+            </remarks>
+            <returns>
+            Return NoContent
+            </returns>
+            <param name="deleteParcelImageDto">DeleteParcelImageDto object</param>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.ParcelController.DeleteParcelImages(EDSystems.WebApi.Models.Parcel.DeleteParcelImagesDto)">
+            <summary>
+            Delete list of Parcel Images by Id
+            </summary>
+            <remarks>
+            </remarks>
+            <returns>
+            Returns NoContent
+            </returns>
+            <responce code="204">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.ParcelController.DeleteParcels(EDSystems.WebApi.Models.Parcel.DeleteParcelsDto)">
+            <summary>
+            Delete list of Parcels by Id
+            </summary>
+            <remarks>
+            </remarks>
+            <param name="deleteParcelsDto">Id of the Branch</param>
+            <returns>
+            Returns NoContent
+            </returns>
+            <responce code="204">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.ParcelController.DeleteParcelSound(EDSystems.WebApi.Models.Parcel.DeleteParcelSoundDto)">
+            <summary>
+            Delete Parcel Sound ONE
+            </summary>
+            <remarks>
+            </remarks>
+            <returns>
+            Return NoContent
+            </returns>
+            <param name="deleteParcelSoundDto">DeleteParcelSoundDto object</param>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.ParcelController.DeleteParcelSounds(EDSystems.WebApi.Models.Parcel.DeleteParcelSoundsDto)">
+            <summary>
+            Delete list of Parcel Sounds by Id
+            </summary>
+            <remarks>
+            </remarks>
+            <returns>
+            Returns NoContent
+            </returns>
+            <responce code="204">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.ParcelController.DeleteParcelStatus(EDSystems.WebApi.Models.Parcel.DeleteParcelStatusDto)">
+            <summary>
+            Delete Parcel Status
+            </summary>
+            <remarks>
+            </remarks>
+            <returns>
+            Return NoContent
+            </returns>
+            <param name="deleteParcelStatusDto">DeleteParcelStatusDto object</param>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.ParcelController.Get(System.Int32)">
+            <summary>
+            Get Parcel by Id
+            </summary>
+            <remarks>
+            </remarks>
+            <param name="Id">Parcel Id (guid)</param>
+            <returns>
+            Return NoteDetailsVm
+            </returns>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.ParcelController.GetAll">
+            <summary>
+            Get the list of Parcels
+            </summary>
+            <remarks>
+            </remarks>
+            <returns>
+            Return ParcelListVm
+            </returns>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.ParcelController.GetAllWithPagination">
+            <summary>
+            Get the list of parcels with pagination
+            </summary>
+            <remarks>
+            </remarks>
+            <returns>
+            Return ParcelListVm
+            </returns>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.ParcelController.Update(EDSystems.WebApi.Models.Parcel.UpdateParcelDto)">
+            <summary>
+            Update Parcel by Id
+            </summary>
+            <remarks>
+            </remarks>
+            <param name="updateParcelDto">UpdateParcelDto object</param>
+            <returns>
+            Returns NoContent
+            </returns>
+            <responce code="204">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.ParcelController.UpdateParcelImage(EDSystems.WebApi.Models.Parcel.UpdateParcelImageDto)">
+            <summary>
+            Update Parcel Image ONE
+            </summary>
+            <remarks>
+            </remarks>
+            <returns>
+            Return NoContent
+            </returns>
+            <param name="updateParcelImageDto">UpdateParcelImageDto object</param>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.ParcelController.UpdateParcelImages(EDSystems.WebApi.Models.Parcel.UpdateParcelImagesDto)">
+            <summary>
+            Update Parcel Images Many
+            </summary>
+            <remarks>
+            </remarks>
+            <returns>
+            Return NoContent
+            </returns>
+            <param name="updateParcelImagesDto">UpdateParcelImageDto object</param>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.ParcelController.UpdateParcelSound(EDSystems.WebApi.Models.Parcel.UpdateParcelSoundDto)">
+            <summary>
+            Update Parcel Sound ONE
+            </summary>
+            <remarks>
+            </remarks>
+            <returns>
+            Return NoContent
+            </returns>
+            <param name="updateParcelSoundDto">UpdateParcelSoundDto object</param>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.ParcelController.UpdateParcelSounds(EDSystems.WebApi.Models.Parcel.UpdateParcelSoundsDto)">
+            <summary>
+            Update Parcel Sounds MANY
+            </summary>
+            <remarks>
+            </remarks>
+            <returns>
+            Return NoContent
+            </returns>
+            <param name="updateParcelSoundsDto">UpdateParcelSoundsDto object</param>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.ParcelController.UpdateParcelsStatusByCode(EDSystems.WebApi.Models.Parcel.UpdateParcelsStatusByCodeDto)">
+            <summary>
+            Update Parcels Status By Code
+            </summary>
+            <remarks>
+            </remarks>
+            <returns>
+            Return NoContent
+            </returns>
+            <param name="updateParcelsStatusByCodeDto">UpdateParcelsStatusByCodeDto object</param>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.ParcelController.UpdateParcelsStatusById(EDSystems.WebApi.Models.Parcel.UpdateParcelsStatusByIdDto)">
+            <summary>
+            Update Parcels Status By Id
+            </summary>
+            <remarks>
+            </remarks>
+            <returns>
+            Return NoContent
+            </returns>
+            <param name="updateParcelsStatusByIdDto">UpdateParcelsStatusByIdDto object</param>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.ParcelController.UpdateParcelStatusById(EDSystems.WebApi.Models.Parcel.UpdateParcelStatusByIdDto)">
+            <summary>
+            Update Parcel Status By Id
+            </summary>
+            <remarks>
+            </remarks>
+            <returns>
+            Return NoContent
+            </returns>
+            <param name="updateParcelStatusByIdDto">UpdateParcelStatusByIdDto object</param>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="T:EDSystems.WebApi.Controllers.ParcelJobController">
+            <summary>
+            Branches
+            </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.ParcelJobController.#ctor(AutoMapper.IMapper)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.ParcelJobController.GetAll">
+            <summary>
+            Get the list of branches
+            </summary>
+            <remarks>
+            Sample request:
+            GET /note
+            </remarks>
+            <returns>
+            Return BranchListVm
+            </returns>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.ParcelJobController.GetAllWithPagination">
+            <summary>
+            Get the list of branches with pagination
+            </summary>
+            <remarks>
+            Sample request:
+            GET /note
+            </remarks>
+            <returns>
+            Return BranchListVm
+            </returns>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.ParcelJobController.Get(System.Int32)">
+            <summary>
+            Get Branch by Id
+            </summary>
+            <remarks>
+            </remarks>
+            <param name="Id">Branch Id (int)</param>
+            <returns>
+            Return BranchDetailsVm
+            </returns>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.ParcelJobController.Create(EDSystems.WebApi.Models.Branches.CreateBranchDto)">
+            <summary>
+            Create Branch
+            </summary>
+            <remarks>
+            </remarks>
+            <returns>
+            Return Id (int)
+            </returns>
+            <param name="createNoteDto">CreateBranchDto object</param>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.ParcelJobController.Update(EDSystems.WebApi.Models.ParcelJob.UpdateParcelJobDto)">
+            <summary>
+            Update Branch by Id
+            </summary>
+            <param name="updateParcelJobDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.ParcelJobController.Delete(System.Int32)">
+            <summary>
+            Delete Branch by Id
+            </summary>
+            <remarks>
+            </remarks>
+            <param name="Id">Id of the Branch</param>
+            <returns>
+            Returns NoContent
+            </returns>
+            <responce code="204">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="T:EDSystems.WebApi.Controllers.PlanController">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.PlanController.#ctor(AutoMapper.IMapper)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.PlanController.GetAll">
+            <summary>
+            Get the list of Plans
+            </summary>
+            <remarks>
+            </remarks>
+            <returns>
+            Return PlanListVm
+            </returns>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.PlanController.GetAllWithPagination">
+            <summary>
+            Get the list of Plans
+            </summary>
+            <remarks>
+            </remarks>
+            <returns>
+            Return PlanListVm
+            </returns>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.PlanController.Get(System.Int32)">
+            <summary>
+            Get Plan by Id
+            </summary>
+            <remarks>
+            </remarks>
+            <param name="Id">Plan Id (guid)</param>
+            <returns>
+            Return PlanDetailsVm
+            </returns>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.PlanController.Create(EDSystems.WebApi.Models.Plan.CreatePlanDto)">
+            <summary>
+            Create Plan
+            </summary>
+            <remarks>
+            </remarks>
+            <returns>
+            Return Id (int)
+            </returns>
+            <param name="createPlanDto">CreatePlanDto object</param>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.PlanController.Update(EDSystems.WebApi.Models.Plan.UpdatePlanDto)">
+            <summary>
+            Update Plan by Id
+            </summary>
+            <remarks>
+            </remarks>
+            <param name="updatePlanDto">UpdatePlanDto object</param>
+            <returns>
+            Returns NoContent
+            </returns>
+            <responce code="204">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.PlanController.Delete(System.Int32)">
+            <summary>
+            Delete the Plan by Id
+            </summary>
+            <remarks>
+            </remarks>
+            <param name="Id">Id of the Plan</param>
+            <returns>
+            Returns NoContent
+            </returns>
+            <responce code="204">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.PlanController.DeletePlans(EDSystems.WebApi.Models.Plan.DeletePlansDto)">
+            <summary>
+            Delete list of Plans by Id
+            </summary>
+            <remarks>
+            </remarks>
+            <param name="deletePlansDto">Id of the Plans</param>
+            <returns>
+            Returns NoContent
+            </returns>
+            <responce code="204">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="T:EDSystems.WebApi.Controllers.RoleManagerController">
+            <summary>
+            Branches
+            </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.RoleManagerController.#ctor(AutoMapper.IMapper)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.RoleManagerController.GetAll">
+            <summary>
+            Get the list of Roles
+            </summary>
+            <remarks>
+            </remarks>
+            <returns>
+            Return RoleListVm
+            </returns>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.RoleManagerController.GetAllWithPagination">
+            <summary>
+            Get the list of Roles with pagination list
+            </summary>
+            <remarks>
+            </remarks>
+            <returns>
+            Return RoleListVm
+            </returns>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.RoleManagerController.Get(System.String)">
+            <summary>
+            Get Role by Id
+            </summary>
+            <remarks>
+            </remarks>
+            <param name="Id">Role Id (int)</param>
+            <returns>
+            Return RoleDetailsVm
+            </returns>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.RoleManagerController.Create(EDSystems.WebApi.Models.RoleManager.CreateRoleDto)">
+            <summary>
+            Create Role
+            </summary>
+            <remarks>
+            </remarks>
+            <returns>
+            Return Id (int)
+            </returns>
+            <param name="createRoleDto">CreateRoleDto object</param>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.RoleManagerController.Update(EDSystems.WebApi.Models.RoleManager.UpdateRoleDto)">
+            <summary>
+            Update Role by Id
+            </summary>
+            <remarks>
+            </remarks>
+            <param name="updateUserDto">UpdateRoleDto object</param>
+            <returns>
+            Returns NoContent
+            </returns>
+            <responce code="204">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.RoleManagerController.Delete(System.String)">
+            <summary>
+            Delete the Role by Id
+            </summary>
+            <remarks>
+            </remarks>
+            <param name="Id">Id of the Role</param>
+            <returns>
+            Returns NoContent
+            </returns>
+            <responce code="204">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="T:EDSystems.WebApi.Controllers.StatusController">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.StatusController.#ctor(AutoMapper.IMapper)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.StatusController.GetAll">
+            <summary>
+            Get the lists of Statuses
+            </summary>
+            <remarks>
+            </remarks>
+            <returns>
+            Return StatusListVm
+            </returns>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.StatusController.GetAllWithPagination">
+            <summary>
+            Get the lists of Statuses with pagination
+            </summary>
+            <remarks>
+            </remarks>
+            <returns>
+            Return StatusListVm
+            </returns>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.StatusController.Get(System.Int32)">
+            <summary>
+            Get Status by Id
+            </summary>
+            <remarks>
+            </remarks>
+            <param name="Id">Status Id (int)</param>
+            <returns>
+            Return StatusDetailsVm
+            </returns>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.StatusController.Create(EDSystems.WebApi.Models.Status.CreateStatusDto)">
+            <summary>
+            Create Status
+            </summary>
+            <remarks>
+            </remarks>
+            <returns>
+            Return Id (int)
+            </returns>
+            <param name="createStatusDto">CreateStatusDto object</param>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.StatusController.Update(EDSystems.WebApi.Models.Status.UpdateStatusDto)">
+            <summary>
+            Update the Status
+            </summary>
+            <remarks>
+            </remarks>
+            <param name="updateStatusDto">UpdateStatusDto object</param>
+            <returns>
+            Returns NoContent
+            </returns>
+            <responce code="204">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.StatusController.Delete(System.Int32)">
+            <summary>
+            Delete the Status by Id
+            </summary>
+            <remarks>
+            </remarks>
+            <param name="Id">Id of the Status</param>
+            <returns>
+            Returns NoContent
+            </returns>
+            <responce code="204">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.StatusController.DeleteStatuses(EDSystems.WebApi.Models.Status.DeleteStatusesDto)">
+            <summary>
+            Delete list of Statuses by Id
+            </summary>
+            <remarks>
+            </remarks>
+            <param name="deleteStatusesDto">Id of the Status</param>
+            <returns>
+            Returns NoContent
+            </returns>
+            <responce code="204">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="T:EDSystems.WebApi.Controllers.UserAccountController">
+            <summary>
+            Accounts
+            </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.UserAccountController.#ctor(AutoMapper.IMapper)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.UserAccountController.GetAll">
+            <summary>
+            Get the list of branches
+            </summary>
+            <remarks>
+            Sample request:
+            GET /note
+            </remarks>
+            <returns>
+            Return BranchListVm
+            </returns>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.UserAccountController.GetAllWithPagination">
+            <summary>
+            Get the list of branches WithPagination
+            </summary>
+            <remarks>
+            Sample request:
+            GET /note
+            </remarks>
+            <returns>
+            Return BranchListVm
+            </returns>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.UserAccountController.Get(System.Int32)">
+            <summary>
+            Get Branch by Id
+            </summary>
+            <remarks>
+            </remarks>
+            <param name="Id">Branch Id (int)</param>
+            <returns>
+            Return BranchDetailsVm
+            </returns>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.UserAccountController.Create(EDSystems.WebApi.Models.Account.CreateUserAccountDto)">
+            <summary>
+            Create Branch
+            </summary>
+            <remarks>
+            </remarks>
+            <returns>
+            Return Id (int)
+            </returns>
+            <param name="createUserAccountDto">CreateUserAccountDto object</param>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.UserAccountController.Update(EDSystems.WebApi.Models.Account.UpdateUserAccountDto)">
+            <summary>
+            Update User Account by Id
+            </summary>
+            <param name="updateUserAccountDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.UserAccountController.Delete(System.Int32)">
+            <summary>
+            Delete Branch by Id
+            </summary>
+            <remarks>
+            </remarks>
+            <param name="Id">Id of the Branch</param>
+            <returns>
+            Returns NoContent
+            </returns>
+            <responce code="204">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="T:EDSystems.WebApi.Controllers.UserAccountHistoryController">
+            <summary>
+            Accounts
+            </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.UserAccountHistoryController.#ctor(AutoMapper.IMapper)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.UserAccountHistoryController.GetAll">
+            <summary>
+            Get the list of branches
+            </summary>
+            <remarks>
+            Sample request:
+            GET /note
+            </remarks>
+            <returns>
+            Return BranchListVm
+            </returns>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.UserAccountHistoryController.GetAllWithPagination">
+            <summary>
+            Get the list of branches
+            </summary>
+            <remarks>
+            Sample request:
+            GET /note
+            </remarks>
+            <returns>
+            Return BranchListVm
+            </returns>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.UserAccountHistoryController.Get(System.Int32)">
+            <summary>
+            Get Branch by Id
+            </summary>
+            <remarks>
+            </remarks>
+            <param name="Id">Branch Id (int)</param>
+            <returns>
+            Return BranchDetailsVm
+            </returns>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="T:EDSystems.WebApi.Controllers.UserManagerController">
+            <summary>
+            User Manager
+            </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.UserManagerController.#ctor(AutoMapper.IMapper)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.UserManagerController.GetAll">
+            <summary>
+            Get the lists of Users
+            </summary>
+            <remarks>
+            Sample request:
+            GET /Users
+            </remarks>
+            <returns>
+            Return UserListVm
+            </returns>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.UserManagerController.GetAllWithPagination">
+            <summary>
+            Get the lists of Users WithPagination
+            </summary>
+            <remarks>
+            Sample request:
+            GET /Users
+            </remarks>
+            <returns>
+            Return UserListVm
+            </returns>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.UserManagerController.Get(System.String)">
+            <summary>
+            Get User by Id
+            </summary>
+            <remarks>
+            Sample request:
+            GET /user/{1}
+            </remarks>
+            <param name="Id">User Id (string)</param>
+            <returns>
+            Return UserDetailsVm
+            </returns>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.UserManagerController.Create(EDSystems.WebApi.Models.UserManager.CreateUserDto)">
+            <summary>
+            Create User
+            </summary>
+            <remarks>
+            </remarks>
+            <returns>
+            Return UserId
+            </returns>
+            <responce code="200">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.UserManagerController.Update(EDSystems.WebApi.Models.UserManager.UpdateUserDto)">
+            <summary>
+            Update User by Id
+            </summary>
+            <remarks>
+            </remarks>
+            <param name="updateUserDto">UpdateUserDto object</param>
+            <returns>
+            Returns NoContent
+            </returns>
+            <responce code="204">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.UserManagerController.UpdateUserRole(EDSystems.WebApi.Models.UserManager.UpdateUserRoleDto)">
+            <summary>
+            Update User Role
+            </summary>
+            <remarks>
+            </remarks>
+            <param name="updateUserRoleDto">UpdateUserRoleDto object</param>
+            <returns>
+            Returns NoContent
+            </returns>
+            <responce code="204">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.UserManagerController.AddToRole(EDSystems.WebApi.Models.UserManager.AddToRoleDto)">
+            <summary>
+            Add To Role
+            </summary>
+            <remarks>
+            </remarks>
+            <param name="addToRoleDto">AddToRoleDto object</param>
+            <returns>
+            Returns NoContent
+            </returns>
+            <responce code="204">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.UserManagerController.DeleteFromRole(EDSystems.WebApi.Models.UserManager.DeleteFromRoleDto)">
+            <summary>
+            Delete From Role
+            </summary>
+            <remarks>
+            </remarks>
+            <param name="deleteFromRoleDto">DeleteFromRoleDto object</param>
+            <returns>
+            Returns NoContent
+            </returns>
+            <responce code="204">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.UserManagerController.UpdatePassword(EDSystems.WebApi.Models.UserManager.UpdatePasswordDto)">
+            <summary>
+            Update Password
+            </summary>
+            <remarks>
+            </remarks>
+            <param name="updatePasswordDto">UpdatePasswordDto object</param>
+            <returns>
+            Returns NoContent
+            </returns>
+            <responce code="204">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="M:EDSystems.WebApi.Controllers.UserManagerController.Delete(System.String)">
+            <summary>
+            Delete the User by id
+            </summary>
+            <remarks>
+            </remarks>
+            <param name="Id">Id of the User</param>
+            <returns>
+            Returns NoContent
+            </returns>
+            <responce code="204">Success</responce>
+            <responce code="401">If the user is unauthorized</responce>
+        </member>
+        <member name="T:EDSystems.WebApi.DependencyInjection">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.DependencyInjection.AddWebServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+             <summary>
+            
+             </summary>
+             <param name="services"></param>
+             <param name="_configuration"></param>
+             <returns></returns>
+        </member>
+        <member name="T:EDSystems.WebApi.Middleware.CustomExceptionHandlerMiddleware">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Middleware.CustomExceptionHandlerMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate)">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Middleware.CustomExceptionHandlerMiddleware.Invoke(Microsoft.AspNetCore.Http.HttpContext)">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:EDSystems.WebApi.Middleware.CustomExceptionHandlerMiddlewareExstentions">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Middleware.CustomExceptionHandlerMiddlewareExstentions.UseCustomeExceptionHandler(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Models.Account.CreateAccountDto.Mapping(AutoMapper.Profile)">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:EDSystems.WebApi.Models.Account.DeleteAccountDto">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Account.DeleteAccountDto.Id">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Models.Account.DeleteAccountDto.Mapping(AutoMapper.Profile)">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:EDSystems.WebApi.Models.Account.UpdateAccountDto">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Models.Account.UpdateAccountDto.Mapping(AutoMapper.Profile)">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Models.Account.CreateUserAccountDto.Mapping(AutoMapper.Profile)">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:EDSystems.WebApi.Models.Account.UpdateUserAccountDto">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Models.Account.UpdateUserAccountDto.Mapping(AutoMapper.Profile)">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:EDSystems.WebApi.Models.AuthManager.AuthResult">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.AuthManager.AuthResult.Token">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.AuthManager.AuthResult.RefreshTokenn">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.AuthManager.AuthResult.Result">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.AuthManager.AuthResult.Message">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:EDSystems.WebApi.Models.AuthManager.RefreshTokenDto">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.AuthManager.RefreshTokenDto.Token">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.AuthManager.RefreshTokenDto.UserId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.AuthManager.RefreshTokenDto.JwtId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.AuthManager.RefreshTokenDto.IsUsed">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.AuthManager.RefreshTokenDto.IsRevoked">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.AuthManager.RefreshTokenDto.AddedDateTime">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.AuthManager.RefreshTokenDto.ExpiryDateTime">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Models.AuthManager.RefreshTokenDto.Mapping(AutoMapper.Profile)">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:EDSystems.WebApi.Models.AuthManager.TokenRequest">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.AuthManager.TokenRequest.Token">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.AuthManager.TokenRequest.RefreshToken">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:EDSystems.WebApi.Models.AuthManager.UserLoginDto">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.AuthManager.UserLoginDto.Email">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.AuthManager.UserLoginDto.Password">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:EDSystems.WebApi.Models.AuthManager.UserRegisterDto">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.AuthManager.UserRegisterDto.Name">
+            <summary>
+            User Name
+            </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.AuthManager.UserRegisterDto.Email">
+            <summary>
+            User Email
+            </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.AuthManager.UserRegisterDto.Password">
+            <summary>
+            User Password
+            </summary>
+        </member>
+        <member name="T:EDSystems.WebApi.Models.Branches.CreateBranchDto">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Branches.CreateBranchDto.Name">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Branches.CreateBranchDto.Country">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Branches.CreateBranchDto.Code">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Branches.CreateBranchDto.City">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Branches.CreateBranchDto.Address">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Branches.CreateBranchDto.Email">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Branches.CreateBranchDto.Phone">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Models.Branches.CreateBranchDto.Mapping(AutoMapper.Profile)">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:EDSystems.WebApi.Models.Branches.DeleteBranchesDto">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Branches.DeleteBranchesDto.Id">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Models.Branches.DeleteBranchesDto.Mapping(AutoMapper.Profile)">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:EDSystems.WebApi.Models.Branches.UpdateBranchDto">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Branches.UpdateBranchDto.Id">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Branches.UpdateBranchDto.Name">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Branches.UpdateBranchDto.Country">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Branches.UpdateBranchDto.Code">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Branches.UpdateBranchDto.City">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Branches.UpdateBranchDto.Address">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Branches.UpdateBranchDto.Email">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Branches.UpdateBranchDto.Phone">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Models.Branches.UpdateBranchDto.Mapping(AutoMapper.Profile)">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:EDSystems.WebApi.Models.Configurations.JwtConfig">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Configurations.JwtConfig.Secret">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Configurations.JwtConfig.ExpiryTimeFrame">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:EDSystems.WebApi.Models.Parcel.AddParcelImageDto">
+            <summary>
+            AddParcelImageDto
+            </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.AddParcelImageDto.ParcelId">
+            <summary>
+            ParcelId
+            </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.AddParcelImageDto.ImageBytes">
+            <summary>
+             Returns a number
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EDSystems.WebApi.Models.Parcel.AddParcelImageDto.Mapping(AutoMapper.Profile)">
+            <summary>
+            Mapping
+            </summary>
+            <param name="profile"></param>
+        </member>
+        <member name="T:EDSystems.WebApi.Models.Parcel.AddParcelImagesDto">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.AddParcelImagesDto.ParcelId">
+            <summary>
+             ParcelId
+            </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.AddParcelImagesDto.ImageBytes">
+            <summary>
+             ImageBytes
+            </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Models.Parcel.AddParcelImagesDto.Mapping(AutoMapper.Profile)">
+            <summary>
+             Mapping
+            </summary>
+        </member>
+        <member name="T:EDSystems.WebApi.Models.Parcel.AddParcelSoundDto">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.AddParcelSoundDto.ParcelId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.AddParcelSoundDto.SoundBytes">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Models.Parcel.AddParcelSoundDto.Mapping(AutoMapper.Profile)">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:EDSystems.WebApi.Models.Parcel.AddParcelSoundsDto">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.AddParcelSoundsDto.ParcelId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.AddParcelSoundsDto.SoundBytes">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Models.Parcel.AddParcelSoundsDto.Mapping(AutoMapper.Profile)">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:EDSystems.WebApi.Models.Parcel.AddParcelStatusDto">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.AddParcelStatusDto.ParcelId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.AddParcelStatusDto.ParcelStatusId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.AddParcelStatusDto.RecepientCourierId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.AddParcelStatusDto.RecepientId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.AddParcelStatusDto.RecepientStaffId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.AddParcelStatusDto.SenderCourierId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.AddParcelStatusDto.SenderId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.AddParcelStatusDto.SenderStaffId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Models.Parcel.AddParcelStatusDto.Mapping(AutoMapper.Profile)">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:EDSystems.WebApi.Models.Parcel.CreateParcelDto">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.CreateParcelDto.ParcelCost">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.CreateParcelDto.SenderId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.CreateParcelDto.RecepientId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.CreateParcelDto.RecepientStaffId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.CreateParcelDto.SenderStaffId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.CreateParcelDto.RecepientCourierId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.CreateParcelDto.SenderCourierId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.CreateParcelDto.ParcelPlanId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.CreateParcelDto.ParcelBranchFromId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.CreateParcelDto.ParcelBranchToId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.CreateParcelDto.ParcelSize">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.CreateParcelDto.ParcelStatusId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.CreateParcelDto.ParcelImage">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.CreateParcelDto.ParcelSound">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.CreateParcelDto.ParcelDescription">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.CreateParcelDto.ParcelItem">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Models.Parcel.CreateParcelDto.Mapping(AutoMapper.Profile)">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:EDSystems.WebApi.Models.Parcel.DeleteParcelImageDto">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.DeleteParcelImageDto.ParcelId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.DeleteParcelImageDto.ParcelImageId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Models.Parcel.DeleteParcelImageDto.Mapping(AutoMapper.Profile)">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:EDSystems.WebApi.Models.Parcel.DeleteParcelImagesDto">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.DeleteParcelImagesDto.ParcelId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.DeleteParcelImagesDto.ParcelImageId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Models.Parcel.DeleteParcelImagesDto.Mapping(AutoMapper.Profile)">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:EDSystems.WebApi.Models.Parcel.DeleteParcelsDto">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.DeleteParcelsDto.Id">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Models.Parcel.DeleteParcelsDto.Mapping(AutoMapper.Profile)">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:EDSystems.WebApi.Models.Parcel.DeleteParcelSoundDto">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.DeleteParcelSoundDto.ParcelId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.DeleteParcelSoundDto.ParcelSoundId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Models.Parcel.DeleteParcelSoundDto.Mapping(AutoMapper.Profile)">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:EDSystems.WebApi.Models.Parcel.DeleteParcelSoundsDto">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.DeleteParcelSoundsDto.ParcelId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.DeleteParcelSoundsDto.ParcelSoundId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Models.Parcel.DeleteParcelSoundsDto.Mapping(AutoMapper.Profile)">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:EDSystems.WebApi.Models.Parcel.DeleteParcelStatusDto">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.DeleteParcelStatusDto.ParcelId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.DeleteParcelStatusDto.ParcelStatusId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.DeleteParcelStatusDto.StatusId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.DeleteParcelStatusDto.RecepientCourierId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.DeleteParcelStatusDto.RecepientId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.DeleteParcelStatusDto.RecepientStaffId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.DeleteParcelStatusDto.SenderCourierId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.DeleteParcelStatusDto.SenderId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.DeleteParcelStatusDto.SenderStaffId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Models.Parcel.DeleteParcelStatusDto.Mapping(AutoMapper.Profile)">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:EDSystems.WebApi.Models.Parcel.UpdateParcelDto">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.UpdateParcelDto.Id">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.UpdateParcelDto.ParcelCost">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.UpdateParcelDto.SenderId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.UpdateParcelDto.RecepientId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.UpdateParcelDto.RecepientStaffId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.UpdateParcelDto.SenderStaffId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.UpdateParcelDto.RecepientCourierId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.UpdateParcelDto.SenderCourierId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.UpdateParcelDto.ParcelPlanId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.UpdateParcelDto.ParcelBranchFromId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.UpdateParcelDto.ParcelBranchToId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.UpdateParcelDto.ParcelSize">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.UpdateParcelDto.ParcelStatusId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.UpdateParcelDto.ParcelImage">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.UpdateParcelDto.ParcelSound">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.UpdateParcelDto.ParcelDescription">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Models.Parcel.UpdateParcelDto.Mapping(AutoMapper.Profile)">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:EDSystems.WebApi.Models.Parcel.UpdateParcelImageDto">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.UpdateParcelImageDto.ParcelId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.UpdateParcelImageDto.ImageBytes">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Models.Parcel.UpdateParcelImageDto.Mapping(AutoMapper.Profile)">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:EDSystems.WebApi.Models.Parcel.UpdateParcelImagesDto">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.UpdateParcelImagesDto.ParcelId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.UpdateParcelImagesDto.ImageBytes">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Models.Parcel.UpdateParcelImagesDto.Mapping(AutoMapper.Profile)">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:EDSystems.WebApi.Models.Parcel.UpdateParcelSoundDto">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.UpdateParcelSoundDto.ParcelId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.UpdateParcelSoundDto.SoundBytes">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Models.Parcel.UpdateParcelSoundDto.Mapping(AutoMapper.Profile)">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:EDSystems.WebApi.Models.Parcel.UpdateParcelSoundsDto">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.UpdateParcelSoundsDto.ParcelId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.UpdateParcelSoundsDto.SoundBytes">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Models.Parcel.UpdateParcelSoundsDto.Mapping(AutoMapper.Profile)">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:EDSystems.WebApi.Models.Parcel.UpdateParcelsStatusByCodeDto">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.UpdateParcelsStatusByCodeDto.ParcelCode">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.UpdateParcelsStatusByCodeDto.StatusId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.UpdateParcelsStatusByCodeDto.SenderId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.UpdateParcelsStatusByCodeDto.RecepientId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.UpdateParcelsStatusByCodeDto.RecepientStaffId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.UpdateParcelsStatusByCodeDto.SenderStaffId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.UpdateParcelsStatusByCodeDto.RecepientCourierId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.UpdateParcelsStatusByCodeDto.SenderCourierId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Models.Parcel.UpdateParcelsStatusByCodeDto.Mapping(AutoMapper.Profile)">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:EDSystems.WebApi.Models.Parcel.UpdateParcelsStatusByIdDto">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.UpdateParcelsStatusByIdDto.ParcelId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.UpdateParcelsStatusByIdDto.StatusId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.UpdateParcelsStatusByIdDto.SenderId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.UpdateParcelsStatusByIdDto.RecepientId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.UpdateParcelsStatusByIdDto.RecepientStaffId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.UpdateParcelsStatusByIdDto.SenderStaffId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.UpdateParcelsStatusByIdDto.RecepientCourierId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.UpdateParcelsStatusByIdDto.SenderCourierId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Models.Parcel.UpdateParcelsStatusByIdDto.Mapping(AutoMapper.Profile)">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:EDSystems.WebApi.Models.Parcel.UpdateParcelStatusByIdDto">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.UpdateParcelStatusByIdDto.ParcelId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.UpdateParcelStatusByIdDto.StatusId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.UpdateParcelStatusByIdDto.SenderId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.UpdateParcelStatusByIdDto.RecepientId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.UpdateParcelStatusByIdDto.RecepientStaffId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.UpdateParcelStatusByIdDto.SenderStaffId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.UpdateParcelStatusByIdDto.RecepientCourierId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Parcel.UpdateParcelStatusByIdDto.SenderCourierId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Models.Parcel.UpdateParcelStatusByIdDto.Mapping(AutoMapper.Profile)">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:EDSystems.WebApi.Models.Plan.CreatePlanDto">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Plan.CreatePlanDto.Name">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Plan.CreatePlanDto.Cost">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Plan.CreatePlanDto.Description">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Models.Plan.CreatePlanDto.Mapping(AutoMapper.Profile)">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:EDSystems.WebApi.Models.Plan.DeletePlansDto">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Plan.DeletePlansDto.Id">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Models.Plan.DeletePlansDto.Mapping(AutoMapper.Profile)">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:EDSystems.WebApi.Models.Plan.UpdatePlanDto">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Plan.UpdatePlanDto.Id">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Plan.UpdatePlanDto.Name">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Plan.UpdatePlanDto.Cost">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Plan.UpdatePlanDto.Description">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Models.Plan.UpdatePlanDto.Mapping(AutoMapper.Profile)">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:EDSystems.WebApi.Models.RoleManager.CreateRoleDto">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.RoleManager.CreateRoleDto.Name">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Models.RoleManager.CreateRoleDto.Mapping(AutoMapper.Profile)">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:EDSystems.WebApi.Models.RoleManager.UpdateRoleDto">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.RoleManager.UpdateRoleDto.Id">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.RoleManager.UpdateRoleDto.Name">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Models.RoleManager.UpdateRoleDto.Mapping(AutoMapper.Profile)">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:EDSystems.WebApi.Models.Status.CreateStatusDto">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Status.CreateStatusDto.Name">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Status.CreateStatusDto.Description">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Models.Status.CreateStatusDto.Mapping(AutoMapper.Profile)">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:EDSystems.WebApi.Models.Status.DeleteStatusesDto">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Status.DeleteStatusesDto.Id">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Models.Status.DeleteStatusesDto.Mapping(AutoMapper.Profile)">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:EDSystems.WebApi.Models.Status.UpdateStatusDto">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Status.UpdateStatusDto.Id">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Status.UpdateStatusDto.Name">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Status.UpdateStatusDto.Description">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Models.Status.UpdateStatusDto.Mapping(AutoMapper.Profile)">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:EDSystems.WebApi.Models.UserAccount.DeleteUserAccountDto">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.UserAccount.DeleteUserAccountDto.Id">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Models.UserAccount.DeleteUserAccountDto.Mapping(AutoMapper.Profile)">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:EDSystems.WebApi.Models.UserManager.AddToRoleDto">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.UserManager.AddToRoleDto.RoleId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.UserManager.AddToRoleDto.UserId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Models.UserManager.AddToRoleDto.Mapping(AutoMapper.Profile)">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:EDSystems.WebApi.Models.UserManager.CreateUserDto">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.UserManager.CreateUserDto.FirstName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.UserManager.CreateUserDto.LastName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.UserManager.CreateUserDto.UserName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.UserManager.CreateUserDto.Email">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.UserManager.CreateUserDto.PhoneNumber">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.UserManager.CreateUserDto.Address">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.UserManager.CreateUserDto.RoleName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.UserManager.CreateUserDto.PasswordHash">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Models.UserManager.CreateUserDto.Mapping(AutoMapper.Profile)">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:EDSystems.WebApi.Models.UserManager.DeleteFromRoleDto">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.UserManager.DeleteFromRoleDto.RoleId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.UserManager.DeleteFromRoleDto.UserId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Models.UserManager.DeleteFromRoleDto.Mapping(AutoMapper.Profile)">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:EDSystems.WebApi.Models.UserManager.UpdatePasswordDto">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.UserManager.UpdatePasswordDto.UserId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.UserManager.UpdatePasswordDto.PasswordHash">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Models.UserManager.UpdatePasswordDto.Mapping(AutoMapper.Profile)">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:EDSystems.WebApi.Models.UserManager.UpdateUserDto">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.UserManager.UpdateUserDto.Id">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.UserManager.UpdateUserDto.FirstName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.UserManager.UpdateUserDto.LastName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.UserManager.UpdateUserDto.Email">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.UserManager.UpdateUserDto.Address">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.UserManager.UpdateUserDto.PhoneNumber">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Models.UserManager.UpdateUserDto.Mapping(AutoMapper.Profile)">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:EDSystems.WebApi.Models.UserManager.UpdateUserRoleDto">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.UserManager.UpdateUserRoleDto.UserId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.UserManager.UpdateUserRoleDto.NewRoleId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.UserManager.UpdateUserRoleDto.OldRoleId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Models.UserManager.UpdateUserRoleDto.Mapping(AutoMapper.Profile)">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:EDSystems.WebApi.Services.CurrentUserService">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Services.CurrentUserService.#ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Services.CurrentUserService.UserId">
+             <summary>
+            
+             </summary>
+        </member>
+    </members>
+</doc>

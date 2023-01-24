@@ -1,0 +1,67 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Claims\**" />
+    <EmbeddedResource Remove="Claims\**" />
+    <None Remove="Claims\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+    <PackageReference Include="FluentValidation" Version="11.4.0" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.4.0" />
+    <PackageReference Include="MediatR" Version="11.1.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="7.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.2" />
+    <PackageReference Include="Serilog" Version="2.12.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EDSystems.Domain\EDSystems.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="EDSystems\Commands\Accounts\DeleteAccounts\" />
+    <Folder Include="EDSystems\Commands\Accounts\UpdateAccount\" />
+    <Folder Include="EDSystems\Commands\UserAccount\CreateUserAccount\" />
+    <Folder Include="EDSystems\Commands\UserAccount\DeleteUserAccount\" />
+    <Folder Include="EDSystems\Commands\UserAccount\DeleteUserAccounts\" />
+    <Folder Include="EDSystems\Commands\UserAccount\UpdateUserAccount\" />
+    <Folder Include="EDSystems\Commands\Users\Administrators\" />
+    <Folder Include="EDSystems\Commands\Users\Couriers\" />
+    <Folder Include="EDSystems\Commands\Users\Customers\" />
+    <Folder Include="EDSystems\Commands\Users\Managers\" />
+    <Folder Include="EDSystems\Commands\Users\Guests\" />
+    <Folder Include="EDSystems\Commands\Users\Staffs\" />
+    <Folder Include="EDSystems\Queries\UserAccountHistories\GetUserAccountHistoryDetails\" />
+    <Folder Include="EDSystems\Queries\UserAccountHistories\GetUserAccountHistoryList\" />
+    <Folder Include="EDSystems\Queries\UserAccounts\GetUserAccountDetails\" />
+    <Folder Include="EDSystems\Queries\UserAccounts\GetUserAccountList\" />
+    <Folder Include="EDSystems\Queries\Users\Couriers\" />
+    <Folder Include="EDSystems\Queries\Users\Customers\" />
+    <Folder Include="EDSystems\Queries\Users\Managers\" />
+    <Folder Include="EDSystems\Queries\Users\Administrators\" />
+    <Folder Include="EDSystems\Queries\Users\Guests\" />
+    <Folder Include="EDSystems\Queries\Users\Staffs\" />
+    <Folder Include="EDSystems\Commands\AccountsHistory\" />
+    <Folder Include="EDSystems\Queries\ParcelJobs\GetParcelJobDetails\" />
+    <Folder Include="EDSystems\Queries\ParcelJobs\GetParcelJobList\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="EDSystems\Commands\AccountsHistory\" />
+    <None Remove="EDSystems\Queries\AccountHistory\GetAccountHistoryList\" />
+    <None Remove="EDSystems\Queries\AccountHistory\GetAccountHistoryDetails\" />
+    <None Remove="EDSystems\Queries\ParcelJobs\" />
+    <None Remove="EDSystems\Queries\ParcelJobs\GetParcelJobDetails\" />
+    <None Remove="EDSystems\Queries\ParcelJobs\GetParcelJobList\" />
+  </ItemGroup>
+</Project>
