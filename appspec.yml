@@ -3,7 +3,7 @@ version: 0
 os: linux
 files:
   - source: app
-    destination: /var/www/edsystems
+    destination: /var/www
   - source: scripts/edsystems.backend.service
     destination: /etc/systemd/system
 hooks:

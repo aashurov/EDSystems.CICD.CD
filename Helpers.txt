@@ -87,6 +87,7 @@ For Connecting to EC2 Instances
 	- chmod 400 ~/.ssh/EDSystems-Key.pem
 	- ssh -i "~/.ssh/EDSystems-Key.pem" ec2-user@ec2-3-89-251-183.compute-1.amazonaws.com
 ssh -i "~/.ssh/EDSystems-Key.pem" ec2-user@ec2-54-84-39-32.compute-1.amazonaws.com
+ssh -i "~/.ssh/EDSystems-Key.pem" ec2-user@ec2-34-203-77-76.compute-1.amazonaws.com
 // Code Deploy
 edsystems-cdd
 	//Deployment Group for Code Deploy
