@@ -7,6 +7,7 @@ using EDSystems.Application.EDSystems.Queries.Branches.GetBranchDetails;
 using EDSystems.Application.EDSystems.Queries.Branches.GetBranchList;
 using EDSystems.Application.EDSystems.Queries.Branches.GetBranchListWithPagination;
 using EDSystems.WebApi.Models.Branches;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EDSystems.WebApi.Controllers;
@@ -15,7 +16,7 @@ namespace EDSystems.WebApi.Controllers;
 /// Branches
 /// </summary>
 
-//[Authorize(Roles = "Administrator")]
+[Authorize(Roles = "Administrator")]
 //[Authorize(Policy = "CanAddBranch")]
 [Produces("application/json")]
 [Route("api/[controller]")]

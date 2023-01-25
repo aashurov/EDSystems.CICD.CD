@@ -10,6 +10,7 @@ using EDSystems.Application.Users.Queries.GetUserDetails;
 using EDSystems.Application.Users.Queries.GetUserList;
 using EDSystems.Application.Users.Queries.GetUserListWithPagination;
 using EDSystems.WebApi.Models.UserManager;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EDSystems.WebApi.Controllers
@@ -17,8 +18,8 @@ namespace EDSystems.WebApi.Controllers
     /// <summary>
     /// User Manager
     /// </summary>
-    //[Authorize(Roles = "Administrator")]
-    //[Produces("application/json")]
+    [Authorize(Roles = "Administrator")]
+    [Produces("application/json")]
     [Route("api/[controller]")]
     public class UserManagerController : BaseController
     {

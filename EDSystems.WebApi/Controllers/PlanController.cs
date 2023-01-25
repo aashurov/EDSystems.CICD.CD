@@ -7,6 +7,7 @@ using EDSystems.Application.EDSystems.Queries.Plans.GetPlanDetails;
 using EDSystems.Application.EDSystems.Queries.Plans.GetPlanList;
 using EDSystems.Application.EDSystems.Queries.Plans.GetPlanListWithPagination;
 using EDSystems.WebApi.Models.Plan;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EDSystems.WebApi.Controllers
@@ -14,7 +15,7 @@ namespace EDSystems.WebApi.Controllers
     /// <summary>
     ///
     /// </summary>
-    //[Authorize(Roles = "Administrator")]
+    [Authorize(Roles = "Administrator")]
     //[Produces("application/json")]
     [Route("api/[controller]")]
     public class PlanController : BaseController

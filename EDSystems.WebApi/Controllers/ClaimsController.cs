@@ -2,6 +2,7 @@
 using EDSystems.Application.Claims.Queries.GetClaimList;
 using EDSystems.Application.EDSystems.Commands.MyClaims.AddToClaim;
 using EDSystems.WebApi.Models.UserClaim.GetClaimList;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EDSystems.WebApi.Controllers;
@@ -9,8 +10,8 @@ namespace EDSystems.WebApi.Controllers;
 /// <summary>
 /// User Manager
 /// </summary>
-//[Authorize(Roles = "Administrator")]
-//[Produces("application/json")]
+[Authorize(Roles = "Administrator")]
+[Produces("application/json")]
 [Route("api/[controller]")]
 [ApiController]
 public class ClaimsController : BaseController

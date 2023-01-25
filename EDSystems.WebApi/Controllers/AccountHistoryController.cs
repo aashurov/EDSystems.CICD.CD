@@ -2,6 +2,7 @@
 using EDSystems.Application.EDSystems.Queries.AccountsHistory.GetAccountHistoryDetails;
 using EDSystems.Application.EDSystems.Queries.AccountsHistory.GetAccountHistoryList;
 using EDSystems.Application.EDSystems.Queries.AccountsHistory.GetAccountHistoryListWithPagination;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EDSystems.WebApi.Controllers;
@@ -10,7 +11,7 @@ namespace EDSystems.WebApi.Controllers;
 /// Accounts
 /// </summary>
 
-//[Authorize(Roles = "Administrator")]
+[Authorize(Roles = "Administrator")]
 //[Authorize(Policy = "OnlyForLondon")]
 [Produces("application/json")]
 [Route("api/[controller]")]

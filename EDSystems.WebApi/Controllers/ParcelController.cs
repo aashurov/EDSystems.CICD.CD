@@ -25,12 +25,14 @@ using EDSystems.Application.EDSystems.Queries.Parcels.GetParcelList;
 using EDSystems.Application.EDSystems.Queries.Parcels.GetParcelListWithPagination;
 using EDSystems.WebApi.Models.Parcel;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace EDSystems.WebApi.Controllers
 {
     /// <summary>
     ///
     /// </summary>
+    [Authorize(Roles = "Administrator")]
     [Produces("application/json")]
     [Route("api/[controller]")]
     public class ParcelController : BaseController

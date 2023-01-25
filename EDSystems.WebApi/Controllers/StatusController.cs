@@ -7,6 +7,7 @@ using EDSystems.Application.EDSystems.Queries.Statuses.GetStatusDetails;
 using EDSystems.Application.EDSystems.Queries.Statuses.GetStatusList;
 using EDSystems.Application.EDSystems.Queries.Statuses.GetStatusListWithPagination;
 using EDSystems.WebApi.Models.Status;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EDSystems.WebApi.Controllers
@@ -14,7 +15,7 @@ namespace EDSystems.WebApi.Controllers
     /// <summary>
     ///
     /// </summary>
-    //[Authorize(Roles = "Administrator")]
+    [Authorize(Roles = "Administrator")]
     [Produces("application/json")]
     [Route("api/[controller]")]
     public class StatusController : BaseController

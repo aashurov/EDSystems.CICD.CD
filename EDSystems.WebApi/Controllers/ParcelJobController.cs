@@ -7,6 +7,7 @@ using EDSystems.Application.EDSystems.Queries.ParcelJobs.GetParcelJobList;
 using EDSystems.Application.EDSystems.Queries.ParcelJobs.GetParcelJobListWithPagination;
 using EDSystems.WebApi.Models.Branches;
 using EDSystems.WebApi.Models.ParcelJob;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EDSystems.WebApi.Controllers;
@@ -15,7 +16,7 @@ namespace EDSystems.WebApi.Controllers;
 /// Branches
 /// </summary>
 
-//[Authorize(Roles = "Administrator")]
+[Authorize(Roles = "Administrator")]
 //[Authorize(Policy = "OnlyForLondon")]
 [Produces("application/json")]
 [Route("api/[controller]")]
