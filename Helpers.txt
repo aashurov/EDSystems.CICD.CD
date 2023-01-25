@@ -71,9 +71,11 @@
 ExecStart=/usr/bin/dotnet /var/www/edsystems/EDSystems.WebApi.dll
 ExecStart=/var/www/edsystems/EDSystems.WebApi.dll
 
+sudo systemctl enable edsystems.backend.service
 sudo systemctl daemon-reload
 sudo systemctl restart edsystems.backend.service
 sudo service edsystems.backend.service status
+sudo systemctl status edsystems.backend.service
 
 //Elastic Container Instace
 edsystems-ec2-1
