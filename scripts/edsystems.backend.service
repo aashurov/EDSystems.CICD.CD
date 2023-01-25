@@ -2,7 +2,7 @@
 Description=EDSystems.Backend
 
 [Service]
-WorkingDirectory=/var/www/edsystems
+WorkingDirectory=/var/www/edsystems/
 ExecStart=/usr/bin/dotnet /var/www/edsystems/EDSystems.WebApi.dll
 Restart=always
 # Restart service after 10 seconds when dotnet services crashes
