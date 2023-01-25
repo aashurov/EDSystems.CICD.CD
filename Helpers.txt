@@ -68,8 +68,8 @@
 
 
 
-ExecStart=/usr/bin/dotnet /var/www/edsystems/EDSystems.WebApi.dll
-ExecStart=/var/www/edsystems/EDSystems.WebApi.dll
+ExecStart=/usr/bin/dotnet /var/www/EDSystems.WebApi.dll
+ExecStart=/var/www/EDSystems.WebApi.dll
 
 sudo systemctl enable edsystems.backend.service
 sudo systemctl daemon-reload
