@@ -6,7 +6,7 @@
 	git branch -M main
 	git remote add origin https://github.com/aashurov/EDSystems.CICD.CD.git
 	git push -u origin main
-	//This line for ssh
+	//This line for sshdddd
 	git push git@github.com:aashurov/EDSystems.CICD.CD.git   
 	git remote set-url origin git@github.com:aashurov/EDSystems.CICD.CD.git
 	------------------------------------------
