@@ -113,6 +113,11 @@ edsystems-cdp
 //Amazon S3 Bucket
 edsystems-s3
 
-sg-0bcddb7540c6dab37
+ 
 
-sg-02cfbd91a1fa0ca70
+dotnet tool install --global dotnet-ef
+dotnet ef migrations add MyFirstMigration
+dotnet ef database update
+
+dotnet ef --startup-project ../EDSystems.WebApi/ migrations add myMigration01
+dotnet ef --startup-project ../EDSystems.WebApi/ database update

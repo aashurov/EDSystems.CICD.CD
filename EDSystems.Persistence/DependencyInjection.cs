@@ -22,8 +22,7 @@ public static class DependencyInjection
             options.UseNpgsql(connectionString);
             AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
         });
-        services.AddScoped<IEDSystemsDbContext>(
-            provider => provider.GetService<EDSystemsDbContext>());
+        services.AddScoped<IEDSystemsDbContext>(provider => provider.GetService<EDSystemsDbContext>());
         services.AddTransient<IDateTimeService, DateTimeService>();
         services.AddTransient<IGetExchangeRateService, GetExchangeRateService>();
         //services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)

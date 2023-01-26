@@ -12,15 +12,15 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace EDSystems.Persistence.Migrations
 {
     [DbContext(typeof(EDSystemsDbContext))]
-    [Migration("20230104080450_Initialize")]
-    partial class Initialize
+    [Migration("20230126053211_myMigration01")]
+    partial class myMigration01
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.1")
+                .HasAnnotation("ProductVersion", "7.0.2")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
@@ -80,7 +80,7 @@ namespace EDSystems.Persistence.Migrations
                             Balance = 0m,
                             BranchId = 1,
                             CurrencyId = 1,
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8688),
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6750),
                             Name = "Валютный счет Москвы",
                             Number = "643840USD"
                         },
@@ -90,7 +90,7 @@ namespace EDSystems.Persistence.Migrations
                             Balance = 0m,
                             BranchId = 1,
                             CurrencyId = 2,
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8691),
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6750),
                             Name = "Рублевый счет Москвы",
                             Number = "643643RUB"
                         },
@@ -100,7 +100,7 @@ namespace EDSystems.Persistence.Migrations
                             Balance = 0m,
                             BranchId = 2,
                             CurrencyId = 1,
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8693),
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6750),
                             Name = "Валютный счет Ташкента",
                             Number = "860840USD"
                         },
@@ -110,7 +110,7 @@ namespace EDSystems.Persistence.Migrations
                             Balance = 0m,
                             BranchId = 2,
                             CurrencyId = 2,
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8694),
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6760),
                             Name = "Рублевый счет Ташкента",
                             Number = "860643RUB"
                         },
@@ -120,7 +120,7 @@ namespace EDSystems.Persistence.Migrations
                             Balance = 0m,
                             BranchId = 3,
                             CurrencyId = 1,
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8696),
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6760),
                             Name = "Валютный счет Бишкека",
                             Number = "417840USD"
                         },
@@ -130,7 +130,7 @@ namespace EDSystems.Persistence.Migrations
                             Balance = 0m,
                             BranchId = 3,
                             CurrencyId = 2,
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8697),
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6760),
                             Name = "Рублевый счет Бишкека",
                             Number = "417643RUB"
                         },
@@ -140,7 +140,7 @@ namespace EDSystems.Persistence.Migrations
                             Balance = 0m,
                             BranchId = 4,
                             CurrencyId = 1,
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8698),
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6760),
                             Name = "Валютный счет Душанбе",
                             Number = "972840USD"
                         },
@@ -150,7 +150,7 @@ namespace EDSystems.Persistence.Migrations
                             Balance = 0m,
                             BranchId = 4,
                             CurrencyId = 2,
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8699),
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6770),
                             Name = "Рублевый счет Душанбе",
                             Number = "972843RUB"
                         },
@@ -160,7 +160,7 @@ namespace EDSystems.Persistence.Migrations
                             Balance = 0m,
                             BranchId = 5,
                             CurrencyId = 1,
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8700),
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6770),
                             Name = "Валютный счет Алматы",
                             Number = "398840USD"
                         },
@@ -170,7 +170,7 @@ namespace EDSystems.Persistence.Migrations
                             Balance = 0m,
                             BranchId = 5,
                             CurrencyId = 2,
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8702),
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6770),
                             Name = "Рублевый счет Алматы",
                             Number = "398643RUB"
                         },
@@ -180,7 +180,7 @@ namespace EDSystems.Persistence.Migrations
                             Balance = 0m,
                             BranchId = 6,
                             CurrencyId = 1,
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8703),
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6780),
                             Name = "Валютный счет Стамбул",
                             Number = "792840USD"
                         },
@@ -190,7 +190,7 @@ namespace EDSystems.Persistence.Migrations
                             Balance = 0m,
                             BranchId = 6,
                             CurrencyId = 5,
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8704),
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6780),
                             Name = "Лировый счет Стамбул",
                             Number = "792949TRY"
                         });
@@ -316,7 +316,7 @@ namespace EDSystems.Persistence.Migrations
                             City = "Москва",
                             Code = "643",
                             Country = "Россия",
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8662),
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6670),
                             Email = "info@ethnologistics.asia",
                             Name = "Москва",
                             Phone = "+765165498496"
@@ -328,7 +328,7 @@ namespace EDSystems.Persistence.Migrations
                             City = "Ташкент",
                             Code = "860",
                             Country = "Узбекистан",
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8664),
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6710),
                             Email = "info@ethnologistics.asia",
                             Name = "Ташкент",
                             Phone = "+998984651"
@@ -340,7 +340,7 @@ namespace EDSystems.Persistence.Migrations
                             City = "Бишкек",
                             Code = "417",
                             Country = "Киргистан",
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8667),
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6720),
                             Email = "info@ethnologistics.asia",
                             Name = "Бишкек",
                             Phone = "+765165498496"
@@ -352,7 +352,7 @@ namespace EDSystems.Persistence.Migrations
                             City = "Душанбе",
                             Code = "762",
                             Country = "Таджикистан",
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8668),
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6720),
                             Email = "info@ethnologistics.asia",
                             Name = "Душанбе",
                             Phone = "+665165498496"
@@ -364,7 +364,7 @@ namespace EDSystems.Persistence.Migrations
                             City = "Алматы",
                             Code = "398",
                             Country = "Казахстан",
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8670),
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6720),
                             Email = "info@ethnologistics.asia",
                             Name = "Алматы",
                             Phone = "+665165498496"
@@ -376,7 +376,7 @@ namespace EDSystems.Persistence.Migrations
                             City = "Стамбул",
                             Code = "792",
                             Country = "Турция",
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8671),
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6720),
                             Email = "info@ethnologistics.asia",
                             Name = "Стамбул",
                             Phone = "+665165498496"
@@ -432,7 +432,7 @@ namespace EDSystems.Persistence.Migrations
                             Id = 1,
                             Code = "USD",
                             Country = "Соединенные Штаты Америки",
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 371, DateTimeKind.Local).AddTicks(8377),
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 804, DateTimeKind.Local).AddTicks(7760),
                             Name = "Доллар",
                             Number = 840
                         },
@@ -441,7 +441,7 @@ namespace EDSystems.Persistence.Migrations
                             Id = 2,
                             Code = "UZS",
                             Country = "Республика Узбекистан",
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 371, DateTimeKind.Local).AddTicks(8379),
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 804, DateTimeKind.Local).AddTicks(7760),
                             Name = "Сум",
                             Number = 860
                         },
@@ -450,7 +450,7 @@ namespace EDSystems.Persistence.Migrations
                             Id = 3,
                             Code = "RUB",
                             Country = "Российская Федерация",
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 371, DateTimeKind.Local).AddTicks(8380),
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 804, DateTimeKind.Local).AddTicks(7760),
                             Name = "Рубль",
                             Number = 643
                         },
@@ -459,7 +459,7 @@ namespace EDSystems.Persistence.Migrations
                             Id = 4,
                             Code = "KZT",
                             Country = "Республика Казахстан",
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 371, DateTimeKind.Local).AddTicks(8381),
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 804, DateTimeKind.Local).AddTicks(7770),
                             Name = "Тенге",
                             Number = 398
                         },
@@ -468,7 +468,7 @@ namespace EDSystems.Persistence.Migrations
                             Id = 5,
                             Code = "TRY",
                             Country = "Турция",
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 371, DateTimeKind.Local).AddTicks(8384),
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 804, DateTimeKind.Local).AddTicks(7770),
                             Name = "Лира",
                             Number = 949
                         },
@@ -477,7 +477,7 @@ namespace EDSystems.Persistence.Migrations
                             Id = 6,
                             Code = "AED",
                             Country = "Объедененные Арабские Эмираты",
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 371, DateTimeKind.Local).AddTicks(8385),
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 804, DateTimeKind.Local).AddTicks(7780),
                             Name = "Дирхам",
                             Number = 784
                         },
@@ -486,7 +486,7 @@ namespace EDSystems.Persistence.Migrations
                             Id = 7,
                             Code = "KGS",
                             Country = "Кыргызская Республика",
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 371, DateTimeKind.Local).AddTicks(8386),
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 804, DateTimeKind.Local).AddTicks(7780),
                             Name = "Сом",
                             Number = 417
                         },
@@ -495,7 +495,7 @@ namespace EDSystems.Persistence.Migrations
                             Id = 8,
                             Code = "TJS",
                             Country = "Республика Таджикистан",
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 371, DateTimeKind.Local).AddTicks(8387),
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 804, DateTimeKind.Local).AddTicks(7780),
                             Name = "Сомони",
                             Number = 972
                         });
@@ -535,91 +535,91 @@ namespace EDSystems.Persistence.Migrations
                         new
                         {
                             Id = 1,
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8776),
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6840),
                             Description = "Зарплата",
                             Name = "Зарплата"
                         },
                         new
                         {
                             Id = 2,
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8777),
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6840),
                             Description = "Аванс",
                             Name = "Аванс"
                         },
                         new
                         {
                             Id = 3,
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8778),
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6840),
                             Description = "Курерам за перевозку",
                             Name = "Курерам за перевозку"
                         },
                         new
                         {
                             Id = 4,
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8780),
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6850),
                             Description = "Обед",
                             Name = "Обед"
                         },
                         new
                         {
                             Id = 5,
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8781),
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6850),
                             Description = "Карзи Хасана",
                             Name = "Карзи Хасана"
                         },
                         new
                         {
                             Id = 6,
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8782),
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6850),
                             Description = "Депозит",
                             Name = "Депозит"
                         },
                         new
                         {
                             Id = 7,
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8783),
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6850),
                             Description = "За перевозку до филиала",
                             Name = "За перевозку до филиала"
                         },
                         new
                         {
                             Id = 8,
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8784),
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6850),
                             Description = "За доставку до получателя",
                             Name = "За доставку до получателя"
                         },
                         new
                         {
                             Id = 9,
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8785),
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6860),
                             Description = "За забор посылки",
                             Name = "За забор посылки"
                         },
                         new
                         {
                             Id = 10,
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8786),
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6860),
                             Description = "За выкуп",
                             Name = "За выкуп"
                         },
                         new
                         {
                             Id = 11,
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8787),
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6860),
                             Description = "Ковертация",
                             Name = "Ковертация"
                         },
                         new
                         {
                             Id = 12,
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8788),
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6860),
                             Description = "Перевод",
                             Name = "Перевод"
                         },
                         new
                         {
                             Id = 13,
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8789),
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6870),
                             Description = "За мелкие расходы",
                             Name = "За мелкие расходы"
                         });
@@ -1217,7 +1217,7 @@ namespace EDSystems.Persistence.Migrations
                         {
                             Id = 1,
                             Cost = 7m,
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 371, DateTimeKind.Local).AddTicks(8339),
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 804, DateTimeKind.Local).AddTicks(7700),
                             Description = "Description",
                             Name = "Стандарт"
                         },
@@ -1225,7 +1225,7 @@ namespace EDSystems.Persistence.Migrations
                         {
                             Id = 2,
                             Cost = 12m,
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 371, DateTimeKind.Local).AddTicks(8343),
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 804, DateTimeKind.Local).AddTicks(7710),
                             Description = "Description",
                             Name = "Экспресс"
                         },
@@ -1233,7 +1233,7 @@ namespace EDSystems.Persistence.Migrations
                         {
                             Id = 3,
                             Cost = 30m,
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 371, DateTimeKind.Local).AddTicks(8344),
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 804, DateTimeKind.Local).AddTicks(7710),
                             Description = "Description",
                             Name = "Ультра"
                         },
@@ -1241,7 +1241,7 @@ namespace EDSystems.Persistence.Migrations
                         {
                             Id = 5,
                             Cost = 5m,
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 371, DateTimeKind.Local).AddTicks(8346),
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 804, DateTimeKind.Local).AddTicks(7710),
                             Description = "Description",
                             Name = "Авто"
                         });
@@ -1281,42 +1281,42 @@ namespace EDSystems.Persistence.Migrations
                         new
                         {
                             Id = 1,
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8495),
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6460),
                             Description = "Создан",
                             Name = "Создан"
                         },
                         new
                         {
                             Id = 2,
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8508),
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6500),
                             Description = "В пути",
                             Name = "В пути"
                         },
                         new
                         {
                             Id = 3,
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8509),
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6500),
                             Description = "Прибыл в пункт доставки",
                             Name = "Прибыл"
                         },
                         new
                         {
                             Id = 4,
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8510),
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6500),
                             Description = "На доставке у курьера",
                             Name = "У курьера"
                         },
                         new
                         {
                             Id = 5,
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8511),
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6510),
                             Description = "Доставлен",
                             Name = "Доставлен"
                         },
                         new
                         {
                             Id = 6,
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8512),
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6510),
                             Description = "Выдан",
                             Name = "Выдан"
                         });
@@ -1377,7 +1377,7 @@ namespace EDSystems.Persistence.Migrations
                             Id = 1,
                             Balance = 0m,
                             CurrencyId = 1,
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8727),
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6800),
                             Name = "Валютный счет",
                             Number = "30a8f9cc-840USD",
                             UserId = "30a8f9cc-8d37-4d93-ab2f-774428387e4a"
@@ -1387,7 +1387,7 @@ namespace EDSystems.Persistence.Migrations
                             Id = 2,
                             Balance = 0m,
                             CurrencyId = 1,
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8729),
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6810),
                             Name = "Валютный счет",
                             Number = "cadaa51d-840USD",
                             UserId = "cadaa51d-ddb3-4564-a8c5-79e80c98a032"
@@ -1397,7 +1397,7 @@ namespace EDSystems.Persistence.Migrations
                             Id = 3,
                             Balance = 0m,
                             CurrencyId = 1,
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8731),
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6810),
                             Name = "Валютный счет",
                             Number = "5a6f1681-840USD",
                             UserId = "5a6f1681-c582-46f5-905b-4eb2c222dcf5"
@@ -1407,7 +1407,7 @@ namespace EDSystems.Persistence.Migrations
                             Id = 4,
                             Balance = 0m,
                             CurrencyId = 1,
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8732),
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6810),
                             Name = "Валютный счет",
                             Number = "3b9d7f21-840USD",
                             UserId = "3b9d7f21-1d66-4c98-8648-64a68777bccb"
@@ -1417,7 +1417,7 @@ namespace EDSystems.Persistence.Migrations
                             Id = 5,
                             Balance = 0m,
                             CurrencyId = 1,
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8733),
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6820),
                             Name = "Валютный счет",
                             Number = "0a1e5c27-840USD",
                             UserId = "0a1e5c27-0b09-4f60-a9c3-8618791a8672"
@@ -1427,7 +1427,7 @@ namespace EDSystems.Persistence.Migrations
                             Id = 6,
                             Balance = 0m,
                             CurrencyId = 1,
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8734),
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6820),
                             Name = "Валютный счет",
                             Number = "e13b576b-840USD",
                             UserId = "e13b576b-afbe-4b4c-aaad-64fd9bee3852"
@@ -1551,35 +1551,35 @@ namespace EDSystems.Persistence.Migrations
                         new
                         {
                             Id = "2c5e174e-3b0e-446f-86af-483d56fd7210",
-                            ConcurrencyStamp = "b78116c3-11d9-484c-b902-896a53fa6fe5",
+                            ConcurrencyStamp = "86931cca-93a9-4d23-94ed-7648594dbcda",
                             Name = "Administrator",
                             NormalizedName = "ADMINISTRATOR"
                         },
                         new
                         {
                             Id = "68373a2b-932e-4fff-a7a9-b31e156d4101",
-                            ConcurrencyStamp = "00f37758-d12e-4706-928b-8f88a501745b",
+                            ConcurrencyStamp = "a1ca06a8-78ec-4a2a-bb2b-2bbcddc5fef7",
                             Name = "Manager",
                             NormalizedName = "MANAGER"
                         },
                         new
                         {
                             Id = "5919c97a-b888-4858-bbbe-0123a1952624",
-                            ConcurrencyStamp = "a3477b20-80ad-4983-b32a-1fea3a04c8a8",
+                            ConcurrencyStamp = "73c901b0-26a9-4351-95df-824fc82a9ef9",
                             Name = "Staff",
                             NormalizedName = "STAFF"
                         },
                         new
                         {
                             Id = "401bc2e9-3a0b-4281-9685-d6b36fc37d31",
-                            ConcurrencyStamp = "76b8e705-d258-4dcd-868e-76e72227401d",
+                            ConcurrencyStamp = "25dd939f-03c9-4ff6-9a02-f05eda01664a",
                             Name = "Courier",
                             NormalizedName = "COURIER"
                         },
                         new
                         {
                             Id = "336b1b38-f4c9-4844-8dcb-b59a0d7f0533",
-                            ConcurrencyStamp = "900de5e5-2fc9-4408-ba34-5df4fa2bd94b",
+                            ConcurrencyStamp = "03d6492f-d488-4b62-bc94-c9b982593f7f",
                             Name = "Customer",
                             NormalizedName = "CUSTOMER"
                         });
@@ -1684,8 +1684,8 @@ namespace EDSystems.Persistence.Migrations
                             AccessFailedCount = 0,
                             Address = "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099",
                             ChatId = -1001663331836L,
-                            ConcurrencyStamp = "10f0a47d-d947-4ba1-b5ba-a0cba39bfe51",
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 371, DateTimeKind.Local).AddTicks(8003),
+                            ConcurrencyStamp = "8e36f5b3-39b4-44b8-8b91-c49146f6b790",
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 804, DateTimeKind.Local).AddTicks(5210),
                             Email = "administrator@gmail.com",
                             EmailConfirmed = false,
                             FirstName = "EDSystem",
@@ -1693,10 +1693,10 @@ namespace EDSystems.Persistence.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMINISTRATOR@GMAIL.COM",
                             NormalizedUserName = "ADMINISTRATOR",
-                            PasswordHash = "AQAAAAIAAYagAAAAEDuYFUUOTZ01KYaRl/wNdeERuWD1OsU3wDmdUrmpZHcmAA+Pzp/y3N8yW6zU4RmADA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEPWLHJ4Kp8eNE+/Lc/TL2qt9dbvHMfOC5daPiZVY7a/It3/Y0sb9fG1YFO5FDuZHBQ==",
                             PhoneNumber = "998970000675",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "82c6526a-149e-4860-8dc1-a6c07457eb7b",
+                            SecurityStamp = "1e2c3f61-f858-47f6-9df2-3fb4cf5c4650",
                             TwoFactorEnabled = false,
                             UserName = "administrator",
                             UserNameT = "UserName"
@@ -1707,8 +1707,8 @@ namespace EDSystems.Persistence.Migrations
                             AccessFailedCount = 0,
                             Address = "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099",
                             ChatId = -1001663331836L,
-                            ConcurrencyStamp = "8847ac0c-c6df-431f-9488-991f7049b978",
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 371, DateTimeKind.Local).AddTicks(8026),
+                            ConcurrencyStamp = "70cabda6-975a-4077-88cf-426efd473c0b",
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 804, DateTimeKind.Local).AddTicks(5430),
                             Email = "hayrulloh@gmail.com",
                             EmailConfirmed = false,
                             FirstName = "EDTashkent",
@@ -1716,10 +1716,10 @@ namespace EDSystems.Persistence.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "HAYRULLOH@GMAIL.COM",
                             NormalizedUserName = "HAYRULLOH",
-                            PasswordHash = "AQAAAAIAAYagAAAAEDuYFUUOTZ01KYaRl/wNdeERuWD1OsU3wDmdUrmpZHcmAA+Pzp/y3N8yW6zU4RmADA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEPWLHJ4Kp8eNE+/Lc/TL2qt9dbvHMfOC5daPiZVY7a/It3/Y0sb9fG1YFO5FDuZHBQ==",
                             PhoneNumber = "998935788886",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "1a872252-a5bd-44bb-87fc-a84a71effba3",
+                            SecurityStamp = "3b338ad8-2318-4fde-8ff4-c18da1d0d8e2",
                             TwoFactorEnabled = false,
                             UserName = "hayrulloh",
                             UserNameT = "UserName"
@@ -1730,8 +1730,8 @@ namespace EDSystems.Persistence.Migrations
                             AccessFailedCount = 0,
                             Address = "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099",
                             ChatId = -1001663331836L,
-                            ConcurrencyStamp = "6ba9f07a-bde3-43b6-9e40-d0d04bd94eff",
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 371, DateTimeKind.Local).AddTicks(8035),
+                            ConcurrencyStamp = "194917f3-6ab4-45e3-b0dd-069511675a0a",
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 804, DateTimeKind.Local).AddTicks(5630),
                             Email = "Nodir@gmail.com",
                             EmailConfirmed = false,
                             FirstName = "EDTashkent",
@@ -1739,10 +1739,10 @@ namespace EDSystems.Persistence.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "NODIR@GMAIL.COM",
                             NormalizedUserName = "NODIR",
-                            PasswordHash = "AQAAAAIAAYagAAAAEDuYFUUOTZ01KYaRl/wNdeERuWD1OsU3wDmdUrmpZHcmAA+Pzp/y3N8yW6zU4RmADA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEPWLHJ4Kp8eNE+/Lc/TL2qt9dbvHMfOC5daPiZVY7a/It3/Y0sb9fG1YFO5FDuZHBQ==",
                             PhoneNumber = "998909046605",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "11b2a014-744a-43a1-8ed7-b221823b4697",
+                            SecurityStamp = "1067df9b-92f3-40a0-9e29-7f5e80c21579",
                             TwoFactorEnabled = false,
                             UserName = "nodir",
                             UserNameT = "UserName"
@@ -1753,8 +1753,8 @@ namespace EDSystems.Persistence.Migrations
                             AccessFailedCount = 0,
                             Address = "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099",
                             ChatId = -1001663331836L,
-                            ConcurrencyStamp = "25bcd5cb-7701-4db8-a14d-825a6caf2884",
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 371, DateTimeKind.Local).AddTicks(8042),
+                            ConcurrencyStamp = "75dcc7fa-99ce-49c1-a420-798d958b42ee",
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 804, DateTimeKind.Local).AddTicks(5650),
                             Email = "Javohir@gmail.com",
                             EmailConfirmed = false,
                             FirstName = "EDTashkent",
@@ -1762,10 +1762,10 @@ namespace EDSystems.Persistence.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "JAVOHIR@GMAIL.COM",
                             NormalizedUserName = "JAVOHIR",
-                            PasswordHash = "AQAAAAIAAYagAAAAEDuYFUUOTZ01KYaRl/wNdeERuWD1OsU3wDmdUrmpZHcmAA+Pzp/y3N8yW6zU4RmADA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEPWLHJ4Kp8eNE+/Lc/TL2qt9dbvHMfOC5daPiZVY7a/It3/Y0sb9fG1YFO5FDuZHBQ==",
                             PhoneNumber = "998931710966",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "33d48f21-ebd5-4a27-9a3a-b4c58afa7740",
+                            SecurityStamp = "3005b877-7645-437e-87ee-70787241f668",
                             TwoFactorEnabled = false,
                             UserName = "javohir",
                             UserNameT = "UserName"
@@ -1776,8 +1776,8 @@ namespace EDSystems.Persistence.Migrations
                             AccessFailedCount = 0,
                             Address = "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099",
                             ChatId = -1001663331836L,
-                            ConcurrencyStamp = "4dc3ba8f-b10a-405f-8849-6e60f4a84f45",
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 371, DateTimeKind.Local).AddTicks(8049),
+                            ConcurrencyStamp = "356f9e00-7a90-4a69-9599-279751fc2bbb",
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 804, DateTimeKind.Local).AddTicks(5680),
                             Email = "Ismoil@gmail.com",
                             EmailConfirmed = false,
                             FirstName = "EDTashkent",
@@ -1785,10 +1785,10 @@ namespace EDSystems.Persistence.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "ISMOIL@GMAIL.COM",
                             NormalizedUserName = "ISMOIL",
-                            PasswordHash = "AQAAAAIAAYagAAAAEDuYFUUOTZ01KYaRl/wNdeERuWD1OsU3wDmdUrmpZHcmAA+Pzp/y3N8yW6zU4RmADA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEPWLHJ4Kp8eNE+/Lc/TL2qt9dbvHMfOC5daPiZVY7a/It3/Y0sb9fG1YFO5FDuZHBQ==",
                             PhoneNumber = "998977093262",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "de9bbbe1-4263-47cc-9dfd-4d4ca1cd80ad",
+                            SecurityStamp = "4db9651d-6702-4cd7-99e0-b1e446cfbe4e",
                             TwoFactorEnabled = false,
                             UserName = "ismoil",
                             UserNameT = "UserName"
@@ -1799,8 +1799,8 @@ namespace EDSystems.Persistence.Migrations
                             AccessFailedCount = 0,
                             Address = "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099",
                             ChatId = -1001663331836L,
-                            ConcurrencyStamp = "0235589c-cd85-48a5-8bcc-54520a5061cf",
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 371, DateTimeKind.Local).AddTicks(8058),
+                            ConcurrencyStamp = "54515182-b527-43ae-8f92-16133e8968e8",
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 804, DateTimeKind.Local).AddTicks(5690),
                             Email = "Sadulla@gmail.com",
                             EmailConfirmed = false,
                             FirstName = "EDTashkent",
@@ -1808,10 +1808,10 @@ namespace EDSystems.Persistence.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "SADULLA@GMAIL.COM",
                             NormalizedUserName = "SADULLA",
-                            PasswordHash = "AQAAAAIAAYagAAAAEDuYFUUOTZ01KYaRl/wNdeERuWD1OsU3wDmdUrmpZHcmAA+Pzp/y3N8yW6zU4RmADA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEPWLHJ4Kp8eNE+/Lc/TL2qt9dbvHMfOC5daPiZVY7a/It3/Y0sb9fG1YFO5FDuZHBQ==",
                             PhoneNumber = "998994885995",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "72a970f1-235c-4d86-9752-99fd1a424789",
+                            SecurityStamp = "2f5872d7-12f6-44b1-a1ef-ead46861be0f",
                             TwoFactorEnabled = false,
                             UserName = "sadulla",
                             UserNameT = "UserName"
@@ -1822,8 +1822,8 @@ namespace EDSystems.Persistence.Migrations
                             AccessFailedCount = 0,
                             Address = "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099",
                             ChatId = -1001663331836L,
-                            ConcurrencyStamp = "91855aa5-b3f9-4dee-9d30-771f29a65a46",
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 371, DateTimeKind.Local).AddTicks(8065),
+                            ConcurrencyStamp = "e6d64b32-4726-4041-bfa8-d3f1859aa70e",
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 804, DateTimeKind.Local).AddTicks(5720),
                             Email = "Ubaydulla@gmail.com",
                             EmailConfirmed = false,
                             FirstName = "EDTashkent",
@@ -1831,10 +1831,10 @@ namespace EDSystems.Persistence.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "UBAYDULLA@GMAIL.COM",
                             NormalizedUserName = "UBAYDULLA",
-                            PasswordHash = "AQAAAAIAAYagAAAAEDuYFUUOTZ01KYaRl/wNdeERuWD1OsU3wDmdUrmpZHcmAA+Pzp/y3N8yW6zU4RmADA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEPWLHJ4Kp8eNE+/Lc/TL2qt9dbvHMfOC5daPiZVY7a/It3/Y0sb9fG1YFO5FDuZHBQ==",
                             PhoneNumber = "998990500033",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "6b556a10-0876-4174-b036-5eb0e8ec3c5f",
+                            SecurityStamp = "7351a8f9-a2bc-4380-8778-43172014facf",
                             TwoFactorEnabled = false,
                             UserName = "ubaydulla",
                             UserNameT = "UserName"
@@ -1845,8 +1845,8 @@ namespace EDSystems.Persistence.Migrations
                             AccessFailedCount = 0,
                             Address = "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099",
                             ChatId = -1001663331836L,
-                            ConcurrencyStamp = "679ab848-65ad-43c9-a1d6-9d6bdefd88db",
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 371, DateTimeKind.Local).AddTicks(8071),
+                            ConcurrencyStamp = "5f87e2ad-04e9-41fc-b2a3-7ce35d683ad9",
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 804, DateTimeKind.Local).AddTicks(5730),
                             Email = "Khikmatillo@gmail.com",
                             EmailConfirmed = false,
                             FirstName = "EDTashkent",
@@ -1854,10 +1854,10 @@ namespace EDSystems.Persistence.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "KHIKMATILLO@GMAIL.COM",
                             NormalizedUserName = "KHIKMATILLO",
-                            PasswordHash = "AQAAAAIAAYagAAAAEDuYFUUOTZ01KYaRl/wNdeERuWD1OsU3wDmdUrmpZHcmAA+Pzp/y3N8yW6zU4RmADA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEPWLHJ4Kp8eNE+/Lc/TL2qt9dbvHMfOC5daPiZVY7a/It3/Y0sb9fG1YFO5FDuZHBQ==",
                             PhoneNumber = "998974468090",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "2ca5e2b1-98a3-4115-8969-703c0534afb3",
+                            SecurityStamp = "22757420-a20c-4a53-bfdd-0689d7ba192b",
                             TwoFactorEnabled = false,
                             UserName = "khikmatillo",
                             UserNameT = "UserName"
@@ -1868,8 +1868,8 @@ namespace EDSystems.Persistence.Migrations
                             AccessFailedCount = 0,
                             Address = "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099",
                             ChatId = -1001663331836L,
-                            ConcurrencyStamp = "070c4151-d94e-4f08-805a-24a7a9790fb4",
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 371, DateTimeKind.Local).AddTicks(8079),
+                            ConcurrencyStamp = "ad31512d-f2f4-48aa-b293-c37f55486174",
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 804, DateTimeKind.Local).AddTicks(5930),
                             Email = "Abbos@gmail.com",
                             EmailConfirmed = false,
                             FirstName = "EDTashkent",
@@ -1877,10 +1877,10 @@ namespace EDSystems.Persistence.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "ABBOS@GMAIL.COM",
                             NormalizedUserName = "ABBOS",
-                            PasswordHash = "AQAAAAIAAYagAAAAEDuYFUUOTZ01KYaRl/wNdeERuWD1OsU3wDmdUrmpZHcmAA+Pzp/y3N8yW6zU4RmADA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEPWLHJ4Kp8eNE+/Lc/TL2qt9dbvHMfOC5daPiZVY7a/It3/Y0sb9fG1YFO5FDuZHBQ==",
                             PhoneNumber = "998903550022",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "25bc8988-3e39-4037-a765-fcaf30ec9324",
+                            SecurityStamp = "43d897b0-c1b1-47cd-a912-0eb015e84535",
                             TwoFactorEnabled = false,
                             UserName = "abbos",
                             UserNameT = "UserName"
@@ -1891,8 +1891,8 @@ namespace EDSystems.Persistence.Migrations
                             AccessFailedCount = 0,
                             Address = "Российская Федерация, Московская область, г. Москва, Академический район, улица Винокурова 7/5, корпус 3, индекс 117449",
                             ChatId = -1001663331836L,
-                            ConcurrencyStamp = "a88abf9c-2538-4df0-ad2a-7d0398e8de3d",
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 371, DateTimeKind.Local).AddTicks(8086),
+                            ConcurrencyStamp = "914fc971-8ed8-4397-bebd-c848cdc5f8fc",
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 804, DateTimeKind.Local).AddTicks(7110),
                             Email = "Shohruh@gmail.com",
                             EmailConfirmed = false,
                             FirstName = "EDMoscow",
@@ -1900,10 +1900,10 @@ namespace EDSystems.Persistence.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "SHOHRUH@GMAIL.COM",
                             NormalizedUserName = "SHOHRUH",
-                            PasswordHash = "AQAAAAIAAYagAAAAEDuYFUUOTZ01KYaRl/wNdeERuWD1OsU3wDmdUrmpZHcmAA+Pzp/y3N8yW6zU4RmADA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEPWLHJ4Kp8eNE+/Lc/TL2qt9dbvHMfOC5daPiZVY7a/It3/Y0sb9fG1YFO5FDuZHBQ==",
                             PhoneNumber = "79060470085",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "cb3afab8-4ee5-42ab-8354-64d27033c25c",
+                            SecurityStamp = "16048597-8db8-40e6-8eab-d52951bba337",
                             TwoFactorEnabled = false,
                             UserName = "shohruh",
                             UserNameT = "UserName"
@@ -1914,8 +1914,8 @@ namespace EDSystems.Persistence.Migrations
                             AccessFailedCount = 0,
                             Address = "Российская Федерация, Московская область, г. Москва, Академический район, улица Винокурова 7/5, корпус 3, индекс 117449",
                             ChatId = -1001663331836L,
-                            ConcurrencyStamp = "ff58b480-a157-4a17-8f16-345457e4def5",
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 371, DateTimeKind.Local).AddTicks(8095),
+                            ConcurrencyStamp = "3e460b65-284a-4106-af45-f1c7c0aaab8e",
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 804, DateTimeKind.Local).AddTicks(7160),
                             Email = "Ulugbek@gmail.com",
                             EmailConfirmed = false,
                             FirstName = "EDMoscow",
@@ -1923,10 +1923,10 @@ namespace EDSystems.Persistence.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "ULUGBEK@GMAIL.COM",
                             NormalizedUserName = "ULUGBEK",
-                            PasswordHash = "AQAAAAIAAYagAAAAEDuYFUUOTZ01KYaRl/wNdeERuWD1OsU3wDmdUrmpZHcmAA+Pzp/y3N8yW6zU4RmADA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEPWLHJ4Kp8eNE+/Lc/TL2qt9dbvHMfOC5daPiZVY7a/It3/Y0sb9fG1YFO5FDuZHBQ==",
                             PhoneNumber = "79777403487",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "ca31b94e-ca41-47fa-be8e-05755f8eee75",
+                            SecurityStamp = "db7f5eea-5cd3-407f-8d0f-c928cc6b74ec",
                             TwoFactorEnabled = false,
                             UserName = "ulugbek",
                             UserNameT = "UserName"
@@ -1937,8 +1937,8 @@ namespace EDSystems.Persistence.Migrations
                             AccessFailedCount = 0,
                             Address = "Российская Федерация, Московская область, г. Москва, Академический район, улица Винокурова 7/5, корпус 3, индекс 117449",
                             ChatId = -1001663331836L,
-                            ConcurrencyStamp = "af435553-e30f-46a9-bb2b-3d0a946d5a94",
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 371, DateTimeKind.Local).AddTicks(8101),
+                            ConcurrencyStamp = "3448cf4b-ef2a-4204-87b9-8493a2961a1c",
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 804, DateTimeKind.Local).AddTicks(7170),
                             Email = "Abdulaziz@gmail.com",
                             EmailConfirmed = false,
                             FirstName = "EDMoscow",
@@ -1946,10 +1946,10 @@ namespace EDSystems.Persistence.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "ABDULAZIZ@GMAIL.COM",
                             NormalizedUserName = "ABDULAZIZ",
-                            PasswordHash = "AQAAAAIAAYagAAAAEDuYFUUOTZ01KYaRl/wNdeERuWD1OsU3wDmdUrmpZHcmAA+Pzp/y3N8yW6zU4RmADA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEPWLHJ4Kp8eNE+/Lc/TL2qt9dbvHMfOC5daPiZVY7a/It3/Y0sb9fG1YFO5FDuZHBQ==",
                             PhoneNumber = "79691799000",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "2381ef44-10c9-479f-9b86-c048d4dd1c41",
+                            SecurityStamp = "e0e7d5ed-7ced-4444-8402-0d3ebbc8963e",
                             TwoFactorEnabled = false,
                             UserName = "abdulaziz",
                             UserNameT = "UserName"
@@ -1960,8 +1960,8 @@ namespace EDSystems.Persistence.Migrations
                             AccessFailedCount = 0,
                             Address = "Российская Федерация, Московская область, г. Москва, Академический район, улица Винокурова 7/5, корпус 3, индекс 117449",
                             ChatId = -1001663331836L,
-                            ConcurrencyStamp = "cf8dcab0-9be2-4131-a4e0-281d710da1bc",
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 371, DateTimeKind.Local).AddTicks(8108),
+                            ConcurrencyStamp = "3dabb423-8bff-4cd8-817a-21fd3430c6b8",
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 804, DateTimeKind.Local).AddTicks(7180),
                             Email = "Doniyor@gmail.com",
                             EmailConfirmed = false,
                             FirstName = "EDMoscow",
@@ -1969,10 +1969,10 @@ namespace EDSystems.Persistence.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "DONIYOR@GMAIL.COM",
                             NormalizedUserName = "DONIYOR",
-                            PasswordHash = "AQAAAAIAAYagAAAAEDuYFUUOTZ01KYaRl/wNdeERuWD1OsU3wDmdUrmpZHcmAA+Pzp/y3N8yW6zU4RmADA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEPWLHJ4Kp8eNE+/Lc/TL2qt9dbvHMfOC5daPiZVY7a/It3/Y0sb9fG1YFO5FDuZHBQ==",
                             PhoneNumber = "79777601654",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "38b2474a-9891-4778-9990-cf9c779d6ddf",
+                            SecurityStamp = "8c022c45-a8d9-4183-ba60-29e06e4979c9",
                             TwoFactorEnabled = false,
                             UserName = "doniyor",
                             UserNameT = "UserName"
@@ -1983,8 +1983,8 @@ namespace EDSystems.Persistence.Migrations
                             AccessFailedCount = 0,
                             Address = "Российская Федерация, Московская область, г. Москва, Академический район, улица Винокурова 7/5, корпус 3, индекс 117449",
                             ChatId = -1001663331836L,
-                            ConcurrencyStamp = "3abe7d58-5dd3-4ab9-89b6-31ac025c1aa5",
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 371, DateTimeKind.Local).AddTicks(8186),
+                            ConcurrencyStamp = "c584f918-7f8f-49ec-825d-056b43d47748",
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 804, DateTimeKind.Local).AddTicks(7190),
                             Email = "Shaxzod@gmail.com",
                             EmailConfirmed = false,
                             FirstName = "EDMoscow",
@@ -1992,10 +1992,10 @@ namespace EDSystems.Persistence.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "SHAXZOD@GMAIL.COM",
                             NormalizedUserName = "SHAXZOD",
-                            PasswordHash = "AQAAAAIAAYagAAAAEDuYFUUOTZ01KYaRl/wNdeERuWD1OsU3wDmdUrmpZHcmAA+Pzp/y3N8yW6zU4RmADA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEPWLHJ4Kp8eNE+/Lc/TL2qt9dbvHMfOC5daPiZVY7a/It3/Y0sb9fG1YFO5FDuZHBQ==",
                             PhoneNumber = "79163870009",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "ebb30ea4-81ac-4f92-a7f3-51acaf63468d",
+                            SecurityStamp = "2f329f18-ff9a-4194-9e35-d9482fe2378a",
                             TwoFactorEnabled = false,
                             UserName = "shaxzod",
                             UserNameT = "UserName"
@@ -2006,8 +2006,8 @@ namespace EDSystems.Persistence.Migrations
                             AccessFailedCount = 0,
                             Address = "Российская Федерация, Московская область, г. Москва, Академический район, улица Винокурова 7/5, корпус 3, индекс 117449",
                             ChatId = -1001663331836L,
-                            ConcurrencyStamp = "90624d9b-aa72-48eb-ae91-187ce68146d2",
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 371, DateTimeKind.Local).AddTicks(8194),
+                            ConcurrencyStamp = "6d6d8604-7b64-4850-b5de-0c9574188852",
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 804, DateTimeKind.Local).AddTicks(7210),
                             Email = "Umar@gmail.com",
                             EmailConfirmed = false,
                             FirstName = "EDMoscow",
@@ -2015,10 +2015,10 @@ namespace EDSystems.Persistence.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "UMAR@GMAIL.COM",
                             NormalizedUserName = "UMAR",
-                            PasswordHash = "AQAAAAIAAYagAAAAEDuYFUUOTZ01KYaRl/wNdeERuWD1OsU3wDmdUrmpZHcmAA+Pzp/y3N8yW6zU4RmADA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEPWLHJ4Kp8eNE+/Lc/TL2qt9dbvHMfOC5daPiZVY7a/It3/Y0sb9fG1YFO5FDuZHBQ==",
                             PhoneNumber = "79963321030",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "29a59dbf-02ff-4e55-939f-fea710e93cd9",
+                            SecurityStamp = "d6ce6628-627d-4951-9628-f9a8c14f4a35",
                             TwoFactorEnabled = false,
                             UserName = "umar",
                             UserNameT = "UserName"
@@ -2029,8 +2029,8 @@ namespace EDSystems.Persistence.Migrations
                             AccessFailedCount = 0,
                             Address = "Российская Федерация, Московская область, г. Москва, Академический район, улица Винокурова 7/5, корпус 3, индекс 117449",
                             ChatId = -1001663331836L,
-                            ConcurrencyStamp = "3dd44643-50b8-4748-870b-beb00462a781",
-                            DateCreated = new DateTime(2023, 1, 4, 13, 4, 50, 371, DateTimeKind.Local).AddTicks(8200),
+                            ConcurrencyStamp = "2920a339-0f92-42a5-8c80-7835a158a60a",
+                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 804, DateTimeKind.Local).AddTicks(7240),
                             Email = "Abror@gmail.com",
                             EmailConfirmed = false,
                             FirstName = "EDMoscow",
@@ -2038,10 +2038,10 @@ namespace EDSystems.Persistence.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "ABROR@GMAIL.COM",
                             NormalizedUserName = "ABROR",
-                            PasswordHash = "AQAAAAIAAYagAAAAEDuYFUUOTZ01KYaRl/wNdeERuWD1OsU3wDmdUrmpZHcmAA+Pzp/y3N8yW6zU4RmADA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEPWLHJ4Kp8eNE+/Lc/TL2qt9dbvHMfOC5daPiZVY7a/It3/Y0sb9fG1YFO5FDuZHBQ==",
                             PhoneNumber = "79296800899",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "0a239918-aa15-4b65-a3fc-bdf6d907f471",
+                            SecurityStamp = "ac64ae7c-2f10-4391-8533-708460a4da92",
                             TwoFactorEnabled = false,
                             UserName = "abror",
                             UserNameT = "UserName"

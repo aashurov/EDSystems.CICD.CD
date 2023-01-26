@@ -9,7 +9,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace EDSystems.Persistence.Migrations
 {
     /// <inheritdoc />
-    public partial class Initialize : Migration
+    public partial class Aziz : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -850,11 +850,11 @@ namespace EDSystems.Persistence.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "2c5e174e-3b0e-446f-86af-483d56fd7210", "b78116c3-11d9-484c-b902-896a53fa6fe5", "Administrator", "ADMINISTRATOR" },
-                    { "336b1b38-f4c9-4844-8dcb-b59a0d7f0533", "900de5e5-2fc9-4408-ba34-5df4fa2bd94b", "Customer", "CUSTOMER" },
-                    { "401bc2e9-3a0b-4281-9685-d6b36fc37d31", "76b8e705-d258-4dcd-868e-76e72227401d", "Courier", "COURIER" },
-                    { "5919c97a-b888-4858-bbbe-0123a1952624", "a3477b20-80ad-4983-b32a-1fea3a04c8a8", "Staff", "STAFF" },
-                    { "68373a2b-932e-4fff-a7a9-b31e156d4101", "00f37758-d12e-4706-928b-8f88a501745b", "Manager", "MANAGER" }
+                    { "2c5e174e-3b0e-446f-86af-483d56fd7210", "5e6ce426-367c-4af9-a1b3-ddbfb2e5845d", "Administrator", "ADMINISTRATOR" },
+                    { "336b1b38-f4c9-4844-8dcb-b59a0d7f0533", "ab370926-428c-40ec-8e1a-e51b8b3ad6a2", "Customer", "CUSTOMER" },
+                    { "401bc2e9-3a0b-4281-9685-d6b36fc37d31", "cff8a6f4-f441-4e48-b54d-083c48d0dd45", "Courier", "COURIER" },
+                    { "5919c97a-b888-4858-bbbe-0123a1952624", "e64c8340-0784-4c22-88cb-3c3520a2ec7b", "Staff", "STAFF" },
+                    { "68373a2b-932e-4fff-a7a9-b31e156d4101", "d01f2334-0304-4041-be4f-465d15ffbcc9", "Manager", "MANAGER" }
                 });
 
             migrationBuilder.InsertData(
@@ -862,22 +862,22 @@ namespace EDSystems.Persistence.Migrations
                 columns: new[] { "Id", "AccessFailedCount", "Address", "ChatId", "ConcurrencyStamp", "DateCreated", "DateUpdated", "Email", "EmailConfirmed", "FirstName", "LastName", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "ParcelJobId", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName", "UserNameT" },
                 values: new object[,]
                 {
-                    { "0a1e5c27-0b09-4f60-a9c3-8618791a8672", 0, "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099", -1001663331836L, "4dc3ba8f-b10a-405f-8849-6e60f4a84f45", new DateTime(2023, 1, 4, 13, 4, 50, 371, DateTimeKind.Local).AddTicks(8049), null, "Ismoil@gmail.com", false, "EDTashkent", "Ismoil", false, null, "ISMOIL@GMAIL.COM", "ISMOIL", null, "AQAAAAIAAYagAAAAEDuYFUUOTZ01KYaRl/wNdeERuWD1OsU3wDmdUrmpZHcmAA+Pzp/y3N8yW6zU4RmADA==", "998977093262", false, "de9bbbe1-4263-47cc-9dfd-4d4ca1cd80ad", false, "ismoil", "UserName" },
-                    { "11fafeb4-c7c1-463c-bb1e-55203e68dfdf", 0, "Российская Федерация, Московская область, г. Москва, Академический район, улица Винокурова 7/5, корпус 3, индекс 117449", -1001663331836L, "90624d9b-aa72-48eb-ae91-187ce68146d2", new DateTime(2023, 1, 4, 13, 4, 50, 371, DateTimeKind.Local).AddTicks(8194), null, "Umar@gmail.com", false, "EDMoscow", "Umar", false, null, "UMAR@GMAIL.COM", "UMAR", null, "AQAAAAIAAYagAAAAEDuYFUUOTZ01KYaRl/wNdeERuWD1OsU3wDmdUrmpZHcmAA+Pzp/y3N8yW6zU4RmADA==", "79963321030", false, "29a59dbf-02ff-4e55-939f-fea710e93cd9", false, "umar", "UserName" },
-                    { "131d5dd1-6bf1-4f52-be90-00815000fb57", 0, "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099", -1001663331836L, "679ab848-65ad-43c9-a1d6-9d6bdefd88db", new DateTime(2023, 1, 4, 13, 4, 50, 371, DateTimeKind.Local).AddTicks(8071), null, "Khikmatillo@gmail.com", false, "EDTashkent", "Khikmatillo", false, null, "KHIKMATILLO@GMAIL.COM", "KHIKMATILLO", null, "AQAAAAIAAYagAAAAEDuYFUUOTZ01KYaRl/wNdeERuWD1OsU3wDmdUrmpZHcmAA+Pzp/y3N8yW6zU4RmADA==", "998974468090", false, "2ca5e2b1-98a3-4115-8969-703c0534afb3", false, "khikmatillo", "UserName" },
-                    { "221c0048-08c9-4e72-8f5c-ddf4039f9488", 0, "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099", -1001663331836L, "070c4151-d94e-4f08-805a-24a7a9790fb4", new DateTime(2023, 1, 4, 13, 4, 50, 371, DateTimeKind.Local).AddTicks(8079), null, "Abbos@gmail.com", false, "EDTashkent", "Abbos", false, null, "ABBOS@GMAIL.COM", "ABBOS", null, "AQAAAAIAAYagAAAAEDuYFUUOTZ01KYaRl/wNdeERuWD1OsU3wDmdUrmpZHcmAA+Pzp/y3N8yW6zU4RmADA==", "998903550022", false, "25bc8988-3e39-4037-a765-fcaf30ec9324", false, "abbos", "UserName" },
-                    { "30a8f9cc-8d37-4d93-ab2f-774428387e4a", 0, "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099", -1001663331836L, "10f0a47d-d947-4ba1-b5ba-a0cba39bfe51", new DateTime(2023, 1, 4, 13, 4, 50, 371, DateTimeKind.Local).AddTicks(8003), null, "administrator@gmail.com", false, "EDSystem", "Administrator", false, null, "ADMINISTRATOR@GMAIL.COM", "ADMINISTRATOR", null, "AQAAAAIAAYagAAAAEDuYFUUOTZ01KYaRl/wNdeERuWD1OsU3wDmdUrmpZHcmAA+Pzp/y3N8yW6zU4RmADA==", "998970000675", false, "82c6526a-149e-4860-8dc1-a6c07457eb7b", false, "administrator", "UserName" },
-                    { "34a0eb9b-6797-40f7-a84c-aa31cdd4cdc6", 0, "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099", -1001663331836L, "91855aa5-b3f9-4dee-9d30-771f29a65a46", new DateTime(2023, 1, 4, 13, 4, 50, 371, DateTimeKind.Local).AddTicks(8065), null, "Ubaydulla@gmail.com", false, "EDTashkent", "Ubaydulla", false, null, "UBAYDULLA@GMAIL.COM", "UBAYDULLA", null, "AQAAAAIAAYagAAAAEDuYFUUOTZ01KYaRl/wNdeERuWD1OsU3wDmdUrmpZHcmAA+Pzp/y3N8yW6zU4RmADA==", "998990500033", false, "6b556a10-0876-4174-b036-5eb0e8ec3c5f", false, "ubaydulla", "UserName" },
-                    { "3b9d7f21-1d66-4c98-8648-64a68777bccb", 0, "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099", -1001663331836L, "25bcd5cb-7701-4db8-a14d-825a6caf2884", new DateTime(2023, 1, 4, 13, 4, 50, 371, DateTimeKind.Local).AddTicks(8042), null, "Javohir@gmail.com", false, "EDTashkent", "Javohir", false, null, "JAVOHIR@GMAIL.COM", "JAVOHIR", null, "AQAAAAIAAYagAAAAEDuYFUUOTZ01KYaRl/wNdeERuWD1OsU3wDmdUrmpZHcmAA+Pzp/y3N8yW6zU4RmADA==", "998931710966", false, "33d48f21-ebd5-4a27-9a3a-b4c58afa7740", false, "javohir", "UserName" },
-                    { "4ff7819d-8e17-4aa8-a0da-964c2db21591", 0, "Российская Федерация, Московская область, г. Москва, Академический район, улица Винокурова 7/5, корпус 3, индекс 117449", -1001663331836L, "ff58b480-a157-4a17-8f16-345457e4def5", new DateTime(2023, 1, 4, 13, 4, 50, 371, DateTimeKind.Local).AddTicks(8095), null, "Ulugbek@gmail.com", false, "EDMoscow", "Ulugbek", false, null, "ULUGBEK@GMAIL.COM", "ULUGBEK", null, "AQAAAAIAAYagAAAAEDuYFUUOTZ01KYaRl/wNdeERuWD1OsU3wDmdUrmpZHcmAA+Pzp/y3N8yW6zU4RmADA==", "79777403487", false, "ca31b94e-ca41-47fa-be8e-05755f8eee75", false, "ulugbek", "UserName" },
-                    { "5a6f1681-c582-46f5-905b-4eb2c222dcf5", 0, "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099", -1001663331836L, "6ba9f07a-bde3-43b6-9e40-d0d04bd94eff", new DateTime(2023, 1, 4, 13, 4, 50, 371, DateTimeKind.Local).AddTicks(8035), null, "Nodir@gmail.com", false, "EDTashkent", "Nodir", false, null, "NODIR@GMAIL.COM", "NODIR", null, "AQAAAAIAAYagAAAAEDuYFUUOTZ01KYaRl/wNdeERuWD1OsU3wDmdUrmpZHcmAA+Pzp/y3N8yW6zU4RmADA==", "998909046605", false, "11b2a014-744a-43a1-8ed7-b221823b4697", false, "nodir", "UserName" },
-                    { "92b7c777-0d3e-4026-844f-20164bb0f97e", 0, "Российская Федерация, Московская область, г. Москва, Академический район, улица Винокурова 7/5, корпус 3, индекс 117449", -1001663331836L, "3dd44643-50b8-4748-870b-beb00462a781", new DateTime(2023, 1, 4, 13, 4, 50, 371, DateTimeKind.Local).AddTicks(8200), null, "Abror@gmail.com", false, "EDMoscow", "Abror", false, null, "ABROR@GMAIL.COM", "ABROR", null, "AQAAAAIAAYagAAAAEDuYFUUOTZ01KYaRl/wNdeERuWD1OsU3wDmdUrmpZHcmAA+Pzp/y3N8yW6zU4RmADA==", "79296800899", false, "0a239918-aa15-4b65-a3fc-bdf6d907f471", false, "abror", "UserName" },
-                    { "92db214d-cd73-4fbc-8b34-1dc0709ba0b2", 0, "Российская Федерация, Московская область, г. Москва, Академический район, улица Винокурова 7/5, корпус 3, индекс 117449", -1001663331836L, "af435553-e30f-46a9-bb2b-3d0a946d5a94", new DateTime(2023, 1, 4, 13, 4, 50, 371, DateTimeKind.Local).AddTicks(8101), null, "Abdulaziz@gmail.com", false, "EDMoscow", "Abdulaziz", false, null, "ABDULAZIZ@GMAIL.COM", "ABDULAZIZ", null, "AQAAAAIAAYagAAAAEDuYFUUOTZ01KYaRl/wNdeERuWD1OsU3wDmdUrmpZHcmAA+Pzp/y3N8yW6zU4RmADA==", "79691799000", false, "2381ef44-10c9-479f-9b86-c048d4dd1c41", false, "abdulaziz", "UserName" },
-                    { "9c57fadd-110a-4b45-aa89-69aa141564c6", 0, "Российская Федерация, Московская область, г. Москва, Академический район, улица Винокурова 7/5, корпус 3, индекс 117449", -1001663331836L, "cf8dcab0-9be2-4131-a4e0-281d710da1bc", new DateTime(2023, 1, 4, 13, 4, 50, 371, DateTimeKind.Local).AddTicks(8108), null, "Doniyor@gmail.com", false, "EDMoscow", "Doniyor", false, null, "DONIYOR@GMAIL.COM", "DONIYOR", null, "AQAAAAIAAYagAAAAEDuYFUUOTZ01KYaRl/wNdeERuWD1OsU3wDmdUrmpZHcmAA+Pzp/y3N8yW6zU4RmADA==", "79777601654", false, "38b2474a-9891-4778-9990-cf9c779d6ddf", false, "doniyor", "UserName" },
-                    { "cadaa51d-ddb3-4564-a8c5-79e80c98a032", 0, "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099", -1001663331836L, "8847ac0c-c6df-431f-9488-991f7049b978", new DateTime(2023, 1, 4, 13, 4, 50, 371, DateTimeKind.Local).AddTicks(8026), null, "hayrulloh@gmail.com", false, "EDTashkent", "Hayrulloh", false, null, "HAYRULLOH@GMAIL.COM", "HAYRULLOH", null, "AQAAAAIAAYagAAAAEDuYFUUOTZ01KYaRl/wNdeERuWD1OsU3wDmdUrmpZHcmAA+Pzp/y3N8yW6zU4RmADA==", "998935788886", false, "1a872252-a5bd-44bb-87fc-a84a71effba3", false, "hayrulloh", "UserName" },
-                    { "e0c3bef9-fd70-421e-b07b-055c38b6d77c", 0, "Российская Федерация, Московская область, г. Москва, Академический район, улица Винокурова 7/5, корпус 3, индекс 117449", -1001663331836L, "a88abf9c-2538-4df0-ad2a-7d0398e8de3d", new DateTime(2023, 1, 4, 13, 4, 50, 371, DateTimeKind.Local).AddTicks(8086), null, "Shohruh@gmail.com", false, "EDMoscow", "Shohruh", false, null, "SHOHRUH@GMAIL.COM", "SHOHRUH", null, "AQAAAAIAAYagAAAAEDuYFUUOTZ01KYaRl/wNdeERuWD1OsU3wDmdUrmpZHcmAA+Pzp/y3N8yW6zU4RmADA==", "79060470085", false, "cb3afab8-4ee5-42ab-8354-64d27033c25c", false, "shohruh", "UserName" },
-                    { "e13b576b-afbe-4b4c-aaad-64fd9bee3852", 0, "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099", -1001663331836L, "0235589c-cd85-48a5-8bcc-54520a5061cf", new DateTime(2023, 1, 4, 13, 4, 50, 371, DateTimeKind.Local).AddTicks(8058), null, "Sadulla@gmail.com", false, "EDTashkent", "Sadulla", false, null, "SADULLA@GMAIL.COM", "SADULLA", null, "AQAAAAIAAYagAAAAEDuYFUUOTZ01KYaRl/wNdeERuWD1OsU3wDmdUrmpZHcmAA+Pzp/y3N8yW6zU4RmADA==", "998994885995", false, "72a970f1-235c-4d86-9752-99fd1a424789", false, "sadulla", "UserName" },
-                    { "eb6a85b0-a7fb-4f8e-9bea-03825e6f020f", 0, "Российская Федерация, Московская область, г. Москва, Академический район, улица Винокурова 7/5, корпус 3, индекс 117449", -1001663331836L, "3abe7d58-5dd3-4ab9-89b6-31ac025c1aa5", new DateTime(2023, 1, 4, 13, 4, 50, 371, DateTimeKind.Local).AddTicks(8186), null, "Shaxzod@gmail.com", false, "EDMoscow", "Shaxzod", false, null, "SHAXZOD@GMAIL.COM", "SHAXZOD", null, "AQAAAAIAAYagAAAAEDuYFUUOTZ01KYaRl/wNdeERuWD1OsU3wDmdUrmpZHcmAA+Pzp/y3N8yW6zU4RmADA==", "79163870009", false, "ebb30ea4-81ac-4f92-a7f3-51acaf63468d", false, "shaxzod", "UserName" }
+                    { "0a1e5c27-0b09-4f60-a9c3-8618791a8672", 0, "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099", -1001663331836L, "efd2401f-be30-466f-a9a0-8f6e657cea2e", new DateTime(2023, 1, 26, 10, 21, 29, 370, DateTimeKind.Local).AddTicks(9675), null, "Ismoil@gmail.com", false, "EDTashkent", "Ismoil", false, null, "ISMOIL@GMAIL.COM", "ISMOIL", null, "AQAAAAIAAYagAAAAEFv7gkeNJbOM5ayBbdEofa6yCUaFv5cZOx0gdC/LrpbZrF3QuJUY8UMNpnc4f9kXoQ==", "998977093262", false, "8b12ef1c-5ba5-42c3-accc-cefc292f755e", false, "ismoil", "UserName" },
+                    { "11fafeb4-c7c1-463c-bb1e-55203e68dfdf", 0, "Российская Федерация, Московская область, г. Москва, Академический район, улица Винокурова 7/5, корпус 3, индекс 117449", -1001663331836L, "7e49bdb7-c9e8-4e90-b0fc-7b65ccfdf31b", new DateTime(2023, 1, 26, 10, 21, 29, 370, DateTimeKind.Local).AddTicks(9816), null, "Umar@gmail.com", false, "EDMoscow", "Umar", false, null, "UMAR@GMAIL.COM", "UMAR", null, "AQAAAAIAAYagAAAAEFv7gkeNJbOM5ayBbdEofa6yCUaFv5cZOx0gdC/LrpbZrF3QuJUY8UMNpnc4f9kXoQ==", "79963321030", false, "f63872fd-9772-4238-a385-96ed3a1bacab", false, "umar", "UserName" },
+                    { "131d5dd1-6bf1-4f52-be90-00815000fb57", 0, "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099", -1001663331836L, "089bc95e-80c3-4720-a259-dab3b94b2c3b", new DateTime(2023, 1, 26, 10, 21, 29, 370, DateTimeKind.Local).AddTicks(9761), null, "Khikmatillo@gmail.com", false, "EDTashkent", "Khikmatillo", false, null, "KHIKMATILLO@GMAIL.COM", "KHIKMATILLO", null, "AQAAAAIAAYagAAAAEFv7gkeNJbOM5ayBbdEofa6yCUaFv5cZOx0gdC/LrpbZrF3QuJUY8UMNpnc4f9kXoQ==", "998974468090", false, "b7451705-5a63-4654-8ece-c3835400bc85", false, "khikmatillo", "UserName" },
+                    { "221c0048-08c9-4e72-8f5c-ddf4039f9488", 0, "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099", -1001663331836L, "bd48d38f-010d-4bd3-8d75-bc378a5aa73a", new DateTime(2023, 1, 26, 10, 21, 29, 370, DateTimeKind.Local).AddTicks(9771), null, "Abbos@gmail.com", false, "EDTashkent", "Abbos", false, null, "ABBOS@GMAIL.COM", "ABBOS", null, "AQAAAAIAAYagAAAAEFv7gkeNJbOM5ayBbdEofa6yCUaFv5cZOx0gdC/LrpbZrF3QuJUY8UMNpnc4f9kXoQ==", "998903550022", false, "db97a05c-d412-4b58-bbc1-98a0b367e9fb", false, "abbos", "UserName" },
+                    { "30a8f9cc-8d37-4d93-ab2f-774428387e4a", 0, "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099", -1001663331836L, "ae10cd49-7c00-4a51-ba88-d84bc2c7f9b9", new DateTime(2023, 1, 26, 10, 21, 29, 370, DateTimeKind.Local).AddTicks(9635), null, "administrator@gmail.com", false, "EDSystem", "Administrator", false, null, "ADMINISTRATOR@GMAIL.COM", "ADMINISTRATOR", null, "AQAAAAIAAYagAAAAEFv7gkeNJbOM5ayBbdEofa6yCUaFv5cZOx0gdC/LrpbZrF3QuJUY8UMNpnc4f9kXoQ==", "998970000675", false, "7f5db097-3ca5-4cd3-9f4a-67b90a64ff98", false, "administrator", "UserName" },
+                    { "34a0eb9b-6797-40f7-a84c-aa31cdd4cdc6", 0, "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099", -1001663331836L, "9980e704-c96f-4050-80b0-5e18f2d6d1a0", new DateTime(2023, 1, 26, 10, 21, 29, 370, DateTimeKind.Local).AddTicks(9754), null, "Ubaydulla@gmail.com", false, "EDTashkent", "Ubaydulla", false, null, "UBAYDULLA@GMAIL.COM", "UBAYDULLA", null, "AQAAAAIAAYagAAAAEFv7gkeNJbOM5ayBbdEofa6yCUaFv5cZOx0gdC/LrpbZrF3QuJUY8UMNpnc4f9kXoQ==", "998990500033", false, "69817238-ecd9-4eba-b140-9b42330f8765", false, "ubaydulla", "UserName" },
+                    { "3b9d7f21-1d66-4c98-8648-64a68777bccb", 0, "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099", -1001663331836L, "c5419253-22e3-4955-a562-1f075cf9fc22", new DateTime(2023, 1, 26, 10, 21, 29, 370, DateTimeKind.Local).AddTicks(9668), null, "Javohir@gmail.com", false, "EDTashkent", "Javohir", false, null, "JAVOHIR@GMAIL.COM", "JAVOHIR", null, "AQAAAAIAAYagAAAAEFv7gkeNJbOM5ayBbdEofa6yCUaFv5cZOx0gdC/LrpbZrF3QuJUY8UMNpnc4f9kXoQ==", "998931710966", false, "fb47769b-29b6-4d71-9bec-644797269810", false, "javohir", "UserName" },
+                    { "4ff7819d-8e17-4aa8-a0da-964c2db21591", 0, "Российская Федерация, Московская область, г. Москва, Академический район, улица Винокурова 7/5, корпус 3, индекс 117449", -1001663331836L, "892345d5-50d6-4a64-900b-fb225deb3a85", new DateTime(2023, 1, 26, 10, 21, 29, 370, DateTimeKind.Local).AddTicks(9785), null, "Ulugbek@gmail.com", false, "EDMoscow", "Ulugbek", false, null, "ULUGBEK@GMAIL.COM", "ULUGBEK", null, "AQAAAAIAAYagAAAAEFv7gkeNJbOM5ayBbdEofa6yCUaFv5cZOx0gdC/LrpbZrF3QuJUY8UMNpnc4f9kXoQ==", "79777403487", false, "58a755b0-403b-4ed2-afff-4e75ca5b9ff4", false, "ulugbek", "UserName" },
+                    { "5a6f1681-c582-46f5-905b-4eb2c222dcf5", 0, "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099", -1001663331836L, "bf61f6da-e2bf-4779-9f79-22d5df6be136", new DateTime(2023, 1, 26, 10, 21, 29, 370, DateTimeKind.Local).AddTicks(9660), null, "Nodir@gmail.com", false, "EDTashkent", "Nodir", false, null, "NODIR@GMAIL.COM", "NODIR", null, "AQAAAAIAAYagAAAAEFv7gkeNJbOM5ayBbdEofa6yCUaFv5cZOx0gdC/LrpbZrF3QuJUY8UMNpnc4f9kXoQ==", "998909046605", false, "5e8534c8-b98b-4ecf-bc0d-765213267e16", false, "nodir", "UserName" },
+                    { "92b7c777-0d3e-4026-844f-20164bb0f97e", 0, "Российская Федерация, Московская область, г. Москва, Академический район, улица Винокурова 7/5, корпус 3, индекс 117449", -1001663331836L, "79e551c8-6806-4b7f-ba98-1146d85df900", new DateTime(2023, 1, 26, 10, 21, 29, 370, DateTimeKind.Local).AddTicks(9822), null, "Abror@gmail.com", false, "EDMoscow", "Abror", false, null, "ABROR@GMAIL.COM", "ABROR", null, "AQAAAAIAAYagAAAAEFv7gkeNJbOM5ayBbdEofa6yCUaFv5cZOx0gdC/LrpbZrF3QuJUY8UMNpnc4f9kXoQ==", "79296800899", false, "831843bb-f263-472b-b298-17c3dc02db92", false, "abror", "UserName" },
+                    { "92db214d-cd73-4fbc-8b34-1dc0709ba0b2", 0, "Российская Федерация, Московская область, г. Москва, Академический район, улица Винокурова 7/5, корпус 3, индекс 117449", -1001663331836L, "27953b89-dcd8-4295-b5ac-b43ab8674080", new DateTime(2023, 1, 26, 10, 21, 29, 370, DateTimeKind.Local).AddTicks(9794), null, "Abdulaziz@gmail.com", false, "EDMoscow", "Abdulaziz", false, null, "ABDULAZIZ@GMAIL.COM", "ABDULAZIZ", null, "AQAAAAIAAYagAAAAEFv7gkeNJbOM5ayBbdEofa6yCUaFv5cZOx0gdC/LrpbZrF3QuJUY8UMNpnc4f9kXoQ==", "79691799000", false, "ce229f03-2c55-4b58-99ba-7cc172ec2251", false, "abdulaziz", "UserName" },
+                    { "9c57fadd-110a-4b45-aa89-69aa141564c6", 0, "Российская Федерация, Московская область, г. Москва, Академический район, улица Винокурова 7/5, корпус 3, индекс 117449", -1001663331836L, "84c809bd-b332-4b54-8285-7b2cac6239a3", new DateTime(2023, 1, 26, 10, 21, 29, 370, DateTimeKind.Local).AddTicks(9801), null, "Doniyor@gmail.com", false, "EDMoscow", "Doniyor", false, null, "DONIYOR@GMAIL.COM", "DONIYOR", null, "AQAAAAIAAYagAAAAEFv7gkeNJbOM5ayBbdEofa6yCUaFv5cZOx0gdC/LrpbZrF3QuJUY8UMNpnc4f9kXoQ==", "79777601654", false, "b7a82653-54f6-4520-ae91-abd4ed98e194", false, "doniyor", "UserName" },
+                    { "cadaa51d-ddb3-4564-a8c5-79e80c98a032", 0, "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099", -1001663331836L, "5d55bb73-6285-4d11-94b0-78547c42f031", new DateTime(2023, 1, 26, 10, 21, 29, 370, DateTimeKind.Local).AddTicks(9653), null, "hayrulloh@gmail.com", false, "EDTashkent", "Hayrulloh", false, null, "HAYRULLOH@GMAIL.COM", "HAYRULLOH", null, "AQAAAAIAAYagAAAAEFv7gkeNJbOM5ayBbdEofa6yCUaFv5cZOx0gdC/LrpbZrF3QuJUY8UMNpnc4f9kXoQ==", "998935788886", false, "1d948fc1-a6a8-4116-aeac-544d0368fcbc", false, "hayrulloh", "UserName" },
+                    { "e0c3bef9-fd70-421e-b07b-055c38b6d77c", 0, "Российская Федерация, Московская область, г. Москва, Академический район, улица Винокурова 7/5, корпус 3, индекс 117449", -1001663331836L, "f0461516-2bc5-466a-b14e-a7581473688e", new DateTime(2023, 1, 26, 10, 21, 29, 370, DateTimeKind.Local).AddTicks(9778), null, "Shohruh@gmail.com", false, "EDMoscow", "Shohruh", false, null, "SHOHRUH@GMAIL.COM", "SHOHRUH", null, "AQAAAAIAAYagAAAAEFv7gkeNJbOM5ayBbdEofa6yCUaFv5cZOx0gdC/LrpbZrF3QuJUY8UMNpnc4f9kXoQ==", "79060470085", false, "3e5bb79c-abdd-4e5a-860c-98b45ac9ca10", false, "shohruh", "UserName" },
+                    { "e13b576b-afbe-4b4c-aaad-64fd9bee3852", 0, "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099", -1001663331836L, "7ac7c441-d396-44b9-8ae3-2acc284214b0", new DateTime(2023, 1, 26, 10, 21, 29, 370, DateTimeKind.Local).AddTicks(9682), null, "Sadulla@gmail.com", false, "EDTashkent", "Sadulla", false, null, "SADULLA@GMAIL.COM", "SADULLA", null, "AQAAAAIAAYagAAAAEFv7gkeNJbOM5ayBbdEofa6yCUaFv5cZOx0gdC/LrpbZrF3QuJUY8UMNpnc4f9kXoQ==", "998994885995", false, "1f7117b5-a8e2-4a13-bd07-7c2ab65cc43b", false, "sadulla", "UserName" },
+                    { "eb6a85b0-a7fb-4f8e-9bea-03825e6f020f", 0, "Российская Федерация, Московская область, г. Москва, Академический район, улица Винокурова 7/5, корпус 3, индекс 117449", -1001663331836L, "6e6777cb-e63d-474b-a59b-8802337d5063", new DateTime(2023, 1, 26, 10, 21, 29, 370, DateTimeKind.Local).AddTicks(9807), null, "Shaxzod@gmail.com", false, "EDMoscow", "Shaxzod", false, null, "SHAXZOD@GMAIL.COM", "SHAXZOD", null, "AQAAAAIAAYagAAAAEFv7gkeNJbOM5ayBbdEofa6yCUaFv5cZOx0gdC/LrpbZrF3QuJUY8UMNpnc4f9kXoQ==", "79163870009", false, "d589d665-7845-4117-9106-527e738ad5b0", false, "shaxzod", "UserName" }
                 });
 
             migrationBuilder.InsertData(
@@ -885,12 +885,12 @@ namespace EDSystems.Persistence.Migrations
                 columns: new[] { "Id", "Address", "City", "Code", "Country", "CreatedBy", "DateCreated", "DateUpdated", "Email", "ModifiedBy", "Name", "Phone" },
                 values: new object[,]
                 {
-                    { 1, "Российская Федерация, Московская область, г. Москва, Академический район, улица Винокурова 7/5, корпус 3, индекс 117449", "Москва", "643", "Россия", null, new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8662), null, "info@ethnologistics.asia", null, "Москва", "+765165498496" },
-                    { 2, "Республика Узбекистан, г. Ташкент, Юнусабадский район, улица Кашгар 11,", "Ташкент", "860", "Узбекистан", null, new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8664), null, "info@ethnologistics.asia", null, "Ташкент", "+998984651" },
-                    { 3, "Киргизия, Бишкек, Жибек-Жолу д 443/1", "Бишкек", "417", "Киргистан", null, new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8667), null, "info@ethnologistics.asia", null, "Бишкек", "+765165498496" },
-                    { 4, "Душанбе 122", "Душанбе", "762", "Таджикистан", null, new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8668), null, "info@ethnologistics.asia", null, "Душанбе", "+665165498496" },
-                    { 5, "Алматы 123", "Алматы", "398", "Казахстан", null, new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8670), null, "info@ethnologistics.asia", null, "Алматы", "+665165498496" },
-                    { 6, "Хайдарпашша", "Стамбул", "792", "Турция", null, new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8671), null, "info@ethnologistics.asia", null, "Стамбул", "+665165498496" }
+                    { 1, "Российская Федерация, Московская область, г. Москва, Академический район, улица Винокурова 7/5, корпус 3, индекс 117449", "Москва", "643", "Россия", null, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3592), null, "info@ethnologistics.asia", null, "Москва", "+765165498496" },
+                    { 2, "Республика Узбекистан, г. Ташкент, Юнусабадский район, улица Кашгар 11,", "Ташкент", "860", "Узбекистан", null, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3595), null, "info@ethnologistics.asia", null, "Ташкент", "+998984651" },
+                    { 3, "Киргизия, Бишкек, Жибек-Жолу д 443/1", "Бишкек", "417", "Киргистан", null, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3597), null, "info@ethnologistics.asia", null, "Бишкек", "+765165498496" },
+                    { 4, "Душанбе 122", "Душанбе", "762", "Таджикистан", null, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3598), null, "info@ethnologistics.asia", null, "Душанбе", "+665165498496" },
+                    { 5, "Алматы 123", "Алматы", "398", "Казахстан", null, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3603), null, "info@ethnologistics.asia", null, "Алматы", "+665165498496" },
+                    { 6, "Хайдарпашша", "Стамбул", "792", "Турция", null, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3605), null, "info@ethnologistics.asia", null, "Стамбул", "+665165498496" }
                 });
 
             migrationBuilder.InsertData(
@@ -898,14 +898,14 @@ namespace EDSystems.Persistence.Migrations
                 columns: new[] { "Id", "Code", "Country", "CreatedBy", "DateCreated", "DateUpdated", "ModifiedBy", "Name", "Number" },
                 values: new object[,]
                 {
-                    { 1, "USD", "Соединенные Штаты Америки", null, new DateTime(2023, 1, 4, 13, 4, 50, 371, DateTimeKind.Local).AddTicks(8377), null, null, "Доллар", 840 },
-                    { 2, "UZS", "Республика Узбекистан", null, new DateTime(2023, 1, 4, 13, 4, 50, 371, DateTimeKind.Local).AddTicks(8379), null, null, "Сум", 860 },
-                    { 3, "RUB", "Российская Федерация", null, new DateTime(2023, 1, 4, 13, 4, 50, 371, DateTimeKind.Local).AddTicks(8380), null, null, "Рубль", 643 },
-                    { 4, "KZT", "Республика Казахстан", null, new DateTime(2023, 1, 4, 13, 4, 50, 371, DateTimeKind.Local).AddTicks(8381), null, null, "Тенге", 398 },
-                    { 5, "TRY", "Турция", null, new DateTime(2023, 1, 4, 13, 4, 50, 371, DateTimeKind.Local).AddTicks(8384), null, null, "Лира", 949 },
-                    { 6, "AED", "Объедененные Арабские Эмираты", null, new DateTime(2023, 1, 4, 13, 4, 50, 371, DateTimeKind.Local).AddTicks(8385), null, null, "Дирхам", 784 },
-                    { 7, "KGS", "Кыргызская Республика", null, new DateTime(2023, 1, 4, 13, 4, 50, 371, DateTimeKind.Local).AddTicks(8386), null, null, "Сом", 417 },
-                    { 8, "TJS", "Республика Таджикистан", null, new DateTime(2023, 1, 4, 13, 4, 50, 371, DateTimeKind.Local).AddTicks(8387), null, null, "Сомони", 972 }
+                    { 1, "USD", "Соединенные Штаты Америки", null, new DateTime(2023, 1, 26, 10, 21, 29, 371, DateTimeKind.Local).AddTicks(13), null, null, "Доллар", 840 },
+                    { 2, "UZS", "Республика Узбекистан", null, new DateTime(2023, 1, 26, 10, 21, 29, 371, DateTimeKind.Local).AddTicks(15), null, null, "Сум", 860 },
+                    { 3, "RUB", "Российская Федерация", null, new DateTime(2023, 1, 26, 10, 21, 29, 371, DateTimeKind.Local).AddTicks(16), null, null, "Рубль", 643 },
+                    { 4, "KZT", "Республика Казахстан", null, new DateTime(2023, 1, 26, 10, 21, 29, 371, DateTimeKind.Local).AddTicks(80), null, null, "Тенге", 398 },
+                    { 5, "TRY", "Турция", null, new DateTime(2023, 1, 26, 10, 21, 29, 371, DateTimeKind.Local).AddTicks(82), null, null, "Лира", 949 },
+                    { 6, "AED", "Объедененные Арабские Эмираты", null, new DateTime(2023, 1, 26, 10, 21, 29, 371, DateTimeKind.Local).AddTicks(84), null, null, "Дирхам", 784 },
+                    { 7, "KGS", "Кыргызская Республика", null, new DateTime(2023, 1, 26, 10, 21, 29, 371, DateTimeKind.Local).AddTicks(85), null, null, "Сом", 417 },
+                    { 8, "TJS", "Республика Таджикистан", null, new DateTime(2023, 1, 26, 10, 21, 29, 371, DateTimeKind.Local).AddTicks(86), null, null, "Сомони", 972 }
                 });
 
             migrationBuilder.InsertData(
@@ -913,19 +913,19 @@ namespace EDSystems.Persistence.Migrations
                 columns: new[] { "Id", "CreatedBy", "DateCreated", "DateUpdated", "Description", "ModifiedBy", "Name" },
                 values: new object[,]
                 {
-                    { 1, null, new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8776), null, "Зарплата", null, "Зарплата" },
-                    { 2, null, new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8777), null, "Аванс", null, "Аванс" },
-                    { 3, null, new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8778), null, "Курерам за перевозку", null, "Курерам за перевозку" },
-                    { 4, null, new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8780), null, "Обед", null, "Обед" },
-                    { 5, null, new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8781), null, "Карзи Хасана", null, "Карзи Хасана" },
-                    { 6, null, new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8782), null, "Депозит", null, "Депозит" },
-                    { 7, null, new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8783), null, "За перевозку до филиала", null, "За перевозку до филиала" },
-                    { 8, null, new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8784), null, "За доставку до получателя", null, "За доставку до получателя" },
-                    { 9, null, new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8785), null, "За забор посылки", null, "За забор посылки" },
-                    { 10, null, new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8786), null, "За выкуп", null, "За выкуп" },
-                    { 11, null, new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8787), null, "Ковертация", null, "Ковертация" },
-                    { 12, null, new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8788), null, "Перевод", null, "Перевод" },
-                    { 13, null, new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8789), null, "За мелкие расходы", null, "За мелкие расходы" }
+                    { 1, null, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3722), null, "Зарплата", null, "Зарплата" },
+                    { 2, null, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3723), null, "Аванс", null, "Аванс" },
+                    { 3, null, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3724), null, "Курерам за перевозку", null, "Курерам за перевозку" },
+                    { 4, null, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3726), null, "Обед", null, "Обед" },
+                    { 5, null, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3727), null, "Карзи Хасана", null, "Карзи Хасана" },
+                    { 6, null, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3728), null, "Депозит", null, "Депозит" },
+                    { 7, null, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3729), null, "За перевозку до филиала", null, "За перевозку до филиала" },
+                    { 8, null, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3730), null, "За доставку до получателя", null, "За доставку до получателя" },
+                    { 9, null, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3732), null, "За забор посылки", null, "За забор посылки" },
+                    { 10, null, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3733), null, "За выкуп", null, "За выкуп" },
+                    { 11, null, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3734), null, "Ковертация", null, "Ковертация" },
+                    { 12, null, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3736), null, "Перевод", null, "Перевод" },
+                    { 13, null, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3737), null, "За мелкие расходы", null, "За мелкие расходы" }
                 });
 
             migrationBuilder.InsertData(
@@ -933,10 +933,10 @@ namespace EDSystems.Persistence.Migrations
                 columns: new[] { "Id", "Cost", "CreatedBy", "DateCreated", "DateUpdated", "Description", "ModifiedBy", "Name" },
                 values: new object[,]
                 {
-                    { 1, 7m, null, new DateTime(2023, 1, 4, 13, 4, 50, 371, DateTimeKind.Local).AddTicks(8339), null, "Description", null, "Стандарт" },
-                    { 2, 12m, null, new DateTime(2023, 1, 4, 13, 4, 50, 371, DateTimeKind.Local).AddTicks(8343), null, "Description", null, "Экспресс" },
-                    { 3, 30m, null, new DateTime(2023, 1, 4, 13, 4, 50, 371, DateTimeKind.Local).AddTicks(8344), null, "Description", null, "Ультра" },
-                    { 5, 5m, null, new DateTime(2023, 1, 4, 13, 4, 50, 371, DateTimeKind.Local).AddTicks(8346), null, "Description", null, "Авто" }
+                    { 1, 7m, null, new DateTime(2023, 1, 26, 10, 21, 29, 370, DateTimeKind.Local).AddTicks(9975), null, "Description", null, "Стандарт" },
+                    { 2, 12m, null, new DateTime(2023, 1, 26, 10, 21, 29, 370, DateTimeKind.Local).AddTicks(9978), null, "Description", null, "Экспресс" },
+                    { 3, 30m, null, new DateTime(2023, 1, 26, 10, 21, 29, 370, DateTimeKind.Local).AddTicks(9979), null, "Description", null, "Ультра" },
+                    { 5, 5m, null, new DateTime(2023, 1, 26, 10, 21, 29, 370, DateTimeKind.Local).AddTicks(9980), null, "Description", null, "Авто" }
                 });
 
             migrationBuilder.InsertData(
@@ -944,12 +944,12 @@ namespace EDSystems.Persistence.Migrations
                 columns: new[] { "Id", "CreatedBy", "DateCreated", "DateUpdated", "Description", "ModifiedBy", "Name" },
                 values: new object[,]
                 {
-                    { 1, null, new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8495), null, "Создан", null, "Создан" },
-                    { 2, null, new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8508), null, "В пути", null, "В пути" },
-                    { 3, null, new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8509), null, "Прибыл в пункт доставки", null, "Прибыл" },
-                    { 4, null, new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8510), null, "На доставке у курьера", null, "У курьера" },
-                    { 5, null, new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8511), null, "Доставлен", null, "Доставлен" },
-                    { 6, null, new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8512), null, "Выдан", null, "Выдан" }
+                    { 1, null, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3430), null, "Создан", null, "Создан" },
+                    { 2, null, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3441), null, "В пути", null, "В пути" },
+                    { 3, null, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3442), null, "Прибыл в пункт доставки", null, "Прибыл" },
+                    { 4, null, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3443), null, "На доставке у курьера", null, "У курьера" },
+                    { 5, null, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3445), null, "Доставлен", null, "Доставлен" },
+                    { 6, null, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3446), null, "Выдан", null, "Выдан" }
                 });
 
             migrationBuilder.InsertData(
@@ -957,18 +957,18 @@ namespace EDSystems.Persistence.Migrations
                 columns: new[] { "Id", "Balance", "BranchId", "CreatedBy", "CurrencyId", "DateCreated", "DateUpdated", "ModifiedBy", "Name", "Number" },
                 values: new object[,]
                 {
-                    { 1, 0m, 1, null, 1, new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8688), null, null, "Валютный счет Москвы", "643840USD" },
-                    { 2, 0m, 1, null, 2, new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8691), null, null, "Рублевый счет Москвы", "643643RUB" },
-                    { 3, 0m, 2, null, 1, new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8693), null, null, "Валютный счет Ташкента", "860840USD" },
-                    { 4, 0m, 2, null, 2, new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8694), null, null, "Рублевый счет Ташкента", "860643RUB" },
-                    { 5, 0m, 3, null, 1, new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8696), null, null, "Валютный счет Бишкека", "417840USD" },
-                    { 6, 0m, 3, null, 2, new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8697), null, null, "Рублевый счет Бишкека", "417643RUB" },
-                    { 7, 0m, 4, null, 1, new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8698), null, null, "Валютный счет Душанбе", "972840USD" },
-                    { 8, 0m, 4, null, 2, new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8699), null, null, "Рублевый счет Душанбе", "972843RUB" },
-                    { 9, 0m, 5, null, 1, new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8700), null, null, "Валютный счет Алматы", "398840USD" },
-                    { 10, 0m, 5, null, 2, new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8702), null, null, "Рублевый счет Алматы", "398643RUB" },
-                    { 11, 0m, 6, null, 1, new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8703), null, null, "Валютный счет Стамбул", "792840USD" },
-                    { 12, 0m, 6, null, 5, new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8704), null, null, "Лировый счет Стамбул", "792949TRY" }
+                    { 1, 0m, 1, null, 1, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3625), null, null, "Валютный счет Москвы", "643840USD" },
+                    { 2, 0m, 1, null, 2, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3628), null, null, "Рублевый счет Москвы", "643643RUB" },
+                    { 3, 0m, 2, null, 1, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3629), null, null, "Валютный счет Ташкента", "860840USD" },
+                    { 4, 0m, 2, null, 2, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3630), null, null, "Рублевый счет Ташкента", "860643RUB" },
+                    { 5, 0m, 3, null, 1, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3655), null, null, "Валютный счет Бишкека", "417840USD" },
+                    { 6, 0m, 3, null, 2, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3656), null, null, "Рублевый счет Бишкека", "417643RUB" },
+                    { 7, 0m, 4, null, 1, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3658), null, null, "Валютный счет Душанбе", "972840USD" },
+                    { 8, 0m, 4, null, 2, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3659), null, null, "Рублевый счет Душанбе", "972843RUB" },
+                    { 9, 0m, 5, null, 1, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3660), null, null, "Валютный счет Алматы", "398840USD" },
+                    { 10, 0m, 5, null, 2, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3662), null, null, "Рублевый счет Алматы", "398643RUB" },
+                    { 11, 0m, 6, null, 1, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3663), null, null, "Валютный счет Стамбул", "792840USD" },
+                    { 12, 0m, 6, null, 5, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3666), null, null, "Лировый счет Стамбул", "792949TRY" }
                 });
 
             migrationBuilder.InsertData(
@@ -1008,12 +1008,12 @@ namespace EDSystems.Persistence.Migrations
                 columns: new[] { "Id", "Balance", "CreatedBy", "CurrencyId", "DateCreated", "DateUpdated", "ModifiedBy", "Name", "Number", "UserId" },
                 values: new object[,]
                 {
-                    { 1, 0m, null, 1, new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8727), null, null, "Валютный счет", "30a8f9cc-840USD", "30a8f9cc-8d37-4d93-ab2f-774428387e4a" },
-                    { 2, 0m, null, 1, new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8729), null, null, "Валютный счет", "cadaa51d-840USD", "cadaa51d-ddb3-4564-a8c5-79e80c98a032" },
-                    { 3, 0m, null, 1, new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8731), null, null, "Валютный счет", "5a6f1681-840USD", "5a6f1681-c582-46f5-905b-4eb2c222dcf5" },
-                    { 4, 0m, null, 1, new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8732), null, null, "Валютный счет", "3b9d7f21-840USD", "3b9d7f21-1d66-4c98-8648-64a68777bccb" },
-                    { 5, 0m, null, 1, new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8733), null, null, "Валютный счет", "0a1e5c27-840USD", "0a1e5c27-0b09-4f60-a9c3-8618791a8672" },
-                    { 6, 0m, null, 1, new DateTime(2023, 1, 4, 13, 4, 50, 311, DateTimeKind.Local).AddTicks(8734), null, null, "Валютный счет", "e13b576b-840USD", "e13b576b-afbe-4b4c-aaad-64fd9bee3852" }
+                    { 1, 0m, null, 1, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3691), null, null, "Валютный счет", "30a8f9cc-840USD", "30a8f9cc-8d37-4d93-ab2f-774428387e4a" },
+                    { 2, 0m, null, 1, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3695), null, null, "Валютный счет", "cadaa51d-840USD", "cadaa51d-ddb3-4564-a8c5-79e80c98a032" },
+                    { 3, 0m, null, 1, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3696), null, null, "Валютный счет", "5a6f1681-840USD", "5a6f1681-c582-46f5-905b-4eb2c222dcf5" },
+                    { 4, 0m, null, 1, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3697), null, null, "Валютный счет", "3b9d7f21-840USD", "3b9d7f21-1d66-4c98-8648-64a68777bccb" },
+                    { 5, 0m, null, 1, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3699), null, null, "Валютный счет", "0a1e5c27-840USD", "0a1e5c27-0b09-4f60-a9c3-8618791a8672" },
+                    { 6, 0m, null, 1, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3701), null, null, "Валютный счет", "e13b576b-840USD", "e13b576b-afbe-4b4c-aaad-64fd9bee3852" }
                 });
 
             migrationBuilder.CreateIndex(
