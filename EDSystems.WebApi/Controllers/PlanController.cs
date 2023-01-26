@@ -16,7 +16,7 @@ namespace EDSystems.WebApi.Controllers
     ///
     /// </summary>
     [Authorize(Roles = "Administrator")]
-    [Authorize(Policy = "CanAddPlan")]
+    [Authorize(Policy = "CanAddBranch")]
     //[Produces("application/json")]
     [Route("api/[controller]")]
     public class PlanController : BaseController
