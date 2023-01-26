@@ -16,7 +16,7 @@ namespace EDSystems.WebApi.Controllers;
 /// Branches
 /// </summary>
 
-[Authorize(Roles = "Administrator")]
+//[Authorize(Roles = "Administrator")]
 //[Authorize(Policy = "CanAddBranch")]
 [Produces("application/json")]
 [Route("api/[controller]")]
