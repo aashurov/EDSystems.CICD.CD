@@ -10,7 +10,7 @@ namespace EDSystems.WebApi.Controllers;
 /// <summary>
 /// User Manager
 /// </summary>
-[Authorize(Roles = "Administrator")]
+//[Authorize(Roles = "Administrator")]
 [Produces("application/json")]
 [Route("api/[controller]")]
 [ApiController]

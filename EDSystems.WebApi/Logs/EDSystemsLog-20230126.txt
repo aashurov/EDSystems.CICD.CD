@@ -1141,3 +1141,85 @@ RolesAuthorizationRequirement:User.IsInRole must be true for one of the followin
 2023-01-26 14:54:29.739 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/api/Branch - - - 302 0 - 0.6497ms
 2023-01-26 14:54:29.748 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/Account/Login?ReturnUrl=%2Fapi%2FBranch - -
 2023-01-26 14:54:29.748 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/Account/Login?ReturnUrl=%2Fapi%2FBranch - - - 404 0 - 0.5832ms
+2023-01-26 15:12:38.661 +05:00 [INF] User profile is available. Using '/Users/kdbiosdeveloper/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-01-26 15:12:39.291 +05:00 [INF] Now listening on: https://localhost:7271
+2023-01-26 15:12:39.292 +05:00 [INF] Now listening on: http://localhost:5271
+2023-01-26 15:12:39.293 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-26 15:12:39.294 +05:00 [INF] Hosting environment: Development
+2023-01-26 15:12:39.294 +05:00 [INF] Content root path: /Users/kdbiosdeveloper/Documents/XProjects/EDSystems.CICD.CD/EDSystems.WebApi
+2023-01-26 15:12:40.653 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/swagger/index.html - -
+2023-01-26 15:12:40.799 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/swagger/index.html - - - 200 - text/html;charset=utf-8 148.2497ms
+2023-01-26 15:12:40.921 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/swagger/v1/swagger.json - -
+2023-01-26 15:12:41.367 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 445.4594ms
+2023-01-26 15:13:58.938 +05:00 [INF] Request starting HTTP/1.1 POST https://localhost:7271/api/Authentication/Login application/json-patch+json 72
+2023-01-26 15:13:59.001 +05:00 [INF] CORS policy execution successful.
+2023-01-26 15:13:59.023 +05:00 [INF] Executing endpoint 'EDSystems.WebApi.Controllers.AuthenticationController.Login (EDSystems.WebApi)'
+2023-01-26 15:13:59.059 +05:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(EDSystems.WebApi.Models.AuthManager.UserLoginDto) on controller EDSystems.WebApi.Controllers.AuthenticationController (EDSystems.WebApi).
+2023-01-26 15:14:04.205 +05:00 [INF] Executed DbCommand (213ms) [Parameters=[@__normalizedEmail_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."Address", a."ChatId", a."ConcurrencyStamp", a."DateCreated", a."DateUpdated", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."ParcelJobId", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName", a."UserNameT"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2023-01-26 15:14:04.462 +05:00 [INF] Executing BadRequestObjectResult, writing value of type 'EDSystems.WebApi.Models.AuthManager.AuthResult'.
+2023-01-26 15:14:04.513 +05:00 [INF] Executed action EDSystems.WebApi.Controllers.AuthenticationController.Login (EDSystems.WebApi) in 5448.4125ms
+2023-01-26 15:14:04.514 +05:00 [INF] Executed endpoint 'EDSystems.WebApi.Controllers.AuthenticationController.Login (EDSystems.WebApi)'
+2023-01-26 15:14:04.523 +05:00 [INF] Request finished HTTP/1.1 POST https://localhost:7271/api/Authentication/Login application/json-patch+json 72 - 400 122 application/json;+charset=utf-8 5588.4969ms
+2023-01-26 15:16:21.954 +05:00 [INF] Request starting HTTP/1.1 POST https://localhost:7271/api/Authentication/Login application/json-patch+json 72
+2023-01-26 15:16:21.982 +05:00 [INF] CORS policy execution successful.
+2023-01-26 15:16:21.986 +05:00 [INF] Executing endpoint 'EDSystems.WebApi.Controllers.AuthenticationController.Login (EDSystems.WebApi)'
+2023-01-26 15:16:21.986 +05:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(EDSystems.WebApi.Models.AuthManager.UserLoginDto) on controller EDSystems.WebApi.Controllers.AuthenticationController (EDSystems.WebApi).
+2023-01-26 15:16:22.816 +05:00 [INF] Executed DbCommand (169ms) [Parameters=[@__normalizedEmail_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."Address", a."ChatId", a."ConcurrencyStamp", a."DateCreated", a."DateUpdated", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."ParcelJobId", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName", a."UserNameT"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2023-01-26 15:16:23.724 +05:00 [INF] Executed DbCommand (179ms) [Parameters=[@__user_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ClaimType", a."ClaimValue", a."Discriminator", a."UserId"
+FROM "AspNetUserClaims" AS a
+WHERE a."UserId" = @__user_Id_0
+2023-01-26 15:16:24.517 +05:00 [INF] Executed DbCommand (185ms) [Parameters=[@__userId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a0."Name"
+FROM "AspNetUserRoles" AS a
+INNER JOIN "AspNetRoles" AS a0 ON a."RoleId" = a0."Id"
+WHERE a."UserId" = @__userId_0
+2023-01-26 15:16:25.236 +05:00 [INF] Executed DbCommand (176ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2023-01-26 15:16:25.969 +05:00 [INF] Executed DbCommand (176ms) [Parameters=[@__role_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."ClaimType", a."ClaimValue"
+FROM "AspNetRoleClaims" AS a
+WHERE a."RoleId" = @__role_Id_0
+2023-01-26 15:16:26.667 +05:00 [INF] Executed DbCommand (171ms) [Parameters=[@__userId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a0."Name"
+FROM "AspNetUserRoles" AS a
+INNER JOIN "AspNetRoles" AS a0 ON a."RoleId" = a0."Id"
+WHERE a."UserId" = @__userId_0
+2023-01-26 15:16:26.811 +05:00 [INF] NotesRequest: RefreshTokenCommand {"Id":0,"UserId":"30a8f9cc-8d37-4d93-ab2f-774428387e4a","Token":"PNNNNA1M5BHFS935GKUKK0FO0MDOIM2RRV6ffe66ac6-7594-4b0f-8d72-6d0a8f84f3b3","JwtId":"515bcae5-c9ed-4ae2-a030-b9963afda5df","IsUsed":false,"IsRevoked":false,"AddedDateTime":"2023-01-26T10:16:26.7791010Z","ExpiryDateTime":"2023-07-26T10:16:26.7791680Z","$type":"RefreshTokenCommand"}
+2023-01-26 15:16:27.692 +05:00 [INF] Executed DbCommand (186ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = DateTime), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?', @p5='?', @p6='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "RefreshToken" ("AddedDateTime", "ExpiryDateTime", "IsRevoked", "IsUsed", "JwtId", "Token", "UserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6)
+RETURNING "Id";
+2023-01-26 15:16:27.747 +05:00 [INF] Executing OkObjectResult, writing value of type 'EDSystems.WebApi.Models.AuthManager.AuthResult'.
+2023-01-26 15:16:27.748 +05:00 [INF] Executed action EDSystems.WebApi.Controllers.AuthenticationController.Login (EDSystems.WebApi) in 5761.5703ms
+2023-01-26 15:16:27.748 +05:00 [INF] Executed endpoint 'EDSystems.WebApi.Controllers.AuthenticationController.Login (EDSystems.WebApi)'
+2023-01-26 15:16:27.749 +05:00 [INF] Request finished HTTP/1.1 POST https://localhost:7271/api/Authentication/Login application/json-patch+json 72 - 200 597 application/json;+charset=utf-8 5794.5571ms
+2023-01-26 15:16:46.508 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/api/Branch - -
+2023-01-26 15:16:46.511 +05:00 [INF] Executing endpoint 'EDSystems.WebApi.Controllers.BranchController.GetAll (EDSystems.WebApi)'
+2023-01-26 15:16:46.516 +05:00 [INF] Route matched with {action = "GetAll", controller = "Branch"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EDSystems.Application.EDSystems.Queries.Branches.GetBranchList.BranchListVm]] GetAll() on controller EDSystems.WebApi.Controllers.BranchController (EDSystems.WebApi).
+2023-01-26 15:16:46.543 +05:00 [INF] NotesRequest: GetBranchListQuery {"$type":"GetBranchListQuery"}
+2023-01-26 15:16:47.381 +05:00 [INF] Executed DbCommand (174ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."Name", b."Country", b."Code", b."City", b."Address", b."Email", b."Phone", b."DateCreated", b."DateUpdated"
+FROM "Branch" AS b
+2023-01-26 15:16:47.388 +05:00 [INF] Executing OkObjectResult, writing value of type 'EDSystems.Application.EDSystems.Queries.Branches.GetBranchList.BranchListVm'.
+2023-01-26 15:16:47.396 +05:00 [INF] Executed action EDSystems.WebApi.Controllers.BranchController.GetAll (EDSystems.WebApi) in 879.9911ms
+2023-01-26 15:16:47.396 +05:00 [INF] Executed endpoint 'EDSystems.WebApi.Controllers.BranchController.GetAll (EDSystems.WebApi)'
+2023-01-26 15:16:47.397 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/api/Branch - - - 200 1492 application/json;+charset=utf-8 888.5043ms
+2023-01-26 15:16:57.989 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/api/Plan - -
+2023-01-26 15:16:57.998 +05:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Administrator)
+2023-01-26 15:16:58.005 +05:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2023-01-26 15:16:58.005 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/api/Plan - - - 302 0 - 15.5850ms
+2023-01-26 15:16:58.007 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/Account/Login?ReturnUrl=%2Fapi%2FPlan - -
+2023-01-26 15:16:58.007 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/Account/Login?ReturnUrl=%2Fapi%2FPlan - - - 404 0 - 0.4813ms
