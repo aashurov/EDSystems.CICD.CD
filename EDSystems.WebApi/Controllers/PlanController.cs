@@ -15,7 +15,7 @@ namespace EDSystems.WebApi.Controllers
     /// <summary>
     ///
     /// </summary>
-    [Authorize(Roles = "Administrator")]
+    //[Authorize(Roles = "Administrator")]
     [Produces("application/json")]
     [Route("api/[controller]")]
     public class PlanController : BaseController
@@ -39,8 +39,7 @@ namespace EDSystems.WebApi.Controllers
         /// <responce code="200">Success</responce>
         /// <responce code="401">If the user is unauthorized</responce>
         [HttpGet]
-        //[Authorize]
-        [Authorize(Policy = "GetPlanList")]
+        [Authorize(Policy = "CanGetAllPlans")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<ActionResult<PlanListVm>> GetAll()
@@ -63,8 +62,7 @@ namespace EDSystems.WebApi.Controllers
         /// <responce code="200">Success</responce>
         /// <responce code="401">If the user is unauthorized</responce>
         [HttpGet("WithPagination")]
-        //[Authorize]
-        [Authorize(Policy = "GetPlanListWithPagination")]
+        [Authorize(Policy = "CanGetAllPlansWithPagination")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<ActionResult<PlanListVmWithPagination>> GetAllWithPagination()
@@ -88,8 +86,7 @@ namespace EDSystems.WebApi.Controllers
         /// <responce code="200">Success</responce>
         /// <responce code="401">If the user is unauthorized</responce>
         [HttpGet("{Id}")]
-        //[Authorize]
-        [Authorize(Policy = "GetPlanDetails")]
+        [Authorize(Policy = "CanGetPlanDetails")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<ActionResult<PlanDetailsVm>> Get(int Id)
@@ -114,8 +111,7 @@ namespace EDSystems.WebApi.Controllers
         /// <responce code="200">Success</responce>
         /// <responce code="401">If the user is unauthorized</responce>
         [HttpPost]
-        //[Authorize]
-        [Authorize(Policy = "CreatePlan")]
+        [Authorize(Policy = "CanCreatePlan")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<ActionResult<Guid>> Create([FromBody] CreatePlanDto createPlanDto)
@@ -137,8 +133,7 @@ namespace EDSystems.WebApi.Controllers
         /// <responce code="204">Success</responce>
         /// <responce code="401">If the user is unauthorized</responce>
         [HttpPut]
-        //[Authorize]
-        [Authorize(Policy = "UpdatePlan")]
+        [Authorize(Policy = "CanUpdatePlan")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<IActionResult> Update([FromBody] UpdatePlanDto updatePlanDto)
@@ -160,8 +155,7 @@ namespace EDSystems.WebApi.Controllers
         /// <responce code="204">Success</responce>
         /// <responce code="401">If the user is unauthorized</responce>
         [HttpDelete("{Id}")]
-        //[Authorize]
-        [Authorize(Policy = "DeletePlan")]
+        [Authorize(Policy = "CanDeletePlan")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<IActionResult> Delete(int Id)
@@ -186,8 +180,7 @@ namespace EDSystems.WebApi.Controllers
         /// <responce code="204">Success</responce>
         /// <responce code="401">If the user is unauthorized</responce>
         [HttpPost("DeletePlans")]
-        [Authorize(Policy = "DeletePlans")]
-        //[Authorize]
+        [Authorize(Policy = "CanDeletePlans")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<IActionResult> DeletePlans([FromBody] DeletePlansDto deletePlansDto)

@@ -39,7 +39,7 @@ namespace EDSystems.WebApi.Controllers
         /// <responce code="200">Success</responce>
         /// <responce code="401">If the user is unauthorized</responce>
         [HttpGet]
-        //[Authorize]
+        [Authorize(Policy = "CanGetAllStatuses")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<ActionResult<StatusListVm>> GetAll()
@@ -62,7 +62,7 @@ namespace EDSystems.WebApi.Controllers
         /// <responce code="200">Success</responce>
         /// <responce code="401">If the user is unauthorized</responce>
         [HttpGet("WithPagination")]
-        //[Authorize]
+        [Authorize(Policy = "CanGetAllStatusesWithPagination")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<ActionResult<StatusListVmWithPagination>> GetAllWithPagination()
@@ -86,7 +86,7 @@ namespace EDSystems.WebApi.Controllers
         /// <responce code="200">Success</responce>
         /// <responce code="401">If the user is unauthorized</responce>
         [HttpGet("{Id}")]
-        //[Authorize]
+        [Authorize(Policy = "CanGetStatusDetails")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<ActionResult<StatusDetailsVm>> Get(int Id)
@@ -111,7 +111,7 @@ namespace EDSystems.WebApi.Controllers
         /// <responce code="200">Success</responce>
         /// <responce code="401">If the user is unauthorized</responce>
         [HttpPost]
-        //[Authorize]
+        [Authorize(Policy = "CanCreateStatus")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<ActionResult<Guid>> Create([FromBody] CreateStatusDto createStatusDto)
@@ -133,7 +133,7 @@ namespace EDSystems.WebApi.Controllers
         /// <responce code="204">Success</responce>
         /// <responce code="401">If the user is unauthorized</responce>
         [HttpPut]
-        //[Authorize]
+        [Authorize(Policy = "CanUpdateStatus")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<IActionResult> Update([FromBody] UpdateStatusDto updateStatusDto)
@@ -155,7 +155,7 @@ namespace EDSystems.WebApi.Controllers
         /// <responce code="204">Success</responce>
         /// <responce code="401">If the user is unauthorized</responce>
         [HttpDelete("{Id}")]
-        //[Authorize]
+        [Authorize(Policy = "CanDeleteStatus")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<IActionResult> Delete(int Id)
@@ -180,7 +180,7 @@ namespace EDSystems.WebApi.Controllers
         /// <responce code="204">Success</responce>
         /// <responce code="401">If the user is unauthorized</responce>
         [HttpPost("DeleteStatuses")]
-        //[Authorize]
+        [Authorize(Policy = "CanDeleteStatuses")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<IActionResult> DeleteStatuses([FromBody] DeleteStatusesDto deleteStatusesDto)
