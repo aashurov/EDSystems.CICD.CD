@@ -31,11 +31,14 @@
     <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.5.0" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.5.0" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.5.0" />
+    <PackageReference Include="Microsoft.OpenApi" Version="1.5.0" />
+    <PackageReference Include="AWSSDK.S3" Version="3.7.102" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Models\UserAccount\" />
     <Folder Include="wwwroot\mainimages\" />
+    <Folder Include="Models\S3\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -45,5 +48,11 @@
     <ProjectReference Include="..\EDSystems.Persistence\EDSystems.Persistence.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Microsoft.AspNetCore.OpenApi" />
+    <None Remove="Microsoft.OpenApi" />
+    <None Remove="AWSSDK.S3" />
+    <None Remove="Models\S3\" />
   </ItemGroup>
 </Project>
