@@ -11,6 +11,7 @@ namespace EDSystems.WebApi.Controllers;
 /// User Manager
 /// </summary>
 //[Authorize(Roles = "Administrator")]
+[AllowAnonymous]
 [Produces("application/json")]
 [Route("api/[controller]")]
 [ApiController]
@@ -71,6 +72,7 @@ public class ClaimsController : BaseController
         var query = new AddToClaimCommand
         {
             Email = addToClaimDto.Email,
+            ClaimType = addToClaimDto.ClaimType,
             ClaimName = addToClaimDto.ClaimName,
             ClaimValue = addToClaimDto.ClaimValue
         };

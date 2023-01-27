@@ -43,6 +43,7 @@ public class BranchController : BaseController
     /// <responce code="200">Success</responce>
     /// <responce code="401">If the user is unauthorized</responce>
     [HttpGet]
+    [Authorize(Policy = "CanGetAllBranches")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     public async Task<ActionResult<BranchListVm>> GetAll()
@@ -68,6 +69,7 @@ public class BranchController : BaseController
     /// <responce code="200">Success</responce>
     /// <responce code="401">If the user is unauthorized</responce>
     [HttpGet("WithPagination")]
+    [Authorize(Policy = "CanGetAllBranchesWithPagination")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     public async Task<ActionResult<BranchListVmWithPagination>> GetAllWithPagination()
@@ -93,6 +95,7 @@ public class BranchController : BaseController
     /// <responce code="401">If the user is unauthorized</responce>
     [HttpGet("{Id}")]
     //[Authorize]
+    [Authorize(Policy = "CanGetBranchDetails")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     public async Task<ActionResult<BranchDetailsVm>> Get(int Id)
@@ -118,6 +121,7 @@ public class BranchController : BaseController
     /// <responce code="401">If the user is unauthorized</responce>
     [HttpPost]
     //[Authorize]
+    [Authorize(Policy = "CanCreateBranch")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     public async Task<ActionResult<Guid>> Create([FromBody] CreateBranchDto createNoteDto)
@@ -134,6 +138,7 @@ public class BranchController : BaseController
     /// <returns></returns>
     [HttpPut]
     //[Authorize]
+    [Authorize(Policy = "CanUpdateBranch")]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     public async Task<IActionResult> Update([FromBody] UpdateBranchDto updateBranchDto)
@@ -156,6 +161,7 @@ public class BranchController : BaseController
     /// <responce code="401">If the user is unauthorized</responce>
     [HttpDelete("{Id}")]
     //[Authorize]
+    [Authorize(Policy = "CanDeleteBranch")]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     public async Task<IActionResult> Delete(int Id)
@@ -180,6 +186,7 @@ public class BranchController : BaseController
     /// <responce code="204">Success</responce>
     /// <responce code="401">If the user is unauthorized</responce>
     [HttpPost("DeleteBranches")]
+    [Authorize(Policy = "CanDeleteBranches")]
     //[Authorize]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]

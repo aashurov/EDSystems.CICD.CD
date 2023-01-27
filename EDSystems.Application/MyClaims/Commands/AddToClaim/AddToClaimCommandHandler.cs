@@ -19,7 +19,7 @@ public class AddToClaimCommandHandler : IRequestHandler<AddToClaimCommand>
     public async Task<Unit> Handle(AddToClaimCommand request, CancellationToken cancellationToken)
     {
         var user = await _userManager.FindByEmailAsync(request.Email);
-        var newClaim = new Claim(request.Email, request.ClaimName, request.ClaimValue);
+        var newClaim = new Claim(request.ClaimType, request.ClaimName, request.ClaimValue);
         await _userManager.AddClaimAsync(user, newClaim);
         return Unit.Value;
     }
