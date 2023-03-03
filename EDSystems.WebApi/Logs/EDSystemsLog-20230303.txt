@@ -108,3 +108,4 @@ FROM "Branch" AS b
 2023-03-03 13:08:15.885 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/swagger/index.html - - - 200 - text/html;charset=utf-8 215.2208ms
 2023-03-03 13:08:16.154 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/swagger/v1/swagger.json - -
 2023-03-03 13:08:16.699 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 544.3548ms
+2023-03-03 13:37:52.029 +05:00 [INF] Application is shutting down...
