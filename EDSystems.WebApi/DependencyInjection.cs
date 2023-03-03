@@ -83,7 +83,7 @@ namespace EDSystems.WebApi
             {
                 options.AddPolicy("AllowAll", policy =>
                 {
-                    policy.WithOrigins("https://www.ethno.ga");
+                    policy.WithOrigins("https://www.roagt.ml");
                     policy.AllowAnyHeader();
                     policy.AllowAnyMethod();
                     policy.AllowAnyOrigin();
