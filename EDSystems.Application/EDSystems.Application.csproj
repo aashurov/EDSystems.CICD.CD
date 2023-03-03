@@ -2,7 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
+    <NoWarn>$(NoWarn);NU1605</NoWarn>
   </PropertyGroup>
+ 
 
   <ItemGroup>
     <Compile Remove="Claims\**" />

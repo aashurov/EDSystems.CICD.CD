@@ -1,10 +1,18 @@
 ﻿using System;
 namespace EDSystems.WebApi.Models.S3;
-
+/// <summary>
+/// 
+/// </summary>
 public class AwsCredentials
 {
-	public string AwsKey { get; set; } = "";
-	public string AwsSecretKey { get; set; }
+    /// <summary>
+    /// 
+    /// </summary>
+    public string AwsKey { get; set; } = "";
+    /// <summary>
+    /// 
+    /// </summary>
+    public string AwsSecretKey { get; set; }
 }
 
 //AKIA2LGN27OZ6S4NQLOB

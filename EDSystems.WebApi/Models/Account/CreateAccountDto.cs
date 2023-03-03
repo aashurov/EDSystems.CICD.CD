@@ -4,12 +4,30 @@ using EDSystems.Application.EDSystems.Commands.Accounts.CreateAccount;
 
 namespace EDSystems.WebApi.Models.Account
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class CreateAccountDto : IMapWith<CreateAccountCommand>
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public string Number { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
         public string Name { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
         public decimal Balance { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
         public int BranchId { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
         public int CurrencyId { get; set; }
 
         /// <summary>

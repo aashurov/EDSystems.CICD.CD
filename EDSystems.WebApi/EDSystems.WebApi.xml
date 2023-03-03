@@ -1360,6 +1360,36 @@
             
              </summary>
         </member>
+        <member name="T:EDSystems.WebApi.Models.Account.CreateAccountDto">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Account.CreateAccountDto.Number">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Account.CreateAccountDto.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Account.CreateAccountDto.Balance">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Account.CreateAccountDto.BranchId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Account.CreateAccountDto.CurrencyId">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="M:EDSystems.WebApi.Models.Account.CreateAccountDto.Mapping(AutoMapper.Profile)">
              <summary>
             
@@ -1385,10 +1415,70 @@
             
              </summary>
         </member>
+        <member name="P:EDSystems.WebApi.Models.Account.UpdateAccountDto.Id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Account.UpdateAccountDto.Number">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Account.UpdateAccountDto.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Account.UpdateAccountDto.Balance">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Account.UpdateAccountDto.BranchId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Account.UpdateAccountDto.CurrencyId">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="M:EDSystems.WebApi.Models.Account.UpdateAccountDto.Mapping(AutoMapper.Profile)">
              <summary>
             
              </summary>
+        </member>
+        <member name="T:EDSystems.WebApi.Models.Account.CreateUserAccountDto">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Account.CreateUserAccountDto.Number">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Account.CreateUserAccountDto.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Account.CreateUserAccountDto.Balance">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Account.CreateUserAccountDto.UserId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Account.CreateUserAccountDto.CurrencyId">
+            <summary>
+            
+            </summary>
         </member>
         <member name="M:EDSystems.WebApi.Models.Account.CreateUserAccountDto.Mapping(AutoMapper.Profile)">
              <summary>
@@ -1399,6 +1489,36 @@
              <summary>
             
              </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Account.UpdateUserAccountDto.Id">
+            <summary>
+            q
+            </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Account.UpdateUserAccountDto.Number">
+            <summary>
+            q
+            </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Account.UpdateUserAccountDto.Name">
+            <summary>
+            q
+            </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Account.UpdateUserAccountDto.Balance">
+            <summary>
+            q
+            </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Account.UpdateUserAccountDto.UserId">
+            <summary>
+            q
+            </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.Account.UpdateUserAccountDto.CurrencyId">
+            <summary>
+            q
+            </summary>
         </member>
         <member name="M:EDSystems.WebApi.Models.Account.UpdateUserAccountDto.Mapping(AutoMapper.Profile)">
              <summary>
@@ -2342,6 +2462,16 @@
             
              </summary>
         </member>
+        <member name="T:EDSystems.WebApi.Models.ParcelJob.DeleteParcelJobDto">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:EDSystems.WebApi.Models.ParcelJob.UpdateParcelJobDto">
+            <summary>
+            s
+            </summary>
+        </member>
         <member name="T:EDSystems.WebApi.Models.Plan.CreatePlanDto">
              <summary>
             
@@ -2447,6 +2577,51 @@
             
              </summary>
         </member>
+        <member name="T:EDSystems.WebApi.Models.S3.AwsCredentials">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.S3.AwsCredentials.AwsKey">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.S3.AwsCredentials.AwsSecretKey">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:EDSystems.WebApi.Models.S3.Constans">
+            <summary>
+            sa
+            </summary>
+        </member>
+        <member name="F:EDSystems.WebApi.Models.S3.Constans.AccessKey">
+            <summary>
+            sa
+            </summary>
+        </member>
+        <member name="F:EDSystems.WebApi.Models.S3.Constans.SecretKey">
+            <summary>
+            sa
+            </summary>
+        </member>
+        <member name="T:EDSystems.WebApi.Models.S3.S3ResponseDto">
+            <summary>
+            sa
+            </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.S3.S3ResponseDto.StatusCode">
+            <summary>
+            sa
+            </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.S3.S3ResponseDto.Message">
+            <summary>
+            sa
+            </summary>
+        </member>
         <member name="T:EDSystems.WebApi.Models.Status.CreateStatusDto">
              <summary>
             
@@ -2521,6 +2696,51 @@
              <summary>
             
              </summary>
+        </member>
+        <member name="T:EDSystems.WebApi.Models.UserClaim.GetClaimList.AddToClaimDto">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.UserClaim.GetClaimList.AddToClaimDto.Email">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.UserClaim.GetClaimList.AddToClaimDto.ClaimType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.UserClaim.GetClaimList.AddToClaimDto.ClaimName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.UserClaim.GetClaimList.AddToClaimDto.ClaimValue">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Models.UserClaim.GetClaimList.AddToClaimDto.Mapping(AutoMapper.Profile)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:EDSystems.WebApi.Models.UserClaim.GetClaimList.GetUserClaimDto">
+            <summary>
+            s
+            </summary>
+        </member>
+        <member name="P:EDSystems.WebApi.Models.UserClaim.GetClaimList.GetUserClaimDto.Email">
+            <summary>
+            sa
+            </summary>
+        </member>
+        <member name="M:EDSystems.WebApi.Models.UserClaim.GetClaimList.GetUserClaimDto.Mapping(AutoMapper.Profile)">
+            <summary>
+            q
+            </summary>
         </member>
         <member name="T:EDSystems.WebApi.Models.UserManager.AddToRoleDto">
              <summary>

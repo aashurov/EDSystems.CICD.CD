@@ -9,11 +9,30 @@ namespace EDSystems.WebApi.Models.Account;
 /// </summary>
 public class UpdateUserAccountDto : IMapWith<UpdateUserAccountCommand>
 {
+    /// <summary>
+    /// q
+    /// </summary>
     public int Id { get; set; }
+
+    /// <summary>
+    /// q
+    /// </summary>
     public string Number { get; set; }
+    /// <summary>
+    /// q
+    /// </summary>
     public string Name { get; set; }
+    /// <summary>
+    /// q
+    /// </summary>
     public decimal Balance { get; set; }
+    /// <summary>
+    /// q
+    /// </summary>
     public string UserId { get; set; }
+    /// <summary>
+    /// q
+    /// </summary>
     public int CurrencyId { get; set; }
 
     /// <summary>
