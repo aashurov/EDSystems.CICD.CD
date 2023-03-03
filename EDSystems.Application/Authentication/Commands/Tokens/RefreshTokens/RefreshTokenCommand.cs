@@ -3,7 +3,7 @@ using System;
 
 namespace EDSystems.Application.Authentication.Commands.Tokens.RefreshTokens
 {
-    public class RefreshTokenCommand : IRequest
+    public class RefreshTokenCommand : IRequest<Unit>
     {
         /// <summary>
         ///

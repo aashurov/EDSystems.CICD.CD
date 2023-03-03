@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace EDSystems.Application.EDSystems.Commands.Parcels.UpdateParcelsStatusById;
 
-public class UpdateParcelsStatusByIdCommandHandler : IRequestHandler<UpdateParcelsStatusByIdCommand>
+public class UpdateParcelsStatusByIdCommandHandler : IRequestHandler<UpdateParcelsStatusByIdCommand, Unit>
 {
     private readonly IEDSystemsDbContext _dbContext;
     private readonly UserManager<User> _userManager;

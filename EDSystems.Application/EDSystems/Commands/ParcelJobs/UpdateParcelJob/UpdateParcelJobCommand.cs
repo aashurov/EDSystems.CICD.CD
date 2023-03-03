@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace EDSystems.Application.EDSystems.Commands.ParcelJobs.UpdateParcelJob;
 
-public class UpdateParcelJobCommand : IRequest
+public class UpdateParcelJobCommand : IRequest<Unit>
 {
     public int Id { get; set; }
     public decimal Cost { get; set; }

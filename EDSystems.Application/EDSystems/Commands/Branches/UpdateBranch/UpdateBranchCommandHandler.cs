@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace EDSystems.Application.EDSystems.Commands.Branches.UpdateBranch;
 
-public class UpdateBranchCommandHandler : IRequestHandler<UpdateBranchCommand>
+public class UpdateBranchCommandHandler : IRequestHandler<UpdateBranchCommand, Unit>
 {
     private readonly IEDSystemsDbContext _dbContext;
     private readonly ICustomLoggingBehavoir _customLoggingBehavior;

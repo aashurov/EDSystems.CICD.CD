@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace EDSystems.Application.EDSystems.Commands.Parcels.DeleteParcelSounds;
 
-public class DeleteParcelSoundsCommandHandler : IRequestHandler<DeleteParcelSoundsCommand>
+public class DeleteParcelSoundsCommandHandler : IRequestHandler<DeleteParcelSoundsCommand, Unit>
 {
     private readonly IEDSystemsDbContext _dbContext;
     private readonly IWebHostEnvironment _env;

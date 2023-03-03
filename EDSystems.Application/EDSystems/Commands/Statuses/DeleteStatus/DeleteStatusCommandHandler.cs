@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace EDSystems.Application.EDSystems.Commands.Statuses.DeleteStatus;
 
-public class DeleteStatusCommandHandler : IRequestHandler<DeleteStatusCommand>
+public class DeleteStatusCommandHandler : IRequestHandler<DeleteStatusCommand, Unit>
 {
     private readonly IEDSystemsDbContext _dbContext;
 

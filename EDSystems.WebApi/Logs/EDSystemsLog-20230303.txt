@@ -1,0 +1,110 @@
+2023-03-03 11:19:10.659 +05:00 [INF] User profile is available. Using '/Users/kdbiosdeveloper/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-03-03 11:19:11.304 +05:00 [INF] Now listening on: https://localhost:7271
+2023-03-03 11:19:11.305 +05:00 [INF] Now listening on: http://localhost:5271
+2023-03-03 11:19:11.306 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-03 11:19:11.307 +05:00 [INF] Hosting environment: Development
+2023-03-03 11:19:11.307 +05:00 [INF] Content root path: /Users/kdbiosdeveloper/Documents/XProjects/EDSystems.CICD.CD/EDSystems.WebApi
+2023-03-03 11:19:12.916 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/swagger/index.html - -
+2023-03-03 11:19:13.103 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/swagger/index.html - - - 200 - text/html;charset=utf-8 190.2998ms
+2023-03-03 11:19:13.352 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/swagger/v1/swagger.json - -
+2023-03-03 11:19:13.767 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 415.1873ms
+2023-03-03 13:02:22.868 +05:00 [INF] User profile is available. Using '/Users/kdbiosdeveloper/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-03-03 13:02:23.865 +05:00 [INF] Now listening on: https://localhost:7271
+2023-03-03 13:02:23.866 +05:00 [INF] Now listening on: http://localhost:5271
+2023-03-03 13:02:23.867 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-03 13:02:23.868 +05:00 [INF] Hosting environment: Development
+2023-03-03 13:02:23.869 +05:00 [INF] Content root path: /Users/kdbiosdeveloper/Documents/XProjects/EDSystems.CICD.CD/EDSystems.WebApi
+2023-03-03 13:02:25.133 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/swagger/index.html - -
+2023-03-03 13:02:25.285 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/swagger/index.html - - - 200 - text/html;charset=utf-8 154.2413ms
+2023-03-03 13:02:25.396 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/swagger/v1/swagger.json - -
+2023-03-03 13:02:25.836 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 439.1659ms
+2023-03-03 13:03:45.694 +05:00 [INF] Request starting HTTP/1.1 POST https://localhost:7271/api/Authentication/Login application/json-patch+json 72
+2023-03-03 13:03:45.794 +05:00 [INF] CORS policy execution successful.
+2023-03-03 13:03:45.862 +05:00 [INF] Executing endpoint 'EDSystems.WebApi.Controllers.AuthenticationController.Login (EDSystems.WebApi)'
+2023-03-03 13:03:45.888 +05:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(EDSystems.WebApi.Models.AuthManager.UserLoginDto) on controller EDSystems.WebApi.Controllers.AuthenticationController (EDSystems.WebApi).
+2023-03-03 13:03:49.494 +05:00 [INF] Executed DbCommand (215ms) [Parameters=[@__normalizedEmail_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."Address", a."ChatId", a."ConcurrencyStamp", a."DateCreated", a."DateUpdated", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."ParcelJobId", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName", a."UserNameT"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2023-03-03 13:03:50.543 +05:00 [INF] Executed DbCommand (179ms) [Parameters=[@__user_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ClaimType", a."ClaimValue", a."Discriminator", a."UserId"
+FROM "AspNetUserClaims" AS a
+WHERE a."UserId" = @__user_Id_0
+2023-03-03 13:03:51.316 +05:00 [INF] Executed DbCommand (183ms) [Parameters=[@__userId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a0."Name"
+FROM "AspNetUserRoles" AS a
+INNER JOIN "AspNetRoles" AS a0 ON a."RoleId" = a0."Id"
+WHERE a."UserId" = @__userId_0
+2023-03-03 13:03:52.105 +05:00 [INF] Executed DbCommand (202ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2023-03-03 13:03:52.917 +05:00 [INF] Executed DbCommand (197ms) [Parameters=[@__role_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."ClaimType", a."ClaimValue"
+FROM "AspNetRoleClaims" AS a
+WHERE a."RoleId" = @__role_Id_0
+2023-03-03 13:03:53.641 +05:00 [INF] Executed DbCommand (173ms) [Parameters=[@__userId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a0."Name"
+FROM "AspNetUserRoles" AS a
+INNER JOIN "AspNetRoles" AS a0 ON a."RoleId" = a0."Id"
+WHERE a."UserId" = @__userId_0
+2023-03-03 13:03:53.777 +05:00 [INF] NotesRequest: RefreshTokenCommand {"Id":0,"UserId":"30a8f9cc-8d37-4d93-ab2f-774428387e4a","Token":"XRXUO75N46GMFNWF2KHZG5WDOJL3WRHVYRH2c837195-e8d7-4e20-9212-2f8c6f487fff","JwtId":"809d6626-4eab-4009-bbae-6b7c9156c98f","IsUsed":false,"IsRevoked":false,"AddedDateTime":"2023-03-03T08:03:53.7541890Z","ExpiryDateTime":"2023-09-03T08:03:53.7542550Z","$type":"RefreshTokenCommand"}
+2023-03-03 13:03:54.715 +05:00 [INF] Executed DbCommand (187ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = DateTime), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?', @p5='?', @p6='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "RefreshToken" ("AddedDateTime", "ExpiryDateTime", "IsRevoked", "IsUsed", "JwtId", "Token", "UserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6)
+RETURNING "Id";
+2023-03-03 13:03:54.795 +05:00 [INF] Executing OkObjectResult, writing value of type 'EDSystems.WebApi.Models.AuthManager.AuthResult'.
+2023-03-03 13:03:54.822 +05:00 [INF] Executed action EDSystems.WebApi.Controllers.AuthenticationController.Login (EDSystems.WebApi) in 8930.5712ms
+2023-03-03 13:03:54.823 +05:00 [INF] Executed endpoint 'EDSystems.WebApi.Controllers.AuthenticationController.Login (EDSystems.WebApi)'
+2023-03-03 13:03:54.833 +05:00 [INF] Request finished HTTP/1.1 POST https://localhost:7271/api/Authentication/Login application/json-patch+json 72 - 200 2058 application/json;+charset=utf-8 9138.2269ms
+2023-03-03 13:04:11.884 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/api/Branch - -
+2023-03-03 13:04:11.983 +05:00 [INF] Executing endpoint 'EDSystems.WebApi.Controllers.BranchController.GetAll (EDSystems.WebApi)'
+2023-03-03 13:04:11.986 +05:00 [INF] Route matched with {action = "GetAll", controller = "Branch"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EDSystems.Application.EDSystems.Queries.Branches.GetBranchList.BranchListVm]] GetAll() on controller EDSystems.WebApi.Controllers.BranchController (EDSystems.WebApi).
+2023-03-03 13:04:12.002 +05:00 [INF] NotesRequest: GetBranchListQuery {"$type":"GetBranchListQuery"}
+2023-03-03 13:04:12.942 +05:00 [INF] Executed DbCommand (176ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."Name", b."Country", b."Code", b."City", b."Address", b."Email", b."Phone", b."DateCreated", b."DateUpdated"
+FROM "Branch" AS b
+2023-03-03 13:04:12.948 +05:00 [INF] Executing OkObjectResult, writing value of type 'EDSystems.Application.EDSystems.Queries.Branches.GetBranchList.BranchListVm'.
+2023-03-03 13:04:12.956 +05:00 [INF] Executed action EDSystems.WebApi.Controllers.BranchController.GetAll (EDSystems.WebApi) in 969.5576ms
+2023-03-03 13:04:12.956 +05:00 [INF] Executed endpoint 'EDSystems.WebApi.Controllers.BranchController.GetAll (EDSystems.WebApi)'
+2023-03-03 13:04:12.957 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/api/Branch - - - 200 1737 application/json;+charset=utf-8 1073.7694ms
+2023-03-03 13:04:23.649 +05:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:7271/api/Branch/1 - -
+2023-03-03 13:04:23.656 +05:00 [INF] CORS policy execution successful.
+2023-03-03 13:04:23.661 +05:00 [INF] Executing endpoint 'EDSystems.WebApi.Controllers.BranchController.Delete (EDSystems.WebApi)'
+2023-03-03 13:04:23.667 +05:00 [INF] Route matched with {action = "Delete", controller = "Branch"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32) on controller EDSystems.WebApi.Controllers.BranchController (EDSystems.WebApi).
+2023-03-03 13:04:23.699 +05:00 [INF] NotesRequest: DeleteBranchCommand {"Id":1,"$type":"DeleteBranchCommand"}
+2023-03-03 13:04:24.483 +05:00 [INF] Executed DbCommand (218ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."Address", b."City", b."Code", b."Country", b."CreatedBy", b."DateCreated", b."DateUpdated", b."Email", b."ModifiedBy", b."Name", b."Phone"
+FROM "Branch" AS b
+WHERE b."Id" = @__p_0
+LIMIT 1
+2023-03-03 13:04:25.528 +05:00 [INF] Executed DbCommand (394ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "Branch"
+WHERE "Id" = @p0;
+2023-03-03 13:04:25.549 +05:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2023-03-03 13:04:25.549 +05:00 [INF] Executed action EDSystems.WebApi.Controllers.BranchController.Delete (EDSystems.WebApi) in 1881.4539ms
+2023-03-03 13:04:25.549 +05:00 [INF] Executed endpoint 'EDSystems.WebApi.Controllers.BranchController.Delete (EDSystems.WebApi)'
+2023-03-03 13:04:25.549 +05:00 [INF] Request finished HTTP/1.1 DELETE https://localhost:7271/api/Branch/1 - - - 204 - - 1900.2799ms
+2023-03-03 13:04:39.755 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/api/Branch - -
+2023-03-03 13:04:39.756 +05:00 [INF] Executing endpoint 'EDSystems.WebApi.Controllers.BranchController.GetAll (EDSystems.WebApi)'
+2023-03-03 13:04:39.756 +05:00 [INF] Route matched with {action = "GetAll", controller = "Branch"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EDSystems.Application.EDSystems.Queries.Branches.GetBranchList.BranchListVm]] GetAll() on controller EDSystems.WebApi.Controllers.BranchController (EDSystems.WebApi).
+2023-03-03 13:04:39.757 +05:00 [INF] NotesRequest: GetBranchListQuery {"$type":"GetBranchListQuery"}
+2023-03-03 13:04:40.571 +05:00 [INF] Executed DbCommand (187ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."Name", b."Country", b."Code", b."City", b."Address", b."Email", b."Phone", b."DateCreated", b."DateUpdated"
+FROM "Branch" AS b
+2023-03-03 13:04:40.572 +05:00 [INF] Executing OkObjectResult, writing value of type 'EDSystems.Application.EDSystems.Queries.Branches.GetBranchList.BranchListVm'.
+2023-03-03 13:04:40.573 +05:00 [INF] Executed action EDSystems.WebApi.Controllers.BranchController.GetAll (EDSystems.WebApi) in 816.5202ms
+2023-03-03 13:04:40.573 +05:00 [INF] Executed endpoint 'EDSystems.WebApi.Controllers.BranchController.GetAll (EDSystems.WebApi)'
+2023-03-03 13:04:40.573 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/api/Branch - - - 200 1305 application/json;+charset=utf-8 818.0608ms
+2023-03-03 13:08:14.671 +05:00 [INF] User profile is available. Using '/Users/kdbiosdeveloper/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-03-03 13:08:15.346 +05:00 [INF] Now listening on: https://localhost:7271
+2023-03-03 13:08:15.347 +05:00 [INF] Now listening on: http://localhost:5271
+2023-03-03 13:08:15.349 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-03 13:08:15.349 +05:00 [INF] Hosting environment: Development
+2023-03-03 13:08:15.349 +05:00 [INF] Content root path: /Users/kdbiosdeveloper/Documents/XProjects/EDSystems.CICD.CD/EDSystems.WebApi
+2023-03-03 13:08:15.672 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/swagger/index.html - -
+2023-03-03 13:08:15.885 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/swagger/index.html - - - 200 - text/html;charset=utf-8 215.2208ms
+2023-03-03 13:08:16.154 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/swagger/v1/swagger.json - -
+2023-03-03 13:08:16.699 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 544.3548ms

@@ -3,7 +3,7 @@ using System;
 
 namespace EDSystems.Application.EDSystems.Commands.Statuses.UpdateStatus;
 
-public class UpdateStatusCommand : IRequest
+public class UpdateStatusCommand : IRequest<Unit>
 {
     public int Id { get; set; }
     public string Name { get; set; }

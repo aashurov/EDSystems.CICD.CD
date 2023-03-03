@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace EDSystems.Application.EDSystems.Commands.Parcels.UpdateParcel;
 
-public class UpdateParcelCommand : IRequest
+public class UpdateParcelCommand : IRequest<Unit>
 {
     public int Id { get; set; }
     public virtual ParcelCost ParcelCost { get; set; }

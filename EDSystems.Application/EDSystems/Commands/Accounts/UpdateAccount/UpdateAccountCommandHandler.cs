@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace EDSystems.Application.EDSystems.Commands.Accounts.UpdateAccount;
 
-public class UpdateAccountCommandHandler : IRequestHandler<UpdateAccountCommand>
+public class UpdateAccountCommandHandler : IRequestHandler<UpdateAccountCommand, Unit>
 {
     private readonly IEDSystemsDbContext _dbContext;
     private readonly ICustomLoggingBehavoir _customLoggingBehavior;

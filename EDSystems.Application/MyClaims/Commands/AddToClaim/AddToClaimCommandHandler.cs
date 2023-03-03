@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace EDSystems.Application.EDSystems.Commands.MyClaims.AddToClaim;
 
-public class AddToClaimCommandHandler : IRequestHandler<AddToClaimCommand>
+public class AddToClaimCommandHandler : IRequestHandler<AddToClaimCommand, Unit>
 {
     private readonly ICustomLoggingBehavoir _customLoggingBehavior;
     private readonly UserManager<User> _userManager;

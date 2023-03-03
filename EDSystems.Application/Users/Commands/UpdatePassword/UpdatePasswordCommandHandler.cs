@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace EDSystems.Application.Users.Commands.UpdatePassword;
 
-public class UpdatePasswordCommandHandler : IRequestHandler<UpdatePasswordCommand>
+public class UpdatePasswordCommandHandler : IRequestHandler<UpdatePasswordCommand, Unit>
 {
     private readonly UserManager<User> _userManager;
     private readonly RoleManager<Role> _roleManager;

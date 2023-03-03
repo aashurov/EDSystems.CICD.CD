@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace EDSystems.Application.EDSystems.Commands.Plans.UpdatePlan;
 
-public class UpdatePlanCommandHandler : IRequestHandler<UpdatePlanCommand>
+public class UpdatePlanCommandHandler : IRequestHandler<UpdatePlanCommand, Unit>
 {
     private readonly IEDSystemsDbContext _dbContext;
 

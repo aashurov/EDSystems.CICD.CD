@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace EDSystems.Application.Roles.Commands.DeleteRole;
 
-public class DeleteRoleCommandHandler : IRequestHandler<DeleteRoleCommand>
+public class DeleteRoleCommandHandler : IRequestHandler<DeleteRoleCommand, Unit>
 {
     private readonly RoleManager<Role> _roleManager;
 

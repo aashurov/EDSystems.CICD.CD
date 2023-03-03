@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace EDSystems.Application.EDSystems.Commands.Parcels.AddParcelSound;
 
-public class AddParcelSoundCommandHandler : IRequestHandler<AddParcelSoundCommand>
+public class AddParcelSoundCommandHandler : IRequestHandler<AddParcelSoundCommand, Unit>
 {
     private readonly IEDSystemsDbContext _dbContext;
     private IWebHostEnvironment _env;

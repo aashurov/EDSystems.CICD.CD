@@ -2,7 +2,7 @@
 
 namespace EDSystems.Application.Users.Commands.UpdateUserRole;
 
-public class UpdateUserRoleCommand : IRequest
+public class UpdateUserRoleCommand : IRequest<Unit>
 {
     public string Id { get; set; }
     public string UserId { get; set; }

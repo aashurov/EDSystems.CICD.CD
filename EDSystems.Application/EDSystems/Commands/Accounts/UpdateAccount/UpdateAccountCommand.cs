@@ -2,7 +2,7 @@
 
 namespace EDSystems.Application.EDSystems.Commands.Accounts.UpdateAccount;
 
-public class UpdateAccountCommand : IRequest
+public class UpdateAccountCommand : IRequest<Unit>
 {
     public int Id { get; set; }
     public string Number { get; set; }

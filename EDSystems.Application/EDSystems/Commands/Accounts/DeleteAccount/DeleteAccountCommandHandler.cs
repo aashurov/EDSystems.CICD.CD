@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace EDSystems.Application.EDSystems.Commands.Accounts.DeleteAccount;
 
-public class DeleteAccountCommandHandler : IRequestHandler<DeleteAccountCommand>
+public class DeleteAccountCommandHandler : IRequestHandler<DeleteAccountCommand, Unit>
 {
     private readonly IEDSystemsDbContext _dbContext;
     private readonly ICustomLoggingBehavoir _customLoggingBehavior;

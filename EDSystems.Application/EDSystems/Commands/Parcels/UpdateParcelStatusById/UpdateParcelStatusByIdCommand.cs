@@ -2,7 +2,7 @@
 
 namespace EDSystems.Application.EDSystems.Commands.Parcels.UpdateParcelStatusById;
 
-public class UpdateParcelStatusByIdCommand : IRequest
+public class UpdateParcelStatusByIdCommand : IRequest<Unit>
 {
     public int ParcelId { get; set; }
     public int StatusId { get; set; }

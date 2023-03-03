@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace EDSystems.Application.EDSystems.Commands.ParcelJobs.UpdateParcelJob;
 
-public class UpdateParcelJobCommandHandler : IRequestHandler<UpdateParcelJobCommand>
+public class UpdateParcelJobCommandHandler : IRequestHandler<UpdateParcelJobCommand, Unit>
 {
     private static readonly string _ClassName = nameof(UpdateParcelJobCommandHandler);
     private readonly ICustomLoggingBehavoir _customLoggingBehavior;

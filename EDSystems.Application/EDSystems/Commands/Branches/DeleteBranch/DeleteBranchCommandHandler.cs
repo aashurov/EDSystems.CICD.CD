@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace EDSystems.Application.EDSystems.Commands.Branches.DeleteBranch;
 
-public class DeleteBranchCommandHandler : IRequestHandler<DeleteBranchCommand>
+public class DeleteBranchCommandHandler : IRequestHandler<DeleteBranchCommand, Unit>
 {
     private readonly IEDSystemsDbContext _dbContext;
     private readonly ICustomLoggingBehavoir _customLoggingBehavior;

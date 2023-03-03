@@ -2,7 +2,7 @@
 
 namespace EDSystems.Application.Users.Commands.UpdateUser;
 
-public class UpdateUserCommand : IRequest
+public class UpdateUserCommand : IRequest<Unit>
 {
     public string Id { get; set; }
     public string FirstName { get; set; }

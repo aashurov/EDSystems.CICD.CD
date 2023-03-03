@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace EDSystems.Application.Roles.Commands.UpdateRole;
 
-public class UpdateRoleCommandHandler : IRequestHandler<UpdateRoleCommand>
+public class UpdateRoleCommandHandler : IRequestHandler<UpdateRoleCommand, Unit>
 {
     private readonly RoleManager<Role> _roleManager;
 

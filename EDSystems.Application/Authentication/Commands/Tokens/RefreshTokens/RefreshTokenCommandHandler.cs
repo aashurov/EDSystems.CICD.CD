@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace EDSystems.Application.Authentication.Commands.Tokens.RefreshTokens;
 
-public class RefreshTokenCommandHandler : IRequestHandler<RefreshTokenCommand>
+public class RefreshTokenCommandHandler : IRequestHandler<RefreshTokenCommand, Unit>
 {
     private readonly IEDSystemsDbContext _dbContext;
     private readonly ICustomLoggingBehavoir _customLoggingBehavior;

@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace EDSystems.Application.EDSystems.Commands.Parcels.UpdateParcel;
 
-public class UpdateParcelCommandHandler : IRequestHandler<UpdateParcelCommand>
+public class UpdateParcelCommandHandler : IRequestHandler<UpdateParcelCommand, Unit>
 {
     private readonly IEDSystemsDbContext _dbContext;
     private readonly IWebHostEnvironment _env;

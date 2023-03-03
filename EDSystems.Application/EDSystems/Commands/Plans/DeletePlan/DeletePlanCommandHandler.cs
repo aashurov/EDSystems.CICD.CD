@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace EDSystems.Application.EDSystems.Commands.Plans.DeletePlan;
 
-public class DeletePlanCommandHandler : IRequestHandler<DeletePlanCommand>
+public class DeletePlanCommandHandler : IRequestHandler<DeletePlanCommand, Unit>
 {
     private readonly IEDSystemsDbContext _dbContext;
 

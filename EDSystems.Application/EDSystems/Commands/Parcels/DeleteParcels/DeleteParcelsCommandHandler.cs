@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace EDSystems.Application.EDSystems.Commands.Parcels.DeleteParcels;
 
-public class DeleteParcelsCommandHandler : IRequestHandler<DeleteParcelsCommand>
+public class DeleteParcelsCommandHandler : IRequestHandler<DeleteParcelsCommand, Unit>
 {
     private readonly IEDSystemsDbContext _dbContext;
 

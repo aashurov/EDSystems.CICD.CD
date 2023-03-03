@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace EDSystems.Application.EDSystems.Commands.Parcels.UpdateParcelImages;
 
-public class UpdateParcelImagesCommandHandler : IRequestHandler<UpdateParcelImagesCommand>
+public class UpdateParcelImagesCommandHandler : IRequestHandler<UpdateParcelImagesCommand, Unit>
 {
     private readonly IEDSystemsDbContext _dbContext;
     private IWebHostEnvironment _env;

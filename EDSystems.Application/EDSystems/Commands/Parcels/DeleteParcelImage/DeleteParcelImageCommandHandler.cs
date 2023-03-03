@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace EDSystems.Application.EDSystems.Commands.Parcels.DeleteImageFromParcel;
 
-public class DeleteParcelImageCommandHandler : IRequestHandler<DeleteParcelImageCommand>
+public class DeleteParcelImageCommandHandler : IRequestHandler<DeleteParcelImageCommand, Unit>
 {
     private readonly IEDSystemsDbContext _dbContext;
     private readonly IWebHostEnvironment _env;

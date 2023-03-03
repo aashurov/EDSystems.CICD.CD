@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace EDSystems.Application.EDSystems.Commands.Parcels.UpdateParcelSound;
 
-public class UpdateParcelSoundCommandHandler : IRequestHandler<UpdateParcelSoundCommand>
+public class UpdateParcelSoundCommandHandler : IRequestHandler<UpdateParcelSoundCommand, Unit>
 {
     private readonly IEDSystemsDbContext _dbContext;
     private IWebHostEnvironment _env;

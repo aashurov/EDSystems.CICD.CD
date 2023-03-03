@@ -2,7 +2,7 @@
 
 namespace EDSystems.Application.Users.Commands.DeleteFromRole
 {
-    public class DeleteFromRoleCommand : IRequest
+    public class DeleteFromRoleCommand : IRequest<Unit>
     {
         public string Id { get; set; }
         public string UserId { get; set; }

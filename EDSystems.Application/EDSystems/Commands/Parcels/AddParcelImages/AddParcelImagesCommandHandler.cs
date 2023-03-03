@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace EDSystems.Application.EDSystems.Commands.Parcels.AddParcelImages;
 
-public class AddParcelImagesCommandHandler : IRequestHandler<AddParcelImagesCommand>
+public class AddParcelImagesCommandHandler : IRequestHandler<AddParcelImagesCommand, Unit>
 {
     private readonly IEDSystemsDbContext _dbContext;
     private readonly IWebHostEnvironment _env;

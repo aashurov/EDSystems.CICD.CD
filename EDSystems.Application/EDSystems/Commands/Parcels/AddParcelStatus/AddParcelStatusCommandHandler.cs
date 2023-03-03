@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace EDSystems.Application.EDSystems.Commands.Parcels.AddParcelStatus;
 
-public class AddParcelStatusCommandHandler : IRequestHandler<AddParcelStatusCommand>
+public class AddParcelStatusCommandHandler : IRequestHandler<AddParcelStatusCommand, Unit>
 {
     private readonly IEDSystemsDbContext _dbContext;
     private readonly UserManager<User> _userManager;

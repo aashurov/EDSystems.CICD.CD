@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace EDSystems.Application.Users.Commands.UpdateUser;
 
-public class UpdateUserCommandHandler : IRequestHandler<UpdateUserCommand>
+public class UpdateUserCommandHandler : IRequestHandler<UpdateUserCommand, Unit>
 {
     private readonly UserManager<User> _userManager;
 

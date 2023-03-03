@@ -2,7 +2,7 @@
 
 namespace EDSystems.Application.EDSystems.Commands.Parcels.DeleteParcelStatus;
 
-public class DeleteParcelStatusCommand : IRequest
+public class DeleteParcelStatusCommand : IRequest<Unit>
 {
     /// <summary>
     ///

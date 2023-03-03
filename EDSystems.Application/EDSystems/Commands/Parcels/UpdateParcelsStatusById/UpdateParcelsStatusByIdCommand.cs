@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace EDSystems.Application.EDSystems.Commands.Parcels.UpdateParcelsStatusById
 {
-    public class UpdateParcelsStatusByIdCommand : IRequest
+    public class UpdateParcelsStatusByIdCommand : IRequest<Unit>
     {
         public ICollection<int> ParcelId { get; set; }
         public int StatusId { get; set; }

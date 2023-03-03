@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace EDSystems.Application.EDSystems.Commands.Statuses.UpdateStatus;
 
-public class UpdateStatusCommandHandler : IRequestHandler<UpdateStatusCommand>
+public class UpdateStatusCommandHandler : IRequestHandler<UpdateStatusCommand, Unit>
 {
     private readonly IEDSystemsDbContext _dbContext;
 

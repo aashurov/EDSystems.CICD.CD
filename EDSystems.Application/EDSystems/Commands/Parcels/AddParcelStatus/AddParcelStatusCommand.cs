@@ -2,7 +2,7 @@
 
 namespace EDSystems.Application.EDSystems.Commands.Parcels.AddParcelStatus;
 
-public class AddParcelStatusCommand : IRequest
+public class AddParcelStatusCommand : IRequest<Unit>
 {
     /// <summary>
     ///

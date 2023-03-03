@@ -2,7 +2,7 @@
 
 namespace EDSystems.Application.EDSystems.Commands.Statuses.DeleteStatus;
 
-public class DeleteStatusCommand : IRequest
+public class DeleteStatusCommand : IRequest<Unit>
 {
     public int Id { get; set; }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace EDSystems.Application.EDSystems.Commands.ParcelJobs.DeleteParcelJob;
 
-public class DeleteParcelJobCommandHandler : IRequestHandler<DeleteParcelJobCommand>
+public class DeleteParcelJobCommandHandler : IRequestHandler<DeleteParcelJobCommand, Unit>
 {
     private readonly IEDSystemsDbContext _dbContext;
     private readonly ICustomLoggingBehavoir _customLoggingBehavior;

@@ -2,7 +2,7 @@
 
 namespace EDSystems.Application.EDSystems.Commands.Branches.UpdateBranch;
 
-public class UpdateBranchCommand : IRequest
+public class UpdateBranchCommand : IRequest<Unit>
 {
     public int Id { get; set; }
     public string Name { get; set; }
