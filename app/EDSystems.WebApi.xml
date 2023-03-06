@@ -285,6 +285,7 @@
             </returns>
             <responce code="204">Success</responce>
             <responce code="401">If the user is unauthorized</responce>
+            ("DeleteBranches")
         </member>
         <member name="T:EDSystems.WebApi.Controllers.ClaimsController">
             <summary>
