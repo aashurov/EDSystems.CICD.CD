@@ -769,3 +769,16 @@ LIMIT @__p_1 OFFSET @__p_0
 2023-03-06 13:52:13.306 +05:00 [INF] Executed action EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination (EDSystems.WebApi) in 1535.9467ms
 2023-03-06 13:52:13.306 +05:00 [INF] Executed endpoint 'EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination (EDSystems.WebApi)'
 2023-03-06 13:52:13.306 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination?PageNumber=1&PageSize=41 - - - 200 9412 application/json;+charset=utf-8 1537.0718ms
+2023-03-06 14:15:46.724 +05:00 [INF] User profile is available. Using '/Users/kdbiosdeveloper/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-03-06 14:15:47.714 +05:00 [INF] Now listening on: https://localhost:7271
+2023-03-06 14:15:47.715 +05:00 [INF] Now listening on: http://localhost:5271
+2023-03-06 14:15:47.717 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-06 14:15:47.717 +05:00 [INF] Hosting environment: Development
+2023-03-06 14:15:47.717 +05:00 [INF] Content root path: /Users/kdbiosdeveloper/Documents/XProjects/EDSystems.CICD.CD/EDSystems.WebApi
+2023-03-06 14:15:48.942 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/swagger/index.html - -
+2023-03-06 14:15:49.085 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/swagger/index.html - - - 200 - text/html;charset=utf-8 144.3129ms
+2023-03-06 14:15:49.101 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/swagger/swagger-ui-bundle.js - -
+2023-03-06 14:15:49.166 +05:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-03-06 14:15:49.168 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/swagger/swagger-ui-bundle.js - - - 200 1061536 text/javascript 66.2440ms
+2023-03-06 14:15:49.301 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/swagger/v1/swagger.json - -
+2023-03-06 14:15:49.745 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 443.5177ms

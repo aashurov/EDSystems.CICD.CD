@@ -19,7 +19,7 @@
    f. open ~/.ssh/config
    e. if file not exist touch ~/.ssh/config
    g. Paste this line of code 
-   		Host *.github.com
+   		Host *.github.com    
   		        AddKeysToAgent yes
                 UseKeychain yes
   				IdentityFile ~/.ssh/id_ed25519
