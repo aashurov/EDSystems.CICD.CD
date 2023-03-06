@@ -54,7 +54,7 @@
 
 5. For connection to EC2 
 	chmod 400 ~/.ssh/EDSystems-KeyPair.pem
-	ssh -i "~/.ssh/EDSystems-Key.pem" ec2-user@ec2-52-90-110-136.compute-1.amazonaws.com
+	ssh -i "~/.ssh/EDSystems-Key.pem" ec2-user@ec2-18-210-20-17.compute-1.amazonaws.com
 ssh -i "~/.ssh/EDSystems-Key.pem" ec2-user@ec2-54-234-97-150.compute-1.amazonaws.com
 
 6. Create CodeDeploy
