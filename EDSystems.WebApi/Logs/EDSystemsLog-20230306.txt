@@ -852,3 +852,31 @@ LIMIT @__p_1 OFFSET @__p_0
 2023-03-06 14:55:19.772 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/swagger/index.html - - - 200 - text/html;charset=utf-8 155.4373ms
 2023-03-06 14:55:19.879 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/swagger/v1/swagger.json - -
 2023-03-06 14:55:20.361 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 481.6245ms
+2023-03-06 14:59:17.698 +05:00 [INF] User profile is available. Using '/Users/kdbiosdeveloper/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-03-06 14:59:18.419 +05:00 [INF] Now listening on: https://localhost:7271
+2023-03-06 14:59:18.423 +05:00 [INF] Now listening on: http://localhost:5271
+2023-03-06 14:59:18.426 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-06 14:59:18.426 +05:00 [INF] Hosting environment: Development
+2023-03-06 14:59:18.426 +05:00 [INF] Content root path: /Users/kdbiosdeveloper/Documents/XProjects/EDSystems.CICD.CD/EDSystems.WebApi
+2023-03-06 14:59:19.727 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/swagger/index.html - -
+2023-03-06 14:59:19.926 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/swagger/index.html - - - 200 - text/html;charset=utf-8 202.3606ms
+2023-03-06 14:59:20.064 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/swagger/v1/swagger.json - -
+2023-03-06 14:59:20.333 +05:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "POST api/Branch" for actions - EDSystems.WebApi.Controllers.BranchController.Create (EDSystems.WebApi),EDSystems.WebApi.Controllers.BranchController.DeleteBranches (EDSystems.WebApi). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2023-03-06 14:59:20.369 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/swagger/v1/swagger.json - - - 500 - text/plain;+charset=utf-8 304.5445ms
+2023-03-06 15:00:20.032 +05:00 [INF] User profile is available. Using '/Users/kdbiosdeveloper/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-03-06 15:00:20.681 +05:00 [INF] Now listening on: https://localhost:7271
+2023-03-06 15:00:20.682 +05:00 [INF] Now listening on: http://localhost:5271
+2023-03-06 15:00:20.684 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-06 15:00:20.684 +05:00 [INF] Hosting environment: Development
+2023-03-06 15:00:20.684 +05:00 [INF] Content root path: /Users/kdbiosdeveloper/Documents/XProjects/EDSystems.CICD.CD/EDSystems.WebApi
+2023-03-06 15:00:21.902 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/swagger/index.html - -
+2023-03-06 15:00:22.045 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/swagger/index.html - - - 200 - text/html;charset=utf-8 145.0156ms
+2023-03-06 15:00:22.159 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/swagger/v1/swagger.json - -
+2023-03-06 15:00:22.569 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 409.4703ms

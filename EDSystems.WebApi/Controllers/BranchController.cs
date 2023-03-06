@@ -168,6 +168,11 @@ public class BranchController : BaseController
     /// </returns>
     /// <responce code="204">Success</responce>
     /// <responce code="401">If the user is unauthorized</responce>
+     #if DEBUG
+    [ApiExplorerSettings(IgnoreApi = true)]
+    #else
+    [ApiExplorerSettings(IgnoreApi = true)]
+    #endif
     [HttpDelete("{Id}")]
     //[Authorize]
     [Authorize(Policy = "CanDeleteBranch")]
@@ -194,6 +199,7 @@ public class BranchController : BaseController
     /// </returns>
     /// <responce code="204">Success</responce>
     /// <responce code="401">If the user is unauthorized</responce>
+    /// ("DeleteBranches")
     [HttpPost("DeleteBranches")]
     [Authorize(Policy = "CanDeleteBranches")]
     //[Authorize]

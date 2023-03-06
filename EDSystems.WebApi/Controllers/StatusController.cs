@@ -162,6 +162,11 @@ namespace EDSystems.WebApi.Controllers
         /// </returns>
         /// <responce code="204">Success</responce>
         /// <responce code="401">If the user is unauthorized</responce>
+#if DEBUG
+        [ApiExplorerSettings(IgnoreApi = true)]
+#else
+        [ApiExplorerSettings(IgnoreApi = true)]
+#endif
         [HttpDelete("{Id}")]
         [Authorize(Policy = "CanDeleteStatus")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
