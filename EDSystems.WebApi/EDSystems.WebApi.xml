@@ -29,7 +29,7 @@
             <responce code="200">Success</responce>
             <responce code="401">If the user is unauthorized</responce>
         </member>
-        <member name="M:EDSystems.WebApi.Controllers.AccountController.GetAllWithPagination">
+        <member name="M:EDSystems.WebApi.Controllers.AccountController.GetAllWithPagination(System.Int32,System.Int32)">
             <summary>
             Get the list of accounts with pagination
             </summary>
@@ -114,7 +114,7 @@
             <responce code="200">Success</responce>
             <responce code="401">If the user is unauthorized</responce>
         </member>
-        <member name="M:EDSystems.WebApi.Controllers.AccountHistoryController.GetAllWithPagination">
+        <member name="M:EDSystems.WebApi.Controllers.AccountHistoryController.GetAllWithPagination(System.Int32,System.Int32)">
             <summary>
             Get the list of branches with pagination
             </summary>
@@ -210,7 +210,7 @@
             <responce code="200">Success</responce>
             <responce code="401">If the user is unauthorized</responce>
         </member>
-        <member name="M:EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination">
+        <member name="M:EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination(System.Int32,System.Int32)">
             <summary>
             Get the list of branches with pagination
             </summary>
@@ -553,7 +553,7 @@
             <responce code="200">Success</responce>
             <responce code="401">If the user is unauthorized</responce>
         </member>
-        <member name="M:EDSystems.WebApi.Controllers.ParcelController.GetAllWithPagination">
+        <member name="M:EDSystems.WebApi.Controllers.ParcelController.GetAllWithPagination(System.Int32,System.Int32)">
             <summary>
             Get the list of parcels with pagination
             </summary>
@@ -694,7 +694,7 @@
             <responce code="200">Success</responce>
             <responce code="401">If the user is unauthorized</responce>
         </member>
-        <member name="M:EDSystems.WebApi.Controllers.ParcelJobController.GetAllWithPagination">
+        <member name="M:EDSystems.WebApi.Controllers.ParcelJobController.GetAllWithPagination(System.Int32,System.Int32)">
             <summary>
             Get the list of branches with pagination
             </summary>
@@ -777,7 +777,7 @@
             <responce code="200">Success</responce>
             <responce code="401">If the user is unauthorized</responce>
         </member>
-        <member name="M:EDSystems.WebApi.Controllers.PlanController.GetAllWithPagination">
+        <member name="M:EDSystems.WebApi.Controllers.PlanController.GetAllWithPagination(System.Int32,System.Int32)">
             <summary>
             Get the list of Plans
             </summary>
@@ -877,7 +877,7 @@
             <responce code="200">Success</responce>
             <responce code="401">If the user is unauthorized</responce>
         </member>
-        <member name="M:EDSystems.WebApi.Controllers.RoleManagerController.GetAllWithPagination">
+        <member name="M:EDSystems.WebApi.Controllers.RoleManagerController.GetAllWithPagination(System.Int32,System.Int32)">
             <summary>
             Get the list of Roles with pagination list
             </summary>
@@ -964,7 +964,7 @@
             <responce code="200">Success</responce>
             <responce code="401">If the user is unauthorized</responce>
         </member>
-        <member name="M:EDSystems.WebApi.Controllers.StatusController.GetAllWithPagination">
+        <member name="M:EDSystems.WebApi.Controllers.StatusController.GetAllWithPagination(System.Int32,System.Int32)">
             <summary>
             Get the lists of Statuses with pagination
             </summary>
@@ -1066,7 +1066,7 @@
             <responce code="200">Success</responce>
             <responce code="401">If the user is unauthorized</responce>
         </member>
-        <member name="M:EDSystems.WebApi.Controllers.UserAccountController.GetAllWithPagination">
+        <member name="M:EDSystems.WebApi.Controllers.UserAccountController.GetAllWithPagination(System.Int32,System.Int32)">
             <summary>
             Get the list of branches WithPagination
             </summary>
@@ -1151,7 +1151,7 @@
             <responce code="200">Success</responce>
             <responce code="401">If the user is unauthorized</responce>
         </member>
-        <member name="M:EDSystems.WebApi.Controllers.UserAccountHistoryController.GetAllWithPagination">
+        <member name="M:EDSystems.WebApi.Controllers.UserAccountHistoryController.GetAllWithPagination(System.Int32,System.Int32)">
             <summary>
             Get the list of branches
             </summary>
@@ -1203,7 +1203,7 @@
             <responce code="200">Success</responce>
             <responce code="401">If the user is unauthorized</responce>
         </member>
-        <member name="M:EDSystems.WebApi.Controllers.UserManagerController.GetAllWithPagination">
+        <member name="M:EDSystems.WebApi.Controllers.UserManagerController.GetAllWithPagination(System.Int32,System.Int32)">
             <summary>
             Get the lists of Users WithPagination
             </summary>

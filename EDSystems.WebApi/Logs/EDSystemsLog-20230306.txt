@@ -1,0 +1,771 @@
+2023-03-06 10:44:07.241 +05:00 [INF] User profile is available. Using '/Users/kdbiosdeveloper/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-03-06 10:44:07.883 +05:00 [INF] Now listening on: https://localhost:7271
+2023-03-06 10:44:07.884 +05:00 [INF] Now listening on: http://localhost:5271
+2023-03-06 10:44:07.886 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-06 10:44:07.886 +05:00 [INF] Hosting environment: Development
+2023-03-06 10:44:07.886 +05:00 [INF] Content root path: /Users/kdbiosdeveloper/Documents/XProjects/EDSystems.CICD.CD/EDSystems.WebApi
+2023-03-06 10:44:09.453 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/swagger/index.html - -
+2023-03-06 10:44:09.615 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/swagger/index.html - - - 200 - text/html;charset=utf-8 166.2258ms
+2023-03-06 10:44:09.695 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/swagger/swagger-ui-bundle.js - -
+2023-03-06 10:44:09.699 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/swagger/swagger-ui.css - -
+2023-03-06 10:44:09.722 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/swagger/swagger-ui-standalone-preset.js - -
+2023-03-06 10:44:09.731 +05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-03-06 10:44:09.732 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/swagger/swagger-ui.css - - - 200 144929 text/css 32.5345ms
+2023-03-06 10:44:09.740 +05:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-03-06 10:44:09.740 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/swagger/swagger-ui-standalone-preset.js - - - 200 312163 text/javascript 18.2423ms
+2023-03-06 10:44:09.790 +05:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-03-06 10:44:09.793 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/swagger/swagger-ui-bundle.js - - - 200 1061536 text/javascript 97.6356ms
+2023-03-06 10:44:09.948 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/swagger/v1/swagger.json - -
+2023-03-06 10:44:10.376 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 428.0971ms
+2023-03-06 10:47:11.926 +05:00 [INF] Request starting HTTP/1.1 POST https://localhost:7271/api/Authentication/Login application/json-patch+json 47
+2023-03-06 10:47:12.078 +05:00 [INF] CORS policy execution successful.
+2023-03-06 10:47:12.147 +05:00 [INF] Executing endpoint 'EDSystems.WebApi.Controllers.AuthenticationController.Login (EDSystems.WebApi)'
+2023-03-06 10:47:12.174 +05:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(EDSystems.WebApi.Models.AuthManager.UserLoginDto) on controller EDSystems.WebApi.Controllers.AuthenticationController (EDSystems.WebApi).
+2023-03-06 10:47:15.638 +05:00 [INF] Executed DbCommand (209ms) [Parameters=[@__normalizedEmail_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."Address", a."ChatId", a."ConcurrencyStamp", a."DateCreated", a."DateUpdated", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."ParcelJobId", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName", a."UserNameT"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2023-03-06 10:47:15.669 +05:00 [INF] Executing BadRequestObjectResult, writing value of type 'EDSystems.WebApi.Models.AuthManager.AuthResult'.
+2023-03-06 10:47:15.713 +05:00 [INF] Executed action EDSystems.WebApi.Controllers.AuthenticationController.Login (EDSystems.WebApi) in 3535.0514ms
+2023-03-06 10:47:15.714 +05:00 [INF] Executed endpoint 'EDSystems.WebApi.Controllers.AuthenticationController.Login (EDSystems.WebApi)'
+2023-03-06 10:47:15.722 +05:00 [INF] Request finished HTTP/1.1 POST https://localhost:7271/api/Authentication/Login application/json-patch+json 47 - 400 127 application/json;+charset=utf-8 3795.6612ms
+2023-03-06 10:47:57.582 +05:00 [INF] Request starting HTTP/1.1 POST https://localhost:7271/api/Authentication/Login application/json 76
+2023-03-06 10:47:57.591 +05:00 [INF] Executing endpoint 'EDSystems.WebApi.Controllers.AuthenticationController.Login (EDSystems.WebApi)'
+2023-03-06 10:47:57.592 +05:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(EDSystems.WebApi.Models.AuthManager.UserLoginDto) on controller EDSystems.WebApi.Controllers.AuthenticationController (EDSystems.WebApi).
+2023-03-06 10:47:58.487 +05:00 [INF] Executed DbCommand (184ms) [Parameters=[@__normalizedEmail_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."Address", a."ChatId", a."ConcurrencyStamp", a."DateCreated", a."DateUpdated", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."ParcelJobId", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName", a."UserNameT"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2023-03-06 10:47:59.486 +05:00 [INF] Executed DbCommand (186ms) [Parameters=[@__user_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ClaimType", a."ClaimValue", a."Discriminator", a."UserId"
+FROM "AspNetUserClaims" AS a
+WHERE a."UserId" = @__user_Id_0
+2023-03-06 10:48:00.508 +05:00 [INF] Executed DbCommand (182ms) [Parameters=[@__userId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a0."Name"
+FROM "AspNetUserRoles" AS a
+INNER JOIN "AspNetRoles" AS a0 ON a."RoleId" = a0."Id"
+WHERE a."UserId" = @__userId_0
+2023-03-06 10:48:01.244 +05:00 [INF] Executed DbCommand (175ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2023-03-06 10:48:01.987 +05:00 [INF] Executed DbCommand (173ms) [Parameters=[@__role_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."ClaimType", a."ClaimValue"
+FROM "AspNetRoleClaims" AS a
+WHERE a."RoleId" = @__role_Id_0
+2023-03-06 10:48:02.712 +05:00 [INF] Executed DbCommand (190ms) [Parameters=[@__userId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a0."Name"
+FROM "AspNetUserRoles" AS a
+INNER JOIN "AspNetRoles" AS a0 ON a."RoleId" = a0."Id"
+WHERE a."UserId" = @__userId_0
+2023-03-06 10:48:02.872 +05:00 [INF] NotesRequest: RefreshTokenCommand {"Id":0,"UserId":"30a8f9cc-8d37-4d93-ab2f-774428387e4a","Token":"9PJOY8IKXJJO0T2K5PRG6GQOULPND916JDOc5094ea0-f4a3-4a93-a1af-2b08e2633f54","JwtId":"d0ad1c63-45df-47b2-84dd-c0240940ab32","IsUsed":false,"IsRevoked":false,"AddedDateTime":"2023-03-06T05:48:02.8504980Z","ExpiryDateTime":"2023-09-06T05:48:02.8505980Z","$type":"RefreshTokenCommand"}
+2023-03-06 10:48:03.792 +05:00 [INF] Executed DbCommand (188ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = DateTime), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?', @p5='?', @p6='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "RefreshToken" ("AddedDateTime", "ExpiryDateTime", "IsRevoked", "IsUsed", "JwtId", "Token", "UserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6)
+RETURNING "Id";
+2023-03-06 10:48:03.832 +05:00 [INF] Executing OkObjectResult, writing value of type 'EDSystems.WebApi.Models.AuthManager.AuthResult'.
+2023-03-06 10:48:03.834 +05:00 [INF] Executed action EDSystems.WebApi.Controllers.AuthenticationController.Login (EDSystems.WebApi) in 6241.7594ms
+2023-03-06 10:48:03.834 +05:00 [INF] Executed endpoint 'EDSystems.WebApi.Controllers.AuthenticationController.Login (EDSystems.WebApi)'
+2023-03-06 10:48:03.834 +05:00 [INF] Request finished HTTP/1.1 POST https://localhost:7271/api/Authentication/Login application/json 76 - 200 2058 application/json;+charset=utf-8 6252.0433ms
+2023-03-06 10:48:43.311 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination - -
+2023-03-06 10:48:43.350 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+ClaimsAuthorizationRequirement:Claim.Type=CanGetAllBranchesWithPagination
+2023-03-06 10:48:43.355 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-03-06 10:48:43.355 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination - - - 401 0 - 44.1633ms
+2023-03-06 10:49:38.128 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination - -
+2023-03-06 10:49:38.136 +05:00 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token.
+2023-03-06 10:49:38.137 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+ClaimsAuthorizationRequirement:Claim.Type=CanGetAllBranchesWithPagination
+2023-03-06 10:49:38.144 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-03-06 10:49:38.145 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination - - - 401 0 - 16.1181ms
+2023-03-06 10:49:50.297 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination - -
+2023-03-06 10:49:50.348 +05:00 [INF] Executing endpoint 'EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination (EDSystems.WebApi)'
+2023-03-06 10:49:50.352 +05:00 [INF] Route matched with {action = "GetAllWithPagination", controller = "Branch"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EDSystems.Application.EDSystems.Queries.Branches.GetBranchListWithPagination.BranchListVmWithPagination]] GetAllWithPagination() on controller EDSystems.WebApi.Controllers.BranchController (EDSystems.WebApi).
+2023-03-06 10:49:50.383 +05:00 [INF] NotesRequest: GetBranchListWithPaginationQuery {"PageNumber":1,"PageSize":10,"$type":"GetBranchListWithPaginationQuery"}
+2023-03-06 10:49:51.258 +05:00 [INF] Executed DbCommand (177ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Branch" AS b
+2023-03-06 10:49:51.266 +05:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-03-06 10:49:51.266 +05:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-03-06 10:49:52.366 +05:00 [INF] Executed DbCommand (547ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."Name", b."Country", b."Code", b."City", b."Address", b."Email", b."Phone", b."DateCreated", b."DateUpdated"
+FROM "Branch" AS b
+LIMIT @__p_1 OFFSET @__p_0
+2023-03-06 10:49:52.370 +05:00 [INF] Executing OkObjectResult, writing value of type 'EDSystems.Application.Common.Models.PaginatedList`1[[EDSystems.Application.EDSystems.Queries.Branches.GetBranchListWithPagination.BranchLookupDtoWithPagination, EDSystems.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-03-06 10:49:52.384 +05:00 [INF] Executed action EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination (EDSystems.WebApi) in 2031.5477ms
+2023-03-06 10:49:52.384 +05:00 [INF] Executed endpoint 'EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination (EDSystems.WebApi)'
+2023-03-06 10:49:52.384 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination - - - 200 2517 application/json;+charset=utf-8 2086.5897ms
+2023-03-06 10:50:09.595 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination/2 - -
+2023-03-06 10:50:09.595 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination/2 - - - 404 0 - 0.6730ms
+2023-03-06 10:50:15.344 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination - -
+2023-03-06 10:50:15.346 +05:00 [INF] Executing endpoint 'EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination (EDSystems.WebApi)'
+2023-03-06 10:50:15.346 +05:00 [INF] Route matched with {action = "GetAllWithPagination", controller = "Branch"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EDSystems.Application.EDSystems.Queries.Branches.GetBranchListWithPagination.BranchListVmWithPagination]] GetAllWithPagination() on controller EDSystems.WebApi.Controllers.BranchController (EDSystems.WebApi).
+2023-03-06 10:50:15.347 +05:00 [INF] NotesRequest: GetBranchListWithPaginationQuery {"PageNumber":1,"PageSize":10,"$type":"GetBranchListWithPaginationQuery"}
+2023-03-06 10:50:16.140 +05:00 [INF] Executed DbCommand (181ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Branch" AS b
+2023-03-06 10:50:16.863 +05:00 [INF] Executed DbCommand (173ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."Name", b."Country", b."Code", b."City", b."Address", b."Email", b."Phone", b."DateCreated", b."DateUpdated"
+FROM "Branch" AS b
+LIMIT @__p_1 OFFSET @__p_0
+2023-03-06 10:50:16.864 +05:00 [INF] Executing OkObjectResult, writing value of type 'EDSystems.Application.Common.Models.PaginatedList`1[[EDSystems.Application.EDSystems.Queries.Branches.GetBranchListWithPagination.BranchLookupDtoWithPagination, EDSystems.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-03-06 10:50:16.864 +05:00 [INF] Executed action EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination (EDSystems.WebApi) in 1518.4688ms
+2023-03-06 10:50:16.864 +05:00 [INF] Executed endpoint 'EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination (EDSystems.WebApi)'
+2023-03-06 10:50:16.865 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination - - - 200 2517 application/json;+charset=utf-8 1520.4310ms
+2023-03-06 10:53:09.767 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination?id=2 - -
+2023-03-06 10:53:09.768 +05:00 [INF] Executing endpoint 'EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination (EDSystems.WebApi)'
+2023-03-06 10:53:09.768 +05:00 [INF] Route matched with {action = "GetAllWithPagination", controller = "Branch"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EDSystems.Application.EDSystems.Queries.Branches.GetBranchListWithPagination.BranchListVmWithPagination]] GetAllWithPagination() on controller EDSystems.WebApi.Controllers.BranchController (EDSystems.WebApi).
+2023-03-06 10:53:09.770 +05:00 [INF] NotesRequest: GetBranchListWithPaginationQuery {"PageNumber":1,"PageSize":10,"$type":"GetBranchListWithPaginationQuery"}
+2023-03-06 10:53:10.966 +05:00 [INF] Executed DbCommand (192ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Branch" AS b
+2023-03-06 10:53:11.893 +05:00 [INF] Executed DbCommand (204ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."Name", b."Country", b."Code", b."City", b."Address", b."Email", b."Phone", b."DateCreated", b."DateUpdated"
+FROM "Branch" AS b
+LIMIT @__p_1 OFFSET @__p_0
+2023-03-06 10:53:11.893 +05:00 [INF] Executing OkObjectResult, writing value of type 'EDSystems.Application.Common.Models.PaginatedList`1[[EDSystems.Application.EDSystems.Queries.Branches.GetBranchListWithPagination.BranchLookupDtoWithPagination, EDSystems.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-03-06 10:53:11.894 +05:00 [INF] Executed action EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination (EDSystems.WebApi) in 2125.5223ms
+2023-03-06 10:53:11.894 +05:00 [INF] Executed endpoint 'EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination (EDSystems.WebApi)'
+2023-03-06 10:53:11.894 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination?id=2 - - - 200 2517 application/json;+charset=utf-8 2126.9619ms
+2023-03-06 10:53:32.845 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination?pageNumber=2 - -
+2023-03-06 10:53:32.846 +05:00 [INF] Executing endpoint 'EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination (EDSystems.WebApi)'
+2023-03-06 10:53:32.846 +05:00 [INF] Route matched with {action = "GetAllWithPagination", controller = "Branch"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EDSystems.Application.EDSystems.Queries.Branches.GetBranchListWithPagination.BranchListVmWithPagination]] GetAllWithPagination() on controller EDSystems.WebApi.Controllers.BranchController (EDSystems.WebApi).
+2023-03-06 10:53:32.846 +05:00 [INF] NotesRequest: GetBranchListWithPaginationQuery {"PageNumber":1,"PageSize":10,"$type":"GetBranchListWithPaginationQuery"}
+2023-03-06 10:53:33.704 +05:00 [INF] Executed DbCommand (192ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Branch" AS b
+2023-03-06 10:53:34.432 +05:00 [INF] Executed DbCommand (179ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."Name", b."Country", b."Code", b."City", b."Address", b."Email", b."Phone", b."DateCreated", b."DateUpdated"
+FROM "Branch" AS b
+LIMIT @__p_1 OFFSET @__p_0
+2023-03-06 10:53:34.432 +05:00 [INF] Executing OkObjectResult, writing value of type 'EDSystems.Application.Common.Models.PaginatedList`1[[EDSystems.Application.EDSystems.Queries.Branches.GetBranchListWithPagination.BranchLookupDtoWithPagination, EDSystems.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-03-06 10:53:34.433 +05:00 [INF] Executed action EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination (EDSystems.WebApi) in 1587.0289ms
+2023-03-06 10:53:34.433 +05:00 [INF] Executed endpoint 'EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination (EDSystems.WebApi)'
+2023-03-06 10:53:34.433 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination?pageNumber=2 - - - 200 2517 application/json;+charset=utf-8 1588.0943ms
+2023-03-06 11:02:23.894 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination/2 - -
+2023-03-06 11:02:23.900 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination/2 - - - 404 0 - 5.7543ms
+2023-03-06 11:02:29.053 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination/3 - -
+2023-03-06 11:02:29.054 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination/3 - - - 404 0 - 0.8361ms
+2023-03-06 11:02:38.407 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination - -
+2023-03-06 11:02:38.411 +05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '06/03/2023 05:49:02', Current time: '06/03/2023 06:02:38'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2023-03-06 11:02:38.450 +05:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '06/03/2023 05:49:02', Current time: '06/03/2023 06:02:38'.
+2023-03-06 11:02:38.451 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+ClaimsAuthorizationRequirement:Claim.Type=CanGetAllBranchesWithPagination
+2023-03-06 11:02:38.451 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-03-06 11:02:38.451 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination - - - 401 0 - 43.8534ms
+2023-03-06 11:02:40.886 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination - -
+2023-03-06 11:02:40.887 +05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '06/03/2023 05:49:02', Current time: '06/03/2023 06:02:40'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2023-03-06 11:02:40.888 +05:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '06/03/2023 05:49:02', Current time: '06/03/2023 06:02:40'.
+2023-03-06 11:02:40.888 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+ClaimsAuthorizationRequirement:Claim.Type=CanGetAllBranchesWithPagination
+2023-03-06 11:02:40.888 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-03-06 11:02:40.888 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination - - - 401 0 - 1.4461ms
+2023-03-06 11:02:43.485 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination - -
+2023-03-06 11:02:43.486 +05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '06/03/2023 05:49:02', Current time: '06/03/2023 06:02:43'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2023-03-06 11:02:43.486 +05:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '06/03/2023 05:49:02', Current time: '06/03/2023 06:02:43'.
+2023-03-06 11:02:43.486 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+ClaimsAuthorizationRequirement:Claim.Type=CanGetAllBranchesWithPagination
+2023-03-06 11:02:43.486 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-03-06 11:02:43.486 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination - - - 401 0 - 1.2223ms
+2023-03-06 11:02:47.345 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination/ - -
+2023-03-06 11:02:47.345 +05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '06/03/2023 05:49:02', Current time: '06/03/2023 06:02:47'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2023-03-06 11:02:47.346 +05:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '06/03/2023 05:49:02', Current time: '06/03/2023 06:02:47'.
+2023-03-06 11:02:47.346 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+ClaimsAuthorizationRequirement:Claim.Type=CanGetAllBranchesWithPagination
+2023-03-06 11:02:47.346 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-03-06 11:02:47.346 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination/ - - - 401 0 - 1.3136ms
+2023-03-06 11:03:09.357 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination - -
+2023-03-06 11:03:09.362 +05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '06/03/2023 05:49:02', Current time: '06/03/2023 06:03:09'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2023-03-06 11:03:09.362 +05:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '06/03/2023 05:49:02', Current time: '06/03/2023 06:03:09'.
+2023-03-06 11:03:09.362 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+ClaimsAuthorizationRequirement:Claim.Type=CanGetAllBranchesWithPagination
+2023-03-06 11:03:09.362 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-03-06 11:03:09.363 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination - - - 401 0 - 5.1920ms
+2023-03-06 11:03:15.636 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination - -
+2023-03-06 11:03:15.638 +05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '06/03/2023 05:49:02', Current time: '06/03/2023 06:03:15'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2023-03-06 11:03:15.638 +05:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '06/03/2023 05:49:02', Current time: '06/03/2023 06:03:15'.
+2023-03-06 11:03:15.638 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+ClaimsAuthorizationRequirement:Claim.Type=CanGetAllBranchesWithPagination
+2023-03-06 11:03:15.638 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-03-06 11:03:15.638 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination - - - 401 0 - 1.9559ms
+2023-03-06 11:03:21.540 +05:00 [INF] Request starting HTTP/1.1 POST https://localhost:7271/api/Authentication/Login application/json 76
+2023-03-06 11:03:21.542 +05:00 [INF] Executing endpoint 'EDSystems.WebApi.Controllers.AuthenticationController.Login (EDSystems.WebApi)'
+2023-03-06 11:03:21.542 +05:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(EDSystems.WebApi.Models.AuthManager.UserLoginDto) on controller EDSystems.WebApi.Controllers.AuthenticationController (EDSystems.WebApi).
+2023-03-06 11:03:22.436 +05:00 [INF] Executed DbCommand (202ms) [Parameters=[@__normalizedEmail_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."Address", a."ChatId", a."ConcurrencyStamp", a."DateCreated", a."DateUpdated", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."ParcelJobId", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName", a."UserNameT"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2023-03-06 11:03:23.242 +05:00 [INF] Executed DbCommand (174ms) [Parameters=[@__user_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ClaimType", a."ClaimValue", a."Discriminator", a."UserId"
+FROM "AspNetUserClaims" AS a
+WHERE a."UserId" = @__user_Id_0
+2023-03-06 11:03:23.954 +05:00 [INF] Executed DbCommand (178ms) [Parameters=[@__userId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a0."Name"
+FROM "AspNetUserRoles" AS a
+INNER JOIN "AspNetRoles" AS a0 ON a."RoleId" = a0."Id"
+WHERE a."UserId" = @__userId_0
+2023-03-06 11:03:24.678 +05:00 [INF] Executed DbCommand (177ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2023-03-06 11:03:25.392 +05:00 [INF] Executed DbCommand (178ms) [Parameters=[@__role_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."ClaimType", a."ClaimValue"
+FROM "AspNetRoleClaims" AS a
+WHERE a."RoleId" = @__role_Id_0
+2023-03-06 11:03:26.123 +05:00 [INF] Executed DbCommand (178ms) [Parameters=[@__userId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a0."Name"
+FROM "AspNetUserRoles" AS a
+INNER JOIN "AspNetRoles" AS a0 ON a."RoleId" = a0."Id"
+WHERE a."UserId" = @__userId_0
+2023-03-06 11:03:26.126 +05:00 [INF] NotesRequest: RefreshTokenCommand {"Id":0,"UserId":"30a8f9cc-8d37-4d93-ab2f-774428387e4a","Token":"SZQCF9MPDHZDFA6G9WZI1R2HPUMSWIE5RGSc01924f6-f701-4cdc-9166-fde789295690","JwtId":"f10372ed-dfb6-4759-8ff3-30410db0bae0","IsUsed":false,"IsRevoked":false,"AddedDateTime":"2023-03-06T06:03:26.1247650Z","ExpiryDateTime":"2023-09-06T06:03:26.1247650Z","$type":"RefreshTokenCommand"}
+2023-03-06 11:03:26.852 +05:00 [INF] Executed DbCommand (176ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = DateTime), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?', @p5='?', @p6='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "RefreshToken" ("AddedDateTime", "ExpiryDateTime", "IsRevoked", "IsUsed", "JwtId", "Token", "UserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6)
+RETURNING "Id";
+2023-03-06 11:03:26.860 +05:00 [INF] Executing OkObjectResult, writing value of type 'EDSystems.WebApi.Models.AuthManager.AuthResult'.
+2023-03-06 11:03:26.860 +05:00 [INF] Executed action EDSystems.WebApi.Controllers.AuthenticationController.Login (EDSystems.WebApi) in 5317.8624ms
+2023-03-06 11:03:26.860 +05:00 [INF] Executed endpoint 'EDSystems.WebApi.Controllers.AuthenticationController.Login (EDSystems.WebApi)'
+2023-03-06 11:03:26.860 +05:00 [INF] Request finished HTTP/1.1 POST https://localhost:7271/api/Authentication/Login application/json 76 - 200 2058 application/json;+charset=utf-8 5319.9591ms
+2023-03-06 11:03:35.485 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination - -
+2023-03-06 11:03:35.486 +05:00 [INF] Executing endpoint 'EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination (EDSystems.WebApi)'
+2023-03-06 11:03:35.486 +05:00 [INF] Route matched with {action = "GetAllWithPagination", controller = "Branch"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EDSystems.Application.EDSystems.Queries.Branches.GetBranchListWithPagination.BranchListVmWithPagination]] GetAllWithPagination() on controller EDSystems.WebApi.Controllers.BranchController (EDSystems.WebApi).
+2023-03-06 11:03:35.486 +05:00 [INF] NotesRequest: GetBranchListWithPaginationQuery {"PageNumber":1,"PageSize":10,"$type":"GetBranchListWithPaginationQuery"}
+2023-03-06 11:03:36.208 +05:00 [INF] Executed DbCommand (180ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Branch" AS b
+2023-03-06 11:03:36.907 +05:00 [INF] Executed DbCommand (175ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."Name", b."Country", b."Code", b."City", b."Address", b."Email", b."Phone", b."DateCreated", b."DateUpdated"
+FROM "Branch" AS b
+LIMIT @__p_1 OFFSET @__p_0
+2023-03-06 11:03:36.908 +05:00 [INF] Executing OkObjectResult, writing value of type 'EDSystems.Application.Common.Models.PaginatedList`1[[EDSystems.Application.EDSystems.Queries.Branches.GetBranchListWithPagination.BranchLookupDtoWithPagination, EDSystems.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-03-06 11:03:36.909 +05:00 [INF] Executed action EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination (EDSystems.WebApi) in 1423.0107ms
+2023-03-06 11:03:36.909 +05:00 [INF] Executed endpoint 'EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination (EDSystems.WebApi)'
+2023-03-06 11:03:36.909 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination - - - 200 2517 application/json;+charset=utf-8 1424.3072ms
+2023-03-06 11:03:50.230 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination/2 - -
+2023-03-06 11:03:50.230 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination/2 - - - 404 0 - 0.2757ms
+2023-03-06 11:03:53.651 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination - -
+2023-03-06 11:03:53.652 +05:00 [INF] Executing endpoint 'EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination (EDSystems.WebApi)'
+2023-03-06 11:03:53.652 +05:00 [INF] Route matched with {action = "GetAllWithPagination", controller = "Branch"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EDSystems.Application.EDSystems.Queries.Branches.GetBranchListWithPagination.BranchListVmWithPagination]] GetAllWithPagination() on controller EDSystems.WebApi.Controllers.BranchController (EDSystems.WebApi).
+2023-03-06 11:03:53.652 +05:00 [INF] NotesRequest: GetBranchListWithPaginationQuery {"PageNumber":1,"PageSize":10,"$type":"GetBranchListWithPaginationQuery"}
+2023-03-06 11:03:54.487 +05:00 [INF] Executed DbCommand (201ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Branch" AS b
+2023-03-06 11:03:55.202 +05:00 [INF] Executed DbCommand (184ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."Name", b."Country", b."Code", b."City", b."Address", b."Email", b."Phone", b."DateCreated", b."DateUpdated"
+FROM "Branch" AS b
+LIMIT @__p_1 OFFSET @__p_0
+2023-03-06 11:03:55.203 +05:00 [INF] Executing OkObjectResult, writing value of type 'EDSystems.Application.Common.Models.PaginatedList`1[[EDSystems.Application.EDSystems.Queries.Branches.GetBranchListWithPagination.BranchLookupDtoWithPagination, EDSystems.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-03-06 11:03:55.203 +05:00 [INF] Executed action EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination (EDSystems.WebApi) in 1551.3904ms
+2023-03-06 11:03:55.203 +05:00 [INF] Executed endpoint 'EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination (EDSystems.WebApi)'
+2023-03-06 11:03:55.203 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination - - - 200 2517 application/json;+charset=utf-8 1552.3881ms
+2023-03-06 11:04:02.291 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination?pageNumber=2 - -
+2023-03-06 11:04:02.292 +05:00 [INF] Executing endpoint 'EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination (EDSystems.WebApi)'
+2023-03-06 11:04:02.292 +05:00 [INF] Route matched with {action = "GetAllWithPagination", controller = "Branch"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EDSystems.Application.EDSystems.Queries.Branches.GetBranchListWithPagination.BranchListVmWithPagination]] GetAllWithPagination() on controller EDSystems.WebApi.Controllers.BranchController (EDSystems.WebApi).
+2023-03-06 11:04:02.293 +05:00 [INF] NotesRequest: GetBranchListWithPaginationQuery {"PageNumber":1,"PageSize":10,"$type":"GetBranchListWithPaginationQuery"}
+2023-03-06 11:04:02.996 +05:00 [INF] Executed DbCommand (173ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Branch" AS b
+2023-03-06 11:04:03.747 +05:00 [INF] Executed DbCommand (188ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."Name", b."Country", b."Code", b."City", b."Address", b."Email", b."Phone", b."DateCreated", b."DateUpdated"
+FROM "Branch" AS b
+LIMIT @__p_1 OFFSET @__p_0
+2023-03-06 11:04:03.748 +05:00 [INF] Executing OkObjectResult, writing value of type 'EDSystems.Application.Common.Models.PaginatedList`1[[EDSystems.Application.EDSystems.Queries.Branches.GetBranchListWithPagination.BranchLookupDtoWithPagination, EDSystems.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-03-06 11:04:03.748 +05:00 [INF] Executed action EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination (EDSystems.WebApi) in 1456.0215ms
+2023-03-06 11:04:03.749 +05:00 [INF] Executed endpoint 'EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination (EDSystems.WebApi)'
+2023-03-06 11:04:03.749 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination?pageNumber=2 - - - 200 2517 application/json;+charset=utf-8 1458.0318ms
+2023-03-06 11:04:29.750 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination?PageNumber=2 - -
+2023-03-06 11:04:29.774 +05:00 [INF] Executing endpoint 'EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination (EDSystems.WebApi)'
+2023-03-06 11:04:29.774 +05:00 [INF] Route matched with {action = "GetAllWithPagination", controller = "Branch"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EDSystems.Application.EDSystems.Queries.Branches.GetBranchListWithPagination.BranchListVmWithPagination]] GetAllWithPagination() on controller EDSystems.WebApi.Controllers.BranchController (EDSystems.WebApi).
+2023-03-06 11:04:29.775 +05:00 [INF] NotesRequest: GetBranchListWithPaginationQuery {"PageNumber":1,"PageSize":10,"$type":"GetBranchListWithPaginationQuery"}
+2023-03-06 11:04:30.589 +05:00 [INF] Executed DbCommand (176ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Branch" AS b
+2023-03-06 11:04:31.888 +05:00 [INF] Executed DbCommand (605ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."Name", b."Country", b."Code", b."City", b."Address", b."Email", b."Phone", b."DateCreated", b."DateUpdated"
+FROM "Branch" AS b
+LIMIT @__p_1 OFFSET @__p_0
+2023-03-06 11:04:31.889 +05:00 [INF] Executing OkObjectResult, writing value of type 'EDSystems.Application.Common.Models.PaginatedList`1[[EDSystems.Application.EDSystems.Queries.Branches.GetBranchListWithPagination.BranchLookupDtoWithPagination, EDSystems.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-03-06 11:04:31.889 +05:00 [INF] Executed action EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination (EDSystems.WebApi) in 2114.8106ms
+2023-03-06 11:04:31.889 +05:00 [INF] Executed endpoint 'EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination (EDSystems.WebApi)'
+2023-03-06 11:04:31.890 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination?PageNumber=2 - - - 200 2517 application/json;+charset=utf-8 2139.8024ms
+2023-03-06 11:05:55.034 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination?pageNumber=2&pageSize=2 - -
+2023-03-06 11:05:55.035 +05:00 [INF] Executing endpoint 'EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination (EDSystems.WebApi)'
+2023-03-06 11:05:55.036 +05:00 [INF] Route matched with {action = "GetAllWithPagination", controller = "Branch"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EDSystems.Application.EDSystems.Queries.Branches.GetBranchListWithPagination.BranchListVmWithPagination]] GetAllWithPagination() on controller EDSystems.WebApi.Controllers.BranchController (EDSystems.WebApi).
+2023-03-06 11:05:55.036 +05:00 [INF] NotesRequest: GetBranchListWithPaginationQuery {"PageNumber":1,"PageSize":10,"$type":"GetBranchListWithPaginationQuery"}
+2023-03-06 11:05:55.849 +05:00 [INF] Executed DbCommand (182ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Branch" AS b
+2023-03-06 11:05:57.146 +05:00 [INF] Executed DbCommand (185ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."Name", b."Country", b."Code", b."City", b."Address", b."Email", b."Phone", b."DateCreated", b."DateUpdated"
+FROM "Branch" AS b
+LIMIT @__p_1 OFFSET @__p_0
+2023-03-06 11:05:57.147 +05:00 [INF] Executing OkObjectResult, writing value of type 'EDSystems.Application.Common.Models.PaginatedList`1[[EDSystems.Application.EDSystems.Queries.Branches.GetBranchListWithPagination.BranchLookupDtoWithPagination, EDSystems.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-03-06 11:05:57.147 +05:00 [INF] Executed action EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination (EDSystems.WebApi) in 2111.5346ms
+2023-03-06 11:05:57.147 +05:00 [INF] Executed endpoint 'EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination (EDSystems.WebApi)'
+2023-03-06 11:05:57.147 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination?pageNumber=2&pageSize=2 - - - 200 2517 application/json;+charset=utf-8 2116.1690ms
+2023-03-06 12:51:32.809 +05:00 [INF] User profile is available. Using '/Users/kdbiosdeveloper/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-03-06 12:51:33.580 +05:00 [INF] Now listening on: https://localhost:7271
+2023-03-06 12:51:33.581 +05:00 [INF] Now listening on: http://localhost:5271
+2023-03-06 12:51:33.586 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-06 12:51:33.587 +05:00 [INF] Hosting environment: Development
+2023-03-06 12:51:33.587 +05:00 [INF] Content root path: /Users/kdbiosdeveloper/Documents/XProjects/EDSystems.CICD.CD/EDSystems.WebApi
+2023-03-06 12:51:34.857 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/swagger/index.html - -
+2023-03-06 12:51:35.019 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/swagger/index.html - - - 200 - text/html;charset=utf-8 163.1330ms
+2023-03-06 12:51:35.256 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/swagger/v1/swagger.json - -
+2023-03-06 12:51:35.697 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 441.1601ms
+2023-03-06 12:51:52.185 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination?PageNumber=2&PageSize=10 - -
+2023-03-06 12:51:52.326 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+ClaimsAuthorizationRequirement:Claim.Type=CanGetAllBranchesWithPagination
+2023-03-06 12:51:52.330 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-03-06 12:51:52.331 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination?PageNumber=2&PageSize=10 - - - 401 0 - 146.1254ms
+2023-03-06 12:52:06.792 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination/2/10 - -
+2023-03-06 12:52:06.805 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination/2/10 - - - 404 0 - 12.9774ms
+2023-03-06 12:52:26.767 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination/?PageNumber=2&PageSize=10 - -
+2023-03-06 12:52:26.934 +05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '06/03/2023 06:04:26', Current time: '06/03/2023 07:52:26'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2023-03-06 12:52:26.964 +05:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '06/03/2023 06:04:26', Current time: '06/03/2023 07:52:26'.
+2023-03-06 12:52:26.965 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+ClaimsAuthorizationRequirement:Claim.Type=CanGetAllBranchesWithPagination
+2023-03-06 12:52:26.968 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-03-06 12:52:26.968 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination/?PageNumber=2&PageSize=10 - - - 401 0 - 201.0605ms
+2023-03-06 12:52:33.623 +05:00 [INF] Request starting HTTP/1.1 POST https://localhost:7271/api/Authentication/Login application/json 76
+2023-03-06 12:52:33.648 +05:00 [INF] Executing endpoint 'EDSystems.WebApi.Controllers.AuthenticationController.Login (EDSystems.WebApi)'
+2023-03-06 12:52:33.682 +05:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(EDSystems.WebApi.Models.AuthManager.UserLoginDto) on controller EDSystems.WebApi.Controllers.AuthenticationController (EDSystems.WebApi).
+2023-03-06 12:52:37.326 +05:00 [INF] Executed DbCommand (207ms) [Parameters=[@__normalizedEmail_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."Address", a."ChatId", a."ConcurrencyStamp", a."DateCreated", a."DateUpdated", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."ParcelJobId", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName", a."UserNameT"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2023-03-06 12:52:38.374 +05:00 [INF] Executed DbCommand (181ms) [Parameters=[@__user_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ClaimType", a."ClaimValue", a."Discriminator", a."UserId"
+FROM "AspNetUserClaims" AS a
+WHERE a."UserId" = @__user_Id_0
+2023-03-06 12:52:39.161 +05:00 [INF] Executed DbCommand (189ms) [Parameters=[@__userId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a0."Name"
+FROM "AspNetUserRoles" AS a
+INNER JOIN "AspNetRoles" AS a0 ON a."RoleId" = a0."Id"
+WHERE a."UserId" = @__userId_0
+2023-03-06 12:52:39.912 +05:00 [INF] Executed DbCommand (180ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2023-03-06 12:52:40.667 +05:00 [INF] Executed DbCommand (177ms) [Parameters=[@__role_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."ClaimType", a."ClaimValue"
+FROM "AspNetRoleClaims" AS a
+WHERE a."RoleId" = @__role_Id_0
+2023-03-06 12:52:41.384 +05:00 [INF] Executed DbCommand (176ms) [Parameters=[@__userId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a0."Name"
+FROM "AspNetUserRoles" AS a
+INNER JOIN "AspNetRoles" AS a0 ON a."RoleId" = a0."Id"
+WHERE a."UserId" = @__userId_0
+2023-03-06 12:52:41.436 +05:00 [INF] NotesRequest: RefreshTokenCommand {"Id":0,"UserId":"30a8f9cc-8d37-4d93-ab2f-774428387e4a","Token":"Q90VGJ4FR9C1PIVA13LR3LK0DKT2VODVDESf10f5319-0f8b-4be8-88b4-5065226534a5","JwtId":"bbec9914-3d88-40d0-8510-4080c17220da","IsUsed":false,"IsRevoked":false,"AddedDateTime":"2023-03-06T07:52:41.4144790Z","ExpiryDateTime":"2023-09-06T07:52:41.4145360Z","$type":"RefreshTokenCommand"}
+2023-03-06 12:52:42.308 +05:00 [INF] Executed DbCommand (183ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = DateTime), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?', @p5='?', @p6='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "RefreshToken" ("AddedDateTime", "ExpiryDateTime", "IsRevoked", "IsUsed", "JwtId", "Token", "UserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6)
+RETURNING "Id";
+2023-03-06 12:52:42.376 +05:00 [INF] Executing OkObjectResult, writing value of type 'EDSystems.WebApi.Models.AuthManager.AuthResult'.
+2023-03-06 12:52:42.401 +05:00 [INF] Executed action EDSystems.WebApi.Controllers.AuthenticationController.Login (EDSystems.WebApi) in 8714.9827ms
+2023-03-06 12:52:42.402 +05:00 [INF] Executed endpoint 'EDSystems.WebApi.Controllers.AuthenticationController.Login (EDSystems.WebApi)'
+2023-03-06 12:52:42.411 +05:00 [INF] Request finished HTTP/1.1 POST https://localhost:7271/api/Authentication/Login application/json 76 - 200 2058 application/json;+charset=utf-8 8787.8930ms
+2023-03-06 12:52:59.756 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination/?PageNumber=2&PageSize=10 - -
+2023-03-06 12:52:59.770 +05:00 [INF] Executing endpoint 'EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination (EDSystems.WebApi)'
+2023-03-06 12:52:59.779 +05:00 [INF] Route matched with {action = "GetAllWithPagination", controller = "Branch"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EDSystems.Application.EDSystems.Queries.Branches.GetBranchListWithPagination.BranchListVmWithPagination]] GetAllWithPagination(Int32, Int32) on controller EDSystems.WebApi.Controllers.BranchController (EDSystems.WebApi).
+2023-03-06 12:52:59.825 +05:00 [INF] NotesRequest: GetBranchListWithPaginationQuery {"PageNumber":2,"PageSize":10,"$type":"GetBranchListWithPaginationQuery"}
+2023-03-06 12:53:00.750 +05:00 [INF] Executed DbCommand (177ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Branch" AS b
+2023-03-06 12:53:00.758 +05:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-03-06 12:53:00.759 +05:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-03-06 12:53:01.532 +05:00 [INF] Executed DbCommand (181ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."Name", b."Country", b."Code", b."City", b."Address", b."Email", b."Phone", b."DateCreated", b."DateUpdated"
+FROM "Branch" AS b
+LIMIT @__p_0 OFFSET @__p_0
+2023-03-06 12:53:01.538 +05:00 [INF] Executing OkObjectResult, writing value of type 'EDSystems.Application.Common.Models.PaginatedList`1[[EDSystems.Application.EDSystems.Queries.Branches.GetBranchListWithPagination.BranchLookupDtoWithPagination, EDSystems.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-03-06 12:53:01.550 +05:00 [INF] Executed action EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination (EDSystems.WebApi) in 1770.4724ms
+2023-03-06 12:53:01.550 +05:00 [INF] Executed endpoint 'EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination (EDSystems.WebApi)'
+2023-03-06 12:53:01.550 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination/?PageNumber=2&PageSize=10 - - - 200 2357 application/json;+charset=utf-8 1793.8177ms
+2023-03-06 13:40:30.822 +05:00 [INF] User profile is available. Using '/Users/kdbiosdeveloper/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-03-06 13:40:31.466 +05:00 [INF] Now listening on: https://localhost:7271
+2023-03-06 13:40:31.467 +05:00 [INF] Now listening on: http://localhost:5271
+2023-03-06 13:40:31.469 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-06 13:40:31.469 +05:00 [INF] Hosting environment: Development
+2023-03-06 13:40:31.469 +05:00 [INF] Content root path: /Users/kdbiosdeveloper/Documents/XProjects/EDSystems.CICD.CD/EDSystems.WebApi
+2023-03-06 13:40:32.774 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/swagger/index.html - -
+2023-03-06 13:40:32.933 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/swagger/index.html - - - 200 - text/html;charset=utf-8 161.4491ms
+2023-03-06 13:40:33.051 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/swagger/v1/swagger.json - -
+2023-03-06 13:40:33.507 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 455.9347ms
+2023-03-06 13:41:22.144 +05:00 [INF] Request starting HTTP/1.1 POST https://localhost:7271/api/Authentication/Login application/json 76
+2023-03-06 13:41:22.269 +05:00 [INF] Executing endpoint 'EDSystems.WebApi.Controllers.AuthenticationController.Login (EDSystems.WebApi)'
+2023-03-06 13:41:22.297 +05:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(EDSystems.WebApi.Models.AuthManager.UserLoginDto) on controller EDSystems.WebApi.Controllers.AuthenticationController (EDSystems.WebApi).
+2023-03-06 13:41:25.853 +05:00 [INF] Executed DbCommand (214ms) [Parameters=[@__normalizedEmail_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."Address", a."ChatId", a."ConcurrencyStamp", a."DateCreated", a."DateUpdated", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."ParcelJobId", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName", a."UserNameT"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2023-03-06 13:41:26.948 +05:00 [INF] Executed DbCommand (182ms) [Parameters=[@__user_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ClaimType", a."ClaimValue", a."Discriminator", a."UserId"
+FROM "AspNetUserClaims" AS a
+WHERE a."UserId" = @__user_Id_0
+2023-03-06 13:41:27.713 +05:00 [INF] Executed DbCommand (180ms) [Parameters=[@__userId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a0."Name"
+FROM "AspNetUserRoles" AS a
+INNER JOIN "AspNetRoles" AS a0 ON a."RoleId" = a0."Id"
+WHERE a."UserId" = @__userId_0
+2023-03-06 13:41:28.442 +05:00 [INF] Executed DbCommand (175ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2023-03-06 13:41:29.201 +05:00 [INF] Executed DbCommand (183ms) [Parameters=[@__role_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."ClaimType", a."ClaimValue"
+FROM "AspNetRoleClaims" AS a
+WHERE a."RoleId" = @__role_Id_0
+2023-03-06 13:41:29.953 +05:00 [INF] Executed DbCommand (210ms) [Parameters=[@__userId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a0."Name"
+FROM "AspNetUserRoles" AS a
+INNER JOIN "AspNetRoles" AS a0 ON a."RoleId" = a0."Id"
+WHERE a."UserId" = @__userId_0
+2023-03-06 13:41:30.088 +05:00 [INF] NotesRequest: RefreshTokenCommand {"Id":0,"UserId":"30a8f9cc-8d37-4d93-ab2f-774428387e4a","Token":"H4GYSAJQG09EGMINADIF8E2S9SO4FLU4J5R5e613343-099e-4763-ba82-013a0bc7535b","JwtId":"458b6487-3f3d-4675-a5a0-f7ce682813b3","IsUsed":false,"IsRevoked":false,"AddedDateTime":"2023-03-06T08:41:30.0666940Z","ExpiryDateTime":"2023-09-06T08:41:30.0667480Z","$type":"RefreshTokenCommand"}
+2023-03-06 13:41:31.026 +05:00 [INF] Executed DbCommand (192ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = DateTime), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?', @p5='?', @p6='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "RefreshToken" ("AddedDateTime", "ExpiryDateTime", "IsRevoked", "IsUsed", "JwtId", "Token", "UserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6)
+RETURNING "Id";
+2023-03-06 13:41:31.098 +05:00 [INF] Executing OkObjectResult, writing value of type 'EDSystems.WebApi.Models.AuthManager.AuthResult'.
+2023-03-06 13:41:31.127 +05:00 [INF] Executed action EDSystems.WebApi.Controllers.AuthenticationController.Login (EDSystems.WebApi) in 8825.3798ms
+2023-03-06 13:41:31.128 +05:00 [INF] Executed endpoint 'EDSystems.WebApi.Controllers.AuthenticationController.Login (EDSystems.WebApi)'
+2023-03-06 13:41:31.137 +05:00 [INF] Request finished HTTP/1.1 POST https://localhost:7271/api/Authentication/Login application/json 76 - 200 2058 application/json;+charset=utf-8 8993.2851ms
+2023-03-06 13:41:41.082 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination/?PageNumber=2&PageSize=10 - -
+2023-03-06 13:41:41.161 +05:00 [INF] Executing endpoint 'EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination (EDSystems.WebApi)'
+2023-03-06 13:41:41.169 +05:00 [INF] Route matched with {action = "GetAllWithPagination", controller = "Branch"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EDSystems.Application.EDSystems.Queries.Branches.GetBranchListWithPagination.BranchListVmWithPagination]] GetAllWithPagination(Int32, Int32) on controller EDSystems.WebApi.Controllers.BranchController (EDSystems.WebApi).
+2023-03-06 13:41:41.212 +05:00 [INF] NotesRequest: GetBranchListWithPaginationQuery {"PageNumber":2,"PageSize":10,"$type":"GetBranchListWithPaginationQuery"}
+2023-03-06 13:41:42.199 +05:00 [INF] Executed DbCommand (181ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Branch" AS b
+2023-03-06 13:41:42.209 +05:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-03-06 13:41:42.209 +05:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-03-06 13:41:42.928 +05:00 [INF] Executed DbCommand (180ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."Name", b."Country", b."Code", b."City", b."Address", b."Email", b."Phone", b."DateCreated", b."DateUpdated"
+FROM "Branch" AS b
+LIMIT @__p_0 OFFSET @__p_0
+2023-03-06 13:41:42.933 +05:00 [INF] Executing OkObjectResult, writing value of type 'EDSystems.Application.Common.Models.PaginatedList`1[[EDSystems.Application.EDSystems.Queries.Branches.GetBranchListWithPagination.BranchLookupDtoWithPagination, EDSystems.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-03-06 13:41:42.947 +05:00 [INF] Executed action EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination (EDSystems.WebApi) in 1777.1325ms
+2023-03-06 13:41:42.947 +05:00 [INF] Executed endpoint 'EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination (EDSystems.WebApi)'
+2023-03-06 13:41:42.947 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination/?PageNumber=2&PageSize=10 - - - 200 2357 application/json;+charset=utf-8 1865.0476ms
+2023-03-06 13:41:47.364 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination - -
+2023-03-06 13:41:47.369 +05:00 [INF] Executing endpoint 'EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination (EDSystems.WebApi)'
+2023-03-06 13:41:47.370 +05:00 [INF] Route matched with {action = "GetAllWithPagination", controller = "Branch"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EDSystems.Application.EDSystems.Queries.Branches.GetBranchListWithPagination.BranchListVmWithPagination]] GetAllWithPagination(Int32, Int32) on controller EDSystems.WebApi.Controllers.BranchController (EDSystems.WebApi).
+2023-03-06 13:41:47.502 +05:00 [INF] Executed action EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination (EDSystems.WebApi) in 132.3939ms
+2023-03-06 13:41:47.503 +05:00 [INF] Executed endpoint 'EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination (EDSystems.WebApi)'
+2023-03-06 13:41:47.505 +05:00 [ERR] An unhandled exception has occurred while executing the request.
+FluentValidation.ValidationException: Validation failed: 
+ -- PageNumber: PageNumber at least greater than or equal to 1. Severity: Error
+ -- PageSize: PageSize at least greater than or equal to 1. Severity: Error
+   at EDSystems.Application.Common.Behaviors.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in /Users/kdbiosdeveloper/Documents/XProjects/EDSystems.CICD.CD/EDSystems.Application/Common/Behaviors/ValidationBehavior.cs:line 30
+   at MediatR.Wrappers.RequestHandlerWrapperImpl`2.<>c__DisplayClass1_1.<Handle>b__2()
+   at MediatR.Wrappers.RequestHandlerWrapperImpl`2.Handle(IRequest`1 request, IServiceProvider serviceProvider, CancellationToken cancellationToken)
+   at MediatR.Mediator.Send[TResponse](IRequest`1 request, CancellationToken cancellationToken)
+   at EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination(Int32 PageNumber, Int32 PageSize) in /Users/kdbiosdeveloper/Documents/XProjects/EDSystems.CICD.CD/EDSystems.WebApi/Controllers/BranchController.cs:line 84
+   at lambda_method674(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2023-03-06 13:41:47.555 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination - - - 500 - text/plain;+charset=utf-8 191.7541ms
+2023-03-06 13:42:04.454 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination/?PageNumber=1&PageSize=10 - -
+2023-03-06 13:42:04.455 +05:00 [INF] Executing endpoint 'EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination (EDSystems.WebApi)'
+2023-03-06 13:42:04.455 +05:00 [INF] Route matched with {action = "GetAllWithPagination", controller = "Branch"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EDSystems.Application.EDSystems.Queries.Branches.GetBranchListWithPagination.BranchListVmWithPagination]] GetAllWithPagination(Int32, Int32) on controller EDSystems.WebApi.Controllers.BranchController (EDSystems.WebApi).
+2023-03-06 13:42:04.458 +05:00 [INF] NotesRequest: GetBranchListWithPaginationQuery {"PageNumber":1,"PageSize":10,"$type":"GetBranchListWithPaginationQuery"}
+2023-03-06 13:42:05.328 +05:00 [INF] Executed DbCommand (179ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Branch" AS b
+2023-03-06 13:42:05.330 +05:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-03-06 13:42:05.330 +05:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-03-06 13:42:06.059 +05:00 [INF] Executed DbCommand (184ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."Name", b."Country", b."Code", b."City", b."Address", b."Email", b."Phone", b."DateCreated", b."DateUpdated"
+FROM "Branch" AS b
+LIMIT @__p_1 OFFSET @__p_0
+2023-03-06 13:42:06.059 +05:00 [INF] Executing OkObjectResult, writing value of type 'EDSystems.Application.Common.Models.PaginatedList`1[[EDSystems.Application.EDSystems.Queries.Branches.GetBranchListWithPagination.BranchLookupDtoWithPagination, EDSystems.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-03-06 13:42:06.060 +05:00 [INF] Executed action EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination (EDSystems.WebApi) in 1605.0749ms
+2023-03-06 13:42:06.061 +05:00 [INF] Executed endpoint 'EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination (EDSystems.WebApi)'
+2023-03-06 13:42:06.061 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination/?PageNumber=1&PageSize=10 - - - 200 2525 application/json;+charset=utf-8 1606.6959ms
+2023-03-06 13:42:34.562 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination - -
+2023-03-06 13:42:34.565 +05:00 [INF] Executing endpoint 'EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination (EDSystems.WebApi)'
+2023-03-06 13:42:34.565 +05:00 [INF] Route matched with {action = "GetAllWithPagination", controller = "Branch"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EDSystems.Application.EDSystems.Queries.Branches.GetBranchListWithPagination.BranchListVmWithPagination]] GetAllWithPagination(Int32, Int32) on controller EDSystems.WebApi.Controllers.BranchController (EDSystems.WebApi).
+2023-03-06 13:42:34.599 +05:00 [INF] Executed action EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination (EDSystems.WebApi) in 33.8952ms
+2023-03-06 13:42:34.599 +05:00 [INF] Executed endpoint 'EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination (EDSystems.WebApi)'
+2023-03-06 13:42:34.600 +05:00 [ERR] An unhandled exception has occurred while executing the request.
+FluentValidation.ValidationException: Validation failed: 
+ -- PageNumber: PageNumber at least greater than or equal to 1. Severity: Error
+ -- PageSize: PageSize at least greater than or equal to 1. Severity: Error
+   at EDSystems.Application.Common.Behaviors.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in /Users/kdbiosdeveloper/Documents/XProjects/EDSystems.CICD.CD/EDSystems.Application/Common/Behaviors/ValidationBehavior.cs:line 30
+   at MediatR.Wrappers.RequestHandlerWrapperImpl`2.<>c__DisplayClass1_1.<Handle>b__2()
+   at MediatR.Wrappers.RequestHandlerWrapperImpl`2.Handle(IRequest`1 request, IServiceProvider serviceProvider, CancellationToken cancellationToken)
+   at MediatR.Mediator.Send[TResponse](IRequest`1 request, CancellationToken cancellationToken)
+   at EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination(Int32 PageNumber, Int32 PageSize) in /Users/kdbiosdeveloper/Documents/XProjects/EDSystems.CICD.CD/EDSystems.WebApi/Controllers/BranchController.cs:line 84
+   at lambda_method674(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2023-03-06 13:42:34.602 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination - - - 500 - text/plain;+charset=utf-8 39.3449ms
+2023-03-06 13:44:32.128 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/api/Branch - -
+2023-03-06 13:44:32.130 +05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '26/01/2023 09:53:05', Current time: '06/03/2023 08:44:32'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2023-03-06 13:44:32.131 +05:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '26/01/2023 09:53:05', Current time: '06/03/2023 08:44:32'.
+2023-03-06 13:44:32.132 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+ClaimsAuthorizationRequirement:Claim.Type=CanGetAllBranches
+2023-03-06 13:44:32.137 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-03-06 13:44:32.137 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/api/Branch - - - 401 0 - 9.5078ms
+2023-03-06 13:44:42.784 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/api/Branch - -
+2023-03-06 13:44:42.785 +05:00 [INF] Executing endpoint 'EDSystems.WebApi.Controllers.BranchController.GetAll (EDSystems.WebApi)'
+2023-03-06 13:44:42.790 +05:00 [INF] Route matched with {action = "GetAll", controller = "Branch"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EDSystems.Application.EDSystems.Queries.Branches.GetBranchList.BranchListVm]] GetAll() on controller EDSystems.WebApi.Controllers.BranchController (EDSystems.WebApi).
+2023-03-06 13:44:42.795 +05:00 [INF] NotesRequest: GetBranchListQuery {"$type":"GetBranchListQuery"}
+2023-03-06 13:44:43.603 +05:00 [INF] Executed DbCommand (184ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."Name", b."Country", b."Code", b."City", b."Address", b."Email", b."Phone", b."DateCreated", b."DateUpdated"
+FROM "Branch" AS b
+2023-03-06 13:44:43.605 +05:00 [INF] Executing OkObjectResult, writing value of type 'EDSystems.Application.EDSystems.Queries.Branches.GetBranchList.BranchListVm'.
+2023-03-06 13:44:43.611 +05:00 [INF] Executed action EDSystems.WebApi.Controllers.BranchController.GetAll (EDSystems.WebApi) in 819.9643ms
+2023-03-06 13:44:43.611 +05:00 [INF] Executed endpoint 'EDSystems.WebApi.Controllers.BranchController.GetAll (EDSystems.WebApi)'
+2023-03-06 13:44:43.612 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/api/Branch - - - 200 9325 application/json;+charset=utf-8 827.3790ms
+2023-03-06 13:46:30.892 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination/?PageNumber=1&PageSize=10 - -
+2023-03-06 13:46:30.896 +05:00 [INF] Executing endpoint 'EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination (EDSystems.WebApi)'
+2023-03-06 13:46:30.896 +05:00 [INF] Route matched with {action = "GetAllWithPagination", controller = "Branch"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EDSystems.Application.EDSystems.Queries.Branches.GetBranchListWithPagination.BranchListVmWithPagination]] GetAllWithPagination(Int32, Int32) on controller EDSystems.WebApi.Controllers.BranchController (EDSystems.WebApi).
+2023-03-06 13:46:30.896 +05:00 [INF] NotesRequest: GetBranchListWithPaginationQuery {"PageNumber":1,"PageSize":10,"$type":"GetBranchListWithPaginationQuery"}
+2023-03-06 13:46:32.403 +05:00 [INF] Executed DbCommand (190ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Branch" AS b
+2023-03-06 13:46:37.323 +05:00 [INF] Executed DbCommand (3,856ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."Name", b."Country", b."Code", b."City", b."Address", b."Email", b."Phone", b."DateCreated", b."DateUpdated"
+FROM "Branch" AS b
+LIMIT @__p_1 OFFSET @__p_0
+2023-03-06 13:46:37.324 +05:00 [INF] Executing OkObjectResult, writing value of type 'EDSystems.Application.Common.Models.PaginatedList`1[[EDSystems.Application.EDSystems.Queries.Branches.GetBranchListWithPagination.BranchLookupDtoWithPagination, EDSystems.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-03-06 13:46:37.325 +05:00 [INF] Executed action EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination (EDSystems.WebApi) in 6428.5239ms
+2023-03-06 13:46:37.325 +05:00 [INF] Executed endpoint 'EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination (EDSystems.WebApi)'
+2023-03-06 13:46:37.325 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination/?PageNumber=1&PageSize=10 - - - 200 2525 application/json;+charset=utf-8 6433.3651ms
+2023-03-06 13:50:44.564 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination?PageNumber=1&PageSize=10 - -
+2023-03-06 13:50:44.565 +05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '06/03/2023 08:42:29', Current time: '06/03/2023 08:50:44'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2023-03-06 13:50:44.565 +05:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '06/03/2023 08:42:29', Current time: '06/03/2023 08:50:44'.
+2023-03-06 13:50:44.566 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+ClaimsAuthorizationRequirement:Claim.Type=CanGetAllBranchesWithPagination
+2023-03-06 13:50:44.566 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-03-06 13:50:44.566 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination?PageNumber=1&PageSize=10 - - - 401 0 - 1.7312ms
+2023-03-06 13:50:50.737 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination/?PageNumber=1&PageSize=10 - -
+2023-03-06 13:50:50.738 +05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '06/03/2023 08:42:29', Current time: '06/03/2023 08:50:50'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2023-03-06 13:50:50.738 +05:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '06/03/2023 08:42:29', Current time: '06/03/2023 08:50:50'.
+2023-03-06 13:50:50.738 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+ClaimsAuthorizationRequirement:Claim.Type=CanGetAllBranchesWithPagination
+2023-03-06 13:50:50.738 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-03-06 13:50:50.738 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination/?PageNumber=1&PageSize=10 - - - 401 0 - 1.5617ms
+2023-03-06 13:51:03.942 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination?PageNumber=1&PageSize=10 - -
+2023-03-06 13:51:03.943 +05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '06/03/2023 08:42:29', Current time: '06/03/2023 08:51:03'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2023-03-06 13:51:03.944 +05:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '06/03/2023 08:42:29', Current time: '06/03/2023 08:51:03'.
+2023-03-06 13:51:03.944 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+ClaimsAuthorizationRequirement:Claim.Type=CanGetAllBranchesWithPagination
+2023-03-06 13:51:03.944 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-03-06 13:51:03.944 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination?PageNumber=1&PageSize=10 - - - 401 0 - 1.5970ms
+2023-03-06 13:51:11.532 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination/?PageNumber=1&PageSize=10 - -
+2023-03-06 13:51:11.533 +05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '06/03/2023 08:42:29', Current time: '06/03/2023 08:51:11'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2023-03-06 13:51:11.534 +05:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '06/03/2023 08:42:29', Current time: '06/03/2023 08:51:11'.
+2023-03-06 13:51:11.534 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+ClaimsAuthorizationRequirement:Claim.Type=CanGetAllBranchesWithPagination
+2023-03-06 13:51:11.534 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-03-06 13:51:11.534 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination/?PageNumber=1&PageSize=10 - - - 401 0 - 2.0691ms
+2023-03-06 13:51:15.960 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination?PageNumber=1&PageSize=10 - -
+2023-03-06 13:51:15.960 +05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '06/03/2023 08:42:29', Current time: '06/03/2023 08:51:15'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2023-03-06 13:51:15.961 +05:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '06/03/2023 08:42:29', Current time: '06/03/2023 08:51:15'.
+2023-03-06 13:51:15.961 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+ClaimsAuthorizationRequirement:Claim.Type=CanGetAllBranchesWithPagination
+2023-03-06 13:51:15.961 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-03-06 13:51:15.961 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination?PageNumber=1&PageSize=10 - - - 401 0 - 0.8837ms
+2023-03-06 13:51:19.684 +05:00 [INF] Request starting HTTP/1.1 POST https://localhost:7271/api/Authentication/Login application/json 76
+2023-03-06 13:51:19.688 +05:00 [INF] Executing endpoint 'EDSystems.WebApi.Controllers.AuthenticationController.Login (EDSystems.WebApi)'
+2023-03-06 13:51:19.688 +05:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(EDSystems.WebApi.Models.AuthManager.UserLoginDto) on controller EDSystems.WebApi.Controllers.AuthenticationController (EDSystems.WebApi).
+2023-03-06 13:51:20.545 +05:00 [INF] Executed DbCommand (183ms) [Parameters=[@__normalizedEmail_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."Address", a."ChatId", a."ConcurrencyStamp", a."DateCreated", a."DateUpdated", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."ParcelJobId", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName", a."UserNameT"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2023-03-06 13:51:21.365 +05:00 [INF] Executed DbCommand (186ms) [Parameters=[@__user_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ClaimType", a."ClaimValue", a."Discriminator", a."UserId"
+FROM "AspNetUserClaims" AS a
+WHERE a."UserId" = @__user_Id_0
+2023-03-06 13:51:22.154 +05:00 [INF] Executed DbCommand (180ms) [Parameters=[@__userId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a0."Name"
+FROM "AspNetUserRoles" AS a
+INNER JOIN "AspNetRoles" AS a0 ON a."RoleId" = a0."Id"
+WHERE a."UserId" = @__userId_0
+2023-03-06 13:51:22.852 +05:00 [INF] Executed DbCommand (174ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2023-03-06 13:51:23.556 +05:00 [INF] Executed DbCommand (176ms) [Parameters=[@__role_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."ClaimType", a."ClaimValue"
+FROM "AspNetRoleClaims" AS a
+WHERE a."RoleId" = @__role_Id_0
+2023-03-06 13:51:24.300 +05:00 [INF] Executed DbCommand (185ms) [Parameters=[@__userId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a0."Name"
+FROM "AspNetUserRoles" AS a
+INNER JOIN "AspNetRoles" AS a0 ON a."RoleId" = a0."Id"
+WHERE a."UserId" = @__userId_0
+2023-03-06 13:51:24.303 +05:00 [INF] NotesRequest: RefreshTokenCommand {"Id":0,"UserId":"30a8f9cc-8d37-4d93-ab2f-774428387e4a","Token":"PIW1UHP8L64AJG0DO5KA9O6PB8SGLMJBHYPd9dfdf73-4ac9-4543-ad76-cfd10d75e172","JwtId":"a5a24796-6910-4553-9698-5e198ffedf93","IsUsed":false,"IsRevoked":false,"AddedDateTime":"2023-03-06T08:51:24.3019840Z","ExpiryDateTime":"2023-09-06T08:51:24.3019840Z","$type":"RefreshTokenCommand"}
+2023-03-06 13:51:25.029 +05:00 [INF] Executed DbCommand (181ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = DateTime), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?', @p5='?', @p6='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "RefreshToken" ("AddedDateTime", "ExpiryDateTime", "IsRevoked", "IsUsed", "JwtId", "Token", "UserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6)
+RETURNING "Id";
+2023-03-06 13:51:25.032 +05:00 [INF] Executing OkObjectResult, writing value of type 'EDSystems.WebApi.Models.AuthManager.AuthResult'.
+2023-03-06 13:51:25.032 +05:00 [INF] Executed action EDSystems.WebApi.Controllers.AuthenticationController.Login (EDSystems.WebApi) in 5344.15ms
+2023-03-06 13:51:25.032 +05:00 [INF] Executed endpoint 'EDSystems.WebApi.Controllers.AuthenticationController.Login (EDSystems.WebApi)'
+2023-03-06 13:51:25.032 +05:00 [INF] Request finished HTTP/1.1 POST https://localhost:7271/api/Authentication/Login application/json 76 - 200 2058 application/json;+charset=utf-8 5350.6891ms
+2023-03-06 13:51:33.549 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination?PageNumber=1&PageSize=10 - -
+2023-03-06 13:51:33.549 +05:00 [INF] Executing endpoint 'EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination (EDSystems.WebApi)'
+2023-03-06 13:51:33.549 +05:00 [INF] Route matched with {action = "GetAllWithPagination", controller = "Branch"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EDSystems.Application.EDSystems.Queries.Branches.GetBranchListWithPagination.BranchListVmWithPagination]] GetAllWithPagination(Int32, Int32) on controller EDSystems.WebApi.Controllers.BranchController (EDSystems.WebApi).
+2023-03-06 13:51:33.550 +05:00 [INF] NotesRequest: GetBranchListWithPaginationQuery {"PageNumber":1,"PageSize":10,"$type":"GetBranchListWithPaginationQuery"}
+2023-03-06 13:51:34.260 +05:00 [INF] Executed DbCommand (183ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Branch" AS b
+2023-03-06 13:51:34.971 +05:00 [INF] Executed DbCommand (182ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."Name", b."Country", b."Code", b."City", b."Address", b."Email", b."Phone", b."DateCreated", b."DateUpdated"
+FROM "Branch" AS b
+LIMIT @__p_1 OFFSET @__p_0
+2023-03-06 13:51:34.971 +05:00 [INF] Executing OkObjectResult, writing value of type 'EDSystems.Application.Common.Models.PaginatedList`1[[EDSystems.Application.EDSystems.Queries.Branches.GetBranchListWithPagination.BranchLookupDtoWithPagination, EDSystems.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-03-06 13:51:34.972 +05:00 [INF] Executed action EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination (EDSystems.WebApi) in 1422.3048ms
+2023-03-06 13:51:34.972 +05:00 [INF] Executed endpoint 'EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination (EDSystems.WebApi)'
+2023-03-06 13:51:34.972 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination?PageNumber=1&PageSize=10 - - - 200 2525 application/json;+charset=utf-8 1423.6127ms
+2023-03-06 13:52:11.769 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination?PageNumber=1&PageSize=41 - -
+2023-03-06 13:52:11.769 +05:00 [INF] Executing endpoint 'EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination (EDSystems.WebApi)'
+2023-03-06 13:52:11.770 +05:00 [INF] Route matched with {action = "GetAllWithPagination", controller = "Branch"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EDSystems.Application.EDSystems.Queries.Branches.GetBranchListWithPagination.BranchListVmWithPagination]] GetAllWithPagination(Int32, Int32) on controller EDSystems.WebApi.Controllers.BranchController (EDSystems.WebApi).
+2023-03-06 13:52:11.770 +05:00 [INF] NotesRequest: GetBranchListWithPaginationQuery {"PageNumber":1,"PageSize":41,"$type":"GetBranchListWithPaginationQuery"}
+2023-03-06 13:52:12.562 +05:00 [INF] Executed DbCommand (174ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Branch" AS b
+2023-03-06 13:52:13.277 +05:00 [INF] Executed DbCommand (181ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."Name", b."Country", b."Code", b."City", b."Address", b."Email", b."Phone", b."DateCreated", b."DateUpdated"
+FROM "Branch" AS b
+LIMIT @__p_1 OFFSET @__p_0
+2023-03-06 13:52:13.305 +05:00 [INF] Executing OkObjectResult, writing value of type 'EDSystems.Application.Common.Models.PaginatedList`1[[EDSystems.Application.EDSystems.Queries.Branches.GetBranchListWithPagination.BranchLookupDtoWithPagination, EDSystems.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-03-06 13:52:13.306 +05:00 [INF] Executed action EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination (EDSystems.WebApi) in 1535.9467ms
+2023-03-06 13:52:13.306 +05:00 [INF] Executed endpoint 'EDSystems.WebApi.Controllers.BranchController.GetAllWithPagination (EDSystems.WebApi)'
+2023-03-06 13:52:13.306 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/api/Branch/WithPagination?PageNumber=1&PageSize=41 - - - 200 9412 application/json;+charset=utf-8 1537.0718ms

@@ -69,10 +69,12 @@ public class UserAccountController : BaseController
     [HttpGet("WithPagination")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
-    public async Task<ActionResult<UserAccountListVmWithPagination>> GetAllWithPagination()
+    public async Task<ActionResult<UserAccountListVmWithPagination>> GetAllWithPagination(int PageNumber, int PageSize)
     {
         var query = new GetUserAccountListWithPaginationQuery
         {
+            PageSize = PageSize,
+            PageNumber = PageNumber
             //UserId = UserId
         };
         var vm = await Mediator.Send(query);

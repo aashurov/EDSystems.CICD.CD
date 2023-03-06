@@ -70,10 +70,12 @@ public class ParcelJobController : BaseController
     [HttpGet("WithPagination")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
-    public async Task<ActionResult<ParcelJobListVmWithPagination>> GetAllWithPagination()
+    public async Task<ActionResult<ParcelJobListVmWithPagination>> GetAllWithPagination(int PageNumber, int PageSize)
     {
         var query = new GetParcelJobListWithPaginationQuery
         {
+            PageNumber = PageNumber,
+            PageSize = PageSize
             //UserId = UserId
         };
         var vm = await Mediator.Send(query);

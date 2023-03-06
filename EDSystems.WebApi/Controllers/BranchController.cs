@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿using Amazon.S3.Model;
+using AutoMapper;
 using EDSystems.Application.EDSystems.Commands.Branches.CreateBranch;
 using EDSystems.Application.EDSystems.Commands.Branches.DeleteBranch;
 using EDSystems.Application.EDSystems.Commands.Branches.DeleteBranches;
@@ -72,10 +73,12 @@ public class BranchController : BaseController
     [Authorize(Policy = "CanGetAllBranchesWithPagination")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
-    public async Task<ActionResult<BranchListVmWithPagination>> GetAllWithPagination()
+    public async Task<ActionResult<BranchListVmWithPagination>> GetAllWithPagination(int PageNumber, int PageSize)
     {
         var query = new GetBranchListWithPaginationQuery
         {
+            PageNumber = PageNumber,
+            PageSize = PageSize
             //UserId = UserId
         };
         var vm = await Mediator.Send(query);

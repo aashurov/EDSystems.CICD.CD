@@ -73,10 +73,12 @@ namespace EDSystems.WebApi.Controllers
         //[Authorize]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
-        public async Task<ActionResult<UserListVmWithPagination>> GetAllWithPagination()
+        public async Task<ActionResult<UserListVmWithPagination>> GetAllWithPagination(int PageNumber, int PageSize)
         {
             var query = new GetUserListWithPaginationQuery
             {
+                PageNumber = PageNumber,
+                PageSize = PageSize
                 //UserId = UserId
             };
             var vm = await Mediator.Send(query);
