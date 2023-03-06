@@ -4,6 +4,7 @@ using EDSystems.Domain.Entities.UserEntities;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -18,7 +19,12 @@ public class GetUserListQueryHandler : IRequestHandler<GetUserListQuery, UserLis
 
     public async Task<UserListVm> Handle(GetUserListQuery request, CancellationToken cancellationToken)
     {
-        var customersQuery = await _userManager.Users.Include(r => r.UserRoles).ThenInclude(e => e.Role).AsNoTracking().ProjectTo<UserLookupDto>(_mapper.ConfigurationProvider).ToListAsync(cancellationToken);
+        var customersQuery = await _userManager.Users
+            .Include(r => r.UserRoles)
+            .ThenInclude(e => e.Role)
+            .AsNoTracking()
+            .OrderBy(x => x.DateCreated)
+            .ProjectTo<UserLookupDto>(_mapper.ConfigurationProvider).ToListAsync(cancellationToken);
         return new UserListVm { Customers = customersQuery };
     }
 }

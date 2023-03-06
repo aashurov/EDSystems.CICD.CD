@@ -4,6 +4,7 @@ using EDSystems.Application.Common.Mappings;
 using EDSystems.Application.Common.Models;
 using EDSystems.Application.Interfaces;
 using MediatR;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -22,7 +23,7 @@ public class GetBranchListWithPaginationQueryHandler : IRequestHandler<GetBranch
 
     public async Task<PaginatedList<BranchLookupDtoWithPagination>> Handle(GetBranchListWithPaginationQuery request, CancellationToken cancellationToken)
     {
-        return await _dbContext.Branch
+        return await _dbContext.Branch.OrderBy(x => x.Id)
             .ProjectTo<BranchLookupDtoWithPagination>(_mapper.ConfigurationProvider)
             .PaginatedListAsync(request.PageNumber, request.PageSize);
     }

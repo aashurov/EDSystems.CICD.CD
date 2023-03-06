@@ -4,6 +4,7 @@ using EDSystems.Application.Common.Mappings;
 using EDSystems.Application.Common.Models;
 using EDSystems.Application.Interfaces;
 using MediatR;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -22,7 +23,7 @@ public class GetUserAccountHistoryListWithPaginationQueryHandler : IRequestHandl
 
     public async Task<PaginatedList<UserAccountHistoryLookupDtoWithPagination>> Handle(GetUserAccountHistoryListWithPaginationQuery request, CancellationToken cancellationToken)
     {
-        return await _dbContext.UserAccountHistory
+        return await _dbContext.UserAccountHistory.OrderBy(x => x.Id)
             .ProjectTo<UserAccountHistoryLookupDtoWithPagination>(_mapper.ConfigurationProvider)
             .PaginatedListAsync(request.PageNumber, request.PageSize);
     }

@@ -880,3 +880,13 @@ Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/
 2023-03-06 15:00:22.045 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/swagger/index.html - - - 200 - text/html;charset=utf-8 145.0156ms
 2023-03-06 15:00:22.159 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/swagger/v1/swagger.json - -
 2023-03-06 15:00:22.569 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 409.4703ms
+2023-03-06 15:27:53.963 +05:00 [INF] User profile is available. Using '/Users/kdbiosdeveloper/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-03-06 15:27:54.543 +05:00 [INF] Now listening on: https://localhost:7271
+2023-03-06 15:27:54.543 +05:00 [INF] Now listening on: http://localhost:5271
+2023-03-06 15:27:54.545 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-06 15:27:54.548 +05:00 [INF] Hosting environment: Development
+2023-03-06 15:27:54.571 +05:00 [INF] Content root path: /Users/kdbiosdeveloper/Documents/XProjects/EDSystems.CICD.CD/EDSystems.WebApi
+2023-03-06 15:27:55.832 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/swagger/index.html - -
+2023-03-06 15:27:55.979 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/swagger/index.html - - - 200 - text/html;charset=utf-8 147.7336ms
+2023-03-06 15:27:56.095 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/swagger/v1/swagger.json - -
+2023-03-06 15:27:56.510 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 415.0502ms

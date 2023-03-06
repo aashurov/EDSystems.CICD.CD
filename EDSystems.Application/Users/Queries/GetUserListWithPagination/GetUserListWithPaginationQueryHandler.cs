@@ -6,6 +6,7 @@ using EDSystems.Domain.Entities.UserEntities;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -25,7 +26,10 @@ public class GetUserListWithPaginationQueryHandler : IRequestHandler<GetUserList
     public async Task<PaginatedList<UserLookupDtoWithPagination>> Handle(GetUserListWithPaginationQuery request, CancellationToken cancellationToken)
     {
         return await _userManager.Users
-            .Include(r => r.UserRoles).ThenInclude(e => e.Role).AsNoTracking()
+            .Include(r => r.UserRoles)
+            .ThenInclude(e => e.Role)
+            .AsNoTracking()
+            .OrderBy(x => x.DateCreated)
             .ProjectTo<UserLookupDtoWithPagination>(_mapper.ConfigurationProvider)
             .PaginatedListAsync(request.PageNumber, request.PageSize);
     }

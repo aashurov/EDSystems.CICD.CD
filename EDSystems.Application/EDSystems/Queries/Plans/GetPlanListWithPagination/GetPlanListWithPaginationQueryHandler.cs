@@ -4,6 +4,7 @@ using EDSystems.Application.Common.Mappings;
 using EDSystems.Application.Common.Models;
 using EDSystems.Application.Interfaces;
 using MediatR;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -22,7 +23,7 @@ public class GetPlanListWithPaginationQueryHandler : IRequestHandler<GetPlanList
 
     public async Task<PaginatedList<PlanLookupDtoWithPagination>> Handle(GetPlanListWithPaginationQuery request, CancellationToken cancellationToken)
     {
-        return await _dbContext.Plan
+        return await _dbContext.Plan.OrderBy(x => x.Id)
             .ProjectTo<PlanLookupDtoWithPagination>(_mapper.ConfigurationProvider)
             .PaginatedListAsync(request.PageNumber, request.PageSize);
     }

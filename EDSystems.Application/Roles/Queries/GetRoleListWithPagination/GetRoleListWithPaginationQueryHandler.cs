@@ -5,6 +5,7 @@ using EDSystems.Application.Common.Models;
 using EDSystems.Domain.Entities.UserEntities;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -23,7 +24,7 @@ public class GetRoleListWithPaginationQueryHandler : IRequestHandler<GetRoleList
 
     public async Task<PaginatedList<RoleListLookupDtoWithPagination>> Handle(GetRoleListWithPaginationQuery request, CancellationToken cancellationToken)
     {
-        return await _roleManager.Roles
+        return await _roleManager.Roles.OrderBy(x => x.Id)
             .ProjectTo<RoleListLookupDtoWithPagination>(_mapper.ConfigurationProvider)
             .PaginatedListAsync(request.PageNumber, request.PageSize);
     }

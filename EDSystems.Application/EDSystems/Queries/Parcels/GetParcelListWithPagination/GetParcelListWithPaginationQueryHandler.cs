@@ -6,6 +6,7 @@ using EDSystems.Application.EDSystems.Queries.Parcels.GetParcelList;
 using EDSystems.Application.Interfaces;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -40,7 +41,7 @@ namespace EDSystems.Application.EDSystems.Queries.Parcels.GetParcelListWithPagin
                    //.Include(w => w.ParcelOwners).ThenInclude(x => new { x.Sender, x.SenderStaff, x.SenderCourier, x.Recepient, x.RecepientStaff, x.RecepientCourier })
                    .Include(w => w.ParcelPlan).ThenInclude(y => y.Plan)
                    .Include(w => w.ParcelSize)
-                   .Include(w => w.ParcelStatus).ThenInclude(e => e.Status)
+                   .Include(w => w.ParcelStatus).ThenInclude(e => e.Status).OrderBy(x => x.DateCreated)
                    .ProjectTo<ParcelLookupDto>(_mapper.ConfigurationProvider)
                    .PaginatedListAsync(request.PageNumber, request.PageSize);
         }

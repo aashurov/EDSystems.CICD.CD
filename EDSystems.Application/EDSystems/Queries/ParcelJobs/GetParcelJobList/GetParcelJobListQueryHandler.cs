@@ -3,6 +3,7 @@ using AutoMapper.QueryableExtensions;
 using EDSystems.Application.Interfaces;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -17,7 +18,7 @@ public class GetParcelJobListQueryHandler : IRequestHandler<GetParcelJobListQuer
 
     public async Task<ParcelJobListVm> Handle(GetParcelJobListQuery request, CancellationToken cancellationToken)
     {
-        var branchesQuery = await _dbContext.ParcelJob
+        var branchesQuery = await _dbContext.ParcelJob.OrderBy(x => x.Id)
             .ProjectTo<ParcelJobLookupDto>(_mapper.ConfigurationProvider)
             .ToListAsync(cancellationToken);
         return new ParcelJobListVm { ParcelJobs = branchesQuery };
