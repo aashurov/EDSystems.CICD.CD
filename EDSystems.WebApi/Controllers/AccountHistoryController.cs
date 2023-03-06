@@ -37,6 +37,11 @@ public class AccountHistoryController : BaseController
     /// </returns>
     /// <responce code="200">Success</responce>
     /// <responce code="401">If the user is unauthorized</responce>
+#if DEBUG
+    [ApiExplorerSettings(IgnoreApi = true)]
+#else
+    [ApiExplorerSettings(IgnoreApi = true)]
+#endif
     [HttpGet]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
@@ -62,7 +67,8 @@ public class AccountHistoryController : BaseController
     /// </returns>
     /// <responce code="200">Success</responce>
     /// <responce code="401">If the user is unauthorized</responce>
-    [HttpGet("WithPagination")]
+    /// ("WithPagination")
+    [HttpGet]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     public async Task<ActionResult<AccountHistoryListVm>> GetAllWithPagination(int PageNumber, int PageSize)

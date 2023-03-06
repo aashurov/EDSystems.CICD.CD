@@ -42,6 +42,7 @@
             </returns>
             <responce code="200">Success</responce>
             <responce code="401">If the user is unauthorized</responce>
+            ("WithPagination")
         </member>
         <member name="M:EDSystems.WebApi.Controllers.AccountController.Get(System.Int32)">
             <summary>
@@ -127,6 +128,7 @@
             </returns>
             <responce code="200">Success</responce>
             <responce code="401">If the user is unauthorized</responce>
+            ("WithPagination")
         </member>
         <member name="M:EDSystems.WebApi.Controllers.AccountHistoryController.Get(System.Int32)">
             <summary>
@@ -223,6 +225,7 @@
             </returns>
             <responce code="200">Success</responce>
             <responce code="401">If the user is unauthorized</responce>
+            ("WithPagination")
         </member>
         <member name="M:EDSystems.WebApi.Controllers.BranchController.Get(System.Int32)">
             <summary>
@@ -554,16 +557,17 @@
             <responce code="401">If the user is unauthorized</responce>
         </member>
         <member name="M:EDSystems.WebApi.Controllers.ParcelController.GetAllWithPagination(System.Int32,System.Int32)">
-            <summary>
-            Get the list of parcels with pagination
-            </summary>
-            <remarks>
-            </remarks>
-            <returns>
-            Return ParcelListVm
-            </returns>
-            <responce code="200">Success</responce>
-            <responce code="401">If the user is unauthorized</responce>
+             <summary>
+             Get the list of parcels with pagination
+             </summary>
+             <remarks>
+             </remarks>
+             <returns>
+             Return ParcelListVm
+             </returns>
+             <responce code="200">Success</responce>
+             <responce code="401">If the user is unauthorized</responce>
+            ("WithPagination")
         </member>
         <member name="M:EDSystems.WebApi.Controllers.ParcelController.Update(EDSystems.WebApi.Models.Parcel.UpdateParcelDto)">
             <summary>
@@ -707,6 +711,7 @@
             </returns>
             <responce code="200">Success</responce>
             <responce code="401">If the user is unauthorized</responce>
+            ("WithPagination")
         </member>
         <member name="M:EDSystems.WebApi.Controllers.ParcelJobController.Get(System.Int32)">
             <summary>
@@ -788,6 +793,7 @@
             </returns>
             <responce code="200">Success</responce>
             <responce code="401">If the user is unauthorized</responce>
+            ("WithPagination")
         </member>
         <member name="M:EDSystems.WebApi.Controllers.PlanController.Get(System.Int32)">
             <summary>
@@ -878,16 +884,17 @@
             <responce code="401">If the user is unauthorized</responce>
         </member>
         <member name="M:EDSystems.WebApi.Controllers.RoleManagerController.GetAllWithPagination(System.Int32,System.Int32)">
-            <summary>
-            Get the list of Roles with pagination list
-            </summary>
-            <remarks>
-            </remarks>
-            <returns>
-            Return RoleListVm
-            </returns>
-            <responce code="200">Success</responce>
-            <responce code="401">If the user is unauthorized</responce>
+             <summary>
+             Get the list of Roles with pagination list
+             </summary>
+             <remarks>
+             </remarks>
+             <returns>
+             Return RoleListVm
+             </returns>
+             <responce code="200">Success</responce>
+             <responce code="401">If the user is unauthorized</responce>
+            ("WithPagination")
         </member>
         <member name="M:EDSystems.WebApi.Controllers.RoleManagerController.Get(System.String)">
             <summary>
@@ -965,16 +972,17 @@
             <responce code="401">If the user is unauthorized</responce>
         </member>
         <member name="M:EDSystems.WebApi.Controllers.StatusController.GetAllWithPagination(System.Int32,System.Int32)">
-            <summary>
-            Get the lists of Statuses with pagination
-            </summary>
-            <remarks>
-            </remarks>
-            <returns>
-            Return StatusListVm
-            </returns>
-            <responce code="200">Success</responce>
-            <responce code="401">If the user is unauthorized</responce>
+             <summary>
+             Get the lists of Statuses with pagination
+             </summary>
+             <remarks>
+             </remarks>
+             <returns>
+             Return StatusListVm
+             </returns>
+             <responce code="200">Success</responce>
+             <responce code="401">If the user is unauthorized</responce>
+            ("WithPagination")
         </member>
         <member name="M:EDSystems.WebApi.Controllers.StatusController.Get(System.Int32)">
             <summary>
@@ -1067,18 +1075,19 @@
             <responce code="401">If the user is unauthorized</responce>
         </member>
         <member name="M:EDSystems.WebApi.Controllers.UserAccountController.GetAllWithPagination(System.Int32,System.Int32)">
-            <summary>
-            Get the list of branches WithPagination
-            </summary>
-            <remarks>
-            Sample request:
-            GET /note
-            </remarks>
-            <returns>
-            Return BranchListVm
-            </returns>
-            <responce code="200">Success</responce>
-            <responce code="401">If the user is unauthorized</responce>
+             <summary>
+             Get the list of branches WithPagination
+             </summary>
+             <remarks>
+             Sample request:
+             GET /note
+             </remarks>
+             <returns>
+             Return BranchListVm
+             </returns>
+             <responce code="200">Success</responce>
+             <responce code="401">If the user is unauthorized</responce>
+            ("WithPagination")
         </member>
         <member name="M:EDSystems.WebApi.Controllers.UserAccountController.Get(System.Int32)">
             <summary>
@@ -1164,6 +1173,7 @@
             </returns>
             <responce code="200">Success</responce>
             <responce code="401">If the user is unauthorized</responce>
+            ("WithPagination")
         </member>
         <member name="M:EDSystems.WebApi.Controllers.UserAccountHistoryController.Get(System.Int32)">
             <summary>
@@ -1216,6 +1226,7 @@
             </returns>
             <responce code="200">Success</responce>
             <responce code="401">If the user is unauthorized</responce>
+            ("WithPagination")
         </member>
         <member name="M:EDSystems.WebApi.Controllers.UserManagerController.Get(System.String)">
             <summary>

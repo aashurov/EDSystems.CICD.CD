@@ -782,3 +782,53 @@ LIMIT @__p_1 OFFSET @__p_0
 2023-03-06 14:15:49.168 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/swagger/swagger-ui-bundle.js - - - 200 1061536 text/javascript 66.2440ms
 2023-03-06 14:15:49.301 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/swagger/v1/swagger.json - -
 2023-03-06 14:15:49.745 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 443.5177ms
+2023-03-06 14:36:42.412 +05:00 [INF] User profile is available. Using '/Users/kdbiosdeveloper/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-03-06 14:36:43.031 +05:00 [INF] Now listening on: https://localhost:7271
+2023-03-06 14:36:43.031 +05:00 [INF] Now listening on: http://localhost:5271
+2023-03-06 14:36:43.033 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-06 14:36:43.033 +05:00 [INF] Hosting environment: Development
+2023-03-06 14:36:43.036 +05:00 [INF] Content root path: /Users/kdbiosdeveloper/Documents/XProjects/EDSystems.CICD.CD/EDSystems.WebApi
+2023-03-06 14:36:44.258 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/swagger/index.html - -
+2023-03-06 14:36:44.408 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/swagger/index.html - - - 200 - text/html;charset=utf-8 152.3167ms
+2023-03-06 14:36:44.638 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/swagger/v1/swagger.json - -
+2023-03-06 14:36:45.084 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 445.0085ms
+2023-03-06 14:36:59.426 +05:00 [INF] User profile is available. Using '/Users/kdbiosdeveloper/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-03-06 14:37:00.015 +05:00 [INF] Now listening on: https://localhost:7271
+2023-03-06 14:37:00.016 +05:00 [INF] Now listening on: http://localhost:5271
+2023-03-06 14:37:00.017 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-06 14:37:00.018 +05:00 [INF] Hosting environment: Development
+2023-03-06 14:37:00.018 +05:00 [INF] Content root path: /Users/kdbiosdeveloper/Documents/XProjects/EDSystems.CICD.CD/EDSystems.WebApi
+2023-03-06 14:37:01.273 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/swagger/index.html - -
+2023-03-06 14:37:01.419 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/swagger/index.html - - - 200 - text/html;charset=utf-8 147.0027ms
+2023-03-06 14:37:01.535 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/swagger/v1/swagger.json - -
+2023-03-06 14:37:01.965 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 430.5072ms
+2023-03-06 14:37:26.280 +05:00 [INF] User profile is available. Using '/Users/kdbiosdeveloper/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-03-06 14:37:26.844 +05:00 [INF] Now listening on: https://localhost:7271
+2023-03-06 14:37:26.845 +05:00 [INF] Now listening on: http://localhost:5271
+2023-03-06 14:37:26.847 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-06 14:37:26.847 +05:00 [INF] Hosting environment: Development
+2023-03-06 14:37:26.847 +05:00 [INF] Content root path: /Users/kdbiosdeveloper/Documents/XProjects/EDSystems.CICD.CD/EDSystems.WebApi
+2023-03-06 14:37:28.106 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/swagger/index.html - -
+2023-03-06 14:37:28.260 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/swagger/index.html - - - 200 - text/html;charset=utf-8 154.8243ms
+2023-03-06 14:37:28.368 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/swagger/v1/swagger.json - -
+2023-03-06 14:37:28.819 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 451.7515ms
+2023-03-06 14:42:29.266 +05:00 [INF] User profile is available. Using '/Users/kdbiosdeveloper/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-03-06 14:42:29.827 +05:00 [INF] Now listening on: https://localhost:7271
+2023-03-06 14:42:29.828 +05:00 [INF] Now listening on: http://localhost:5271
+2023-03-06 14:42:29.830 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-06 14:42:29.830 +05:00 [INF] Hosting environment: Development
+2023-03-06 14:42:29.830 +05:00 [INF] Content root path: /Users/kdbiosdeveloper/Documents/XProjects/EDSystems.CICD.CD/EDSystems.WebApi
+2023-03-06 14:42:30.985 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/swagger/index.html - -
+2023-03-06 14:42:31.148 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/swagger/index.html - - - 200 - text/html;charset=utf-8 164.3443ms
+2023-03-06 14:42:31.261 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/swagger/v1/swagger.json - -
+2023-03-06 14:42:31.702 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 441.6304ms
+2023-03-06 14:43:49.971 +05:00 [INF] User profile is available. Using '/Users/kdbiosdeveloper/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-03-06 14:43:50.557 +05:00 [INF] Now listening on: https://localhost:7271
+2023-03-06 14:43:50.558 +05:00 [INF] Now listening on: http://localhost:5271
+2023-03-06 14:43:50.560 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-06 14:43:50.561 +05:00 [INF] Hosting environment: Development
+2023-03-06 14:43:50.561 +05:00 [INF] Content root path: /Users/kdbiosdeveloper/Documents/XProjects/EDSystems.CICD.CD/EDSystems.WebApi
+2023-03-06 14:43:51.847 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/swagger/index.html - -
+2023-03-06 14:43:51.987 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/swagger/index.html - - - 200 - text/html;charset=utf-8 140.4716ms
+2023-03-06 14:43:52.097 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/swagger/v1/swagger.json - -
+2023-03-06 14:43:52.504 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 406.6455ms

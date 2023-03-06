@@ -38,6 +38,11 @@ namespace EDSystems.WebApi.Controllers
         /// </returns>
         /// <responce code="200">Success</responce>
         /// <responce code="401">If the user is unauthorized</responce>
+#if DEBUG
+        [ApiExplorerSettings(IgnoreApi = true)]
+#else
+        [ApiExplorerSettings(IgnoreApi = true)]
+#endif
         [HttpGet]
         //[Authorize]
         [ProducesResponseType(StatusCodes.Status200OK)]
@@ -62,7 +67,8 @@ namespace EDSystems.WebApi.Controllers
         /// </returns>
         /// <responce code="200">Success</responce>
         /// <responce code="401">If the user is unauthorized</responce>
-        [HttpGet("WithPagination")]
+        ///("WithPagination")
+        [HttpGet]
         //[Authorize]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
