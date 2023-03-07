@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 
 namespace EDSystems.Application.Users.Commands.CreateUser;
 
-public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, string>
+public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, int>
 {
     private readonly UserManager<User> _userManager;
     private readonly ICustomLoggingBehavoir _customLoggingBehavior;
 
     public CreateUserCommandHandler(UserManager<User> userManager, ICustomLoggingBehavoir customLoggingBehavior) => (_userManager, _customLoggingBehavior) = (userManager, customLoggingBehavior);
 
-    public async Task<string> Handle(CreateUserCommand request, CancellationToken cancellationToken)
+    public async Task<int> Handle(CreateUserCommand request, CancellationToken cancellationToken)
     {
         var password = new PasswordHasher<User>();
         Func<string> GenerateSecurityStamp = delegate ()
@@ -41,7 +41,7 @@ public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, strin
         var isCreateAsync = await _userManager.CreateAsync(user, hashed);
         var isAddToRoleAsync = await _userManager.AddToRoleAsync(user, request.RoleName);
         var isCreatedSecurityStamp = await _userManager.UpdateSecurityStampAsync(user);
-        string response = "Error";
+        int response = 0;
         if (isCreateAsync.Succeeded)
         {
             response = user.Id;
@@ -49,7 +49,7 @@ public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, strin
         }
         else
         {
-            response = isCreateAsync.Errors.ToString();
+            //response = isCreateAsync.Errors.ToString();
         }
 
         if (isAddToRoleAsync.Succeeded)
@@ -58,7 +58,7 @@ public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, strin
         }
         else
         {
-            response = isAddToRoleAsync.Errors.ToString();
+            //response = isAddToRoleAsync.Errors;
         }
 
         if (isCreatedSecurityStamp.Succeeded)
@@ -67,7 +67,7 @@ public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, strin
         }
         else
         {
-            response = isCreatedSecurityStamp.Errors.ToString();
+            //response = isCreatedSecurityStamp.Errors.ToString();
         }
 
         return response;

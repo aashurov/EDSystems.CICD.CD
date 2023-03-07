@@ -9,7 +9,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace EDSystems.Persistence.Migrations
 {
     /// <inheritdoc />
-    public partial class Aziz : Migration
+    public partial class myMigration01 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -18,7 +18,8 @@ namespace EDSystems.Persistence.Migrations
                 name: "AspNetRoles",
                 columns: table => new
                 {
-                    Id = table.Column<string>(type: "text", nullable: false),
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     NormalizedName = table.Column<string>(type: "character varying(256)", maxLength: 256, nullable: true),
                     ConcurrencyStamp = table.Column<string>(type: "text", nullable: true),
                     Name = table.Column<string>(type: "character varying(256)", maxLength: 256, nullable: true)
@@ -143,7 +144,7 @@ namespace EDSystems.Persistence.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    UserId = table.Column<string>(type: "text", nullable: true),
+                    UserId = table.Column<int>(type: "integer", nullable: false),
                     Token = table.Column<string>(type: "text", nullable: true),
                     JwtId = table.Column<string>(type: "text", nullable: true),
                     IsUsed = table.Column<bool>(type: "boolean", nullable: false),
@@ -198,7 +199,7 @@ namespace EDSystems.Persistence.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    RoleId = table.Column<string>(type: "text", nullable: false),
+                    RoleId = table.Column<int>(type: "integer", nullable: false),
                     ClaimType = table.Column<string>(type: "text", nullable: true),
                     ClaimValue = table.Column<string>(type: "text", nullable: true)
                 },
@@ -544,7 +545,8 @@ namespace EDSystems.Persistence.Migrations
                 name: "AspNetUsers",
                 columns: table => new
                 {
-                    Id = table.Column<string>(type: "text", nullable: false),
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     FirstName = table.Column<string>(type: "text", nullable: true),
                     LastName = table.Column<string>(type: "text", nullable: true),
                     Address = table.Column<string>(type: "text", nullable: true),
@@ -590,6 +592,7 @@ namespace EDSystems.Persistence.Migrations
                     CurrencyId = table.Column<int>(type: "integer", nullable: false),
                     ParcelId = table.Column<int>(type: "integer", nullable: false),
                     PayerId = table.Column<string>(type: "text", nullable: true),
+                    PayerId1 = table.Column<int>(type: "integer", nullable: true),
                     DateCreated = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
                     DateUpdated = table.Column<DateTime>(type: "timestamp without time zone", nullable: true),
                     CreatedBy = table.Column<string>(type: "text", nullable: true),
@@ -605,8 +608,8 @@ namespace EDSystems.Persistence.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_AccountHistory_AspNetUsers_PayerId",
-                        column: x => x.PayerId,
+                        name: "FK_AccountHistory_AspNetUsers_PayerId1",
+                        column: x => x.PayerId1,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id");
                     table.ForeignKey(
@@ -629,10 +632,9 @@ namespace EDSystems.Persistence.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    UserId = table.Column<string>(type: "text", nullable: false),
+                    UserId = table.Column<int>(type: "integer", nullable: false),
                     ClaimType = table.Column<string>(type: "text", nullable: true),
-                    ClaimValue = table.Column<string>(type: "text", nullable: true),
-                    Discriminator = table.Column<string>(type: "text", nullable: false)
+                    ClaimValue = table.Column<string>(type: "text", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -652,7 +654,7 @@ namespace EDSystems.Persistence.Migrations
                     LoginProvider = table.Column<string>(type: "text", nullable: false),
                     ProviderKey = table.Column<string>(type: "text", nullable: false),
                     ProviderDisplayName = table.Column<string>(type: "text", nullable: true),
-                    UserId = table.Column<string>(type: "text", nullable: false)
+                    UserId = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -669,8 +671,8 @@ namespace EDSystems.Persistence.Migrations
                 name: "AspNetUserRoles",
                 columns: table => new
                 {
-                    UserId = table.Column<string>(type: "text", nullable: false),
-                    RoleId = table.Column<string>(type: "text", nullable: false)
+                    UserId = table.Column<int>(type: "integer", nullable: false),
+                    RoleId = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -693,7 +695,7 @@ namespace EDSystems.Persistence.Migrations
                 name: "AspNetUserTokens",
                 columns: table => new
                 {
-                    UserId = table.Column<string>(type: "text", nullable: false),
+                    UserId = table.Column<int>(type: "integer", nullable: false),
                     LoginProvider = table.Column<string>(type: "text", nullable: false),
                     Name = table.Column<string>(type: "text", nullable: false),
                     Value = table.Column<string>(type: "text", nullable: true)
@@ -716,11 +718,17 @@ namespace EDSystems.Persistence.Migrations
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     SenderId = table.Column<string>(type: "text", nullable: true),
+                    SenderId1 = table.Column<int>(type: "integer", nullable: true),
                     RecepientId = table.Column<string>(type: "text", nullable: true),
+                    RecepientId1 = table.Column<int>(type: "integer", nullable: true),
                     RecepientStaffId = table.Column<string>(type: "text", nullable: true),
+                    RecepientStaffId1 = table.Column<int>(type: "integer", nullable: true),
                     SenderStaffId = table.Column<string>(type: "text", nullable: true),
+                    SenderStaffId1 = table.Column<int>(type: "integer", nullable: true),
                     RecepientCourierId = table.Column<string>(type: "text", nullable: true),
+                    RecepientCourierId1 = table.Column<int>(type: "integer", nullable: true),
                     SenderCourierId = table.Column<string>(type: "text", nullable: true),
+                    SenderCourierId1 = table.Column<int>(type: "integer", nullable: true),
                     ParcelId = table.Column<int>(type: "integer", nullable: false),
                     DateCreated = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
                     DateUpdated = table.Column<DateTime>(type: "timestamp without time zone", nullable: true),
@@ -731,33 +739,33 @@ namespace EDSystems.Persistence.Migrations
                 {
                     table.PrimaryKey("PK_ParcelOwners", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_ParcelOwners_AspNetUsers_RecepientCourierId",
-                        column: x => x.RecepientCourierId,
+                        name: "FK_ParcelOwners_AspNetUsers_RecepientCourierId1",
+                        column: x => x.RecepientCourierId1,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id");
                     table.ForeignKey(
-                        name: "FK_ParcelOwners_AspNetUsers_RecepientId",
-                        column: x => x.RecepientId,
+                        name: "FK_ParcelOwners_AspNetUsers_RecepientId1",
+                        column: x => x.RecepientId1,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id");
                     table.ForeignKey(
-                        name: "FK_ParcelOwners_AspNetUsers_RecepientStaffId",
-                        column: x => x.RecepientStaffId,
+                        name: "FK_ParcelOwners_AspNetUsers_RecepientStaffId1",
+                        column: x => x.RecepientStaffId1,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id");
                     table.ForeignKey(
-                        name: "FK_ParcelOwners_AspNetUsers_SenderCourierId",
-                        column: x => x.SenderCourierId,
+                        name: "FK_ParcelOwners_AspNetUsers_SenderCourierId1",
+                        column: x => x.SenderCourierId1,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id");
                     table.ForeignKey(
-                        name: "FK_ParcelOwners_AspNetUsers_SenderId",
-                        column: x => x.SenderId,
+                        name: "FK_ParcelOwners_AspNetUsers_SenderId1",
+                        column: x => x.SenderId1,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id");
                     table.ForeignKey(
-                        name: "FK_ParcelOwners_AspNetUsers_SenderStaffId",
-                        column: x => x.SenderStaffId,
+                        name: "FK_ParcelOwners_AspNetUsers_SenderStaffId1",
+                        column: x => x.SenderStaffId1,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id");
                     table.ForeignKey(
@@ -778,6 +786,7 @@ namespace EDSystems.Persistence.Migrations
                     Name = table.Column<string>(type: "varchar", maxLength: 20, nullable: true),
                     Balance = table.Column<decimal>(type: "numeric", maxLength: 20, nullable: false),
                     UserId = table.Column<string>(type: "text", nullable: true),
+                    UserId1 = table.Column<int>(type: "integer", nullable: true),
                     CurrencyId = table.Column<int>(type: "integer", nullable: false),
                     DateCreated = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
                     DateUpdated = table.Column<DateTime>(type: "timestamp without time zone", nullable: true),
@@ -788,8 +797,8 @@ namespace EDSystems.Persistence.Migrations
                 {
                     table.PrimaryKey("PK_UserAccount", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_UserAccount_AspNetUsers_UserId",
-                        column: x => x.UserId,
+                        name: "FK_UserAccount_AspNetUsers_UserId1",
+                        column: x => x.UserId1,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id");
                     table.ForeignKey(
@@ -812,6 +821,7 @@ namespace EDSystems.Persistence.Migrations
                     CurrencyId = table.Column<int>(type: "integer", nullable: false),
                     ParcelId = table.Column<int>(type: "integer", nullable: false),
                     UserId = table.Column<string>(type: "text", nullable: true),
+                    UserId1 = table.Column<int>(type: "integer", nullable: true),
                     DateCreated = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
                     DateUpdated = table.Column<DateTime>(type: "timestamp without time zone", nullable: true),
                     CreatedBy = table.Column<string>(type: "text", nullable: true),
@@ -821,8 +831,8 @@ namespace EDSystems.Persistence.Migrations
                 {
                     table.PrimaryKey("PK_UserAccountHistory", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_UserAccountHistory_AspNetUsers_UserId",
-                        column: x => x.UserId,
+                        name: "FK_UserAccountHistory_AspNetUsers_UserId1",
+                        column: x => x.UserId1,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id");
                     table.ForeignKey(
@@ -850,11 +860,11 @@ namespace EDSystems.Persistence.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "2c5e174e-3b0e-446f-86af-483d56fd7210", "5e6ce426-367c-4af9-a1b3-ddbfb2e5845d", "Administrator", "ADMINISTRATOR" },
-                    { "336b1b38-f4c9-4844-8dcb-b59a0d7f0533", "ab370926-428c-40ec-8e1a-e51b8b3ad6a2", "Customer", "CUSTOMER" },
-                    { "401bc2e9-3a0b-4281-9685-d6b36fc37d31", "cff8a6f4-f441-4e48-b54d-083c48d0dd45", "Courier", "COURIER" },
-                    { "5919c97a-b888-4858-bbbe-0123a1952624", "e64c8340-0784-4c22-88cb-3c3520a2ec7b", "Staff", "STAFF" },
-                    { "68373a2b-932e-4fff-a7a9-b31e156d4101", "d01f2334-0304-4041-be4f-465d15ffbcc9", "Manager", "MANAGER" }
+                    { 1, "62d65bae-26fe-4478-8c5a-028912ed52f8", "Administrator", "ADMINISTRATOR" },
+                    { 2, "745a2a87-3eec-4831-9648-ff3e0ca27f5f", "Manager", "MANAGER" },
+                    { 3, "ca38d0cc-67c2-4fcb-83fa-9ecdd0ee6130", "Staff", "STAFF" },
+                    { 4, "18be39b6-69fa-4303-acb2-13c9ad627d6e", "Courier", "COURIER" },
+                    { 5, "3072d295-e268-445f-9aae-2c5c58501d87", "Customer", "CUSTOMER" }
                 });
 
             migrationBuilder.InsertData(
@@ -862,22 +872,11 @@ namespace EDSystems.Persistence.Migrations
                 columns: new[] { "Id", "AccessFailedCount", "Address", "ChatId", "ConcurrencyStamp", "DateCreated", "DateUpdated", "Email", "EmailConfirmed", "FirstName", "LastName", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "ParcelJobId", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName", "UserNameT" },
                 values: new object[,]
                 {
-                    { "0a1e5c27-0b09-4f60-a9c3-8618791a8672", 0, "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099", -1001663331836L, "efd2401f-be30-466f-a9a0-8f6e657cea2e", new DateTime(2023, 1, 26, 10, 21, 29, 370, DateTimeKind.Local).AddTicks(9675), null, "Ismoil@gmail.com", false, "EDTashkent", "Ismoil", false, null, "ISMOIL@GMAIL.COM", "ISMOIL", null, "AQAAAAIAAYagAAAAEFv7gkeNJbOM5ayBbdEofa6yCUaFv5cZOx0gdC/LrpbZrF3QuJUY8UMNpnc4f9kXoQ==", "998977093262", false, "8b12ef1c-5ba5-42c3-accc-cefc292f755e", false, "ismoil", "UserName" },
-                    { "11fafeb4-c7c1-463c-bb1e-55203e68dfdf", 0, "Российская Федерация, Московская область, г. Москва, Академический район, улица Винокурова 7/5, корпус 3, индекс 117449", -1001663331836L, "7e49bdb7-c9e8-4e90-b0fc-7b65ccfdf31b", new DateTime(2023, 1, 26, 10, 21, 29, 370, DateTimeKind.Local).AddTicks(9816), null, "Umar@gmail.com", false, "EDMoscow", "Umar", false, null, "UMAR@GMAIL.COM", "UMAR", null, "AQAAAAIAAYagAAAAEFv7gkeNJbOM5ayBbdEofa6yCUaFv5cZOx0gdC/LrpbZrF3QuJUY8UMNpnc4f9kXoQ==", "79963321030", false, "f63872fd-9772-4238-a385-96ed3a1bacab", false, "umar", "UserName" },
-                    { "131d5dd1-6bf1-4f52-be90-00815000fb57", 0, "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099", -1001663331836L, "089bc95e-80c3-4720-a259-dab3b94b2c3b", new DateTime(2023, 1, 26, 10, 21, 29, 370, DateTimeKind.Local).AddTicks(9761), null, "Khikmatillo@gmail.com", false, "EDTashkent", "Khikmatillo", false, null, "KHIKMATILLO@GMAIL.COM", "KHIKMATILLO", null, "AQAAAAIAAYagAAAAEFv7gkeNJbOM5ayBbdEofa6yCUaFv5cZOx0gdC/LrpbZrF3QuJUY8UMNpnc4f9kXoQ==", "998974468090", false, "b7451705-5a63-4654-8ece-c3835400bc85", false, "khikmatillo", "UserName" },
-                    { "221c0048-08c9-4e72-8f5c-ddf4039f9488", 0, "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099", -1001663331836L, "bd48d38f-010d-4bd3-8d75-bc378a5aa73a", new DateTime(2023, 1, 26, 10, 21, 29, 370, DateTimeKind.Local).AddTicks(9771), null, "Abbos@gmail.com", false, "EDTashkent", "Abbos", false, null, "ABBOS@GMAIL.COM", "ABBOS", null, "AQAAAAIAAYagAAAAEFv7gkeNJbOM5ayBbdEofa6yCUaFv5cZOx0gdC/LrpbZrF3QuJUY8UMNpnc4f9kXoQ==", "998903550022", false, "db97a05c-d412-4b58-bbc1-98a0b367e9fb", false, "abbos", "UserName" },
-                    { "30a8f9cc-8d37-4d93-ab2f-774428387e4a", 0, "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099", -1001663331836L, "ae10cd49-7c00-4a51-ba88-d84bc2c7f9b9", new DateTime(2023, 1, 26, 10, 21, 29, 370, DateTimeKind.Local).AddTicks(9635), null, "administrator@gmail.com", false, "EDSystem", "Administrator", false, null, "ADMINISTRATOR@GMAIL.COM", "ADMINISTRATOR", null, "AQAAAAIAAYagAAAAEFv7gkeNJbOM5ayBbdEofa6yCUaFv5cZOx0gdC/LrpbZrF3QuJUY8UMNpnc4f9kXoQ==", "998970000675", false, "7f5db097-3ca5-4cd3-9f4a-67b90a64ff98", false, "administrator", "UserName" },
-                    { "34a0eb9b-6797-40f7-a84c-aa31cdd4cdc6", 0, "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099", -1001663331836L, "9980e704-c96f-4050-80b0-5e18f2d6d1a0", new DateTime(2023, 1, 26, 10, 21, 29, 370, DateTimeKind.Local).AddTicks(9754), null, "Ubaydulla@gmail.com", false, "EDTashkent", "Ubaydulla", false, null, "UBAYDULLA@GMAIL.COM", "UBAYDULLA", null, "AQAAAAIAAYagAAAAEFv7gkeNJbOM5ayBbdEofa6yCUaFv5cZOx0gdC/LrpbZrF3QuJUY8UMNpnc4f9kXoQ==", "998990500033", false, "69817238-ecd9-4eba-b140-9b42330f8765", false, "ubaydulla", "UserName" },
-                    { "3b9d7f21-1d66-4c98-8648-64a68777bccb", 0, "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099", -1001663331836L, "c5419253-22e3-4955-a562-1f075cf9fc22", new DateTime(2023, 1, 26, 10, 21, 29, 370, DateTimeKind.Local).AddTicks(9668), null, "Javohir@gmail.com", false, "EDTashkent", "Javohir", false, null, "JAVOHIR@GMAIL.COM", "JAVOHIR", null, "AQAAAAIAAYagAAAAEFv7gkeNJbOM5ayBbdEofa6yCUaFv5cZOx0gdC/LrpbZrF3QuJUY8UMNpnc4f9kXoQ==", "998931710966", false, "fb47769b-29b6-4d71-9bec-644797269810", false, "javohir", "UserName" },
-                    { "4ff7819d-8e17-4aa8-a0da-964c2db21591", 0, "Российская Федерация, Московская область, г. Москва, Академический район, улица Винокурова 7/5, корпус 3, индекс 117449", -1001663331836L, "892345d5-50d6-4a64-900b-fb225deb3a85", new DateTime(2023, 1, 26, 10, 21, 29, 370, DateTimeKind.Local).AddTicks(9785), null, "Ulugbek@gmail.com", false, "EDMoscow", "Ulugbek", false, null, "ULUGBEK@GMAIL.COM", "ULUGBEK", null, "AQAAAAIAAYagAAAAEFv7gkeNJbOM5ayBbdEofa6yCUaFv5cZOx0gdC/LrpbZrF3QuJUY8UMNpnc4f9kXoQ==", "79777403487", false, "58a755b0-403b-4ed2-afff-4e75ca5b9ff4", false, "ulugbek", "UserName" },
-                    { "5a6f1681-c582-46f5-905b-4eb2c222dcf5", 0, "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099", -1001663331836L, "bf61f6da-e2bf-4779-9f79-22d5df6be136", new DateTime(2023, 1, 26, 10, 21, 29, 370, DateTimeKind.Local).AddTicks(9660), null, "Nodir@gmail.com", false, "EDTashkent", "Nodir", false, null, "NODIR@GMAIL.COM", "NODIR", null, "AQAAAAIAAYagAAAAEFv7gkeNJbOM5ayBbdEofa6yCUaFv5cZOx0gdC/LrpbZrF3QuJUY8UMNpnc4f9kXoQ==", "998909046605", false, "5e8534c8-b98b-4ecf-bc0d-765213267e16", false, "nodir", "UserName" },
-                    { "92b7c777-0d3e-4026-844f-20164bb0f97e", 0, "Российская Федерация, Московская область, г. Москва, Академический район, улица Винокурова 7/5, корпус 3, индекс 117449", -1001663331836L, "79e551c8-6806-4b7f-ba98-1146d85df900", new DateTime(2023, 1, 26, 10, 21, 29, 370, DateTimeKind.Local).AddTicks(9822), null, "Abror@gmail.com", false, "EDMoscow", "Abror", false, null, "ABROR@GMAIL.COM", "ABROR", null, "AQAAAAIAAYagAAAAEFv7gkeNJbOM5ayBbdEofa6yCUaFv5cZOx0gdC/LrpbZrF3QuJUY8UMNpnc4f9kXoQ==", "79296800899", false, "831843bb-f263-472b-b298-17c3dc02db92", false, "abror", "UserName" },
-                    { "92db214d-cd73-4fbc-8b34-1dc0709ba0b2", 0, "Российская Федерация, Московская область, г. Москва, Академический район, улица Винокурова 7/5, корпус 3, индекс 117449", -1001663331836L, "27953b89-dcd8-4295-b5ac-b43ab8674080", new DateTime(2023, 1, 26, 10, 21, 29, 370, DateTimeKind.Local).AddTicks(9794), null, "Abdulaziz@gmail.com", false, "EDMoscow", "Abdulaziz", false, null, "ABDULAZIZ@GMAIL.COM", "ABDULAZIZ", null, "AQAAAAIAAYagAAAAEFv7gkeNJbOM5ayBbdEofa6yCUaFv5cZOx0gdC/LrpbZrF3QuJUY8UMNpnc4f9kXoQ==", "79691799000", false, "ce229f03-2c55-4b58-99ba-7cc172ec2251", false, "abdulaziz", "UserName" },
-                    { "9c57fadd-110a-4b45-aa89-69aa141564c6", 0, "Российская Федерация, Московская область, г. Москва, Академический район, улица Винокурова 7/5, корпус 3, индекс 117449", -1001663331836L, "84c809bd-b332-4b54-8285-7b2cac6239a3", new DateTime(2023, 1, 26, 10, 21, 29, 370, DateTimeKind.Local).AddTicks(9801), null, "Doniyor@gmail.com", false, "EDMoscow", "Doniyor", false, null, "DONIYOR@GMAIL.COM", "DONIYOR", null, "AQAAAAIAAYagAAAAEFv7gkeNJbOM5ayBbdEofa6yCUaFv5cZOx0gdC/LrpbZrF3QuJUY8UMNpnc4f9kXoQ==", "79777601654", false, "b7a82653-54f6-4520-ae91-abd4ed98e194", false, "doniyor", "UserName" },
-                    { "cadaa51d-ddb3-4564-a8c5-79e80c98a032", 0, "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099", -1001663331836L, "5d55bb73-6285-4d11-94b0-78547c42f031", new DateTime(2023, 1, 26, 10, 21, 29, 370, DateTimeKind.Local).AddTicks(9653), null, "hayrulloh@gmail.com", false, "EDTashkent", "Hayrulloh", false, null, "HAYRULLOH@GMAIL.COM", "HAYRULLOH", null, "AQAAAAIAAYagAAAAEFv7gkeNJbOM5ayBbdEofa6yCUaFv5cZOx0gdC/LrpbZrF3QuJUY8UMNpnc4f9kXoQ==", "998935788886", false, "1d948fc1-a6a8-4116-aeac-544d0368fcbc", false, "hayrulloh", "UserName" },
-                    { "e0c3bef9-fd70-421e-b07b-055c38b6d77c", 0, "Российская Федерация, Московская область, г. Москва, Академический район, улица Винокурова 7/5, корпус 3, индекс 117449", -1001663331836L, "f0461516-2bc5-466a-b14e-a7581473688e", new DateTime(2023, 1, 26, 10, 21, 29, 370, DateTimeKind.Local).AddTicks(9778), null, "Shohruh@gmail.com", false, "EDMoscow", "Shohruh", false, null, "SHOHRUH@GMAIL.COM", "SHOHRUH", null, "AQAAAAIAAYagAAAAEFv7gkeNJbOM5ayBbdEofa6yCUaFv5cZOx0gdC/LrpbZrF3QuJUY8UMNpnc4f9kXoQ==", "79060470085", false, "3e5bb79c-abdd-4e5a-860c-98b45ac9ca10", false, "shohruh", "UserName" },
-                    { "e13b576b-afbe-4b4c-aaad-64fd9bee3852", 0, "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099", -1001663331836L, "7ac7c441-d396-44b9-8ae3-2acc284214b0", new DateTime(2023, 1, 26, 10, 21, 29, 370, DateTimeKind.Local).AddTicks(9682), null, "Sadulla@gmail.com", false, "EDTashkent", "Sadulla", false, null, "SADULLA@GMAIL.COM", "SADULLA", null, "AQAAAAIAAYagAAAAEFv7gkeNJbOM5ayBbdEofa6yCUaFv5cZOx0gdC/LrpbZrF3QuJUY8UMNpnc4f9kXoQ==", "998994885995", false, "1f7117b5-a8e2-4a13-bd07-7c2ab65cc43b", false, "sadulla", "UserName" },
-                    { "eb6a85b0-a7fb-4f8e-9bea-03825e6f020f", 0, "Российская Федерация, Московская область, г. Москва, Академический район, улица Винокурова 7/5, корпус 3, индекс 117449", -1001663331836L, "6e6777cb-e63d-474b-a59b-8802337d5063", new DateTime(2023, 1, 26, 10, 21, 29, 370, DateTimeKind.Local).AddTicks(9807), null, "Shaxzod@gmail.com", false, "EDMoscow", "Shaxzod", false, null, "SHAXZOD@GMAIL.COM", "SHAXZOD", null, "AQAAAAIAAYagAAAAEFv7gkeNJbOM5ayBbdEofa6yCUaFv5cZOx0gdC/LrpbZrF3QuJUY8UMNpnc4f9kXoQ==", "79163870009", false, "d589d665-7845-4117-9106-527e738ad5b0", false, "shaxzod", "UserName" }
+                    { 1, 0, "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099", -1001663331836L, "537ead06-91c5-4e77-9d74-8a4c24c98c0c", new DateTime(2023, 3, 7, 22, 34, 32, 818, DateTimeKind.Local).AddTicks(1260), null, "administrator@gmail.com", false, "EDSystem", "Administrator", false, null, "ADMINISTRATOR@GMAIL.COM", "ADMINISTRATOR", null, "AQAAAAIAAYagAAAAEG96UZInZlqlB7GEfsljsHadi+M+gyuEt9ueoxFf/3f3wCIWCDN9c+bQaOWsM8M05A==", "998970000675", false, null, false, "administrator", "UserName" },
+                    { 2, 0, "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099", -1001663331836L, "4d518d26-2c13-460b-b918-30d018a73dce", new DateTime(2023, 3, 7, 22, 34, 32, 818, DateTimeKind.Local).AddTicks(1270), null, "hayrulloh@gmail.com", false, "EDTashkent", "Hayrulloh", false, null, "HAYRULLOH@GMAIL.COM", "HAYRULLOH", null, "AQAAAAIAAYagAAAAEG96UZInZlqlB7GEfsljsHadi+M+gyuEt9ueoxFf/3f3wCIWCDN9c+bQaOWsM8M05A==", "998935788886", false, null, false, "hayrulloh", "UserName" },
+                    { 3, 0, "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099", -1001663331836L, "99484c3d-c5a9-40b4-996f-43b88d4fd06e", new DateTime(2023, 3, 7, 22, 34, 32, 818, DateTimeKind.Local).AddTicks(1280), null, "Nodir@gmail.com", false, "EDTashkent", "Nodir", false, null, "NODIR@GMAIL.COM", "NODIR", null, "AQAAAAIAAYagAAAAEG96UZInZlqlB7GEfsljsHadi+M+gyuEt9ueoxFf/3f3wCIWCDN9c+bQaOWsM8M05A==", "998909046605", false, null, false, "nodir", "UserName" },
+                    { 4, 0, "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099", -1001663331836L, "7dfa1f3d-3dfb-4990-b102-f2254a385477", new DateTime(2023, 3, 7, 22, 34, 32, 818, DateTimeKind.Local).AddTicks(1310), null, "Javohir@gmail.com", false, "EDTashkent", "Javohir", false, null, "JAVOHIR@GMAIL.COM", "JAVOHIR", null, "AQAAAAIAAYagAAAAEG96UZInZlqlB7GEfsljsHadi+M+gyuEt9ueoxFf/3f3wCIWCDN9c+bQaOWsM8M05A==", "998931710966", false, null, false, "javohir", "UserName" },
+                    { 5, 0, "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099", -1001663331836L, "97a5ddd0-0a30-4208-af4d-79f82fe2dbcd", new DateTime(2023, 3, 7, 22, 34, 32, 818, DateTimeKind.Local).AddTicks(1320), null, "Ismoil@gmail.com", false, "EDTashkent", "Ismoil", false, null, "ISMOIL@GMAIL.COM", "ISMOIL", null, "AQAAAAIAAYagAAAAEG96UZInZlqlB7GEfsljsHadi+M+gyuEt9ueoxFf/3f3wCIWCDN9c+bQaOWsM8M05A==", "998977093262", false, null, false, "ismoil", "UserName" }
                 });
 
             migrationBuilder.InsertData(
@@ -885,12 +884,12 @@ namespace EDSystems.Persistence.Migrations
                 columns: new[] { "Id", "Address", "City", "Code", "Country", "CreatedBy", "DateCreated", "DateUpdated", "Email", "ModifiedBy", "Name", "Phone" },
                 values: new object[,]
                 {
-                    { 1, "Российская Федерация, Московская область, г. Москва, Академический район, улица Винокурова 7/5, корпус 3, индекс 117449", "Москва", "643", "Россия", null, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3592), null, "info@ethnologistics.asia", null, "Москва", "+765165498496" },
-                    { 2, "Республика Узбекистан, г. Ташкент, Юнусабадский район, улица Кашгар 11,", "Ташкент", "860", "Узбекистан", null, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3595), null, "info@ethnologistics.asia", null, "Ташкент", "+998984651" },
-                    { 3, "Киргизия, Бишкек, Жибек-Жолу д 443/1", "Бишкек", "417", "Киргистан", null, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3597), null, "info@ethnologistics.asia", null, "Бишкек", "+765165498496" },
-                    { 4, "Душанбе 122", "Душанбе", "762", "Таджикистан", null, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3598), null, "info@ethnologistics.asia", null, "Душанбе", "+665165498496" },
-                    { 5, "Алматы 123", "Алматы", "398", "Казахстан", null, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3603), null, "info@ethnologistics.asia", null, "Алматы", "+665165498496" },
-                    { 6, "Хайдарпашша", "Стамбул", "792", "Турция", null, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3605), null, "info@ethnologistics.asia", null, "Стамбул", "+665165498496" }
+                    { 1, "Российская Федерация, Московская область, г. Москва, Академический район, улица Винокурова 7/5, корпус 3, индекс 117449", "Москва", "643", "Россия", null, new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(150), null, "info@ethnologistics.asia", null, "Москва", "+765165498496" },
+                    { 2, "Республика Узбекистан, г. Ташкент, Юнусабадский район, улица Кашгар 11,", "Ташкент", "860", "Узбекистан", null, new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(150), null, "info@ethnologistics.asia", null, "Ташкент", "+998984651" },
+                    { 3, "Киргизия, Бишкек, Жибек-Жолу д 443/1", "Бишкек", "417", "Киргистан", null, new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(150), null, "info@ethnologistics.asia", null, "Бишкек", "+765165498496" },
+                    { 4, "Душанбе 122", "Душанбе", "762", "Таджикистан", null, new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(160), null, "info@ethnologistics.asia", null, "Душанбе", "+665165498496" },
+                    { 5, "Алматы 123", "Алматы", "398", "Казахстан", null, new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(160), null, "info@ethnologistics.asia", null, "Алматы", "+665165498496" },
+                    { 6, "Хайдарпашша", "Стамбул", "792", "Турция", null, new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(160), null, "info@ethnologistics.asia", null, "Стамбул", "+665165498496" }
                 });
 
             migrationBuilder.InsertData(
@@ -898,14 +897,14 @@ namespace EDSystems.Persistence.Migrations
                 columns: new[] { "Id", "Code", "Country", "CreatedBy", "DateCreated", "DateUpdated", "ModifiedBy", "Name", "Number" },
                 values: new object[,]
                 {
-                    { 1, "USD", "Соединенные Штаты Америки", null, new DateTime(2023, 1, 26, 10, 21, 29, 371, DateTimeKind.Local).AddTicks(13), null, null, "Доллар", 840 },
-                    { 2, "UZS", "Республика Узбекистан", null, new DateTime(2023, 1, 26, 10, 21, 29, 371, DateTimeKind.Local).AddTicks(15), null, null, "Сум", 860 },
-                    { 3, "RUB", "Российская Федерация", null, new DateTime(2023, 1, 26, 10, 21, 29, 371, DateTimeKind.Local).AddTicks(16), null, null, "Рубль", 643 },
-                    { 4, "KZT", "Республика Казахстан", null, new DateTime(2023, 1, 26, 10, 21, 29, 371, DateTimeKind.Local).AddTicks(80), null, null, "Тенге", 398 },
-                    { 5, "TRY", "Турция", null, new DateTime(2023, 1, 26, 10, 21, 29, 371, DateTimeKind.Local).AddTicks(82), null, null, "Лира", 949 },
-                    { 6, "AED", "Объедененные Арабские Эмираты", null, new DateTime(2023, 1, 26, 10, 21, 29, 371, DateTimeKind.Local).AddTicks(84), null, null, "Дирхам", 784 },
-                    { 7, "KGS", "Кыргызская Республика", null, new DateTime(2023, 1, 26, 10, 21, 29, 371, DateTimeKind.Local).AddTicks(85), null, null, "Сом", 417 },
-                    { 8, "TJS", "Республика Таджикистан", null, new DateTime(2023, 1, 26, 10, 21, 29, 371, DateTimeKind.Local).AddTicks(86), null, null, "Сомони", 972 }
+                    { 1, "USD", "Соединенные Штаты Америки", null, new DateTime(2023, 3, 7, 22, 34, 32, 818, DateTimeKind.Local).AddTicks(1420), null, null, "Доллар", 840 },
+                    { 2, "UZS", "Республика Узбекистан", null, new DateTime(2023, 3, 7, 22, 34, 32, 818, DateTimeKind.Local).AddTicks(1420), null, null, "Сум", 860 },
+                    { 3, "RUB", "Российская Федерация", null, new DateTime(2023, 3, 7, 22, 34, 32, 818, DateTimeKind.Local).AddTicks(1420), null, null, "Рубль", 643 },
+                    { 4, "KZT", "Республика Казахстан", null, new DateTime(2023, 3, 7, 22, 34, 32, 818, DateTimeKind.Local).AddTicks(1420), null, null, "Тенге", 398 },
+                    { 5, "TRY", "Турция", null, new DateTime(2023, 3, 7, 22, 34, 32, 818, DateTimeKind.Local).AddTicks(1430), null, null, "Лира", 949 },
+                    { 6, "AED", "Объедененные Арабские Эмираты", null, new DateTime(2023, 3, 7, 22, 34, 32, 818, DateTimeKind.Local).AddTicks(1430), null, null, "Дирхам", 784 },
+                    { 7, "KGS", "Кыргызская Республика", null, new DateTime(2023, 3, 7, 22, 34, 32, 818, DateTimeKind.Local).AddTicks(1430), null, null, "Сом", 417 },
+                    { 8, "TJS", "Республика Таджикистан", null, new DateTime(2023, 3, 7, 22, 34, 32, 818, DateTimeKind.Local).AddTicks(1430), null, null, "Сомони", 972 }
                 });
 
             migrationBuilder.InsertData(
@@ -913,19 +912,19 @@ namespace EDSystems.Persistence.Migrations
                 columns: new[] { "Id", "CreatedBy", "DateCreated", "DateUpdated", "Description", "ModifiedBy", "Name" },
                 values: new object[,]
                 {
-                    { 1, null, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3722), null, "Зарплата", null, "Зарплата" },
-                    { 2, null, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3723), null, "Аванс", null, "Аванс" },
-                    { 3, null, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3724), null, "Курерам за перевозку", null, "Курерам за перевозку" },
-                    { 4, null, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3726), null, "Обед", null, "Обед" },
-                    { 5, null, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3727), null, "Карзи Хасана", null, "Карзи Хасана" },
-                    { 6, null, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3728), null, "Депозит", null, "Депозит" },
-                    { 7, null, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3729), null, "За перевозку до филиала", null, "За перевозку до филиала" },
-                    { 8, null, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3730), null, "За доставку до получателя", null, "За доставку до получателя" },
-                    { 9, null, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3732), null, "За забор посылки", null, "За забор посылки" },
-                    { 10, null, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3733), null, "За выкуп", null, "За выкуп" },
-                    { 11, null, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3734), null, "Ковертация", null, "Ковертация" },
-                    { 12, null, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3736), null, "Перевод", null, "Перевод" },
-                    { 13, null, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3737), null, "За мелкие расходы", null, "За мелкие расходы" }
+                    { 1, null, new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(240), null, "Зарплата", null, "Зарплата" },
+                    { 2, null, new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(240), null, "Аванс", null, "Аванс" },
+                    { 3, null, new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(250), null, "Курерам за перевозку", null, "Курерам за перевозку" },
+                    { 4, null, new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(250), null, "Обед", null, "Обед" },
+                    { 5, null, new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(250), null, "Карзи Хасана", null, "Карзи Хасана" },
+                    { 6, null, new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(250), null, "Депозит", null, "Депозит" },
+                    { 7, null, new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(250), null, "За перевозку до филиала", null, "За перевозку до филиала" },
+                    { 8, null, new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(260), null, "За доставку до получателя", null, "За доставку до получателя" },
+                    { 9, null, new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(260), null, "За забор посылки", null, "За забор посылки" },
+                    { 10, null, new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(260), null, "За выкуп", null, "За выкуп" },
+                    { 11, null, new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(260), null, "Ковертация", null, "Ковертация" },
+                    { 12, null, new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(260), null, "Перевод", null, "Перевод" },
+                    { 13, null, new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(260), null, "За мелкие расходы", null, "За мелкие расходы" }
                 });
 
             migrationBuilder.InsertData(
@@ -933,10 +932,10 @@ namespace EDSystems.Persistence.Migrations
                 columns: new[] { "Id", "Cost", "CreatedBy", "DateCreated", "DateUpdated", "Description", "ModifiedBy", "Name" },
                 values: new object[,]
                 {
-                    { 1, 7m, null, new DateTime(2023, 1, 26, 10, 21, 29, 370, DateTimeKind.Local).AddTicks(9975), null, "Description", null, "Стандарт" },
-                    { 2, 12m, null, new DateTime(2023, 1, 26, 10, 21, 29, 370, DateTimeKind.Local).AddTicks(9978), null, "Description", null, "Экспресс" },
-                    { 3, 30m, null, new DateTime(2023, 1, 26, 10, 21, 29, 370, DateTimeKind.Local).AddTicks(9979), null, "Description", null, "Ультра" },
-                    { 5, 5m, null, new DateTime(2023, 1, 26, 10, 21, 29, 370, DateTimeKind.Local).AddTicks(9980), null, "Description", null, "Авто" }
+                    { 1, 7m, null, new DateTime(2023, 3, 7, 22, 34, 32, 818, DateTimeKind.Local).AddTicks(1400), null, "Description", null, "Стандарт" },
+                    { 2, 12m, null, new DateTime(2023, 3, 7, 22, 34, 32, 818, DateTimeKind.Local).AddTicks(1400), null, "Description", null, "Экспресс" },
+                    { 3, 30m, null, new DateTime(2023, 3, 7, 22, 34, 32, 818, DateTimeKind.Local).AddTicks(1400), null, "Description", null, "Ультра" },
+                    { 5, 5m, null, new DateTime(2023, 3, 7, 22, 34, 32, 818, DateTimeKind.Local).AddTicks(1410), null, "Description", null, "Авто" }
                 });
 
             migrationBuilder.InsertData(
@@ -944,12 +943,12 @@ namespace EDSystems.Persistence.Migrations
                 columns: new[] { "Id", "CreatedBy", "DateCreated", "DateUpdated", "Description", "ModifiedBy", "Name" },
                 values: new object[,]
                 {
-                    { 1, null, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3430), null, "Создан", null, "Создан" },
-                    { 2, null, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3441), null, "В пути", null, "В пути" },
-                    { 3, null, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3442), null, "Прибыл в пункт доставки", null, "Прибыл" },
-                    { 4, null, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3443), null, "На доставке у курьера", null, "У курьера" },
-                    { 5, null, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3445), null, "Доставлен", null, "Доставлен" },
-                    { 6, null, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3446), null, "Выдан", null, "Выдан" }
+                    { 1, null, new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(20), null, "Создан", null, "Создан" },
+                    { 2, null, new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(60), null, "В пути", null, "В пути" },
+                    { 3, null, new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(60), null, "Прибыл в пункт доставки", null, "Прибыл" },
+                    { 4, null, new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(70), null, "На доставке у курьера", null, "У курьера" },
+                    { 5, null, new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(70), null, "Доставлен", null, "Доставлен" },
+                    { 6, null, new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(70), null, "Выдан", null, "Выдан" }
                 });
 
             migrationBuilder.InsertData(
@@ -957,27 +956,60 @@ namespace EDSystems.Persistence.Migrations
                 columns: new[] { "Id", "Balance", "BranchId", "CreatedBy", "CurrencyId", "DateCreated", "DateUpdated", "ModifiedBy", "Name", "Number" },
                 values: new object[,]
                 {
-                    { 1, 0m, 1, null, 1, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3625), null, null, "Валютный счет Москвы", "643840USD" },
-                    { 2, 0m, 1, null, 2, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3628), null, null, "Рублевый счет Москвы", "643643RUB" },
-                    { 3, 0m, 2, null, 1, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3629), null, null, "Валютный счет Ташкента", "860840USD" },
-                    { 4, 0m, 2, null, 2, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3630), null, null, "Рублевый счет Ташкента", "860643RUB" },
-                    { 5, 0m, 3, null, 1, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3655), null, null, "Валютный счет Бишкека", "417840USD" },
-                    { 6, 0m, 3, null, 2, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3656), null, null, "Рублевый счет Бишкека", "417643RUB" },
-                    { 7, 0m, 4, null, 1, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3658), null, null, "Валютный счет Душанбе", "972840USD" },
-                    { 8, 0m, 4, null, 2, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3659), null, null, "Рублевый счет Душанбе", "972843RUB" },
-                    { 9, 0m, 5, null, 1, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3660), null, null, "Валютный счет Алматы", "398840USD" },
-                    { 10, 0m, 5, null, 2, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3662), null, null, "Рублевый счет Алматы", "398643RUB" },
-                    { 11, 0m, 6, null, 1, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3663), null, null, "Валютный счет Стамбул", "792840USD" },
-                    { 12, 0m, 6, null, 5, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3666), null, null, "Лировый счет Стамбул", "792949TRY" }
+                    { 1, 0m, 1, null, 1, new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(180), null, null, "Валютный счет Москвы", "643840USD" },
+                    { 2, 0m, 1, null, 2, new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(180), null, null, "Рублевый счет Москвы", "643643RUB" },
+                    { 3, 0m, 2, null, 1, new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(180), null, null, "Валютный счет Ташкента", "860840USD" },
+                    { 4, 0m, 2, null, 2, new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(180), null, null, "Рублевый счет Ташкента", "860643RUB" },
+                    { 5, 0m, 3, null, 1, new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(180), null, null, "Валютный счет Бишкека", "417840USD" },
+                    { 6, 0m, 3, null, 2, new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(190), null, null, "Рублевый счет Бишкека", "417643RUB" },
+                    { 7, 0m, 4, null, 1, new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(190), null, null, "Валютный счет Душанбе", "972840USD" },
+                    { 8, 0m, 4, null, 2, new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(190), null, null, "Рублевый счет Душанбе", "972843RUB" },
+                    { 9, 0m, 5, null, 1, new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(200), null, null, "Валютный счет Алматы", "398840USD" },
+                    { 10, 0m, 5, null, 2, new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(200), null, null, "Рублевый счет Алматы", "398643RUB" },
+                    { 11, 0m, 6, null, 1, new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(200), null, null, "Валютный счет Стамбул", "792840USD" },
+                    { 12, 0m, 6, null, 5, new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(200), null, null, "Лировый счет Стамбул", "792949TRY" }
                 });
 
             migrationBuilder.InsertData(
                 table: "AspNetUserClaims",
-                columns: new[] { "Id", "ClaimType", "ClaimValue", "Discriminator", "UserId" },
+                columns: new[] { "Id", "ClaimType", "ClaimValue", "UserId" },
                 values: new object[,]
                 {
-                    { 1, "CanAddBranch", "CanAddBranch", "UserClaim", "30a8f9cc-8d37-4d93-ab2f-774428387e4a" },
-                    { 2, "Manager", "CanOnlyRead", "UserClaim", "cadaa51d-ddb3-4564-a8c5-79e80c98a032" }
+                    { 1, "CanGetAllBranches", "CanGetAllBranches", 1 },
+                    { 2, "CanGetAllBranchesWithPagination", "CanGetAllBranchesWithPagination", 1 },
+                    { 3, "CanGetBranchDetails", "CanGetBranchDetails", 1 },
+                    { 4, "CanCreateBranch", "CanCreateBranch", 1 },
+                    { 5, "CanUpdateBranch", "CanUpdateBranch", 1 },
+                    { 6, "CanDeleteBranch", "CanDeleteBranch", 1 },
+                    { 7, "CanDeleteBranches", "CanDeleteBranches", 1 },
+                    { 8, "CanGetAllPlans", "CanGetAllPlans", 1 },
+                    { 9, "CanGetAllPlansWithPagination", "CanGetAllPlansWithPagination", 1 },
+                    { 10, "CanGetPlanDetails", "CanGetPlanDetails", 1 },
+                    { 11, "CanCreatePlan", "CanCreatePlan", 1 },
+                    { 12, "CanUpdatePlan", "CanUpdatePlan", 1 },
+                    { 13, "CanDeletePlan", "CanDeletePlan", 1 },
+                    { 14, "CanDeletePlans", "CanDeletePlans", 1 },
+                    { 15, "CanGetAllStatuses", "CanGetAllStatuses", 1 },
+                    { 16, "CanGetAllStatusesWithPagination", "CanGetAllStatusesWithPagination", 1 },
+                    { 17, "CanGetStatusDetails", "CanGetStatusDetails", 1 },
+                    { 18, "CanCreateStatus", "CanCreateStatus", 1 },
+                    { 19, "CanUpdateStatus", "CanUpdateStatus", 1 },
+                    { 20, "CanDeleteStatus", "CanDeleteStatus", 1 },
+                    { 21, "CanDeleteStatuses", "CanDeleteStatuses", 1 },
+                    { 22, "CanGetAllParcels", "CanGetAllParcels", 1 },
+                    { 23, "CanGetAllParcelsWithPagination", "CanGetAllParcelsWithPagination", 1 },
+                    { 24, "CanGetParcelDetails", "CanGetParcelDetails", 1 },
+                    { 25, "CanCreateParcel", "CanCreateParcel", 1 },
+                    { 26, "CanUpdateParcel", "CanUpdateParcel", 1 },
+                    { 27, "CanDeleteParcel", "CanDeleteParcel", 1 },
+                    { 28, "CanDeleteParcels", "CanDeleteParcels", 1 },
+                    { 29, "CanGetAllUsers", "CanGetAllUsers", 1 },
+                    { 30, "CanGetAllUsersWithPagination", "CanGetAllUsersWithPagination", 1 },
+                    { 31, "CanGetUserDetails", "CanGetUserDetails", 1 },
+                    { 32, "CanCreateUser", "CanCreateUser", 1 },
+                    { 33, "CanUpdateUser", "CanUpdateUser", 1 },
+                    { 34, "CanDeleteUser", "CanDeleteUser", 1 },
+                    { 35, "CanDeleteUsers", "CanDeleteUsers", 1 }
                 });
 
             migrationBuilder.InsertData(
@@ -985,35 +1017,21 @@ namespace EDSystems.Persistence.Migrations
                 columns: new[] { "RoleId", "UserId" },
                 values: new object[,]
                 {
-                    { "401bc2e9-3a0b-4281-9685-d6b36fc37d31", "0a1e5c27-0b09-4f60-a9c3-8618791a8672" },
-                    { "68373a2b-932e-4fff-a7a9-b31e156d4101", "11fafeb4-c7c1-463c-bb1e-55203e68dfdf" },
-                    { "68373a2b-932e-4fff-a7a9-b31e156d4101", "131d5dd1-6bf1-4f52-be90-00815000fb57" },
-                    { "401bc2e9-3a0b-4281-9685-d6b36fc37d31", "221c0048-08c9-4e72-8f5c-ddf4039f9488" },
-                    { "2c5e174e-3b0e-446f-86af-483d56fd7210", "30a8f9cc-8d37-4d93-ab2f-774428387e4a" },
-                    { "401bc2e9-3a0b-4281-9685-d6b36fc37d31", "34a0eb9b-6797-40f7-a84c-aa31cdd4cdc6" },
-                    { "401bc2e9-3a0b-4281-9685-d6b36fc37d31", "3b9d7f21-1d66-4c98-8648-64a68777bccb" },
-                    { "401bc2e9-3a0b-4281-9685-d6b36fc37d31", "4ff7819d-8e17-4aa8-a0da-964c2db21591" },
-                    { "401bc2e9-3a0b-4281-9685-d6b36fc37d31", "5a6f1681-c582-46f5-905b-4eb2c222dcf5" },
-                    { "401bc2e9-3a0b-4281-9685-d6b36fc37d31", "92b7c777-0d3e-4026-844f-20164bb0f97e" },
-                    { "401bc2e9-3a0b-4281-9685-d6b36fc37d31", "92db214d-cd73-4fbc-8b34-1dc0709ba0b2" },
-                    { "401bc2e9-3a0b-4281-9685-d6b36fc37d31", "9c57fadd-110a-4b45-aa89-69aa141564c6" },
-                    { "401bc2e9-3a0b-4281-9685-d6b36fc37d31", "cadaa51d-ddb3-4564-a8c5-79e80c98a032" },
-                    { "401bc2e9-3a0b-4281-9685-d6b36fc37d31", "e0c3bef9-fd70-421e-b07b-055c38b6d77c" },
-                    { "401bc2e9-3a0b-4281-9685-d6b36fc37d31", "e13b576b-afbe-4b4c-aaad-64fd9bee3852" },
-                    { "401bc2e9-3a0b-4281-9685-d6b36fc37d31", "eb6a85b0-a7fb-4f8e-9bea-03825e6f020f" }
+                    { 1, 1 },
+                    { 2, 2 }
                 });
 
             migrationBuilder.InsertData(
                 table: "UserAccount",
-                columns: new[] { "Id", "Balance", "CreatedBy", "CurrencyId", "DateCreated", "DateUpdated", "ModifiedBy", "Name", "Number", "UserId" },
+                columns: new[] { "Id", "Balance", "CreatedBy", "CurrencyId", "DateCreated", "DateUpdated", "ModifiedBy", "Name", "Number", "UserId", "UserId1" },
                 values: new object[,]
                 {
-                    { 1, 0m, null, 1, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3691), null, null, "Валютный счет", "30a8f9cc-840USD", "30a8f9cc-8d37-4d93-ab2f-774428387e4a" },
-                    { 2, 0m, null, 1, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3695), null, null, "Валютный счет", "cadaa51d-840USD", "cadaa51d-ddb3-4564-a8c5-79e80c98a032" },
-                    { 3, 0m, null, 1, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3696), null, null, "Валютный счет", "5a6f1681-840USD", "5a6f1681-c582-46f5-905b-4eb2c222dcf5" },
-                    { 4, 0m, null, 1, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3697), null, null, "Валютный счет", "3b9d7f21-840USD", "3b9d7f21-1d66-4c98-8648-64a68777bccb" },
-                    { 5, 0m, null, 1, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3699), null, null, "Валютный счет", "0a1e5c27-840USD", "0a1e5c27-0b09-4f60-a9c3-8618791a8672" },
-                    { 6, 0m, null, 1, new DateTime(2023, 1, 26, 10, 21, 29, 310, DateTimeKind.Local).AddTicks(3701), null, null, "Валютный счет", "e13b576b-840USD", "e13b576b-afbe-4b4c-aaad-64fd9bee3852" }
+                    { 1, 0m, null, 1, new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(220), null, null, "Валютный счет", "30a8f9cc-840USD", "1", null },
+                    { 2, 0m, null, 1, new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(220), null, null, "Валютный счет", "cadaa51d-840USD", "2", null },
+                    { 3, 0m, null, 1, new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(220), null, null, "Валютный счет", "5a6f1681-840USD", "3", null },
+                    { 4, 0m, null, 1, new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(230), null, null, "Валютный счет", "3b9d7f21-840USD", "1", null },
+                    { 5, 0m, null, 1, new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(230), null, null, "Валютный счет", "0a1e5c27-840USD", "2", null },
+                    { 6, 0m, null, 1, new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(230), null, null, "Валютный счет", "e13b576b-840USD", "3", null }
                 });
 
             migrationBuilder.CreateIndex(
@@ -1054,9 +1072,9 @@ namespace EDSystems.Persistence.Migrations
                 column: "ParcelId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_AccountHistory_PayerId",
+                name: "IX_AccountHistory_PayerId1",
                 table: "AccountHistory",
-                column: "PayerId");
+                column: "PayerId1");
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
@@ -1088,6 +1106,12 @@ namespace EDSystems.Persistence.Migrations
                 name: "EmailIndex",
                 table: "AspNetUsers",
                 column: "NormalizedEmail");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_AspNetUsers_Id",
+                table: "AspNetUsers",
+                column: "Id",
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetUsers_ParcelJobId",
@@ -1226,34 +1250,34 @@ namespace EDSystems.Persistence.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_ParcelOwners_RecepientCourierId",
+                name: "IX_ParcelOwners_RecepientCourierId1",
                 table: "ParcelOwners",
-                column: "RecepientCourierId");
+                column: "RecepientCourierId1");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ParcelOwners_RecepientId",
+                name: "IX_ParcelOwners_RecepientId1",
                 table: "ParcelOwners",
-                column: "RecepientId");
+                column: "RecepientId1");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ParcelOwners_RecepientStaffId",
+                name: "IX_ParcelOwners_RecepientStaffId1",
                 table: "ParcelOwners",
-                column: "RecepientStaffId");
+                column: "RecepientStaffId1");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ParcelOwners_SenderCourierId",
+                name: "IX_ParcelOwners_SenderCourierId1",
                 table: "ParcelOwners",
-                column: "SenderCourierId");
+                column: "SenderCourierId1");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ParcelOwners_SenderId",
+                name: "IX_ParcelOwners_SenderId1",
                 table: "ParcelOwners",
-                column: "SenderId");
+                column: "SenderId1");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ParcelOwners_SenderStaffId",
+                name: "IX_ParcelOwners_SenderStaffId1",
                 table: "ParcelOwners",
-                column: "SenderStaffId");
+                column: "SenderStaffId1");
 
             migrationBuilder.CreateIndex(
                 name: "IX_ParcelPlan_Id",
@@ -1335,9 +1359,9 @@ namespace EDSystems.Persistence.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_UserAccount_UserId",
+                name: "IX_UserAccount_UserId1",
                 table: "UserAccount",
-                column: "UserId");
+                column: "UserId1");
 
             migrationBuilder.CreateIndex(
                 name: "IX_UserAccountHistory_CurrencyId",
@@ -1361,9 +1385,9 @@ namespace EDSystems.Persistence.Migrations
                 column: "UserAccountId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_UserAccountHistory_UserId",
+                name: "IX_UserAccountHistory_UserId1",
                 table: "UserAccountHistory",
-                column: "UserId");
+                column: "UserId1");
         }
 
         /// <inheritdoc />

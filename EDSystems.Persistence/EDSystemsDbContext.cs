@@ -15,9 +15,9 @@ using System.Threading.Tasks;
 
 namespace EDSystems.Persistence;
 
-public class EDSystemsDbContext : IdentityDbContext<User, Role, string,
-    IdentityUserClaim<string>, UserRole, IdentityUserLogin<string>,
-    IdentityRoleClaim<string>, IdentityUserToken<string>>, IEDSystemsDbContext
+public class EDSystemsDbContext : IdentityDbContext<User, Role, int,
+    UserClaim, UserRole, UserLogin,
+    IdentityRoleClaim<int>, IdentityUserToken<int>>, IEDSystemsDbContext
 {
     public DbSet<Branch> Branch { get; set; }
     public DbSet<ParcelBranch> ParcelBranch { get; set; }
@@ -40,12 +40,16 @@ public class EDSystemsDbContext : IdentityDbContext<User, Role, string,
     public DbSet<Plan> Plan { get; set; }
     public DbSet<Status> Status { get; set; }
     public DbSet<RefreshToken> RefreshToken { get; set; }
+    public DbSet<UserClaim> UserClaim { get; set; }
+
+    
 
     //public DbSet<UserRole> UserRoles { get; set; }
 
-    //public DbSet<User> User { get; set; }
+    public DbSet<User> User { get; set; }
 
-    //public DbSet<Role> Role { get; set; }
+    public DbSet<Role> Role { get; set; }
+
     private readonly IDateTimeService _dateTimeService;
 
     private readonly AuditableEntitySaveChangesInterceptor _auditableEntitySaveChangesInterceptor;
@@ -97,23 +101,23 @@ public class EDSystemsDbContext : IdentityDbContext<User, Role, string,
         builder.ApplyConfiguration(new ParcelJobConfiguration());
         builder.ApplyConfiguration(new ExpensesConfiguration());
 
-        //builder.Entity<User>(b =>
-        //{
-        //    // Each User can have many entries in the UserRole join table
-        //    b.HasMany(e => e.UserRoles)
-        //        .WithOne(e => e.User)
-        //        .HasForeignKey(ur => ur.UserId)
-        //        .IsRequired();
-        //});
+        builder.Entity<User>(b =>
+        {
+            // Each User can have many entries in the UserRole join table
+            b.HasMany(e => e.UserRoles)
+                .WithOne(e => e.User)
+                .HasForeignKey(ur => ur.UserId)
+                .IsRequired();
+        });
 
-        //builder.Entity<Role>(b =>
-        //{
-        //    // Each Role can have many entries in the UserRole join table
-        //    b.HasMany(e => e.UserRoles)
-        //        .WithOne(e => e.Role)
-        //        .HasForeignKey(ur => ur.RoleId)
-        //        .IsRequired();
-        //});
+        builder.Entity<Role>(b =>
+        {
+            // Each Role can have many entries in the UserRole join table
+            b.HasMany(e => e.UserRoles)
+                .WithOne(e => e.Role)
+                .HasForeignKey(ur => ur.RoleId)
+                .IsRequired();
+        });
 
         foreach (var relationship in builder.Model.GetEntityTypes().SelectMany(e => e.GetForeignKeys()))
         {
@@ -153,7 +157,7 @@ public class EDSystemsDbContext : IdentityDbContext<User, Role, string,
        new Branch { Id = 6, Name = "Стамбул", Country = "Турция", City = "Стамбул", Email = "info@ethnologistics.asia", Address = "Хайдарпашша", Phone = "+665165498496", Code = "792", DateCreated = _dateTimeService.Now });
 
         Currency cr = new Currency();
-
+        
         builder.Entity<Account>().HasData(
         new Account { Id = 1, Number = "643840USD", Balance = 0, Name = "Валютный счет Москвы", DateCreated = _dateTimeService.Now, BranchId = 1, CurrencyId = 1 },
         new Account { Id = 2, Number = "643643RUB", Balance = 0, Name = "Рублевый счет Москвы", DateCreated = _dateTimeService.Now, BranchId = 1, CurrencyId = 2 },
@@ -169,12 +173,12 @@ public class EDSystemsDbContext : IdentityDbContext<User, Role, string,
         new Account { Id = 12, Number = "792949TRY", Balance = 0, Name = "Лировый счет Стамбул", DateCreated = _dateTimeService.Now, BranchId = 6, CurrencyId = 5 });
 
         builder.Entity<UserAccount>().HasData(
-            new UserAccount { Id = 1, Number = "30a8f9cc-840USD", Balance = 0, Name = "Валютный счет", DateCreated = _dateTimeService.Now, UserId = "30a8f9cc-8d37-4d93-ab2f-774428387e4a", CurrencyId = 1 },
-            new UserAccount { Id = 2, Number = "cadaa51d-840USD", Balance = 0, Name = "Валютный счет", DateCreated = _dateTimeService.Now, UserId = "cadaa51d-ddb3-4564-a8c5-79e80c98a032", CurrencyId = 1 },
-            new UserAccount { Id = 3, Number = "5a6f1681-840USD", Balance = 0, Name = "Валютный счет", DateCreated = _dateTimeService.Now, UserId = "5a6f1681-c582-46f5-905b-4eb2c222dcf5", CurrencyId = 1 },
-            new UserAccount { Id = 4, Number = "3b9d7f21-840USD", Balance = 0, Name = "Валютный счет", DateCreated = _dateTimeService.Now, UserId = "3b9d7f21-1d66-4c98-8648-64a68777bccb", CurrencyId = 1 },
-            new UserAccount { Id = 5, Number = "0a1e5c27-840USD", Balance = 0, Name = "Валютный счет", DateCreated = _dateTimeService.Now, UserId = "0a1e5c27-0b09-4f60-a9c3-8618791a8672", CurrencyId = 1 },
-            new UserAccount { Id = 6, Number = "e13b576b-840USD", Balance = 0, Name = "Валютный счет", DateCreated = _dateTimeService.Now, UserId = "e13b576b-afbe-4b4c-aaad-64fd9bee3852", CurrencyId = 1 });
+            new UserAccount { Id = 1, Number = "30a8f9cc-840USD", Balance = 0, Name = "Валютный счет", DateCreated = _dateTimeService.Now, UserId = "1", CurrencyId = 1 },
+            new UserAccount { Id = 2, Number = "cadaa51d-840USD", Balance = 0, Name = "Валютный счет", DateCreated = _dateTimeService.Now, UserId = "2", CurrencyId = 1 },
+            new UserAccount { Id = 3, Number = "5a6f1681-840USD", Balance = 0, Name = "Валютный счет", DateCreated = _dateTimeService.Now, UserId = "3", CurrencyId = 1 },
+            new UserAccount { Id = 4, Number = "3b9d7f21-840USD", Balance = 0, Name = "Валютный счет", DateCreated = _dateTimeService.Now, UserId = "1", CurrencyId = 1 },
+            new UserAccount { Id = 5, Number = "0a1e5c27-840USD", Balance = 0, Name = "Валютный счет", DateCreated = _dateTimeService.Now, UserId = "2", CurrencyId = 1 },
+            new UserAccount { Id = 6, Number = "e13b576b-840USD", Balance = 0, Name = "Валютный счет", DateCreated = _dateTimeService.Now, UserId = "3", CurrencyId = 1 });
 
         builder.Entity<ExpenseType>().HasData(
             new ExpenseType { Id = 1, Name = "Зарплата", Description = "Зарплата", DateCreated = _dateTimeService.Now },
@@ -192,55 +196,68 @@ public class EDSystemsDbContext : IdentityDbContext<User, Role, string,
             new ExpenseType { Id = 13, Name = "За мелкие расходы", Description = "За мелкие расходы", DateCreated = _dateTimeService.Now });
 
         builder.Entity<Role>().HasData(
-            new Role { Id = "2c5e174e-3b0e-446f-86af-483d56fd7210", Name = "Administrator", NormalizedName = "ADMINISTRATOR", ConcurrencyStamp = Guid.NewGuid().ToString("D") },
-            new Role { Id = "68373a2b-932e-4fff-a7a9-b31e156d4101", Name = "Manager", NormalizedName = "MANAGER", ConcurrencyStamp = Guid.NewGuid().ToString("D") },
-            new Role { Id = "5919c97a-b888-4858-bbbe-0123a1952624", Name = "Staff", NormalizedName = "STAFF", ConcurrencyStamp = Guid.NewGuid().ToString("D") },
-            new Role { Id = "401bc2e9-3a0b-4281-9685-d6b36fc37d31", Name = "Courier", NormalizedName = "COURIER", ConcurrencyStamp = Guid.NewGuid().ToString("D") },
-            new Role { Id = "336b1b38-f4c9-4844-8dcb-b59a0d7f0533", Name = "Customer", NormalizedName = "CUSTOMER", ConcurrencyStamp = Guid.NewGuid().ToString("D") });
+            new Role { Id = 1, Name = "Administrator", NormalizedName = "ADMINISTRATOR", ConcurrencyStamp = Guid.NewGuid().ToString("D") },
+            new Role { Id = 2, Name = "Manager", NormalizedName = "MANAGER", ConcurrencyStamp = Guid.NewGuid().ToString("D") },
+            new Role { Id = 3, Name = "Staff", NormalizedName = "STAFF", ConcurrencyStamp = Guid.NewGuid().ToString("D") },
+            new Role { Id = 4, Name = "Courier", NormalizedName = "COURIER", ConcurrencyStamp = Guid.NewGuid().ToString("D") },
+            new Role { Id = 5, Name = "Customer", NormalizedName = "CUSTOMER", ConcurrencyStamp = Guid.NewGuid().ToString("D") });
 
-        builder.Entity<UserClaim>().HasData(
-            new UserClaim { Id = 1, ClaimType = "CanAddBranch", ClaimValue = "CanAddBranch", UserId = "30a8f9cc-8d37-4d93-ab2f-774428387e4a" },
-            new UserClaim { Id = 2, ClaimType = "Manager", ClaimValue = "CanOnlyRead", UserId = "cadaa51d-ddb3-4564-a8c5-79e80c98a032" });
+        //builder.Entity<UserClaim>().HasData(
+        //    new UserClaim { Id = 1, ClaimType = "CanAddBranch", ClaimValue = "CanAddBranch", UserId = 1 },
+        //    new UserClaim { Id = 2, ClaimType = "Manager", ClaimValue = "CanOnlyRead", UserId = 2 });
 
         var hasher = new PasswordHasher<User>();
         var password = hasher.HashPassword(null, "Qwertyruru20@@");
         builder.Entity<User>().HasData(
 
-        new User() { Id = "30a8f9cc-8d37-4d93-ab2f-774428387e4a", UserName = "administrator", NormalizedUserName = "ADMINISTRATOR", Email = "administrator@gmail.com", NormalizedEmail = "ADMINISTRATOR@GMAIL.COM", FirstName = "EDSystem", LastName = "Administrator", Address = "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099", PhoneNumber = "998970000675", PasswordHash = password, DateCreated = _dateTimeService.Now },
-        new User() { Id = "cadaa51d-ddb3-4564-a8c5-79e80c98a032", UserName = "hayrulloh", NormalizedUserName = "HAYRULLOH", Email = "hayrulloh@gmail.com", NormalizedEmail = "HAYRULLOH@GMAIL.COM", FirstName = "EDTashkent", LastName = "Hayrulloh", Address = "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099", PhoneNumber = "998935788886", PasswordHash = password, DateCreated = _dateTimeService.Now },
-        new User() { Id = "5a6f1681-c582-46f5-905b-4eb2c222dcf5", UserName = "nodir", NormalizedUserName = "NODIR", Email = "Nodir@gmail.com", NormalizedEmail = "NODIR@GMAIL.COM", FirstName = "EDTashkent", LastName = "Nodir", Address = "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099", PhoneNumber = "998909046605", PasswordHash = password, DateCreated = _dateTimeService.Now },
-        new User() { Id = "3b9d7f21-1d66-4c98-8648-64a68777bccb", UserName = "javohir", NormalizedUserName = "JAVOHIR", Email = "Javohir@gmail.com", NormalizedEmail = "JAVOHIR@GMAIL.COM", FirstName = "EDTashkent", LastName = "Javohir", Address = "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099", PhoneNumber = "998931710966", PasswordHash = password, DateCreated = _dateTimeService.Now },
-        new User() { Id = "0a1e5c27-0b09-4f60-a9c3-8618791a8672", UserName = "ismoil", NormalizedUserName = "ISMOIL", Email = "Ismoil@gmail.com", NormalizedEmail = "ISMOIL@GMAIL.COM", FirstName = "EDTashkent", LastName = "Ismoil", Address = "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099", PhoneNumber = "998977093262", PasswordHash = password, DateCreated = _dateTimeService.Now },
-        new User() { Id = "e13b576b-afbe-4b4c-aaad-64fd9bee3852", UserName = "sadulla", NormalizedUserName = "SADULLA", Email = "Sadulla@gmail.com", NormalizedEmail = "SADULLA@GMAIL.COM", FirstName = "EDTashkent", LastName = "Sadulla", Address = "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099", PhoneNumber = "998994885995", PasswordHash = password, DateCreated = _dateTimeService.Now },
-        new User() { Id = "34a0eb9b-6797-40f7-a84c-aa31cdd4cdc6", UserName = "ubaydulla", NormalizedUserName = "UBAYDULLA", Email = "Ubaydulla@gmail.com", NormalizedEmail = "UBAYDULLA@GMAIL.COM", FirstName = "EDTashkent", LastName = "Ubaydulla", Address = "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099", PhoneNumber = "998990500033", PasswordHash = password, DateCreated = _dateTimeService.Now },
-        new User() { Id = "131d5dd1-6bf1-4f52-be90-00815000fb57", UserName = "khikmatillo", NormalizedUserName = "KHIKMATILLO", Email = "Khikmatillo@gmail.com", NormalizedEmail = "KHIKMATILLO@GMAIL.COM", FirstName = "EDTashkent", LastName = "Khikmatillo", Address = "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099", PhoneNumber = "998974468090", PasswordHash = password, DateCreated = _dateTimeService.Now },
-        new User() { Id = "221c0048-08c9-4e72-8f5c-ddf4039f9488", UserName = "abbos", NormalizedUserName = "ABBOS", Email = "Abbos@gmail.com", NormalizedEmail = "ABBOS@GMAIL.COM", FirstName = "EDTashkent", LastName = "Abbos", Address = "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099", PhoneNumber = "998903550022", PasswordHash = password, DateCreated = _dateTimeService.Now },
-        new User() { Id = "e0c3bef9-fd70-421e-b07b-055c38b6d77c", UserName = "shohruh", NormalizedUserName = "SHOHRUH", Email = "Shohruh@gmail.com", NormalizedEmail = "SHOHRUH@GMAIL.COM", FirstName = "EDMoscow", LastName = "Shohruh", Address = "Российская Федерация, Московская область, г. Москва, Академический район, улица Винокурова 7/5, корпус 3, индекс 117449", PhoneNumber = "79060470085", PasswordHash = password, DateCreated = _dateTimeService.Now },
-        new User() { Id = "4ff7819d-8e17-4aa8-a0da-964c2db21591", UserName = "ulugbek", NormalizedUserName = "ULUGBEK", Email = "Ulugbek@gmail.com", NormalizedEmail = "ULUGBEK@GMAIL.COM", FirstName = "EDMoscow", LastName = "Ulugbek", Address = "Российская Федерация, Московская область, г. Москва, Академический район, улица Винокурова 7/5, корпус 3, индекс 117449", PhoneNumber = "79777403487", PasswordHash = password, DateCreated = _dateTimeService.Now },
-        new User() { Id = "92db214d-cd73-4fbc-8b34-1dc0709ba0b2", UserName = "abdulaziz", NormalizedUserName = "ABDULAZIZ", Email = "Abdulaziz@gmail.com", NormalizedEmail = "ABDULAZIZ@GMAIL.COM", FirstName = "EDMoscow", LastName = "Abdulaziz", Address = "Российская Федерация, Московская область, г. Москва, Академический район, улица Винокурова 7/5, корпус 3, индекс 117449", PhoneNumber = "79691799000", PasswordHash = password, DateCreated = _dateTimeService.Now },
-        new User() { Id = "9c57fadd-110a-4b45-aa89-69aa141564c6", UserName = "doniyor", NormalizedUserName = "DONIYOR", Email = "Doniyor@gmail.com", NormalizedEmail = "DONIYOR@GMAIL.COM", FirstName = "EDMoscow", LastName = "Doniyor", Address = "Российская Федерация, Московская область, г. Москва, Академический район, улица Винокурова 7/5, корпус 3, индекс 117449", PhoneNumber = "79777601654", PasswordHash = password, DateCreated = _dateTimeService.Now },
-        new User() { Id = "eb6a85b0-a7fb-4f8e-9bea-03825e6f020f", UserName = "shaxzod", NormalizedUserName = "SHAXZOD", Email = "Shaxzod@gmail.com", NormalizedEmail = "SHAXZOD@GMAIL.COM", FirstName = "EDMoscow", LastName = "Shaxzod", Address = "Российская Федерация, Московская область, г. Москва, Академический район, улица Винокурова 7/5, корпус 3, индекс 117449", PhoneNumber = "79163870009", PasswordHash = password, DateCreated = _dateTimeService.Now },
-        new User() { Id = "11fafeb4-c7c1-463c-bb1e-55203e68dfdf", UserName = "umar", NormalizedUserName = "UMAR", Email = "Umar@gmail.com", NormalizedEmail = "UMAR@GMAIL.COM", FirstName = "EDMoscow", LastName = "Umar", Address = "Российская Федерация, Московская область, г. Москва, Академический район, улица Винокурова 7/5, корпус 3, индекс 117449", PhoneNumber = "79963321030", PasswordHash = password, DateCreated = _dateTimeService.Now },
-        new User() { Id = "92b7c777-0d3e-4026-844f-20164bb0f97e", UserName = "abror", NormalizedUserName = "ABROR", Email = "Abror@gmail.com", NormalizedEmail = "ABROR@GMAIL.COM", FirstName = "EDMoscow", LastName = "Abror", Address = "Российская Федерация, Московская область, г. Москва, Академический район, улица Винокурова 7/5, корпус 3, индекс 117449", PhoneNumber = "79296800899", PasswordHash = password, DateCreated = _dateTimeService.Now });
+        new User() { Id = 1, UserName = "administrator", NormalizedUserName = "ADMINISTRATOR", Email = "administrator@gmail.com", NormalizedEmail = "ADMINISTRATOR@GMAIL.COM", FirstName = "EDSystem", LastName = "Administrator", Address = "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099", PhoneNumber = "998970000675", PasswordHash = password, DateCreated = _dateTimeService.Now },
+        new User() { Id = 2, UserName = "hayrulloh", NormalizedUserName = "HAYRULLOH", Email = "hayrulloh@gmail.com", NormalizedEmail = "HAYRULLOH@GMAIL.COM", FirstName = "EDTashkent", LastName = "Hayrulloh", Address = "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099", PhoneNumber = "998935788886", PasswordHash = password, DateCreated = _dateTimeService.Now },
+        new User() { Id = 3, UserName = "nodir", NormalizedUserName = "NODIR", Email = "Nodir@gmail.com", NormalizedEmail = "NODIR@GMAIL.COM", FirstName = "EDTashkent", LastName = "Nodir", Address = "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099", PhoneNumber = "998909046605", PasswordHash = password, DateCreated = _dateTimeService.Now },
+        new User() { Id = 4, UserName = "javohir", NormalizedUserName = "JAVOHIR", Email = "Javohir@gmail.com", NormalizedEmail = "JAVOHIR@GMAIL.COM", FirstName = "EDTashkent", LastName = "Javohir", Address = "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099", PhoneNumber = "998931710966", PasswordHash = password, DateCreated = _dateTimeService.Now },
+        new User() { Id = 5, UserName = "ismoil", NormalizedUserName = "ISMOIL", Email = "Ismoil@gmail.com", NormalizedEmail = "ISMOIL@GMAIL.COM", FirstName = "EDTashkent", LastName = "Ismoil", Address = "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099", PhoneNumber = "998977093262", PasswordHash = password, DateCreated = _dateTimeService.Now });
+
 
         builder.Entity<UserRole>().HasData(
-         new UserRole { RoleId = "2c5e174e-3b0e-446f-86af-483d56fd7210", UserId = "30a8f9cc-8d37-4d93-ab2f-774428387e4a" },
-         new UserRole { RoleId = "401bc2e9-3a0b-4281-9685-d6b36fc37d31", UserId = "cadaa51d-ddb3-4564-a8c5-79e80c98a032" },
-         new UserRole { RoleId = "401bc2e9-3a0b-4281-9685-d6b36fc37d31", UserId = "5a6f1681-c582-46f5-905b-4eb2c222dcf5" },
-         new UserRole { RoleId = "401bc2e9-3a0b-4281-9685-d6b36fc37d31", UserId = "3b9d7f21-1d66-4c98-8648-64a68777bccb" },
-         new UserRole { RoleId = "401bc2e9-3a0b-4281-9685-d6b36fc37d31", UserId = "0a1e5c27-0b09-4f60-a9c3-8618791a8672" },
-         new UserRole { RoleId = "401bc2e9-3a0b-4281-9685-d6b36fc37d31", UserId = "e13b576b-afbe-4b4c-aaad-64fd9bee3852" },
-         new UserRole { RoleId = "401bc2e9-3a0b-4281-9685-d6b36fc37d31", UserId = "34a0eb9b-6797-40f7-a84c-aa31cdd4cdc6" },
-         new UserRole { RoleId = "68373a2b-932e-4fff-a7a9-b31e156d4101", UserId = "131d5dd1-6bf1-4f52-be90-00815000fb57" },
-         new UserRole { RoleId = "401bc2e9-3a0b-4281-9685-d6b36fc37d31", UserId = "221c0048-08c9-4e72-8f5c-ddf4039f9488" },
-         new UserRole { RoleId = "401bc2e9-3a0b-4281-9685-d6b36fc37d31", UserId = "e0c3bef9-fd70-421e-b07b-055c38b6d77c" },
-         new UserRole { RoleId = "401bc2e9-3a0b-4281-9685-d6b36fc37d31", UserId = "4ff7819d-8e17-4aa8-a0da-964c2db21591" },
-         new UserRole { RoleId = "401bc2e9-3a0b-4281-9685-d6b36fc37d31", UserId = "92db214d-cd73-4fbc-8b34-1dc0709ba0b2" },
-         new UserRole { RoleId = "401bc2e9-3a0b-4281-9685-d6b36fc37d31", UserId = "9c57fadd-110a-4b45-aa89-69aa141564c6" },
-         new UserRole { RoleId = "401bc2e9-3a0b-4281-9685-d6b36fc37d31", UserId = "eb6a85b0-a7fb-4f8e-9bea-03825e6f020f" },
-         new UserRole { RoleId = "68373a2b-932e-4fff-a7a9-b31e156d4101", UserId = "11fafeb4-c7c1-463c-bb1e-55203e68dfdf" },
-         new UserRole { RoleId = "401bc2e9-3a0b-4281-9685-d6b36fc37d31", UserId = "92b7c777-0d3e-4026-844f-20164bb0f97e" }
-    );
+         new UserRole { RoleId = 1, UserId = 1 },
+         new UserRole { RoleId = 2, UserId = 2 });
+
+        builder.Entity<UserClaim>().HasData(
+            new UserClaim { Id= 1, UserId = 1, ClaimType = "CanGetAllBranches", ClaimValue = "CanGetAllBranches" },
+            new UserClaim { Id= 2, UserId = 1, ClaimType = "CanGetAllBranchesWithPagination", ClaimValue = "CanGetAllBranchesWithPagination" },
+            new UserClaim { Id= 3, UserId = 1, ClaimType = "CanGetBranchDetails", ClaimValue = "CanGetBranchDetails" },
+            new UserClaim { Id= 4, UserId = 1, ClaimType = "CanCreateBranch", ClaimValue = "CanCreateBranch" },
+            new UserClaim { Id= 5, UserId = 1, ClaimType = "CanUpdateBranch", ClaimValue = "CanUpdateBranch" },
+            new UserClaim { Id= 6, UserId = 1, ClaimType = "CanDeleteBranch", ClaimValue = "CanDeleteBranch" },
+            new UserClaim { Id= 7, UserId = 1, ClaimType = "CanDeleteBranches", ClaimValue = "CanDeleteBranches" },
+            new UserClaim { Id= 8, UserId = 1, ClaimType = "CanGetAllPlans", ClaimValue = "CanGetAllPlans" },
+            new UserClaim { Id= 9, UserId = 1, ClaimType = "CanGetAllPlansWithPagination", ClaimValue = "CanGetAllPlansWithPagination" },
+            new UserClaim { Id= 10,UserId = 1, ClaimType = "CanGetPlanDetails", ClaimValue = "CanGetPlanDetails" },
+            new UserClaim { Id= 11,UserId = 1, ClaimType = "CanCreatePlan", ClaimValue = "CanCreatePlan" },
+            new UserClaim { Id= 12,UserId = 1, ClaimType = "CanUpdatePlan", ClaimValue = "CanUpdatePlan" },
+            new UserClaim { Id= 13,UserId = 1, ClaimType = "CanDeletePlan", ClaimValue = "CanDeletePlan" },
+            new UserClaim { Id= 14,UserId = 1, ClaimType = "CanDeletePlans", ClaimValue = "CanDeletePlans" },
+            new UserClaim { Id= 15,UserId = 1, ClaimType = "CanGetAllStatuses", ClaimValue = "CanGetAllStatuses", },
+            new UserClaim { Id= 16,UserId = 1, ClaimType = "CanGetAllStatusesWithPagination", ClaimValue = "CanGetAllStatusesWithPagination" },
+            new UserClaim { Id= 17,UserId = 1, ClaimType = "CanGetStatusDetails", ClaimValue = "CanGetStatusDetails" },
+            new UserClaim { Id= 18,UserId = 1, ClaimType = "CanCreateStatus", ClaimValue = "CanCreateStatus" },
+            new UserClaim { Id= 19,UserId = 1, ClaimType = "CanUpdateStatus", ClaimValue = "CanUpdateStatus" },
+            new UserClaim { Id= 20,UserId = 1, ClaimType = "CanDeleteStatus", ClaimValue = "CanDeleteStatus" },
+            new UserClaim { Id= 21,UserId = 1, ClaimType = "CanDeleteStatuses", ClaimValue = "CanDeleteStatuses" },
+            new UserClaim { Id= 22,UserId = 1, ClaimType = "CanGetAllParcels", ClaimValue = "CanGetAllParcels" },
+            new UserClaim { Id= 23,UserId = 1, ClaimType = "CanGetAllParcelsWithPagination", ClaimValue = "CanGetAllParcelsWithPagination" },
+            new UserClaim { Id= 24,UserId = 1, ClaimType = "CanGetParcelDetails", ClaimValue = "CanGetParcelDetails" },
+            new UserClaim { Id= 25,UserId = 1, ClaimType = "CanCreateParcel", ClaimValue = "CanCreateParcel" },
+            new UserClaim { Id= 26,UserId = 1, ClaimType = "CanUpdateParcel", ClaimValue = "CanUpdateParcel" },
+            new UserClaim { Id= 27,UserId = 1, ClaimType = "CanDeleteParcel", ClaimValue = "CanDeleteParcel" },
+            new UserClaim { Id= 28,UserId = 1, ClaimType = "CanDeleteParcels", ClaimValue = "CanDeleteParcels" },
+            new UserClaim { Id= 29,UserId = 1, ClaimType = "CanGetAllUsers", ClaimValue = "CanGetAllUsers" },
+            new UserClaim { Id= 30,UserId = 1, ClaimType = "CanGetAllUsersWithPagination", ClaimValue = "CanGetAllUsersWithPagination" },
+            new UserClaim { Id= 31,UserId = 1, ClaimType = "CanGetUserDetails", ClaimValue = "CanGetUserDetails" },
+            new UserClaim { Id= 32,UserId = 1, ClaimType = "CanCreateUser", ClaimValue = "CanCreateUser" },
+            new UserClaim { Id= 33,UserId = 1, ClaimType = "CanUpdateUser", ClaimValue = "CanUpdateUser" },
+            new UserClaim { Id= 34,UserId = 1, ClaimType = "CanDeleteUser", ClaimValue = "CanDeleteUser" },
+            new UserClaim { Id = 35, UserId = 1, ClaimType = "CanDeleteUsers", ClaimValue = "CanDeleteUsers" }
+        );
 
         builder.Entity<Plan>().HasData(
              new Plan { Id = 1, Name = "Стандарт", Cost = 7, Description = "Description", DateCreated = _dateTimeService.Now },

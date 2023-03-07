@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace EDSystems.Application.Users.Commands.AddToRole;
 
-public class AddToRoleCommandHandler : IRequestHandler<AddToRoleCommand, string>
+public class AddToRoleCommandHandler : IRequestHandler<AddToRoleCommand, int>
 {
     private readonly UserManager<User> _userManager;
 
@@ -15,10 +15,10 @@ public class AddToRoleCommandHandler : IRequestHandler<AddToRoleCommand, string>
 
     public AddToRoleCommandHandler(UserManager<User> userManager, RoleManager<Role> roleManager) => (_userManager, _roleManager) = (userManager, roleManager);
 
-    public async Task<string> Handle(AddToRoleCommand request, CancellationToken cancellationToken)
+    public async Task<int> Handle(AddToRoleCommand request, CancellationToken cancellationToken)
     {
-        var user = await _userManager.FindByIdAsync(request.UserId);
-        var role = await _roleManager.FindByIdAsync(request.RoleId);
+        var user = await _userManager.FindByIdAsync(request.UserId.ToString());
+        var role = await _roleManager.FindByIdAsync(request.RoleId.ToString());
 
         if (user == null)
         {

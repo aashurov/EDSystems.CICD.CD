@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EDSystems.Domain.Entities.UserEntities;
 
-public class UserRole : IdentityUserRole<string>
+public class UserRole : IdentityUserRole<int>
 {
     [JsonIgnore]
     public virtual User User { get; set; }
@@ -17,9 +17,9 @@ public class UserRole : IdentityUserRole<string>
 
     [ForeignKey("AspNetUser")]
     [JsonIgnore]
-    public override string UserId { get; set; }
+    public override int UserId { get; set; }
 
     [ForeignKey("AspNetRole")]
     [JsonIgnore]
-    public override string RoleId { get; set; }
+    public override int RoleId { get; set; }
 }

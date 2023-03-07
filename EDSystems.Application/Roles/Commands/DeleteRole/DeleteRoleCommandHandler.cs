@@ -22,7 +22,7 @@ public class DeleteRoleCommandHandler : IRequestHandler<DeleteRoleCommand, Unit>
             throw new NotFoundException(nameof(Role), request.Id);
         }
 
-        await _roleManager.DeleteAsync(await _roleManager.FindByIdAsync(entity.Id));
+        await _roleManager.DeleteAsync(await _roleManager.FindByIdAsync(entity.Id.ToString()));
         return Unit.Value;
     }
 }

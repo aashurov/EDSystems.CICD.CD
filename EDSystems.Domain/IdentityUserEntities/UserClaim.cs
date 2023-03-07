@@ -2,6 +2,7 @@
 
 namespace EDSystems.Domain.IdentityUserEntities;
 
-public class UserClaim : IdentityUserClaim<string>
+public class UserClaim : IdentityUserClaim<int>
 {
+
 }

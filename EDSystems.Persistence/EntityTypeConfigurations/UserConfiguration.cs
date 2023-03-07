@@ -9,7 +9,7 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
     public void Configure(EntityTypeBuilder<User> builder)
     {
         //builder.HasKey(applicationUser => applicationUser.Id);
-        //builder.HasIndex(applicationUser => applicationUser.Id).IsUnique();
+        builder.HasIndex(applicationUser => applicationUser.Id).IsUnique();
         builder.HasIndex(applicationUser => applicationUser.PhoneNumber).IsUnique();
         builder.HasMany(e => e.UserRoles).WithOne(e => e.User).HasForeignKey(e => e.UserId).IsRequired();
 
@@ -20,6 +20,6 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
         //builder.HasOne(e => e.ParcelOwners).WithOne(e => e.RecepientStaff);//.HasForeignKey(e => e.RecepientStaffId).IsRequired();
         //builder.HasOne(e => e.ParcelOwners).WithOne(e => e.RecepientCourier);//.HasForeignKey(e => e.RecepientCourierId).IsRequired();
 
-        //builder.HasMany(e => e.UserRoles).WithOne(e => e.User).HasForeignKey(ur => ur.UserId).IsRequired();
+        builder.HasMany(e => e.UserRoles).WithOne(e => e.User).HasForeignKey(ur => ur.UserId).IsRequired();
     }
 }

@@ -72,7 +72,7 @@ public class AccountController : BaseController
     /// <responce code="200">Success</responce>
     /// <responce code="401">If the user is unauthorized</responce>
     /// ("WithPagination")
-    [HttpGet]
+    [HttpGet("WithPagination")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     public async Task<ActionResult<AccountListVm>> GetAllWithPagination(int PageNumber, int PageSize)

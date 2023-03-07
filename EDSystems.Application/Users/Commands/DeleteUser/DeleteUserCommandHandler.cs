@@ -23,7 +23,7 @@ public class DeleteUserCommandHandler : IRequestHandler<DeleteUserCommand, Unit>
             throw new NotFoundException(nameof(Plan), request.Id);
         }
 
-        await _userManager.DeleteAsync(await _userManager.FindByIdAsync(entity.Id));
+        await _userManager.DeleteAsync(await _userManager.FindByIdAsync(entity.Id.ToString()));
         return Unit.Value;
     }
 }

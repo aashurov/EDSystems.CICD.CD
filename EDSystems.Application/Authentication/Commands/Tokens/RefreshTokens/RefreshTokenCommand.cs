@@ -13,7 +13,7 @@ namespace EDSystems.Application.Authentication.Commands.Tokens.RefreshTokens
         /// <summary>
         ///
         /// </summary>
-        public string UserId { get; set; }
+        public int UserId { get; set; }
 
         /// <summary>
         ///

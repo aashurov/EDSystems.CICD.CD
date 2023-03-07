@@ -409,7 +409,7 @@ namespace EDSystems.WebApi.Controllers
         /// <responce code="200">Success</responce>
         /// <responce code="401">If the user is unauthorized</responce>
         ///("WithPagination")
-        [HttpGet]
+        [HttpGet("WithPagination")]
         //[Authorize]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]

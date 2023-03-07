@@ -2,6 +2,6 @@
 
 namespace EDSystems.Domain.IdentityUserEntities;
 
-public class UserLogin : IdentityUserLogin<string>
+public class UserLogin : IdentityUserLogin<int>
 {
 }

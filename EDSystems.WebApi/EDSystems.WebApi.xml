@@ -128,7 +128,7 @@
             </returns>
             <responce code="200">Success</responce>
             <responce code="401">If the user is unauthorized</responce>
-            ("WithPagination")
+            
         </member>
         <member name="M:EDSystems.WebApi.Controllers.AccountHistoryController.Get(System.Int32)">
             <summary>
@@ -1229,7 +1229,7 @@
             <responce code="401">If the user is unauthorized</responce>
             ("WithPagination")
         </member>
-        <member name="M:EDSystems.WebApi.Controllers.UserManagerController.Get(System.String)">
+        <member name="M:EDSystems.WebApi.Controllers.UserManagerController.Get(System.Int32)">
             <summary>
             Get User by Id
             </summary>

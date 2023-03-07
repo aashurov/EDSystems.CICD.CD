@@ -43,11 +43,11 @@ public class BranchController : BaseController
     /// </returns>
     /// <responce code="200">Success</responce>
     /// <responce code="401">If the user is unauthorized</responce>
-    //#if DEBUG
-    //[ApiExplorerSettings(IgnoreApi = true)]
-    //#else
-    //[ApiExplorerSettings(IgnoreApi = true)]
-    //#endif
+#if DEBUG
+    [ApiExplorerSettings(IgnoreApi = true)]
+#else
+    [ApiExplorerSettings(IgnoreApi = true)]
+#endif
     [HttpGet]
     [Authorize(Policy = "CanGetAllBranches")]
     [ProducesResponseType(StatusCodes.Status200OK)]

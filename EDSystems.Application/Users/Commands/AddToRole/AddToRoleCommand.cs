@@ -2,8 +2,8 @@
 
 namespace EDSystems.Application.Users.Commands.AddToRole;
 
-public class AddToRoleCommand : IRequest<string>
+public class AddToRoleCommand : IRequest<int>
 {
-    public string RoleId { get; set; }
-    public string UserId { get; set; }
+    public int RoleId { get; set; }
+    public int UserId { get; set; }
 }

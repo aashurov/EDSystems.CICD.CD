@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace EDSystems.Domain.Entities.UserEntities;
 
-public class Role : IdentityRole
+public class Role : IdentityRole<int>
 {
     [JsonIgnore]
     public virtual ICollection<UserRole> UserRoles { get; set; }

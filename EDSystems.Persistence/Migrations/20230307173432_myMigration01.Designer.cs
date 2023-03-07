@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace EDSystems.Persistence.Migrations
 {
     [DbContext(typeof(EDSystemsDbContext))]
-    [Migration("20230126053211_myMigration01")]
+    [Migration("20230307173432_myMigration01")]
     partial class myMigration01
     {
         /// <inheritdoc />
@@ -20,7 +20,7 @@ namespace EDSystems.Persistence.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.2")
+                .HasAnnotation("ProductVersion", "7.0.3")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
@@ -80,7 +80,7 @@ namespace EDSystems.Persistence.Migrations
                             Balance = 0m,
                             BranchId = 1,
                             CurrencyId = 1,
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6750),
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(180),
                             Name = "Валютный счет Москвы",
                             Number = "643840USD"
                         },
@@ -90,7 +90,7 @@ namespace EDSystems.Persistence.Migrations
                             Balance = 0m,
                             BranchId = 1,
                             CurrencyId = 2,
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6750),
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(180),
                             Name = "Рублевый счет Москвы",
                             Number = "643643RUB"
                         },
@@ -100,7 +100,7 @@ namespace EDSystems.Persistence.Migrations
                             Balance = 0m,
                             BranchId = 2,
                             CurrencyId = 1,
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6750),
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(180),
                             Name = "Валютный счет Ташкента",
                             Number = "860840USD"
                         },
@@ -110,7 +110,7 @@ namespace EDSystems.Persistence.Migrations
                             Balance = 0m,
                             BranchId = 2,
                             CurrencyId = 2,
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6760),
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(180),
                             Name = "Рублевый счет Ташкента",
                             Number = "860643RUB"
                         },
@@ -120,7 +120,7 @@ namespace EDSystems.Persistence.Migrations
                             Balance = 0m,
                             BranchId = 3,
                             CurrencyId = 1,
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6760),
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(180),
                             Name = "Валютный счет Бишкека",
                             Number = "417840USD"
                         },
@@ -130,7 +130,7 @@ namespace EDSystems.Persistence.Migrations
                             Balance = 0m,
                             BranchId = 3,
                             CurrencyId = 2,
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6760),
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(190),
                             Name = "Рублевый счет Бишкека",
                             Number = "417643RUB"
                         },
@@ -140,7 +140,7 @@ namespace EDSystems.Persistence.Migrations
                             Balance = 0m,
                             BranchId = 4,
                             CurrencyId = 1,
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6760),
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(190),
                             Name = "Валютный счет Душанбе",
                             Number = "972840USD"
                         },
@@ -150,7 +150,7 @@ namespace EDSystems.Persistence.Migrations
                             Balance = 0m,
                             BranchId = 4,
                             CurrencyId = 2,
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6770),
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(190),
                             Name = "Рублевый счет Душанбе",
                             Number = "972843RUB"
                         },
@@ -160,7 +160,7 @@ namespace EDSystems.Persistence.Migrations
                             Balance = 0m,
                             BranchId = 5,
                             CurrencyId = 1,
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6770),
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(200),
                             Name = "Валютный счет Алматы",
                             Number = "398840USD"
                         },
@@ -170,7 +170,7 @@ namespace EDSystems.Persistence.Migrations
                             Balance = 0m,
                             BranchId = 5,
                             CurrencyId = 2,
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6770),
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(200),
                             Name = "Рублевый счет Алматы",
                             Number = "398643RUB"
                         },
@@ -180,7 +180,7 @@ namespace EDSystems.Persistence.Migrations
                             Balance = 0m,
                             BranchId = 6,
                             CurrencyId = 1,
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6780),
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(200),
                             Name = "Валютный счет Стамбул",
                             Number = "792840USD"
                         },
@@ -190,7 +190,7 @@ namespace EDSystems.Persistence.Migrations
                             Balance = 0m,
                             BranchId = 6,
                             CurrencyId = 5,
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6780),
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(200),
                             Name = "Лировый счет Стамбул",
                             Number = "792949TRY"
                         });
@@ -234,6 +234,9 @@ namespace EDSystems.Persistence.Migrations
                     b.Property<string>("PayerId")
                         .HasColumnType("text");
 
+                    b.Property<int?>("PayerId1")
+                        .HasColumnType("integer");
+
                     b.HasKey("Id");
 
                     b.HasIndex("BranchAccountId");
@@ -245,7 +248,7 @@ namespace EDSystems.Persistence.Migrations
 
                     b.HasIndex("ParcelId");
 
-                    b.HasIndex("PayerId");
+                    b.HasIndex("PayerId1");
 
                     b.ToTable("AccountHistory");
                 });
@@ -316,7 +319,7 @@ namespace EDSystems.Persistence.Migrations
                             City = "Москва",
                             Code = "643",
                             Country = "Россия",
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6670),
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(150),
                             Email = "info@ethnologistics.asia",
                             Name = "Москва",
                             Phone = "+765165498496"
@@ -328,7 +331,7 @@ namespace EDSystems.Persistence.Migrations
                             City = "Ташкент",
                             Code = "860",
                             Country = "Узбекистан",
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6710),
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(150),
                             Email = "info@ethnologistics.asia",
                             Name = "Ташкент",
                             Phone = "+998984651"
@@ -340,7 +343,7 @@ namespace EDSystems.Persistence.Migrations
                             City = "Бишкек",
                             Code = "417",
                             Country = "Киргистан",
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6720),
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(150),
                             Email = "info@ethnologistics.asia",
                             Name = "Бишкек",
                             Phone = "+765165498496"
@@ -352,7 +355,7 @@ namespace EDSystems.Persistence.Migrations
                             City = "Душанбе",
                             Code = "762",
                             Country = "Таджикистан",
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6720),
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(160),
                             Email = "info@ethnologistics.asia",
                             Name = "Душанбе",
                             Phone = "+665165498496"
@@ -364,7 +367,7 @@ namespace EDSystems.Persistence.Migrations
                             City = "Алматы",
                             Code = "398",
                             Country = "Казахстан",
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6720),
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(160),
                             Email = "info@ethnologistics.asia",
                             Name = "Алматы",
                             Phone = "+665165498496"
@@ -376,7 +379,7 @@ namespace EDSystems.Persistence.Migrations
                             City = "Стамбул",
                             Code = "792",
                             Country = "Турция",
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6720),
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(160),
                             Email = "info@ethnologistics.asia",
                             Name = "Стамбул",
                             Phone = "+665165498496"
@@ -432,7 +435,7 @@ namespace EDSystems.Persistence.Migrations
                             Id = 1,
                             Code = "USD",
                             Country = "Соединенные Штаты Америки",
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 804, DateTimeKind.Local).AddTicks(7760),
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 818, DateTimeKind.Local).AddTicks(1420),
                             Name = "Доллар",
                             Number = 840
                         },
@@ -441,7 +444,7 @@ namespace EDSystems.Persistence.Migrations
                             Id = 2,
                             Code = "UZS",
                             Country = "Республика Узбекистан",
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 804, DateTimeKind.Local).AddTicks(7760),
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 818, DateTimeKind.Local).AddTicks(1420),
                             Name = "Сум",
                             Number = 860
                         },
@@ -450,7 +453,7 @@ namespace EDSystems.Persistence.Migrations
                             Id = 3,
                             Code = "RUB",
                             Country = "Российская Федерация",
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 804, DateTimeKind.Local).AddTicks(7760),
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 818, DateTimeKind.Local).AddTicks(1420),
                             Name = "Рубль",
                             Number = 643
                         },
@@ -459,7 +462,7 @@ namespace EDSystems.Persistence.Migrations
                             Id = 4,
                             Code = "KZT",
                             Country = "Республика Казахстан",
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 804, DateTimeKind.Local).AddTicks(7770),
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 818, DateTimeKind.Local).AddTicks(1420),
                             Name = "Тенге",
                             Number = 398
                         },
@@ -468,7 +471,7 @@ namespace EDSystems.Persistence.Migrations
                             Id = 5,
                             Code = "TRY",
                             Country = "Турция",
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 804, DateTimeKind.Local).AddTicks(7770),
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 818, DateTimeKind.Local).AddTicks(1430),
                             Name = "Лира",
                             Number = 949
                         },
@@ -477,7 +480,7 @@ namespace EDSystems.Persistence.Migrations
                             Id = 6,
                             Code = "AED",
                             Country = "Объедененные Арабские Эмираты",
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 804, DateTimeKind.Local).AddTicks(7780),
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 818, DateTimeKind.Local).AddTicks(1430),
                             Name = "Дирхам",
                             Number = 784
                         },
@@ -486,7 +489,7 @@ namespace EDSystems.Persistence.Migrations
                             Id = 7,
                             Code = "KGS",
                             Country = "Кыргызская Республика",
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 804, DateTimeKind.Local).AddTicks(7780),
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 818, DateTimeKind.Local).AddTicks(1430),
                             Name = "Сом",
                             Number = 417
                         },
@@ -495,7 +498,7 @@ namespace EDSystems.Persistence.Migrations
                             Id = 8,
                             Code = "TJS",
                             Country = "Республика Таджикистан",
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 804, DateTimeKind.Local).AddTicks(7780),
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 818, DateTimeKind.Local).AddTicks(1430),
                             Name = "Сомони",
                             Number = 972
                         });
@@ -535,91 +538,91 @@ namespace EDSystems.Persistence.Migrations
                         new
                         {
                             Id = 1,
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6840),
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(240),
                             Description = "Зарплата",
                             Name = "Зарплата"
                         },
                         new
                         {
                             Id = 2,
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6840),
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(240),
                             Description = "Аванс",
                             Name = "Аванс"
                         },
                         new
                         {
                             Id = 3,
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6840),
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(250),
                             Description = "Курерам за перевозку",
                             Name = "Курерам за перевозку"
                         },
                         new
                         {
                             Id = 4,
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6850),
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(250),
                             Description = "Обед",
                             Name = "Обед"
                         },
                         new
                         {
                             Id = 5,
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6850),
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(250),
                             Description = "Карзи Хасана",
                             Name = "Карзи Хасана"
                         },
                         new
                         {
                             Id = 6,
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6850),
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(250),
                             Description = "Депозит",
                             Name = "Депозит"
                         },
                         new
                         {
                             Id = 7,
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6850),
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(250),
                             Description = "За перевозку до филиала",
                             Name = "За перевозку до филиала"
                         },
                         new
                         {
                             Id = 8,
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6850),
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(260),
                             Description = "За доставку до получателя",
                             Name = "За доставку до получателя"
                         },
                         new
                         {
                             Id = 9,
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6860),
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(260),
                             Description = "За забор посылки",
                             Name = "За забор посылки"
                         },
                         new
                         {
                             Id = 10,
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6860),
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(260),
                             Description = "За выкуп",
                             Name = "За выкуп"
                         },
                         new
                         {
                             Id = 11,
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6860),
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(260),
                             Description = "Ковертация",
                             Name = "Ковертация"
                         },
                         new
                         {
                             Id = 12,
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6860),
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(260),
                             Description = "Перевод",
                             Name = "Перевод"
                         },
                         new
                         {
                             Id = 13,
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6870),
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(260),
                             Description = "За мелкие расходы",
                             Name = "За мелкие расходы"
                         });
@@ -975,20 +978,38 @@ namespace EDSystems.Persistence.Migrations
                     b.Property<string>("RecepientCourierId")
                         .HasColumnType("text");
 
+                    b.Property<int?>("RecepientCourierId1")
+                        .HasColumnType("integer");
+
                     b.Property<string>("RecepientId")
                         .HasColumnType("text");
+
+                    b.Property<int?>("RecepientId1")
+                        .HasColumnType("integer");
 
                     b.Property<string>("RecepientStaffId")
                         .HasColumnType("text");
 
+                    b.Property<int?>("RecepientStaffId1")
+                        .HasColumnType("integer");
+
                     b.Property<string>("SenderCourierId")
                         .HasColumnType("text");
+
+                    b.Property<int?>("SenderCourierId1")
+                        .HasColumnType("integer");
 
                     b.Property<string>("SenderId")
                         .HasColumnType("text");
 
+                    b.Property<int?>("SenderId1")
+                        .HasColumnType("integer");
+
                     b.Property<string>("SenderStaffId")
                         .HasColumnType("text");
+
+                    b.Property<int?>("SenderStaffId1")
+                        .HasColumnType("integer");
 
                     b.HasKey("Id");
 
@@ -998,17 +1019,17 @@ namespace EDSystems.Persistence.Migrations
                     b.HasIndex("ParcelId")
                         .IsUnique();
 
-                    b.HasIndex("RecepientCourierId");
+                    b.HasIndex("RecepientCourierId1");
 
-                    b.HasIndex("RecepientId");
+                    b.HasIndex("RecepientId1");
 
-                    b.HasIndex("RecepientStaffId");
+                    b.HasIndex("RecepientStaffId1");
 
-                    b.HasIndex("SenderCourierId");
+                    b.HasIndex("SenderCourierId1");
 
-                    b.HasIndex("SenderId");
+                    b.HasIndex("SenderId1");
 
-                    b.HasIndex("SenderStaffId");
+                    b.HasIndex("SenderStaffId1");
 
                     b.ToTable("ParcelOwners");
                 });
@@ -1217,7 +1238,7 @@ namespace EDSystems.Persistence.Migrations
                         {
                             Id = 1,
                             Cost = 7m,
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 804, DateTimeKind.Local).AddTicks(7700),
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 818, DateTimeKind.Local).AddTicks(1400),
                             Description = "Description",
                             Name = "Стандарт"
                         },
@@ -1225,7 +1246,7 @@ namespace EDSystems.Persistence.Migrations
                         {
                             Id = 2,
                             Cost = 12m,
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 804, DateTimeKind.Local).AddTicks(7710),
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 818, DateTimeKind.Local).AddTicks(1400),
                             Description = "Description",
                             Name = "Экспресс"
                         },
@@ -1233,7 +1254,7 @@ namespace EDSystems.Persistence.Migrations
                         {
                             Id = 3,
                             Cost = 30m,
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 804, DateTimeKind.Local).AddTicks(7710),
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 818, DateTimeKind.Local).AddTicks(1400),
                             Description = "Description",
                             Name = "Ультра"
                         },
@@ -1241,7 +1262,7 @@ namespace EDSystems.Persistence.Migrations
                         {
                             Id = 5,
                             Cost = 5m,
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 804, DateTimeKind.Local).AddTicks(7710),
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 818, DateTimeKind.Local).AddTicks(1410),
                             Description = "Description",
                             Name = "Авто"
                         });
@@ -1281,42 +1302,42 @@ namespace EDSystems.Persistence.Migrations
                         new
                         {
                             Id = 1,
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6460),
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(20),
                             Description = "Создан",
                             Name = "Создан"
                         },
                         new
                         {
                             Id = 2,
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6500),
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(60),
                             Description = "В пути",
                             Name = "В пути"
                         },
                         new
                         {
                             Id = 3,
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6500),
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(60),
                             Description = "Прибыл в пункт доставки",
                             Name = "Прибыл"
                         },
                         new
                         {
                             Id = 4,
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6500),
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(70),
                             Description = "На доставке у курьера",
                             Name = "У курьера"
                         },
                         new
                         {
                             Id = 5,
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6510),
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(70),
                             Description = "Доставлен",
                             Name = "Доставлен"
                         },
                         new
                         {
                             Id = 6,
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6510),
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(70),
                             Description = "Выдан",
                             Name = "Выдан"
                         });
@@ -1360,6 +1381,9 @@ namespace EDSystems.Persistence.Migrations
                     b.Property<string>("UserId")
                         .HasColumnType("text");
 
+                    b.Property<int?>("UserId1")
+                        .HasColumnType("integer");
+
                     b.HasKey("Id");
 
                     b.HasIndex("CurrencyId");
@@ -1367,7 +1391,7 @@ namespace EDSystems.Persistence.Migrations
                     b.HasIndex("Id")
                         .IsUnique();
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("UserId1");
 
                     b.ToTable("UserAccount");
 
@@ -1377,60 +1401,60 @@ namespace EDSystems.Persistence.Migrations
                             Id = 1,
                             Balance = 0m,
                             CurrencyId = 1,
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6800),
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(220),
                             Name = "Валютный счет",
                             Number = "30a8f9cc-840USD",
-                            UserId = "30a8f9cc-8d37-4d93-ab2f-774428387e4a"
+                            UserId = "1"
                         },
                         new
                         {
                             Id = 2,
                             Balance = 0m,
                             CurrencyId = 1,
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6810),
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(220),
                             Name = "Валютный счет",
                             Number = "cadaa51d-840USD",
-                            UserId = "cadaa51d-ddb3-4564-a8c5-79e80c98a032"
+                            UserId = "2"
                         },
                         new
                         {
                             Id = 3,
                             Balance = 0m,
                             CurrencyId = 1,
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6810),
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(220),
                             Name = "Валютный счет",
                             Number = "5a6f1681-840USD",
-                            UserId = "5a6f1681-c582-46f5-905b-4eb2c222dcf5"
+                            UserId = "3"
                         },
                         new
                         {
                             Id = 4,
                             Balance = 0m,
                             CurrencyId = 1,
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6810),
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(230),
                             Name = "Валютный счет",
                             Number = "3b9d7f21-840USD",
-                            UserId = "3b9d7f21-1d66-4c98-8648-64a68777bccb"
+                            UserId = "1"
                         },
                         new
                         {
                             Id = 5,
                             Balance = 0m,
                             CurrencyId = 1,
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6820),
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(230),
                             Name = "Валютный счет",
                             Number = "0a1e5c27-840USD",
-                            UserId = "0a1e5c27-0b09-4f60-a9c3-8618791a8672"
+                            UserId = "2"
                         },
                         new
                         {
                             Id = 6,
                             Balance = 0m,
                             CurrencyId = 1,
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 728, DateTimeKind.Local).AddTicks(6820),
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 786, DateTimeKind.Local).AddTicks(230),
                             Name = "Валютный счет",
                             Number = "e13b576b-840USD",
-                            UserId = "e13b576b-afbe-4b4c-aaad-64fd9bee3852"
+                            UserId = "3"
                         });
                 });
 
@@ -1472,6 +1496,9 @@ namespace EDSystems.Persistence.Migrations
                     b.Property<string>("UserId")
                         .HasColumnType("text");
 
+                    b.Property<int?>("UserId1")
+                        .HasColumnType("integer");
+
                     b.HasKey("Id");
 
                     b.HasIndex("CurrencyId");
@@ -1483,7 +1510,7 @@ namespace EDSystems.Persistence.Migrations
 
                     b.HasIndex("UserAccountId");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("UserId1");
 
                     b.ToTable("UserAccountHistory");
                 });
@@ -1514,8 +1541,8 @@ namespace EDSystems.Persistence.Migrations
                     b.Property<string>("Token")
                         .HasColumnType("text");
 
-                    b.Property<string>("UserId")
-                        .HasColumnType("text");
+                    b.Property<int>("UserId")
+                        .HasColumnType("integer");
 
                     b.HasKey("Id");
 
@@ -1524,8 +1551,11 @@ namespace EDSystems.Persistence.Migrations
 
             modelBuilder.Entity("EDSystems.Domain.Entities.UserEntities.Role", b =>
                 {
-                    b.Property<string>("Id")
-                        .HasColumnType("text");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
@@ -1550,36 +1580,36 @@ namespace EDSystems.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "2c5e174e-3b0e-446f-86af-483d56fd7210",
-                            ConcurrencyStamp = "86931cca-93a9-4d23-94ed-7648594dbcda",
+                            Id = 1,
+                            ConcurrencyStamp = "62d65bae-26fe-4478-8c5a-028912ed52f8",
                             Name = "Administrator",
                             NormalizedName = "ADMINISTRATOR"
                         },
                         new
                         {
-                            Id = "68373a2b-932e-4fff-a7a9-b31e156d4101",
-                            ConcurrencyStamp = "a1ca06a8-78ec-4a2a-bb2b-2bbcddc5fef7",
+                            Id = 2,
+                            ConcurrencyStamp = "745a2a87-3eec-4831-9648-ff3e0ca27f5f",
                             Name = "Manager",
                             NormalizedName = "MANAGER"
                         },
                         new
                         {
-                            Id = "5919c97a-b888-4858-bbbe-0123a1952624",
-                            ConcurrencyStamp = "73c901b0-26a9-4351-95df-824fc82a9ef9",
+                            Id = 3,
+                            ConcurrencyStamp = "ca38d0cc-67c2-4fcb-83fa-9ecdd0ee6130",
                             Name = "Staff",
                             NormalizedName = "STAFF"
                         },
                         new
                         {
-                            Id = "401bc2e9-3a0b-4281-9685-d6b36fc37d31",
-                            ConcurrencyStamp = "25dd939f-03c9-4ff6-9a02-f05eda01664a",
+                            Id = 4,
+                            ConcurrencyStamp = "18be39b6-69fa-4303-acb2-13c9ad627d6e",
                             Name = "Courier",
                             NormalizedName = "COURIER"
                         },
                         new
                         {
-                            Id = "336b1b38-f4c9-4844-8dcb-b59a0d7f0533",
-                            ConcurrencyStamp = "03d6492f-d488-4b62-bc94-c9b982593f7f",
+                            Id = 5,
+                            ConcurrencyStamp = "3072d295-e268-445f-9aae-2c5c58501d87",
                             Name = "Customer",
                             NormalizedName = "CUSTOMER"
                         });
@@ -1587,8 +1617,11 @@ namespace EDSystems.Persistence.Migrations
 
             modelBuilder.Entity("EDSystems.Domain.Entities.UserEntities.User", b =>
                 {
-                    b.Property<string>("Id")
-                        .HasColumnType("text");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("integer");
@@ -1663,6 +1696,9 @@ namespace EDSystems.Persistence.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("Id")
+                        .IsUnique();
+
                     b.HasIndex("NormalizedEmail")
                         .HasDatabaseName("EmailIndex");
 
@@ -1680,12 +1716,12 @@ namespace EDSystems.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "30a8f9cc-8d37-4d93-ab2f-774428387e4a",
+                            Id = 1,
                             AccessFailedCount = 0,
                             Address = "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099",
                             ChatId = -1001663331836L,
-                            ConcurrencyStamp = "8e36f5b3-39b4-44b8-8b91-c49146f6b790",
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 804, DateTimeKind.Local).AddTicks(5210),
+                            ConcurrencyStamp = "537ead06-91c5-4e77-9d74-8a4c24c98c0c",
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 818, DateTimeKind.Local).AddTicks(1260),
                             Email = "administrator@gmail.com",
                             EmailConfirmed = false,
                             FirstName = "EDSystem",
@@ -1693,22 +1729,21 @@ namespace EDSystems.Persistence.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMINISTRATOR@GMAIL.COM",
                             NormalizedUserName = "ADMINISTRATOR",
-                            PasswordHash = "AQAAAAIAAYagAAAAEPWLHJ4Kp8eNE+/Lc/TL2qt9dbvHMfOC5daPiZVY7a/It3/Y0sb9fG1YFO5FDuZHBQ==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEG96UZInZlqlB7GEfsljsHadi+M+gyuEt9ueoxFf/3f3wCIWCDN9c+bQaOWsM8M05A==",
                             PhoneNumber = "998970000675",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "1e2c3f61-f858-47f6-9df2-3fb4cf5c4650",
                             TwoFactorEnabled = false,
                             UserName = "administrator",
                             UserNameT = "UserName"
                         },
                         new
                         {
-                            Id = "cadaa51d-ddb3-4564-a8c5-79e80c98a032",
+                            Id = 2,
                             AccessFailedCount = 0,
                             Address = "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099",
                             ChatId = -1001663331836L,
-                            ConcurrencyStamp = "70cabda6-975a-4077-88cf-426efd473c0b",
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 804, DateTimeKind.Local).AddTicks(5430),
+                            ConcurrencyStamp = "4d518d26-2c13-460b-b918-30d018a73dce",
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 818, DateTimeKind.Local).AddTicks(1270),
                             Email = "hayrulloh@gmail.com",
                             EmailConfirmed = false,
                             FirstName = "EDTashkent",
@@ -1716,22 +1751,21 @@ namespace EDSystems.Persistence.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "HAYRULLOH@GMAIL.COM",
                             NormalizedUserName = "HAYRULLOH",
-                            PasswordHash = "AQAAAAIAAYagAAAAEPWLHJ4Kp8eNE+/Lc/TL2qt9dbvHMfOC5daPiZVY7a/It3/Y0sb9fG1YFO5FDuZHBQ==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEG96UZInZlqlB7GEfsljsHadi+M+gyuEt9ueoxFf/3f3wCIWCDN9c+bQaOWsM8M05A==",
                             PhoneNumber = "998935788886",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "3b338ad8-2318-4fde-8ff4-c18da1d0d8e2",
                             TwoFactorEnabled = false,
                             UserName = "hayrulloh",
                             UserNameT = "UserName"
                         },
                         new
                         {
-                            Id = "5a6f1681-c582-46f5-905b-4eb2c222dcf5",
+                            Id = 3,
                             AccessFailedCount = 0,
                             Address = "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099",
                             ChatId = -1001663331836L,
-                            ConcurrencyStamp = "194917f3-6ab4-45e3-b0dd-069511675a0a",
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 804, DateTimeKind.Local).AddTicks(5630),
+                            ConcurrencyStamp = "99484c3d-c5a9-40b4-996f-43b88d4fd06e",
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 818, DateTimeKind.Local).AddTicks(1280),
                             Email = "Nodir@gmail.com",
                             EmailConfirmed = false,
                             FirstName = "EDTashkent",
@@ -1739,22 +1773,21 @@ namespace EDSystems.Persistence.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "NODIR@GMAIL.COM",
                             NormalizedUserName = "NODIR",
-                            PasswordHash = "AQAAAAIAAYagAAAAEPWLHJ4Kp8eNE+/Lc/TL2qt9dbvHMfOC5daPiZVY7a/It3/Y0sb9fG1YFO5FDuZHBQ==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEG96UZInZlqlB7GEfsljsHadi+M+gyuEt9ueoxFf/3f3wCIWCDN9c+bQaOWsM8M05A==",
                             PhoneNumber = "998909046605",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "1067df9b-92f3-40a0-9e29-7f5e80c21579",
                             TwoFactorEnabled = false,
                             UserName = "nodir",
                             UserNameT = "UserName"
                         },
                         new
                         {
-                            Id = "3b9d7f21-1d66-4c98-8648-64a68777bccb",
+                            Id = 4,
                             AccessFailedCount = 0,
                             Address = "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099",
                             ChatId = -1001663331836L,
-                            ConcurrencyStamp = "75dcc7fa-99ce-49c1-a420-798d958b42ee",
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 804, DateTimeKind.Local).AddTicks(5650),
+                            ConcurrencyStamp = "7dfa1f3d-3dfb-4990-b102-f2254a385477",
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 818, DateTimeKind.Local).AddTicks(1310),
                             Email = "Javohir@gmail.com",
                             EmailConfirmed = false,
                             FirstName = "EDTashkent",
@@ -1762,22 +1795,21 @@ namespace EDSystems.Persistence.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "JAVOHIR@GMAIL.COM",
                             NormalizedUserName = "JAVOHIR",
-                            PasswordHash = "AQAAAAIAAYagAAAAEPWLHJ4Kp8eNE+/Lc/TL2qt9dbvHMfOC5daPiZVY7a/It3/Y0sb9fG1YFO5FDuZHBQ==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEG96UZInZlqlB7GEfsljsHadi+M+gyuEt9ueoxFf/3f3wCIWCDN9c+bQaOWsM8M05A==",
                             PhoneNumber = "998931710966",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "3005b877-7645-437e-87ee-70787241f668",
                             TwoFactorEnabled = false,
                             UserName = "javohir",
                             UserNameT = "UserName"
                         },
                         new
                         {
-                            Id = "0a1e5c27-0b09-4f60-a9c3-8618791a8672",
+                            Id = 5,
                             AccessFailedCount = 0,
                             Address = "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099",
                             ChatId = -1001663331836L,
-                            ConcurrencyStamp = "356f9e00-7a90-4a69-9599-279751fc2bbb",
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 804, DateTimeKind.Local).AddTicks(5680),
+                            ConcurrencyStamp = "97a5ddd0-0a30-4208-af4d-79f82fe2dbcd",
+                            DateCreated = new DateTime(2023, 3, 7, 22, 34, 32, 818, DateTimeKind.Local).AddTicks(1320),
                             Email = "Ismoil@gmail.com",
                             EmailConfirmed = false,
                             FirstName = "EDTashkent",
@@ -1785,276 +1817,22 @@ namespace EDSystems.Persistence.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "ISMOIL@GMAIL.COM",
                             NormalizedUserName = "ISMOIL",
-                            PasswordHash = "AQAAAAIAAYagAAAAEPWLHJ4Kp8eNE+/Lc/TL2qt9dbvHMfOC5daPiZVY7a/It3/Y0sb9fG1YFO5FDuZHBQ==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEG96UZInZlqlB7GEfsljsHadi+M+gyuEt9ueoxFf/3f3wCIWCDN9c+bQaOWsM8M05A==",
                             PhoneNumber = "998977093262",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "4db9651d-6702-4cd7-99e0-b1e446cfbe4e",
                             TwoFactorEnabled = false,
                             UserName = "ismoil",
-                            UserNameT = "UserName"
-                        },
-                        new
-                        {
-                            Id = "e13b576b-afbe-4b4c-aaad-64fd9bee3852",
-                            AccessFailedCount = 0,
-                            Address = "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099",
-                            ChatId = -1001663331836L,
-                            ConcurrencyStamp = "54515182-b527-43ae-8f92-16133e8968e8",
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 804, DateTimeKind.Local).AddTicks(5690),
-                            Email = "Sadulla@gmail.com",
-                            EmailConfirmed = false,
-                            FirstName = "EDTashkent",
-                            LastName = "Sadulla",
-                            LockoutEnabled = false,
-                            NormalizedEmail = "SADULLA@GMAIL.COM",
-                            NormalizedUserName = "SADULLA",
-                            PasswordHash = "AQAAAAIAAYagAAAAEPWLHJ4Kp8eNE+/Lc/TL2qt9dbvHMfOC5daPiZVY7a/It3/Y0sb9fG1YFO5FDuZHBQ==",
-                            PhoneNumber = "998994885995",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "2f5872d7-12f6-44b1-a1ef-ead46861be0f",
-                            TwoFactorEnabled = false,
-                            UserName = "sadulla",
-                            UserNameT = "UserName"
-                        },
-                        new
-                        {
-                            Id = "34a0eb9b-6797-40f7-a84c-aa31cdd4cdc6",
-                            AccessFailedCount = 0,
-                            Address = "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099",
-                            ChatId = -1001663331836L,
-                            ConcurrencyStamp = "e6d64b32-4726-4041-bfa8-d3f1859aa70e",
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 804, DateTimeKind.Local).AddTicks(5720),
-                            Email = "Ubaydulla@gmail.com",
-                            EmailConfirmed = false,
-                            FirstName = "EDTashkent",
-                            LastName = "Ubaydulla",
-                            LockoutEnabled = false,
-                            NormalizedEmail = "UBAYDULLA@GMAIL.COM",
-                            NormalizedUserName = "UBAYDULLA",
-                            PasswordHash = "AQAAAAIAAYagAAAAEPWLHJ4Kp8eNE+/Lc/TL2qt9dbvHMfOC5daPiZVY7a/It3/Y0sb9fG1YFO5FDuZHBQ==",
-                            PhoneNumber = "998990500033",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "7351a8f9-a2bc-4380-8778-43172014facf",
-                            TwoFactorEnabled = false,
-                            UserName = "ubaydulla",
-                            UserNameT = "UserName"
-                        },
-                        new
-                        {
-                            Id = "131d5dd1-6bf1-4f52-be90-00815000fb57",
-                            AccessFailedCount = 0,
-                            Address = "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099",
-                            ChatId = -1001663331836L,
-                            ConcurrencyStamp = "5f87e2ad-04e9-41fc-b2a3-7ce35d683ad9",
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 804, DateTimeKind.Local).AddTicks(5730),
-                            Email = "Khikmatillo@gmail.com",
-                            EmailConfirmed = false,
-                            FirstName = "EDTashkent",
-                            LastName = "Khikmatillo",
-                            LockoutEnabled = false,
-                            NormalizedEmail = "KHIKMATILLO@GMAIL.COM",
-                            NormalizedUserName = "KHIKMATILLO",
-                            PasswordHash = "AQAAAAIAAYagAAAAEPWLHJ4Kp8eNE+/Lc/TL2qt9dbvHMfOC5daPiZVY7a/It3/Y0sb9fG1YFO5FDuZHBQ==",
-                            PhoneNumber = "998974468090",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "22757420-a20c-4a53-bfdd-0689d7ba192b",
-                            TwoFactorEnabled = false,
-                            UserName = "khikmatillo",
-                            UserNameT = "UserName"
-                        },
-                        new
-                        {
-                            Id = "221c0048-08c9-4e72-8f5c-ddf4039f9488",
-                            AccessFailedCount = 0,
-                            Address = "Республика Узбекистан, г. Ташкент, Кашгар 11, 100099",
-                            ChatId = -1001663331836L,
-                            ConcurrencyStamp = "ad31512d-f2f4-48aa-b293-c37f55486174",
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 804, DateTimeKind.Local).AddTicks(5930),
-                            Email = "Abbos@gmail.com",
-                            EmailConfirmed = false,
-                            FirstName = "EDTashkent",
-                            LastName = "Abbos",
-                            LockoutEnabled = false,
-                            NormalizedEmail = "ABBOS@GMAIL.COM",
-                            NormalizedUserName = "ABBOS",
-                            PasswordHash = "AQAAAAIAAYagAAAAEPWLHJ4Kp8eNE+/Lc/TL2qt9dbvHMfOC5daPiZVY7a/It3/Y0sb9fG1YFO5FDuZHBQ==",
-                            PhoneNumber = "998903550022",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "43d897b0-c1b1-47cd-a912-0eb015e84535",
-                            TwoFactorEnabled = false,
-                            UserName = "abbos",
-                            UserNameT = "UserName"
-                        },
-                        new
-                        {
-                            Id = "e0c3bef9-fd70-421e-b07b-055c38b6d77c",
-                            AccessFailedCount = 0,
-                            Address = "Российская Федерация, Московская область, г. Москва, Академический район, улица Винокурова 7/5, корпус 3, индекс 117449",
-                            ChatId = -1001663331836L,
-                            ConcurrencyStamp = "914fc971-8ed8-4397-bebd-c848cdc5f8fc",
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 804, DateTimeKind.Local).AddTicks(7110),
-                            Email = "Shohruh@gmail.com",
-                            EmailConfirmed = false,
-                            FirstName = "EDMoscow",
-                            LastName = "Shohruh",
-                            LockoutEnabled = false,
-                            NormalizedEmail = "SHOHRUH@GMAIL.COM",
-                            NormalizedUserName = "SHOHRUH",
-                            PasswordHash = "AQAAAAIAAYagAAAAEPWLHJ4Kp8eNE+/Lc/TL2qt9dbvHMfOC5daPiZVY7a/It3/Y0sb9fG1YFO5FDuZHBQ==",
-                            PhoneNumber = "79060470085",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "16048597-8db8-40e6-8eab-d52951bba337",
-                            TwoFactorEnabled = false,
-                            UserName = "shohruh",
-                            UserNameT = "UserName"
-                        },
-                        new
-                        {
-                            Id = "4ff7819d-8e17-4aa8-a0da-964c2db21591",
-                            AccessFailedCount = 0,
-                            Address = "Российская Федерация, Московская область, г. Москва, Академический район, улица Винокурова 7/5, корпус 3, индекс 117449",
-                            ChatId = -1001663331836L,
-                            ConcurrencyStamp = "3e460b65-284a-4106-af45-f1c7c0aaab8e",
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 804, DateTimeKind.Local).AddTicks(7160),
-                            Email = "Ulugbek@gmail.com",
-                            EmailConfirmed = false,
-                            FirstName = "EDMoscow",
-                            LastName = "Ulugbek",
-                            LockoutEnabled = false,
-                            NormalizedEmail = "ULUGBEK@GMAIL.COM",
-                            NormalizedUserName = "ULUGBEK",
-                            PasswordHash = "AQAAAAIAAYagAAAAEPWLHJ4Kp8eNE+/Lc/TL2qt9dbvHMfOC5daPiZVY7a/It3/Y0sb9fG1YFO5FDuZHBQ==",
-                            PhoneNumber = "79777403487",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "db7f5eea-5cd3-407f-8d0f-c928cc6b74ec",
-                            TwoFactorEnabled = false,
-                            UserName = "ulugbek",
-                            UserNameT = "UserName"
-                        },
-                        new
-                        {
-                            Id = "92db214d-cd73-4fbc-8b34-1dc0709ba0b2",
-                            AccessFailedCount = 0,
-                            Address = "Российская Федерация, Московская область, г. Москва, Академический район, улица Винокурова 7/5, корпус 3, индекс 117449",
-                            ChatId = -1001663331836L,
-                            ConcurrencyStamp = "3448cf4b-ef2a-4204-87b9-8493a2961a1c",
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 804, DateTimeKind.Local).AddTicks(7170),
-                            Email = "Abdulaziz@gmail.com",
-                            EmailConfirmed = false,
-                            FirstName = "EDMoscow",
-                            LastName = "Abdulaziz",
-                            LockoutEnabled = false,
-                            NormalizedEmail = "ABDULAZIZ@GMAIL.COM",
-                            NormalizedUserName = "ABDULAZIZ",
-                            PasswordHash = "AQAAAAIAAYagAAAAEPWLHJ4Kp8eNE+/Lc/TL2qt9dbvHMfOC5daPiZVY7a/It3/Y0sb9fG1YFO5FDuZHBQ==",
-                            PhoneNumber = "79691799000",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "e0e7d5ed-7ced-4444-8402-0d3ebbc8963e",
-                            TwoFactorEnabled = false,
-                            UserName = "abdulaziz",
-                            UserNameT = "UserName"
-                        },
-                        new
-                        {
-                            Id = "9c57fadd-110a-4b45-aa89-69aa141564c6",
-                            AccessFailedCount = 0,
-                            Address = "Российская Федерация, Московская область, г. Москва, Академический район, улица Винокурова 7/5, корпус 3, индекс 117449",
-                            ChatId = -1001663331836L,
-                            ConcurrencyStamp = "3dabb423-8bff-4cd8-817a-21fd3430c6b8",
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 804, DateTimeKind.Local).AddTicks(7180),
-                            Email = "Doniyor@gmail.com",
-                            EmailConfirmed = false,
-                            FirstName = "EDMoscow",
-                            LastName = "Doniyor",
-                            LockoutEnabled = false,
-                            NormalizedEmail = "DONIYOR@GMAIL.COM",
-                            NormalizedUserName = "DONIYOR",
-                            PasswordHash = "AQAAAAIAAYagAAAAEPWLHJ4Kp8eNE+/Lc/TL2qt9dbvHMfOC5daPiZVY7a/It3/Y0sb9fG1YFO5FDuZHBQ==",
-                            PhoneNumber = "79777601654",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "8c022c45-a8d9-4183-ba60-29e06e4979c9",
-                            TwoFactorEnabled = false,
-                            UserName = "doniyor",
-                            UserNameT = "UserName"
-                        },
-                        new
-                        {
-                            Id = "eb6a85b0-a7fb-4f8e-9bea-03825e6f020f",
-                            AccessFailedCount = 0,
-                            Address = "Российская Федерация, Московская область, г. Москва, Академический район, улица Винокурова 7/5, корпус 3, индекс 117449",
-                            ChatId = -1001663331836L,
-                            ConcurrencyStamp = "c584f918-7f8f-49ec-825d-056b43d47748",
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 804, DateTimeKind.Local).AddTicks(7190),
-                            Email = "Shaxzod@gmail.com",
-                            EmailConfirmed = false,
-                            FirstName = "EDMoscow",
-                            LastName = "Shaxzod",
-                            LockoutEnabled = false,
-                            NormalizedEmail = "SHAXZOD@GMAIL.COM",
-                            NormalizedUserName = "SHAXZOD",
-                            PasswordHash = "AQAAAAIAAYagAAAAEPWLHJ4Kp8eNE+/Lc/TL2qt9dbvHMfOC5daPiZVY7a/It3/Y0sb9fG1YFO5FDuZHBQ==",
-                            PhoneNumber = "79163870009",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "2f329f18-ff9a-4194-9e35-d9482fe2378a",
-                            TwoFactorEnabled = false,
-                            UserName = "shaxzod",
-                            UserNameT = "UserName"
-                        },
-                        new
-                        {
-                            Id = "11fafeb4-c7c1-463c-bb1e-55203e68dfdf",
-                            AccessFailedCount = 0,
-                            Address = "Российская Федерация, Московская область, г. Москва, Академический район, улица Винокурова 7/5, корпус 3, индекс 117449",
-                            ChatId = -1001663331836L,
-                            ConcurrencyStamp = "6d6d8604-7b64-4850-b5de-0c9574188852",
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 804, DateTimeKind.Local).AddTicks(7210),
-                            Email = "Umar@gmail.com",
-                            EmailConfirmed = false,
-                            FirstName = "EDMoscow",
-                            LastName = "Umar",
-                            LockoutEnabled = false,
-                            NormalizedEmail = "UMAR@GMAIL.COM",
-                            NormalizedUserName = "UMAR",
-                            PasswordHash = "AQAAAAIAAYagAAAAEPWLHJ4Kp8eNE+/Lc/TL2qt9dbvHMfOC5daPiZVY7a/It3/Y0sb9fG1YFO5FDuZHBQ==",
-                            PhoneNumber = "79963321030",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "d6ce6628-627d-4951-9628-f9a8c14f4a35",
-                            TwoFactorEnabled = false,
-                            UserName = "umar",
-                            UserNameT = "UserName"
-                        },
-                        new
-                        {
-                            Id = "92b7c777-0d3e-4026-844f-20164bb0f97e",
-                            AccessFailedCount = 0,
-                            Address = "Российская Федерация, Московская область, г. Москва, Академический район, улица Винокурова 7/5, корпус 3, индекс 117449",
-                            ChatId = -1001663331836L,
-                            ConcurrencyStamp = "2920a339-0f92-42a5-8c80-7835a158a60a",
-                            DateCreated = new DateTime(2023, 1, 26, 10, 32, 10, 804, DateTimeKind.Local).AddTicks(7240),
-                            Email = "Abror@gmail.com",
-                            EmailConfirmed = false,
-                            FirstName = "EDMoscow",
-                            LastName = "Abror",
-                            LockoutEnabled = false,
-                            NormalizedEmail = "ABROR@GMAIL.COM",
-                            NormalizedUserName = "ABROR",
-                            PasswordHash = "AQAAAAIAAYagAAAAEPWLHJ4Kp8eNE+/Lc/TL2qt9dbvHMfOC5daPiZVY7a/It3/Y0sb9fG1YFO5FDuZHBQ==",
-                            PhoneNumber = "79296800899",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "ac64ae7c-2f10-4391-8533-708460a4da92",
-                            TwoFactorEnabled = false,
-                            UserName = "abror",
                             UserNameT = "UserName"
                         });
                 });
 
             modelBuilder.Entity("EDSystems.Domain.Entities.UserEntities.UserRole", b =>
                 {
-                    b.Property<string>("UserId")
-                        .HasColumnType("text");
+                    b.Property<int>("UserId")
+                        .HasColumnType("integer");
 
-                    b.Property<string>("RoleId")
-                        .HasColumnType("text");
+                    b.Property<int>("RoleId")
+                        .HasColumnType("integer");
 
                     b.HasKey("UserId", "RoleId");
 
@@ -2065,83 +1843,13 @@ namespace EDSystems.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = "30a8f9cc-8d37-4d93-ab2f-774428387e4a",
-                            RoleId = "2c5e174e-3b0e-446f-86af-483d56fd7210"
+                            UserId = 1,
+                            RoleId = 1
                         },
                         new
                         {
-                            UserId = "cadaa51d-ddb3-4564-a8c5-79e80c98a032",
-                            RoleId = "401bc2e9-3a0b-4281-9685-d6b36fc37d31"
-                        },
-                        new
-                        {
-                            UserId = "5a6f1681-c582-46f5-905b-4eb2c222dcf5",
-                            RoleId = "401bc2e9-3a0b-4281-9685-d6b36fc37d31"
-                        },
-                        new
-                        {
-                            UserId = "3b9d7f21-1d66-4c98-8648-64a68777bccb",
-                            RoleId = "401bc2e9-3a0b-4281-9685-d6b36fc37d31"
-                        },
-                        new
-                        {
-                            UserId = "0a1e5c27-0b09-4f60-a9c3-8618791a8672",
-                            RoleId = "401bc2e9-3a0b-4281-9685-d6b36fc37d31"
-                        },
-                        new
-                        {
-                            UserId = "e13b576b-afbe-4b4c-aaad-64fd9bee3852",
-                            RoleId = "401bc2e9-3a0b-4281-9685-d6b36fc37d31"
-                        },
-                        new
-                        {
-                            UserId = "34a0eb9b-6797-40f7-a84c-aa31cdd4cdc6",
-                            RoleId = "401bc2e9-3a0b-4281-9685-d6b36fc37d31"
-                        },
-                        new
-                        {
-                            UserId = "131d5dd1-6bf1-4f52-be90-00815000fb57",
-                            RoleId = "68373a2b-932e-4fff-a7a9-b31e156d4101"
-                        },
-                        new
-                        {
-                            UserId = "221c0048-08c9-4e72-8f5c-ddf4039f9488",
-                            RoleId = "401bc2e9-3a0b-4281-9685-d6b36fc37d31"
-                        },
-                        new
-                        {
-                            UserId = "e0c3bef9-fd70-421e-b07b-055c38b6d77c",
-                            RoleId = "401bc2e9-3a0b-4281-9685-d6b36fc37d31"
-                        },
-                        new
-                        {
-                            UserId = "4ff7819d-8e17-4aa8-a0da-964c2db21591",
-                            RoleId = "401bc2e9-3a0b-4281-9685-d6b36fc37d31"
-                        },
-                        new
-                        {
-                            UserId = "92db214d-cd73-4fbc-8b34-1dc0709ba0b2",
-                            RoleId = "401bc2e9-3a0b-4281-9685-d6b36fc37d31"
-                        },
-                        new
-                        {
-                            UserId = "9c57fadd-110a-4b45-aa89-69aa141564c6",
-                            RoleId = "401bc2e9-3a0b-4281-9685-d6b36fc37d31"
-                        },
-                        new
-                        {
-                            UserId = "eb6a85b0-a7fb-4f8e-9bea-03825e6f020f",
-                            RoleId = "401bc2e9-3a0b-4281-9685-d6b36fc37d31"
-                        },
-                        new
-                        {
-                            UserId = "11fafeb4-c7c1-463c-bb1e-55203e68dfdf",
-                            RoleId = "68373a2b-932e-4fff-a7a9-b31e156d4101"
-                        },
-                        new
-                        {
-                            UserId = "92b7c777-0d3e-4026-844f-20164bb0f97e",
-                            RoleId = "401bc2e9-3a0b-4281-9685-d6b36fc37d31"
+                            UserId = 2,
+                            RoleId = 2
                         });
                 });
 
@@ -2179,7 +1887,7 @@ namespace EDSystems.Persistence.Migrations
                     b.ToTable("Tokens");
                 });
 
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
+            modelBuilder.Entity("EDSystems.Domain.IdentityUserEntities.UserClaim", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -2193,38 +1901,8 @@ namespace EDSystems.Persistence.Migrations
                     b.Property<string>("ClaimValue")
                         .HasColumnType("text");
 
-                    b.Property<string>("RoleId")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("RoleId");
-
-                    b.ToTable("AspNetRoleClaims", (string)null);
-                });
-
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
+                    b.Property<int>("UserId")
                         .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("ClaimType")
-                        .HasColumnType("text");
-
-                    b.Property<string>("ClaimValue")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Discriminator")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("text");
 
                     b.HasKey("Id");
 
@@ -2232,12 +1910,255 @@ namespace EDSystems.Persistence.Migrations
 
                     b.ToTable("AspNetUserClaims", (string)null);
 
-                    b.HasDiscriminator<string>("Discriminator").HasValue("IdentityUserClaim<string>");
-
-                    b.UseTphMappingStrategy();
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            ClaimType = "CanGetAllBranches",
+                            ClaimValue = "CanGetAllBranches",
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 2,
+                            ClaimType = "CanGetAllBranchesWithPagination",
+                            ClaimValue = "CanGetAllBranchesWithPagination",
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 3,
+                            ClaimType = "CanGetBranchDetails",
+                            ClaimValue = "CanGetBranchDetails",
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 4,
+                            ClaimType = "CanCreateBranch",
+                            ClaimValue = "CanCreateBranch",
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 5,
+                            ClaimType = "CanUpdateBranch",
+                            ClaimValue = "CanUpdateBranch",
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 6,
+                            ClaimType = "CanDeleteBranch",
+                            ClaimValue = "CanDeleteBranch",
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 7,
+                            ClaimType = "CanDeleteBranches",
+                            ClaimValue = "CanDeleteBranches",
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 8,
+                            ClaimType = "CanGetAllPlans",
+                            ClaimValue = "CanGetAllPlans",
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 9,
+                            ClaimType = "CanGetAllPlansWithPagination",
+                            ClaimValue = "CanGetAllPlansWithPagination",
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 10,
+                            ClaimType = "CanGetPlanDetails",
+                            ClaimValue = "CanGetPlanDetails",
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 11,
+                            ClaimType = "CanCreatePlan",
+                            ClaimValue = "CanCreatePlan",
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 12,
+                            ClaimType = "CanUpdatePlan",
+                            ClaimValue = "CanUpdatePlan",
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 13,
+                            ClaimType = "CanDeletePlan",
+                            ClaimValue = "CanDeletePlan",
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 14,
+                            ClaimType = "CanDeletePlans",
+                            ClaimValue = "CanDeletePlans",
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 15,
+                            ClaimType = "CanGetAllStatuses",
+                            ClaimValue = "CanGetAllStatuses",
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 16,
+                            ClaimType = "CanGetAllStatusesWithPagination",
+                            ClaimValue = "CanGetAllStatusesWithPagination",
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 17,
+                            ClaimType = "CanGetStatusDetails",
+                            ClaimValue = "CanGetStatusDetails",
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 18,
+                            ClaimType = "CanCreateStatus",
+                            ClaimValue = "CanCreateStatus",
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 19,
+                            ClaimType = "CanUpdateStatus",
+                            ClaimValue = "CanUpdateStatus",
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 20,
+                            ClaimType = "CanDeleteStatus",
+                            ClaimValue = "CanDeleteStatus",
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 21,
+                            ClaimType = "CanDeleteStatuses",
+                            ClaimValue = "CanDeleteStatuses",
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 22,
+                            ClaimType = "CanGetAllParcels",
+                            ClaimValue = "CanGetAllParcels",
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 23,
+                            ClaimType = "CanGetAllParcelsWithPagination",
+                            ClaimValue = "CanGetAllParcelsWithPagination",
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 24,
+                            ClaimType = "CanGetParcelDetails",
+                            ClaimValue = "CanGetParcelDetails",
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 25,
+                            ClaimType = "CanCreateParcel",
+                            ClaimValue = "CanCreateParcel",
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 26,
+                            ClaimType = "CanUpdateParcel",
+                            ClaimValue = "CanUpdateParcel",
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 27,
+                            ClaimType = "CanDeleteParcel",
+                            ClaimValue = "CanDeleteParcel",
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 28,
+                            ClaimType = "CanDeleteParcels",
+                            ClaimValue = "CanDeleteParcels",
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 29,
+                            ClaimType = "CanGetAllUsers",
+                            ClaimValue = "CanGetAllUsers",
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 30,
+                            ClaimType = "CanGetAllUsersWithPagination",
+                            ClaimValue = "CanGetAllUsersWithPagination",
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 31,
+                            ClaimType = "CanGetUserDetails",
+                            ClaimValue = "CanGetUserDetails",
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 32,
+                            ClaimType = "CanCreateUser",
+                            ClaimValue = "CanCreateUser",
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 33,
+                            ClaimType = "CanUpdateUser",
+                            ClaimValue = "CanUpdateUser",
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 34,
+                            ClaimType = "CanDeleteUser",
+                            ClaimValue = "CanDeleteUser",
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 35,
+                            ClaimType = "CanDeleteUsers",
+                            ClaimValue = "CanDeleteUsers",
+                            UserId = 1
+                        });
                 });
 
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
+            modelBuilder.Entity("EDSystems.Domain.IdentityUserEntities.UserLogin", b =>
                 {
                     b.Property<string>("LoginProvider")
                         .HasColumnType("text");
@@ -2248,9 +2169,8 @@ namespace EDSystems.Persistence.Migrations
                     b.Property<string>("ProviderDisplayName")
                         .HasColumnType("text");
 
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("text");
+                    b.Property<int>("UserId")
+                        .HasColumnType("integer");
 
                     b.HasKey("LoginProvider", "ProviderKey");
 
@@ -2259,10 +2179,34 @@ namespace EDSystems.Persistence.Migrations
                     b.ToTable("AspNetUserLogins", (string)null);
                 });
 
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
                 {
-                    b.Property<string>("UserId")
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ClaimType")
                         .HasColumnType("text");
+
+                    b.Property<string>("ClaimValue")
+                        .HasColumnType("text");
+
+                    b.Property<int>("RoleId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RoleId");
+
+                    b.ToTable("AspNetRoleClaims", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<int>", b =>
+                {
+                    b.Property<int>("UserId")
+                        .HasColumnType("integer");
 
                     b.Property<string>("LoginProvider")
                         .HasColumnType("text");
@@ -2276,29 +2220,6 @@ namespace EDSystems.Persistence.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens", (string)null);
-                });
-
-            modelBuilder.Entity("EDSystems.Domain.IdentityUserEntities.UserClaim", b =>
-                {
-                    b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>");
-
-                    b.HasDiscriminator().HasValue("UserClaim");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            ClaimType = "CanAddBranch",
-                            ClaimValue = "CanAddBranch",
-                            UserId = "30a8f9cc-8d37-4d93-ab2f-774428387e4a"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            ClaimType = "Manager",
-                            ClaimValue = "CanOnlyRead",
-                            UserId = "cadaa51d-ddb3-4564-a8c5-79e80c98a032"
-                        });
                 });
 
             modelBuilder.Entity("EDSystems.Domain.Entities.Account", b =>
@@ -2342,7 +2263,7 @@ namespace EDSystems.Persistence.Migrations
 
                     b.HasOne("EDSystems.Domain.Entities.UserEntities.User", "Payer")
                         .WithMany()
-                        .HasForeignKey("PayerId");
+                        .HasForeignKey("PayerId1");
 
                     b.Navigation("BranchAccount");
 
@@ -2459,27 +2380,27 @@ namespace EDSystems.Persistence.Migrations
 
                     b.HasOne("EDSystems.Domain.Entities.UserEntities.User", "RecepientCourier")
                         .WithMany()
-                        .HasForeignKey("RecepientCourierId");
+                        .HasForeignKey("RecepientCourierId1");
 
                     b.HasOne("EDSystems.Domain.Entities.UserEntities.User", "Recepient")
                         .WithMany()
-                        .HasForeignKey("RecepientId");
+                        .HasForeignKey("RecepientId1");
 
                     b.HasOne("EDSystems.Domain.Entities.UserEntities.User", "RecepientStaff")
                         .WithMany()
-                        .HasForeignKey("RecepientStaffId");
+                        .HasForeignKey("RecepientStaffId1");
 
                     b.HasOne("EDSystems.Domain.Entities.UserEntities.User", "SenderCourier")
                         .WithMany()
-                        .HasForeignKey("SenderCourierId");
+                        .HasForeignKey("SenderCourierId1");
 
                     b.HasOne("EDSystems.Domain.Entities.UserEntities.User", "Sender")
                         .WithMany()
-                        .HasForeignKey("SenderId");
+                        .HasForeignKey("SenderId1");
 
                     b.HasOne("EDSystems.Domain.Entities.UserEntities.User", "SenderStaff")
                         .WithMany()
-                        .HasForeignKey("SenderStaffId");
+                        .HasForeignKey("SenderStaffId1");
 
                     b.Navigation("Parcel");
 
@@ -2563,7 +2484,7 @@ namespace EDSystems.Persistence.Migrations
 
                     b.HasOne("EDSystems.Domain.Entities.UserEntities.User", "User")
                         .WithMany()
-                        .HasForeignKey("UserId");
+                        .HasForeignKey("UserId1");
 
                     b.Navigation("Currency");
 
@@ -2592,7 +2513,7 @@ namespace EDSystems.Persistence.Migrations
 
                     b.HasOne("EDSystems.Domain.Entities.UserEntities.User", "User")
                         .WithMany()
-                        .HasForeignKey("UserId");
+                        .HasForeignKey("UserId1");
 
                     b.Navigation("Currency");
 
@@ -2629,7 +2550,25 @@ namespace EDSystems.Persistence.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
+            modelBuilder.Entity("EDSystems.Domain.IdentityUserEntities.UserClaim", b =>
+                {
+                    b.HasOne("EDSystems.Domain.Entities.UserEntities.User", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("EDSystems.Domain.IdentityUserEntities.UserLogin", b =>
+                {
+                    b.HasOne("EDSystems.Domain.Entities.UserEntities.User", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
                 {
                     b.HasOne("EDSystems.Domain.Entities.UserEntities.Role", null)
                         .WithMany()
@@ -2638,25 +2577,7 @@ namespace EDSystems.Persistence.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
-                {
-                    b.HasOne("EDSystems.Domain.Entities.UserEntities.User", null)
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
-                {
-                    b.HasOne("EDSystems.Domain.Entities.UserEntities.User", null)
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<int>", b =>
                 {
                     b.HasOne("EDSystems.Domain.Entities.UserEntities.User", null)
                         .WithMany()

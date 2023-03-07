@@ -81,7 +81,7 @@ public class AuthenticationController : BaseController
             };
             var isCreateAsync = await _userManager.CreateAsync(user, request.Password);
             var isAddToRoleAsync = await _userManager.AddToRoleAsync(user, "Customer");
-            string response = "Error";
+            int response = 0;
             if (isCreateAsync.Succeeded)
             {
                 var token = await GenerateJwtToken(user);
@@ -89,7 +89,7 @@ public class AuthenticationController : BaseController
             }
             else
             {
-                response = isCreateAsync.Errors.ToString();
+                //response = isCreateAsync.Errors.ToString();
             }
 
             if (isAddToRoleAsync.Succeeded)
@@ -98,7 +98,7 @@ public class AuthenticationController : BaseController
             }
             else
             {
-                response = isAddToRoleAsync.Errors.ToString();
+                //response = isAddToRoleAsync.Errors.ToString();
             }
         }
         else
@@ -216,7 +216,7 @@ public class AuthenticationController : BaseController
         });
     }
 
-    private async Task<List<string>> GetUserRole(string UserId)
+    private async Task<List<string>> GetUserRole(int UserId)
     {
         CancellationToken cancellationToken = CancellationToken.None;
         var entity = await _userManager.Users
@@ -226,7 +226,7 @@ public class AuthenticationController : BaseController
         List<string> rolesMasters = new List<string>();
         foreach (var item in entity.UserRoles)
         {
-            var entityRole = await _roleManager.FindByIdAsync(item.RoleId);
+            var entityRole = await _roleManager.FindByIdAsync(item.RoleId.ToString());
 
             rolesMasters.Add(entityRole.Name);
         }
@@ -288,7 +288,7 @@ public class AuthenticationController : BaseController
         var _options = new IdentityOptions();
         var claims = new List<Claim>()
         {
-                new Claim("id", user.Id),
+                new Claim("id", user.Id.ToString()),
                 new Claim(JwtRegisteredClaimNames.Sub, user.Email),
                 new Claim(JwtRegisteredClaimNames.Email, user.Email),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
@@ -433,7 +433,7 @@ public class AuthenticationController : BaseController
             await _iEDSystemsDbContext.SaveChangesAsync(cancellationToken);
 
             // Generate a new token
-            var dbUser = await _userManager.FindByIdAsync(storedToken.UserId);
+            var dbUser = await _userManager.FindByIdAsync(storedToken.UserId.ToString());
             return await GenerateJwtToken(dbUser);
         }
         catch (Exception ex)
