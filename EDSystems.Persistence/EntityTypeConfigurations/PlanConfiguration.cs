@@ -11,7 +11,7 @@ public class PlanConfiguration : IEntityTypeConfiguration<Plan>
         builder.HasKey(plan => plan.Id);
         builder.HasIndex(plan => plan.Id).IsUnique();
         builder.Property(plan => plan.Name).HasColumnType("varchar").HasMaxLength(255);
-        builder.Property(plan => plan.Cost).HasColumnType("decimal(18,3)").HasMaxLength(5).IsRequired();
+        //builder.Property(plan => plan.Cost).HasColumnType("decimal(18,3)").HasMaxLength(5).IsRequired();
         builder.Property(plan => plan.Description).HasColumnType("varchar").HasMaxLength(500).IsRequired();
     }
 }
