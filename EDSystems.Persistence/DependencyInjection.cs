@@ -18,13 +18,14 @@ public static class DependencyInjection
         var connectionString = configuration["DbConnection"];
         services.AddDbContext<EDSystemsDbContext>(options =>
         {
-            //options.UseSqlite(connectionString);
-            options.UseNpgsql(connectionString);
-            AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+            options.UseSqlite(connectionString);
+           // options.UseNpgsql(connectionString);
+            //AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
         });
         services.AddScoped<IEDSystemsDbContext>(provider => provider.GetService<EDSystemsDbContext>());
         services.AddTransient<IDateTimeService, DateTimeService>();
         services.AddTransient<IGetExchangeRateService, GetExchangeRateService>();
+        services.AddScoped<ICacheService, CacheService>();
         //services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
         //    .AddDefaultUI()
         //    .AddEntityFrameworkStores<EDSystemsDbContext>();

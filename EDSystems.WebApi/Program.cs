@@ -16,6 +16,7 @@ builder.Services.AddPersistence(configuration);
 builder.Services.AddControllers();
 builder.Services.AddHealthChecks();
 
+
 var app = builder.Build();
 
 if (!app.Environment.IsDevelopment())
