@@ -33,13 +33,16 @@
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.5.0" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.5.0" />
     <PackageReference Include="Microsoft.OpenApi" Version="1.6.3" />
-    <PackageReference Include="AWSSDK.S3" Version="3.7.103.23" />
+    <PackageReference Include="AWSSDK.S3" Version="3.7.103.24" />
+    <PackageReference Include="StackExchange.Redis" Version="2.6.96" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Models\UserAccount\" />
     <Folder Include="wwwroot\mainimages\" />
     <Folder Include="Models\S3\" />
+    <Folder Include="Logs\" />
+    <Folder Include="Caching\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -55,5 +58,7 @@
     <None Remove="Microsoft.OpenApi" />
     <None Remove="AWSSDK.S3" />
     <None Remove="Models\S3\" />
+    <None Remove="Logs\" />
+    <None Remove="Caching\" />
   </ItemGroup>
 </Project>

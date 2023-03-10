@@ -10,6 +10,7 @@ using EDSystems.Application.EDSystems.Queries.Branches.GetBranchListWithPaginati
 using EDSystems.WebApi.Models.Branches;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.OutputCaching;
 
 namespace EDSystems.WebApi.Controllers;
 
@@ -24,6 +25,7 @@ namespace EDSystems.WebApi.Controllers;
 public class BranchController : BaseController
 {
     private readonly IMapper _mapper;
+    
 
     /// <summary>
     /// Constructor

@@ -1,6 +1,8 @@
 ﻿using System;
-using System.Text.Json;
+//using System.Text.Json;
 using EDSystems.Application.Interfaces;
+using Newtonsoft.Json;
+using RedisCacheDemo.Cache;
 using StackExchange.Redis;
 
 namespace EDSystems.Persistence.Services;
@@ -11,23 +13,29 @@ public class CacheService : ICacheService
 
     public CacheService()
     {
-        var redis = ConnectionMultiplexer.Connect("localhost:6379");
+        //string primaryEndpoint = "myrediscluster.baq32s.ng.0001.use1.cache.amazonaws.com:6379,abortConnect=false"; 
+        //string readerEndpoint = "myrediscluster-ro.baq32s.ng.0001.use1.cache.amazonaws.com:6379,abortConnect=false";
 
-        _cacheDb = redis.GetDatabase();
+        //var redis = ConnectionMultiplexer.Connect("localhost:6379");
+        //var redis = ConnectionMultiplexer.Connect($"{primaryEndpoint}, {readerEndpoint}");
+
+        _cacheDb = ConnectionHelper.Connection.GetDatabase();
+
+        //_cacheDb = redis.GetDatabase();
     }
-   
+
     public T GetData<T>(string key)
     {
         var value = _cacheDb.StringGet(key);
-        var options = new JsonSerializerOptions
-        {
-            IncludeFields = false,
-            PropertyNameCaseInsensitive = false,
-            PropertyNamingPolicy = JsonNamingPolicy.CamelCase
-        };
+        //var options = new JsonSerializerOptions
+        //{
+        //    IncludeFields = false,
+        //    PropertyNameCaseInsensitive = false,
+        //    PropertyNamingPolicy = JsonNamingPolicy.CamelCase
+        //};
         if (!string.IsNullOrEmpty(value))
         {
-            return JsonSerializer.Deserialize<T>(value, options);
+            return JsonConvert.DeserializeObject<T>(value);
         }
 
         return default;
@@ -48,14 +56,14 @@ public class CacheService : ICacheService
         bool tto = true;
         try
         {
-            var options = new JsonSerializerOptions
-            {
-                IncludeFields = true,
-                PropertyNameCaseInsensitive = true,
-                PropertyNamingPolicy = JsonNamingPolicy.CamelCase
-            };
-            var dataSeri = JsonSerializer.Serialize(value, options);
-            tto = _cacheDb.StringSet(key, JsonSerializer.Serialize(value, options), expiryTime);
+            //var options = new JsonSerializerOptions
+            //{
+            //    IncludeFields = true,
+            //    PropertyNameCaseInsensitive = true,
+            //    PropertyNamingPolicy = JsonNamingPolicy.CamelCase
+            //};
+            //var dataSeri = JsonConvert.SerializeObject(value);
+            tto = _cacheDb.StringSet(key, JsonConvert.SerializeObject(value), expiryTime);
          }
         catch (Exception ex)
         {

@@ -1,7 +1,9 @@
 using EDSystems.Application;
 using EDSystems.Persistence;
 using EDSystems.WebApi;
+using EDSystems.WebApi.Caching;
 using Serilog;
+using StackExchange.Redis;
 
 var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration;
@@ -15,7 +17,9 @@ builder.Services.AddApplication();
 builder.Services.AddPersistence(configuration);
 builder.Services.AddControllers();
 builder.Services.AddHealthChecks();
+//builder.Services.AddSingleton<IConnectionMultiplexer>(_ => ConnectionMultiplexer.Connect("localhost:6379"));
 
+//builder.Services.AddRedisOutputCache();
 
 var app = builder.Build();
 

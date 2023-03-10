@@ -10,10 +10,21 @@ namespace EDSystems.Application.EDSystems.Commands.Branches.DeleteBranch;
 public class DeleteBranchCommandHandler : IRequestHandler<DeleteBranchCommand, Unit>
 {
     private readonly IEDSystemsDbContext _dbContext;
+
     private readonly ICustomLoggingBehavoir _customLoggingBehavior;
+
     private static readonly string _ClassName = nameof(DeleteBranchCommandHandler);
 
-    public DeleteBranchCommandHandler(IEDSystemsDbContext dbContext, ICustomLoggingBehavoir customLoggingBehavior) => (_dbContext, _customLoggingBehavior) = (dbContext, customLoggingBehavior);
+    private readonly ICacheService _cacheService;
+
+    public DeleteBranchCommandHandler(IEDSystemsDbContext dbContext,
+                                      ICustomLoggingBehavoir customLoggingBehavior,
+                                      ICacheService cacheService)
+     {
+        _dbContext = dbContext;
+        _customLoggingBehavior = customLoggingBehavior;
+        _cacheService = cacheService;
+    }
 
     public async Task<Unit> Handle(DeleteBranchCommand request, CancellationToken cancellationToken)
     {
@@ -23,7 +34,11 @@ public class DeleteBranchCommandHandler : IRequestHandler<DeleteBranchCommand, U
         {
             throw new NotFoundException(nameof(Branch), request.Id);
         }
+
+        _cacheService.RemoveData($"Branch/{request.Id}");
+
         _dbContext.Branch.Remove(entity);
+
         var result = await _dbContext.SaveChangesAsync(cancellationToken);
 
         if (result > 0)

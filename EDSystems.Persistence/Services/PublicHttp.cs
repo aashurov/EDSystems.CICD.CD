@@ -1,14 +1,13 @@
 ﻿using System.Net.Http;
 
-namespace EDSystems.Persistence.Services
-{
-    public class PublicHttp
-    {
-        public HttpClient Client { get; private set; }
+namespace EDSystems.Persistence.Services;
 
-        public PublicHttp(HttpClient httpClient)
-        {
-            Client = httpClient;
-        }
+public class PublicHttp
+{
+    public HttpClient Client { get; private set; }
+
+    public PublicHttp(HttpClient httpClient)
+    {
+        Client = httpClient;
     }
 }
