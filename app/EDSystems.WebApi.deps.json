@@ -8,7 +8,7 @@
     ".NETCoreApp,Version=v7.0": {
       "EDSystems.WebApi/1.0.0": {
         "dependencies": {
-          "AWSSDK.S3": "3.7.103.21",
+          "AWSSDK.S3": "3.7.103.24",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0",
           "EDSystems.Application": "1.0.0",
           "EDSystems.Persistence": "1.0.0",
@@ -19,9 +19,10 @@
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "7.0.3",
           "Microsoft.EntityFrameworkCore.Design": "7.0.3",
           "Microsoft.NET.Build.Containers": "0.3.2",
-          "Microsoft.OpenApi": "1.6.2",
+          "Microsoft.OpenApi": "1.6.3",
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.17.2",
           "Serilog.AspNetCore": "6.1.0",
+          "StackExchange.Redis": "2.6.96",
           "Swashbuckle.AspNetCore": "6.5.0",
           "Swashbuckle.AspNetCore.Annotations": "6.5.0",
           "Swashbuckle.AspNetCore.Swagger": "6.5.0",
@@ -55,22 +56,22 @@
           }
         }
       },
-      "AWSSDK.Core/3.7.105.13": {
+      "AWSSDK.Core/3.7.105.16": {
         "runtime": {
           "lib/netcoreapp3.1/AWSSDK.Core.dll": {
             "assemblyVersion": "3.3.0.0",
-            "fileVersion": "3.7.105.13"
+            "fileVersion": "3.7.105.16"
           }
         }
       },
-      "AWSSDK.S3/3.7.103.21": {
+      "AWSSDK.S3/3.7.103.24": {
         "dependencies": {
-          "AWSSDK.Core": "3.7.105.13"
+          "AWSSDK.Core": "3.7.105.16"
         },
         "runtime": {
           "lib/netcoreapp3.1/AWSSDK.S3.dll": {
             "assemblyVersion": "3.3.0.0",
-            "fileVersion": "3.7.103.21"
+            "fileVersion": "3.7.103.24"
           }
         }
       },
@@ -689,6 +690,20 @@
           "Microsoft.Extensions.Primitives": "7.0.0"
         }
       },
+      "Microsoft.Extensions.Caching.StackExchangeRedis/7.0.3": {
+        "dependencies": {
+          "Microsoft.Extensions.Caching.Abstractions": "7.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "7.0.0",
+          "Microsoft.Extensions.Options": "7.0.1",
+          "StackExchange.Redis": "2.6.96"
+        },
+        "runtime": {
+          "lib/net7.0/Microsoft.Extensions.Caching.StackExchangeRedis.dll": {
+            "assemblyVersion": "7.0.3.0",
+            "fileVersion": "7.0.323.8009"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/2.0.0": {
         "dependencies": {
           "Microsoft.Extensions.Configuration.Abstractions": "7.0.0"
@@ -890,11 +905,11 @@
       },
       "Microsoft.NETCore.Platforms/2.0.0": {},
       "Microsoft.NETCore.Targets/1.1.0": {},
-      "Microsoft.OpenApi/1.6.2": {
+      "Microsoft.OpenApi/1.6.3": {
         "runtime": {
           "lib/netstandard2.0/Microsoft.OpenApi.dll": {
-            "assemblyVersion": "1.6.2.0",
-            "fileVersion": "1.6.2.0"
+            "assemblyVersion": "1.6.3.0",
+            "fileVersion": "1.6.3.0"
           }
         }
       },
@@ -951,6 +966,17 @@
           "lib/net7.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll": {
             "assemblyVersion": "7.0.3.0",
             "fileVersion": "7.0.3.0"
+          }
+        }
+      },
+      "Pipelines.Sockets.Unofficial/2.2.2": {
+        "dependencies": {
+          "System.IO.Pipelines": "5.0.1"
+        },
+        "runtime": {
+          "lib/net5.0/Pipelines.Sockets.Unofficial.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "2.2.2.34088"
           }
         }
       },
@@ -1266,6 +1292,17 @@
           }
         }
       },
+      "StackExchange.Redis/2.6.96": {
+        "dependencies": {
+          "Pipelines.Sockets.Unofficial": "2.2.2"
+        },
+        "runtime": {
+          "lib/net5.0/StackExchange.Redis.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.6.96.30123"
+          }
+        }
+      },
       "Swashbuckle.AspNetCore/6.5.0": {
         "dependencies": {
           "Microsoft.Extensions.ApiDescription.Server": "6.0.5",
@@ -1287,7 +1324,7 @@
       },
       "Swashbuckle.AspNetCore.Swagger/6.5.0": {
         "dependencies": {
-          "Microsoft.OpenApi": "1.6.2"
+          "Microsoft.OpenApi": "1.6.3"
         },
         "runtime": {
           "lib/net7.0/Swashbuckle.AspNetCore.Swagger.dll": {
@@ -1498,6 +1535,7 @@
           "System.Runtime": "4.3.0"
         }
       },
+      "System.IO.Pipelines/5.0.1": {},
       "System.Linq/4.3.0": {
         "dependencies": {
           "System.Collections": "4.3.0",
@@ -2003,6 +2041,7 @@
           "EDSystems.Application": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.3",
           "Microsoft.EntityFrameworkCore.Sqlite": "7.0.3",
+          "Microsoft.Extensions.Caching.StackExchangeRedis": "7.0.3",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.3",
           "Telegram.Bot": "18.0.0"
         },
@@ -2032,19 +2071,19 @@
       "path": "automapper.extensions.microsoft.dependencyinjection/12.0.0",
       "hashPath": "automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512"
     },
-    "AWSSDK.Core/3.7.105.13": {
+    "AWSSDK.Core/3.7.105.16": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-2jpBfc3xPpEce16QWJBddv6FXycE2QApyI+iLytkwy0B9Rt5xEejdeN3r4Z+Nh0UOdEuQ49nKVyFR9zV/vxYmA==",
-      "path": "awssdk.core/3.7.105.13",
-      "hashPath": "awssdk.core.3.7.105.13.nupkg.sha512"
+      "sha512": "sha512-a5bazeQFYqN9wQahEOYrK41AZ39y3Xxm1zfxC8sIn7zjaLk2DVCk4LDYcApM2EdRjSK5al+gBHXe7O8cS/LcaA==",
+      "path": "awssdk.core/3.7.105.16",
+      "hashPath": "awssdk.core.3.7.105.16.nupkg.sha512"
     },
-    "AWSSDK.S3/3.7.103.21": {
+    "AWSSDK.S3/3.7.103.24": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-joqvaKufn+JgN7hwplLGLFv+wS0tcKY6686JC7R0vt16cjet0ojUQZkbxMmZBoQav5tte+1Ts3j/7UQGK9hWyQ==",
-      "path": "awssdk.s3/3.7.103.21",
-      "hashPath": "awssdk.s3.3.7.103.21.nupkg.sha512"
+      "sha512": "sha512-hhf8Qe1N7yfZTQ9z+Ddo+9C2rZSe41NNcrhPW83I42bKRtWUJ0pxGO6hK8FMsP6sBkXRe91C8hpkcjO2sgbzjw==",
+      "path": "awssdk.s3/3.7.103.24",
+      "hashPath": "awssdk.s3.3.7.103.24.nupkg.sha512"
     },
     "BCrypt.Net-Next/4.0.3": {
       "type": "package",
@@ -2557,6 +2596,13 @@
       "path": "microsoft.extensions.caching.memory/7.0.0",
       "hashPath": "microsoft.extensions.caching.memory.7.0.0.nupkg.sha512"
     },
+    "Microsoft.Extensions.Caching.StackExchangeRedis/7.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yCFYyTwGXrYrJYEIziJkOIpaCKQ8zO/ZN+gB5rLiFui8zpyy58VEeiFwsNRKaE1oRqOK4lpf7w+igEFR0X8mww==",
+      "path": "microsoft.extensions.caching.stackexchangeredis/7.0.3",
+      "hashPath": "microsoft.extensions.caching.stackexchangeredis.7.0.3.nupkg.sha512"
+    },
     "Microsoft.Extensions.Configuration/2.0.0": {
       "type": "package",
       "serviceable": true,
@@ -2774,12 +2820,12 @@
       "path": "microsoft.netcore.targets/1.1.0",
       "hashPath": "microsoft.netcore.targets.1.1.0.nupkg.sha512"
     },
-    "Microsoft.OpenApi/1.6.2": {
+    "Microsoft.OpenApi/1.6.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ctY35nqtVn0orK9WaBZeDlBEzip2+dUsB0wMvI2z5pQDZxQ3NuSQb9Eo6UqWSzGwLje/7tEWKPzuxDX2TrRyvQ==",
-      "path": "microsoft.openapi/1.6.2",
-      "hashPath": "microsoft.openapi.1.6.2.nupkg.sha512"
+      "sha512": "sha512-HQLJnNMXbt7D+VuJFBFaHMlkxKH1z3vLRrR3wiVrSOnwAXRQxHBLzgH5FjNSMKMWeyj3nY0AnM3OSACyGZUMZw==",
+      "path": "microsoft.openapi/1.6.3",
+      "hashPath": "microsoft.openapi.1.6.3.nupkg.sha512"
     },
     "Microsoft.VisualStudio.Azure.Containers.Tools.Targets/1.17.2": {
       "type": "package",
@@ -2829,6 +2875,13 @@
       "sha512": "sha512-3iVz7vcPAZt6iBSjJ8XyjtIP19jilNOJqTiTCs2UHWhpTyP+FbNhnzCBE/oyD3n49McmmenjKpva+yTy7q1z/g==",
       "path": "npgsql.entityframeworkcore.postgresql/7.0.3",
       "hashPath": "npgsql.entityframeworkcore.postgresql.7.0.3.nupkg.sha512"
+    },
+    "Pipelines.Sockets.Unofficial/2.2.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Bhk0FWxH1paI+18zr1g5cTL+ebeuDcBCR+rRFO+fKEhretgjs7MF2Mc1P64FGLecWp4zKCUOPzngBNrqVyY7Zg==",
+      "path": "pipelines.sockets.unofficial/2.2.2",
+      "hashPath": "pipelines.sockets.unofficial.2.2.2.nupkg.sha512"
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "type": "package",
@@ -3033,6 +3086,13 @@
       "path": "sqlitepclraw.provider.e_sqlite3/2.1.4",
       "hashPath": "sqlitepclraw.provider.e_sqlite3.2.1.4.nupkg.sha512"
     },
+    "StackExchange.Redis/2.6.96": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JDj94bTwBZ6zA1vknEYJppRXRejTnl5u2z6cRBQ0DJ+Uy94qvn0XsQZ2M+1/VkqtxQ+LUU1h4JZWwcvVojGiQg==",
+      "path": "stackexchange.redis/2.6.96",
+      "hashPath": "stackexchange.redis.2.6.96.nupkg.sha512"
+    },
     "Swashbuckle.AspNetCore/6.5.0": {
       "type": "package",
       "serviceable": true,
@@ -3221,6 +3281,13 @@
       "sha512": "sha512-6QOb2XFLch7bEc4lIcJH49nJN2HV+OC3fHDgsLVsBVBk3Y4hFAnOBGzJ2lUu7CyDDFo9IBWkSsnbkT6IBwwiMw==",
       "path": "system.io.filesystem.primitives/4.3.0",
       "hashPath": "system.io.filesystem.primitives.4.3.0.nupkg.sha512"
+    },
+    "System.IO.Pipelines/5.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qEePWsaq9LoEEIqhbGe6D5J8c9IqQOUuTzzV6wn1POlfdLkJliZY3OlB0j0f17uMWlqZYjH7txj+2YbyrIA8Yg==",
+      "path": "system.io.pipelines/5.0.1",
+      "hashPath": "system.io.pipelines.5.0.1.nupkg.sha512"
     },
     "System.Linq/4.3.0": {
       "type": "package",

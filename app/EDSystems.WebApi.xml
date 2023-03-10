@@ -4,6 +4,21 @@
         <name>EDSystems.WebApi</name>
     </assembly>
     <members>
+        <member name="T:EDSystems.WebApi.Caching.IOutputCacheStore">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:EDSystems.WebApi.Caching.RedisOutputCacheServiceCollectionExtensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:EDSystems.WebApi.Caching.RedisOutputCacheStore">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="T:EDSystems.WebApi.Controllers.AccountController">
             <summary>
             Accounts
