@@ -119,6 +119,7 @@ dotnet tool install --global dotnet-ef
 dotnet ef migrations add MyFirstMigration
 dotnet ef database update
 
+cd EDSystems.Persistence
 dotnet ef --startup-project ../EDSystems.WebApi/ migrations add myMigration01
 dotnet ef --startup-project ../EDSystems.WebApi/ database update
 

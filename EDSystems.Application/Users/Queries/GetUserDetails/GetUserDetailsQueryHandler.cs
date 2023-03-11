@@ -20,8 +20,9 @@ public class GetUserDetailsQueryHandler : IRequestHandler<GetUserDetailsQuery, U
     public async Task<UserDetailsVm> Handle(GetUserDetailsQuery request, CancellationToken cancellationToken)
     {
         var entity = await _userManager.Users
-                                            .Include(p => p.UserRoles).ThenInclude(e => e.Role)
+                                            .Include(p => p.UserRoles).ThenInclude(e => e.Role).Include(r=>r.UserClaim)
                                             .FirstOrDefaultAsync(userDetails => userDetails.Id == request.Id, cancellationToken);
+
         if (entity == null)
         {
             throw new NotFoundException(nameof(User), request.Id);

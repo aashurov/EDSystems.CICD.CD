@@ -1,4 +1,5 @@
 ﻿//using System.Text.Json.Serialization;
+using EDSystems.Domain.IdentityUserEntities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
@@ -21,6 +22,8 @@ public class User : IdentityUser<int>
 
     [JsonIgnore]
     public virtual ICollection<UserRole> UserRoles { get; set; }
+    [JsonIgnore]
+    public virtual ICollection<UserClaim> UserClaim { get; set; }
 
     public DateTime DateCreated { get; set; }
 
