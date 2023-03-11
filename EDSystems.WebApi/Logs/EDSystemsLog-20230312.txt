@@ -2779,3 +2779,948 @@ ORDER BY t."Id", t0."UserId", t0."RoleId", t0."Id"
 2023-03-12 00:24:16.937 +05:00 [INF] Executed action EDSystems.WebApi.Controllers.UserManagerController.Get (EDSystems.WebApi) in 1331.249ms
 2023-03-12 00:24:16.937 +05:00 [INF] Executed endpoint 'EDSystems.WebApi.Controllers.UserManagerController.Get (EDSystems.WebApi)'
 2023-03-12 00:24:16.938 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/api/UserManager/1 - - - 200 3405 application/json;+charset=utf-8 1385.8751ms
+2023-03-12 00:57:53.435 +05:00 [WRN] There are multiple relationships between 'ParcelOwners' and 'User' without configured foreign key properties. This will cause Entity Framework to create shadow properties on 'ParcelOwners' with names dependent on the discovery order. Consider configuring the foreign key properties using the [ForeignKey] attribute or in 'OnModelCreating'.
+2023-03-12 00:57:53.537 +05:00 [WRN] The foreign key property 'AccountHistory.PayerId1' was created in shadow state because a conflicting property with the simple name 'PayerId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2023-03-12 00:57:53.538 +05:00 [WRN] The foreign key property 'ParcelOwners.RecepientCourierId1' was created in shadow state because a conflicting property with the simple name 'RecepientCourierId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2023-03-12 00:57:53.538 +05:00 [WRN] The foreign key property 'ParcelOwners.RecepientId1' was created in shadow state because a conflicting property with the simple name 'RecepientId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2023-03-12 00:57:53.538 +05:00 [WRN] The foreign key property 'ParcelOwners.RecepientStaffId1' was created in shadow state because a conflicting property with the simple name 'RecepientStaffId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2023-03-12 00:57:53.538 +05:00 [WRN] The foreign key property 'ParcelOwners.SenderCourierId1' was created in shadow state because a conflicting property with the simple name 'SenderCourierId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2023-03-12 00:57:53.538 +05:00 [WRN] The foreign key property 'ParcelOwners.SenderId1' was created in shadow state because a conflicting property with the simple name 'SenderId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2023-03-12 00:57:53.538 +05:00 [WRN] The foreign key property 'ParcelOwners.SenderStaffId1' was created in shadow state because a conflicting property with the simple name 'SenderStaffId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2023-03-12 00:57:53.538 +05:00 [WRN] The foreign key property 'UserAccount.UserId1' was created in shadow state because a conflicting property with the simple name 'UserId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2023-03-12 00:57:53.538 +05:00 [WRN] The foreign key property 'UserAccountHistory.UserId1' was created in shadow state because a conflicting property with the simple name 'UserId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2023-03-12 00:57:56.123 +05:00 [INF] Executed DbCommand (224ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+REVOKE CONNECT ON DATABASE edsystemsdatabase FROM PUBLIC;
+SELECT pg_terminate_backend(pg_stat_activity.pid) FROM pg_stat_activity WHERE datname = 'edsystemsdatabase';
+2023-03-12 00:57:56.332 +05:00 [INF] Executed DbCommand (206ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DROP DATABASE edsystemsdatabase;
+2023-03-12 00:57:57.013 +05:00 [WRN] There are multiple relationships between 'ParcelOwners' and 'User' without configured foreign key properties. This will cause Entity Framework to create shadow properties on 'ParcelOwners' with names dependent on the discovery order. Consider configuring the foreign key properties using the [ForeignKey] attribute or in 'OnModelCreating'.
+2023-03-12 00:57:57.061 +05:00 [WRN] The foreign key property 'AccountHistory.PayerId1' was created in shadow state because a conflicting property with the simple name 'PayerId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2023-03-12 00:57:57.061 +05:00 [WRN] The foreign key property 'ParcelOwners.RecepientCourierId1' was created in shadow state because a conflicting property with the simple name 'RecepientCourierId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2023-03-12 00:57:57.061 +05:00 [WRN] The foreign key property 'ParcelOwners.RecepientId1' was created in shadow state because a conflicting property with the simple name 'RecepientId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2023-03-12 00:57:57.061 +05:00 [WRN] The foreign key property 'ParcelOwners.RecepientStaffId1' was created in shadow state because a conflicting property with the simple name 'RecepientStaffId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2023-03-12 00:57:57.061 +05:00 [WRN] The foreign key property 'ParcelOwners.SenderCourierId1' was created in shadow state because a conflicting property with the simple name 'SenderCourierId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2023-03-12 00:57:57.061 +05:00 [WRN] The foreign key property 'ParcelOwners.SenderId1' was created in shadow state because a conflicting property with the simple name 'SenderId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2023-03-12 00:57:57.061 +05:00 [WRN] The foreign key property 'ParcelOwners.SenderStaffId1' was created in shadow state because a conflicting property with the simple name 'SenderStaffId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2023-03-12 00:57:57.061 +05:00 [WRN] The foreign key property 'UserAccount.UserId1' was created in shadow state because a conflicting property with the simple name 'UserId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2023-03-12 00:57:57.061 +05:00 [WRN] The foreign key property 'UserAccountHistory.UserId1' was created in shadow state because a conflicting property with the simple name 'UserId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2023-03-12 00:57:57.850 +05:00 [INF] Executed DbCommand (228ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE DATABASE edsystemsdatabase;
+2023-03-12 00:57:59.439 +05:00 [INF] Executed DbCommand (185ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "AspNetRoles" (
+    "Id" integer GENERATED BY DEFAULT AS IDENTITY,
+    "NormalizedName" character varying(256) NULL,
+    "ConcurrencyStamp" text NULL,
+    "Name" character varying(256) NULL,
+    CONSTRAINT "PK_AspNetRoles" PRIMARY KEY ("Id")
+);
+2023-03-12 00:57:59.623 +05:00 [INF] Executed DbCommand (182ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Branch" (
+    "Id" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Name" varchar NOT NULL,
+    "Country" varchar NOT NULL,
+    "Code" text NULL,
+    "City" varchar NOT NULL,
+    "Address" varchar NOT NULL,
+    "Email" varchar NULL,
+    "Phone" varchar NULL,
+    "DateCreated" timestamp without time zone NOT NULL,
+    "DateUpdated" timestamp without time zone NULL,
+    "CreatedBy" text NULL,
+    "ModifiedBy" text NULL,
+    CONSTRAINT "PK_Branch" PRIMARY KEY ("Id")
+);
+2023-03-12 00:57:59.807 +05:00 [INF] Executed DbCommand (183ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Currency" (
+    "Id" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Name" varchar NULL,
+    "Code" varchar NULL,
+    "Number" integer NOT NULL,
+    "Country" varchar NULL,
+    "DateCreated" timestamp without time zone NOT NULL,
+    "DateUpdated" timestamp without time zone NULL,
+    "CreatedBy" text NULL,
+    "ModifiedBy" text NULL,
+    CONSTRAINT "PK_Currency" PRIMARY KEY ("Id")
+);
+2023-03-12 00:57:59.989 +05:00 [INF] Executed DbCommand (181ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Expenses" (
+    "Id" integer GENERATED BY DEFAULT AS IDENTITY,
+    CONSTRAINT "PK_Expenses" PRIMARY KEY ("Id")
+);
+2023-03-12 00:58:00.171 +05:00 [INF] Executed DbCommand (181ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "ExpenseType" (
+    "Id" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Name" text NULL,
+    "Description" text NULL,
+    "DateCreated" timestamp without time zone NOT NULL,
+    "DateUpdated" timestamp without time zone NULL,
+    "CreatedBy" text NULL,
+    "ModifiedBy" text NULL,
+    CONSTRAINT "PK_ExpenseType" PRIMARY KEY ("Id")
+);
+2023-03-12 00:58:00.354 +05:00 [INF] Executed DbCommand (182ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Parcel" (
+    "Id" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Code" integer NOT NULL,
+    "DateCreated" timestamp without time zone NOT NULL,
+    "DateUpdated" timestamp without time zone NULL,
+    "CreatedBy" text NULL,
+    "ModifiedBy" text NULL,
+    CONSTRAINT "PK_Parcel" PRIMARY KEY ("Id")
+);
+2023-03-12 00:58:00.536 +05:00 [INF] Executed DbCommand (181ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Plan" (
+    "Id" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Name" varchar NULL,
+    "Cost" numeric NOT NULL,
+    "Description" varchar NOT NULL,
+    "DateCreated" timestamp without time zone NOT NULL,
+    "DateUpdated" timestamp without time zone NULL,
+    "CreatedBy" text NULL,
+    "ModifiedBy" text NULL,
+    CONSTRAINT "PK_Plan" PRIMARY KEY ("Id")
+);
+2023-03-12 00:58:00.719 +05:00 [INF] Executed DbCommand (182ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "RefreshToken" (
+    "Id" integer GENERATED BY DEFAULT AS IDENTITY,
+    "UserId" integer NOT NULL,
+    "Token" text NULL,
+    "JwtId" text NULL,
+    "IsUsed" boolean NOT NULL,
+    "IsRevoked" boolean NOT NULL,
+    "AddedDateTime" timestamp without time zone NOT NULL,
+    "ExpiryDateTime" timestamp without time zone NOT NULL,
+    CONSTRAINT "PK_RefreshToken" PRIMARY KEY ("Id")
+);
+2023-03-12 00:58:00.905 +05:00 [INF] Executed DbCommand (183ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Status" (
+    "Id" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Name" text NULL,
+    "Description" text NULL,
+    "DateCreated" timestamp without time zone NOT NULL,
+    "DateUpdated" timestamp without time zone NULL,
+    "CreatedBy" text NULL,
+    "ModifiedBy" text NULL,
+    CONSTRAINT "PK_Status" PRIMARY KEY ("Id")
+);
+2023-03-12 00:58:01.088 +05:00 [INF] Executed DbCommand (182ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Tokens" (
+    "Id" integer GENERATED BY DEFAULT AS IDENTITY,
+    "TokenId" text NULL,
+    "RefreshToken" text NULL,
+    "DateCreated" timestamp without time zone NOT NULL,
+    "DateUpdated" timestamp without time zone NULL,
+    "CreatedBy" text NULL,
+    "ModifiedBy" text NULL,
+    CONSTRAINT "PK_Tokens" PRIMARY KEY ("Id")
+);
+2023-03-12 00:58:01.271 +05:00 [INF] Executed DbCommand (182ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "AspNetRoleClaims" (
+    "Id" integer GENERATED BY DEFAULT AS IDENTITY,
+    "RoleId" integer NOT NULL,
+    "ClaimType" text NULL,
+    "ClaimValue" text NULL,
+    CONSTRAINT "PK_AspNetRoleClaims" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_AspNetRoleClaims_AspNetRoles_RoleId" FOREIGN KEY ("RoleId") REFERENCES "AspNetRoles" ("Id") ON DELETE CASCADE
+);
+2023-03-12 00:58:01.464 +05:00 [INF] Executed DbCommand (192ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Account" (
+    "Id" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Number" varchar NULL,
+    "Name" varchar NULL,
+    "Balance" numeric(18,3) NOT NULL,
+    "BranchId" integer NOT NULL,
+    "CurrencyId" integer NOT NULL,
+    "DateCreated" timestamp without time zone NOT NULL,
+    "DateUpdated" timestamp without time zone NULL,
+    "CreatedBy" text NULL,
+    "ModifiedBy" text NULL,
+    CONSTRAINT "PK_Account" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_Account_Branch_BranchId" FOREIGN KEY ("BranchId") REFERENCES "Branch" ("Id") ON DELETE CASCADE,
+    CONSTRAINT "FK_Account_Currency_CurrencyId" FOREIGN KEY ("CurrencyId") REFERENCES "Currency" ("Id") ON DELETE CASCADE
+);
+2023-03-12 00:58:01.647 +05:00 [INF] Executed DbCommand (182ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "ParcelBranch" (
+    "Id" integer GENERATED BY DEFAULT AS IDENTITY,
+    "ToBranchId" integer NOT NULL,
+    "FromBranchId" integer NOT NULL,
+    "ParcelId" integer NOT NULL,
+    "DateCreated" timestamp without time zone NOT NULL,
+    "DateUpdated" timestamp without time zone NULL,
+    "CreatedBy" text NULL,
+    "ModifiedBy" text NULL,
+    CONSTRAINT "PK_ParcelBranch" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_ParcelBranch_Branch_FromBranchId" FOREIGN KEY ("FromBranchId") REFERENCES "Branch" ("Id") ON DELETE SET NULL,
+    CONSTRAINT "FK_ParcelBranch_Branch_ToBranchId" FOREIGN KEY ("ToBranchId") REFERENCES "Branch" ("Id") ON DELETE SET NULL,
+    CONSTRAINT "FK_ParcelBranch_Parcel_ParcelId" FOREIGN KEY ("ParcelId") REFERENCES "Parcel" ("Id") ON DELETE CASCADE
+);
+2023-03-12 00:58:01.829 +05:00 [INF] Executed DbCommand (181ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "ParcelCost" (
+    "Id" integer GENERATED BY DEFAULT AS IDENTITY,
+    "StateDeliveryToBranch" boolean NOT NULL,
+    "StatePickingUp" boolean NOT NULL,
+    "StateDeliveryToPoint" boolean NOT NULL,
+    "StateBuyout" boolean NOT NULL,
+    "CostPickingUp" numeric(18,3) NOT NULL,
+    "CostDeliveryToPoint" numeric(18,3) NOT NULL,
+    "CostDeliveryToBranch" numeric(18,3) NOT NULL,
+    "CostBuyout" numeric NOT NULL,
+    "CurrencyId" integer NOT NULL,
+    "ParcelId" integer NOT NULL,
+    "DateCreated" timestamp without time zone NOT NULL,
+    "DateUpdated" timestamp without time zone NULL,
+    "CreatedBy" text NULL,
+    "ModifiedBy" text NULL,
+    CONSTRAINT "PK_ParcelCost" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_ParcelCost_Currency_CurrencyId" FOREIGN KEY ("CurrencyId") REFERENCES "Currency" ("Id") ON DELETE CASCADE,
+    CONSTRAINT "FK_ParcelCost_Parcel_ParcelId" FOREIGN KEY ("ParcelId") REFERENCES "Parcel" ("Id") ON DELETE CASCADE
+);
+2023-03-12 00:58:02.011 +05:00 [INF] Executed DbCommand (182ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "ParcelDescription" (
+    "Id" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Description" varchar NULL,
+    "ParcelId" integer NOT NULL,
+    "DateCreated" timestamp without time zone NOT NULL,
+    "DateUpdated" timestamp without time zone NULL,
+    "CreatedBy" text NULL,
+    "ModifiedBy" text NULL,
+    CONSTRAINT "PK_ParcelDescription" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_ParcelDescription_Parcel_ParcelId" FOREIGN KEY ("ParcelId") REFERENCES "Parcel" ("Id") ON DELETE CASCADE
+);
+2023-03-12 00:58:02.195 +05:00 [INF] Executed DbCommand (183ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "ParcelImage" (
+    "Id" integer GENERATED BY DEFAULT AS IDENTITY,
+    "ImageName" varchar NULL,
+    "ImageBytes" varchar NULL,
+    "ParcelId" integer NULL,
+    "DateCreated" timestamp without time zone NOT NULL,
+    "DateUpdated" timestamp without time zone NULL,
+    "CreatedBy" text NULL,
+    "ModifiedBy" text NULL,
+    CONSTRAINT "PK_ParcelImage" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_ParcelImage_Parcel_ParcelId" FOREIGN KEY ("ParcelId") REFERENCES "Parcel" ("Id") ON DELETE CASCADE
+);
+2023-03-12 00:58:02.381 +05:00 [INF] Executed DbCommand (184ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "ParcelItem" (
+    "Id" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Name" varchar(200) NULL,
+    "Description" text NULL,
+    "Cost" varchar(200) NULL,
+    "CurrencyId" integer NOT NULL,
+    "ParcelId" integer NULL,
+    "DateCreated" timestamp without time zone NOT NULL,
+    "DateUpdated" timestamp without time zone NULL,
+    "CreatedBy" text NULL,
+    "ModifiedBy" text NULL,
+    CONSTRAINT "PK_ParcelItem" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_ParcelItem_Currency_CurrencyId" FOREIGN KEY ("CurrencyId") REFERENCES "Currency" ("Id") ON DELETE CASCADE,
+    CONSTRAINT "FK_ParcelItem_Parcel_ParcelId" FOREIGN KEY ("ParcelId") REFERENCES "Parcel" ("Id") ON DELETE CASCADE
+);
+2023-03-12 00:58:02.566 +05:00 [INF] Executed DbCommand (184ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "ParcelJob" (
+    "Id" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Cost" numeric(18,3) NOT NULL,
+    "CourierId" text NULL,
+    "JobType" varchar NULL,
+    "ParcelId" integer NOT NULL,
+    "PaymentState" boolean NOT NULL,
+    "DateCreated" timestamp without time zone NOT NULL,
+    "DateUpdated" timestamp without time zone NULL,
+    "CreatedBy" text NULL,
+    "ModifiedBy" text NULL,
+    CONSTRAINT "PK_ParcelJob" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_ParcelJob_Parcel_ParcelId" FOREIGN KEY ("ParcelId") REFERENCES "Parcel" ("Id") ON DELETE CASCADE
+);
+2023-03-12 00:58:02.749 +05:00 [INF] Executed DbCommand (183ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "ParcelSize" (
+    "Id" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Weight" numeric(18,3) NOT NULL,
+    "NumberOfPoint" int NOT NULL,
+    "ParcelId" integer NOT NULL,
+    "DateCreated" timestamp without time zone NOT NULL,
+    "DateUpdated" timestamp without time zone NULL,
+    "CreatedBy" text NULL,
+    "ModifiedBy" text NULL,
+    CONSTRAINT "PK_ParcelSize" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_ParcelSize_Parcel_ParcelId" FOREIGN KEY ("ParcelId") REFERENCES "Parcel" ("Id") ON DELETE CASCADE
+);
+2023-03-12 00:58:02.931 +05:00 [INF] Executed DbCommand (182ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "ParcelSound" (
+    "Id" integer GENERATED BY DEFAULT AS IDENTITY,
+    "SoundName" varchar NULL,
+    "SoundBytes" varchar NULL,
+    "ParcelId" integer NULL,
+    "DateCreated" timestamp without time zone NOT NULL,
+    "DateUpdated" timestamp without time zone NULL,
+    "CreatedBy" text NULL,
+    "ModifiedBy" text NULL,
+    CONSTRAINT "PK_ParcelSound" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_ParcelSound_Parcel_ParcelId" FOREIGN KEY ("ParcelId") REFERENCES "Parcel" ("Id") ON DELETE CASCADE
+);
+2023-03-12 00:58:03.115 +05:00 [INF] Executed DbCommand (183ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "ParcelPlan" (
+    "Id" integer GENERATED BY DEFAULT AS IDENTITY,
+    "PlanId" integer NOT NULL,
+    "ParcelId" integer NOT NULL,
+    "DateCreated" timestamp without time zone NOT NULL,
+    "DateUpdated" timestamp without time zone NULL,
+    "CreatedBy" text NULL,
+    "ModifiedBy" text NULL,
+    CONSTRAINT "PK_ParcelPlan" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_ParcelPlan_Parcel_ParcelId" FOREIGN KEY ("ParcelId") REFERENCES "Parcel" ("Id") ON DELETE CASCADE,
+    CONSTRAINT "FK_ParcelPlan_Plan_PlanId" FOREIGN KEY ("PlanId") REFERENCES "Plan" ("Id") ON DELETE SET NULL
+);
+2023-03-12 00:58:03.298 +05:00 [INF] Executed DbCommand (182ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "ParcelStatus" (
+    "Id" integer GENERATED BY DEFAULT AS IDENTITY,
+    "StatusId" integer NULL,
+    "ParcelId" integer NULL,
+    "DateCreated" timestamp without time zone NOT NULL,
+    "DateUpdated" timestamp without time zone NULL,
+    "CreatedBy" text NULL,
+    "ModifiedBy" text NULL,
+    CONSTRAINT "PK_ParcelStatus" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_ParcelStatus_Parcel_ParcelId" FOREIGN KEY ("ParcelId") REFERENCES "Parcel" ("Id") ON DELETE CASCADE,
+    CONSTRAINT "FK_ParcelStatus_Status_StatusId" FOREIGN KEY ("StatusId") REFERENCES "Status" ("Id") ON DELETE SET NULL
+);
+2023-03-12 00:58:03.481 +05:00 [INF] Executed DbCommand (182ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "AspNetUsers" (
+    "Id" integer GENERATED BY DEFAULT AS IDENTITY,
+    "FirstName" text NULL,
+    "LastName" text NULL,
+    "Address" text NULL,
+    "UserNameT" text NULL,
+    "ChatId" bigint NOT NULL,
+    "DateCreated" timestamp without time zone NOT NULL,
+    "DateUpdated" timestamp without time zone NULL,
+    "ParcelJobId" integer NULL,
+    "UserName" character varying(256) NULL,
+    "NormalizedUserName" character varying(256) NULL,
+    "Email" character varying(256) NULL,
+    "NormalizedEmail" character varying(256) NULL,
+    "EmailConfirmed" boolean NOT NULL,
+    "PasswordHash" text NULL,
+    "SecurityStamp" text NULL,
+    "ConcurrencyStamp" text NULL,
+    "PhoneNumber" text NULL,
+    "PhoneNumberConfirmed" boolean NOT NULL,
+    "TwoFactorEnabled" boolean NOT NULL,
+    "LockoutEnd" timestamp with time zone NULL,
+    "LockoutEnabled" boolean NOT NULL,
+    "AccessFailedCount" integer NOT NULL,
+    CONSTRAINT "PK_AspNetUsers" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_AspNetUsers_ParcelJob_ParcelJobId" FOREIGN KEY ("ParcelJobId") REFERENCES "ParcelJob" ("Id")
+);
+2023-03-12 00:58:03.664 +05:00 [INF] Executed DbCommand (183ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "AccountHistory" (
+    "Id" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Amount" numeric(18,3) NOT NULL,
+    "JobType" bool NOT NULL,
+    "BranchAccountId" integer NOT NULL,
+    "CurrencyId" integer NOT NULL,
+    "ParcelId" integer NOT NULL,
+    "PayerId" text NULL,
+    "PayerId1" integer NULL,
+    "DateCreated" timestamp without time zone NOT NULL,
+    "DateUpdated" timestamp without time zone NULL,
+    "CreatedBy" text NULL,
+    "ModifiedBy" text NULL,
+    CONSTRAINT "PK_AccountHistory" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_AccountHistory_Account_BranchAccountId" FOREIGN KEY ("BranchAccountId") REFERENCES "Account" ("Id") ON DELETE CASCADE,
+    CONSTRAINT "FK_AccountHistory_AspNetUsers_PayerId1" FOREIGN KEY ("PayerId1") REFERENCES "AspNetUsers" ("Id"),
+    CONSTRAINT "FK_AccountHistory_Currency_CurrencyId" FOREIGN KEY ("CurrencyId") REFERENCES "Currency" ("Id") ON DELETE CASCADE,
+    CONSTRAINT "FK_AccountHistory_Parcel_ParcelId" FOREIGN KEY ("ParcelId") REFERENCES "Parcel" ("Id") ON DELETE CASCADE
+);
+2023-03-12 00:58:03.846 +05:00 [INF] Executed DbCommand (182ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "AspNetUserClaims" (
+    "Id" integer GENERATED BY DEFAULT AS IDENTITY,
+    "UserId" integer NOT NULL,
+    "ClaimType" text NULL,
+    "ClaimValue" text NULL,
+    CONSTRAINT "PK_AspNetUserClaims" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_AspNetUserClaims_AspNetUsers_UserId" FOREIGN KEY ("UserId") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE
+);
+2023-03-12 00:58:04.029 +05:00 [INF] Executed DbCommand (182ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "AspNetUserLogins" (
+    "LoginProvider" text NOT NULL,
+    "ProviderKey" text NOT NULL,
+    "ProviderDisplayName" text NULL,
+    "UserId" integer NOT NULL,
+    CONSTRAINT "PK_AspNetUserLogins" PRIMARY KEY ("LoginProvider", "ProviderKey"),
+    CONSTRAINT "FK_AspNetUserLogins_AspNetUsers_UserId" FOREIGN KEY ("UserId") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE
+);
+2023-03-12 00:58:04.211 +05:00 [INF] Executed DbCommand (181ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "AspNetUserRoles" (
+    "UserId" integer NOT NULL,
+    "RoleId" integer NOT NULL,
+    CONSTRAINT "PK_AspNetUserRoles" PRIMARY KEY ("UserId", "RoleId"),
+    CONSTRAINT "FK_AspNetUserRoles_AspNetRoles_RoleId" FOREIGN KEY ("RoleId") REFERENCES "AspNetRoles" ("Id") ON DELETE CASCADE,
+    CONSTRAINT "FK_AspNetUserRoles_AspNetUsers_UserId" FOREIGN KEY ("UserId") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE
+);
+2023-03-12 00:58:04.393 +05:00 [INF] Executed DbCommand (182ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "AspNetUserTokens" (
+    "UserId" integer NOT NULL,
+    "LoginProvider" text NOT NULL,
+    "Name" text NOT NULL,
+    "Value" text NULL,
+    CONSTRAINT "PK_AspNetUserTokens" PRIMARY KEY ("UserId", "LoginProvider", "Name"),
+    CONSTRAINT "FK_AspNetUserTokens_AspNetUsers_UserId" FOREIGN KEY ("UserId") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE
+);
+2023-03-12 00:58:04.579 +05:00 [INF] Executed DbCommand (185ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "ParcelOwners" (
+    "Id" integer GENERATED BY DEFAULT AS IDENTITY,
+    "SenderId" text NULL,
+    "SenderId1" integer NULL,
+    "RecepientId" text NULL,
+    "RecepientId1" integer NULL,
+    "RecepientStaffId" text NULL,
+    "RecepientStaffId1" integer NULL,
+    "SenderStaffId" text NULL,
+    "SenderStaffId1" integer NULL,
+    "RecepientCourierId" text NULL,
+    "RecepientCourierId1" integer NULL,
+    "SenderCourierId" text NULL,
+    "SenderCourierId1" integer NULL,
+    "ParcelId" integer NOT NULL,
+    "DateCreated" timestamp without time zone NOT NULL,
+    "DateUpdated" timestamp without time zone NULL,
+    "CreatedBy" text NULL,
+    "ModifiedBy" text NULL,
+    CONSTRAINT "PK_ParcelOwners" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_ParcelOwners_AspNetUsers_RecepientCourierId1" FOREIGN KEY ("RecepientCourierId1") REFERENCES "AspNetUsers" ("Id"),
+    CONSTRAINT "FK_ParcelOwners_AspNetUsers_RecepientId1" FOREIGN KEY ("RecepientId1") REFERENCES "AspNetUsers" ("Id"),
+    CONSTRAINT "FK_ParcelOwners_AspNetUsers_RecepientStaffId1" FOREIGN KEY ("RecepientStaffId1") REFERENCES "AspNetUsers" ("Id"),
+    CONSTRAINT "FK_ParcelOwners_AspNetUsers_SenderCourierId1" FOREIGN KEY ("SenderCourierId1") REFERENCES "AspNetUsers" ("Id"),
+    CONSTRAINT "FK_ParcelOwners_AspNetUsers_SenderId1" FOREIGN KEY ("SenderId1") REFERENCES "AspNetUsers" ("Id"),
+    CONSTRAINT "FK_ParcelOwners_AspNetUsers_SenderStaffId1" FOREIGN KEY ("SenderStaffId1") REFERENCES "AspNetUsers" ("Id"),
+    CONSTRAINT "FK_ParcelOwners_Parcel_ParcelId" FOREIGN KEY ("ParcelId") REFERENCES "Parcel" ("Id") ON DELETE CASCADE
+);
+2023-03-12 00:58:04.763 +05:00 [INF] Executed DbCommand (183ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "UserAccount" (
+    "Id" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Number" varchar NULL,
+    "Name" varchar NULL,
+    "Balance" numeric NOT NULL,
+    "UserId" text NULL,
+    "UserId1" integer NULL,
+    "CurrencyId" integer NOT NULL,
+    "DateCreated" timestamp without time zone NOT NULL,
+    "DateUpdated" timestamp without time zone NULL,
+    "CreatedBy" text NULL,
+    "ModifiedBy" text NULL,
+    CONSTRAINT "PK_UserAccount" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_UserAccount_AspNetUsers_UserId1" FOREIGN KEY ("UserId1") REFERENCES "AspNetUsers" ("Id"),
+    CONSTRAINT "FK_UserAccount_Currency_CurrencyId" FOREIGN KEY ("CurrencyId") REFERENCES "Currency" ("Id") ON DELETE CASCADE
+);
+2023-03-12 00:58:04.948 +05:00 [INF] Executed DbCommand (184ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "UserAccountHistory" (
+    "Id" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Amount" numeric(18,3) NOT NULL,
+    "JobType" bool NOT NULL,
+    "UserAccountId" integer NOT NULL,
+    "CurrencyId" integer NOT NULL,
+    "ParcelId" integer NOT NULL,
+    "UserId" text NULL,
+    "UserId1" integer NULL,
+    "DateCreated" timestamp without time zone NOT NULL,
+    "DateUpdated" timestamp without time zone NULL,
+    "CreatedBy" text NULL,
+    "ModifiedBy" text NULL,
+    CONSTRAINT "PK_UserAccountHistory" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_UserAccountHistory_AspNetUsers_UserId1" FOREIGN KEY ("UserId1") REFERENCES "AspNetUsers" ("Id"),
+    CONSTRAINT "FK_UserAccountHistory_Currency_CurrencyId" FOREIGN KEY ("CurrencyId") REFERENCES "Currency" ("Id") ON DELETE CASCADE,
+    CONSTRAINT "FK_UserAccountHistory_Parcel_ParcelId" FOREIGN KEY ("ParcelId") REFERENCES "Parcel" ("Id") ON DELETE CASCADE,
+    CONSTRAINT "FK_UserAccountHistory_UserAccount_UserAccountId" FOREIGN KEY ("UserAccountId") REFERENCES "UserAccount" ("Id") ON DELETE CASCADE
+);
+2023-03-12 00:58:05.131 +05:00 [INF] Executed DbCommand (183ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AspNetRoles" ("Id", "ConcurrencyStamp", "Name", "NormalizedName")
+VALUES (1, '5369988b-4455-4026-8af7-e01870b3623f', 'Administrator', 'ADMINISTRATOR');
+INSERT INTO "AspNetRoles" ("Id", "ConcurrencyStamp", "Name", "NormalizedName")
+VALUES (2, '024785ea-c55f-4de6-a72c-f535ba29a141', 'Manager', 'MANAGER');
+INSERT INTO "AspNetRoles" ("Id", "ConcurrencyStamp", "Name", "NormalizedName")
+VALUES (3, '1d1be787-0311-49a3-8a7e-f753dcd6d693', 'Staff', 'STAFF');
+INSERT INTO "AspNetRoles" ("Id", "ConcurrencyStamp", "Name", "NormalizedName")
+VALUES (4, '080f794e-a6fd-4ff7-a3f1-d81c2bfd3254', 'Courier', 'COURIER');
+INSERT INTO "AspNetRoles" ("Id", "ConcurrencyStamp", "Name", "NormalizedName")
+VALUES (5, 'c4a6ae6f-103f-4676-925a-d43fbfb89ff5', 'Customer', 'CUSTOMER');
+2023-03-12 00:58:05.315 +05:00 [INF] Executed DbCommand (183ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AspNetUsers" ("Id", "AccessFailedCount", "Address", "ChatId", "ConcurrencyStamp", "DateCreated", "DateUpdated", "Email", "EmailConfirmed", "FirstName", "LastName", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "ParcelJobId", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName", "UserNameT")
+VALUES (1, 0, 'Республика Узбекистан, г. Ташкент, Кашгар 11, 100099', -1001663331836, '5cf333e8-d430-4512-bfcf-cf97940174ef', TIMESTAMP '2023-03-12 00:57:57.012977', NULL, 'administrator@gmail.com', FALSE, 'EDSystem', 'Administrator', FALSE, NULL, 'ADMINISTRATOR@GMAIL.COM', 'ADMINISTRATOR', NULL, 'AQAAAAIAAYagAAAAEC9NRlsadIMgADpsU1KWeMN4oKr7gr096Gk1gy4h2NVFW7QzDViEEYcIJ29/OtHSUQ==', '998970000675', FALSE, NULL, FALSE, 'administrator', 'UserName');
+INSERT INTO "AspNetUsers" ("Id", "AccessFailedCount", "Address", "ChatId", "ConcurrencyStamp", "DateCreated", "DateUpdated", "Email", "EmailConfirmed", "FirstName", "LastName", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "ParcelJobId", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName", "UserNameT")
+VALUES (2, 0, 'Республика Узбекистан, г. Ташкент, Кашгар 11, 100099', -1001663331836, 'a3691513-e494-4c3f-8e57-a9a559d7df44', TIMESTAMP '2023-03-12 00:57:57.012984', NULL, 'hayrulloh@gmail.com', FALSE, 'EDTashkent', 'Hayrulloh', FALSE, NULL, 'HAYRULLOH@GMAIL.COM', 'HAYRULLOH', NULL, 'AQAAAAIAAYagAAAAEC9NRlsadIMgADpsU1KWeMN4oKr7gr096Gk1gy4h2NVFW7QzDViEEYcIJ29/OtHSUQ==', '998935788886', FALSE, NULL, FALSE, 'hayrulloh', 'UserName');
+INSERT INTO "AspNetUsers" ("Id", "AccessFailedCount", "Address", "ChatId", "ConcurrencyStamp", "DateCreated", "DateUpdated", "Email", "EmailConfirmed", "FirstName", "LastName", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "ParcelJobId", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName", "UserNameT")
+VALUES (3, 0, 'Республика Узбекистан, г. Ташкент, Кашгар 11, 100099', -1001663331836, 'd51d74aa-7232-420c-944d-2b6cbcd71d97', TIMESTAMP '2023-03-12 00:57:57.012986', NULL, 'Nodir@gmail.com', FALSE, 'EDTashkent', 'Nodir', FALSE, NULL, 'NODIR@GMAIL.COM', 'NODIR', NULL, 'AQAAAAIAAYagAAAAEC9NRlsadIMgADpsU1KWeMN4oKr7gr096Gk1gy4h2NVFW7QzDViEEYcIJ29/OtHSUQ==', '998909046605', FALSE, NULL, FALSE, 'nodir', 'UserName');
+INSERT INTO "AspNetUsers" ("Id", "AccessFailedCount", "Address", "ChatId", "ConcurrencyStamp", "DateCreated", "DateUpdated", "Email", "EmailConfirmed", "FirstName", "LastName", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "ParcelJobId", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName", "UserNameT")
+VALUES (4, 0, 'Республика Узбекистан, г. Ташкент, Кашгар 11, 100099', -1001663331836, '4ff9f13a-239e-4dca-aebe-9850aff4e24f', TIMESTAMP '2023-03-12 00:57:57.012987', NULL, 'Javohir@gmail.com', FALSE, 'EDTashkent', 'Javohir', FALSE, NULL, 'JAVOHIR@GMAIL.COM', 'JAVOHIR', NULL, 'AQAAAAIAAYagAAAAEC9NRlsadIMgADpsU1KWeMN4oKr7gr096Gk1gy4h2NVFW7QzDViEEYcIJ29/OtHSUQ==', '998931710966', FALSE, NULL, FALSE, 'javohir', 'UserName');
+INSERT INTO "AspNetUsers" ("Id", "AccessFailedCount", "Address", "ChatId", "ConcurrencyStamp", "DateCreated", "DateUpdated", "Email", "EmailConfirmed", "FirstName", "LastName", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "ParcelJobId", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName", "UserNameT")
+VALUES (5, 0, 'Республика Узбекистан, г. Ташкент, Кашгар 11, 100099', -1001663331836, 'b61b168f-86b1-47b1-82ba-93d5e67587f0', TIMESTAMP '2023-03-12 00:57:57.012988', NULL, 'Ismoil@gmail.com', FALSE, 'EDTashkent', 'Ismoil', FALSE, NULL, 'ISMOIL@GMAIL.COM', 'ISMOIL', NULL, 'AQAAAAIAAYagAAAAEC9NRlsadIMgADpsU1KWeMN4oKr7gr096Gk1gy4h2NVFW7QzDViEEYcIJ29/OtHSUQ==', '998977093262', FALSE, NULL, FALSE, 'ismoil', 'UserName');
+2023-03-12 00:58:05.497 +05:00 [INF] Executed DbCommand (181ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Branch" ("Id", "Address", "City", "Code", "Country", "CreatedBy", "DateCreated", "DateUpdated", "Email", "ModifiedBy", "Name", "Phone")
+VALUES (1, 'Российская Федерация, Московская область, г. Москва, Академический район, улица Винокурова 7/5, корпус 3, индекс 117449', 'Москва', '643', 'Россия', NULL, TIMESTAMP '2023-03-12 00:57:56.977845', NULL, 'info@ethnologistics.asia', NULL, 'Москва', '+765165498496');
+INSERT INTO "Branch" ("Id", "Address", "City", "Code", "Country", "CreatedBy", "DateCreated", "DateUpdated", "Email", "ModifiedBy", "Name", "Phone")
+VALUES (2, 'Республика Узбекистан, г. Ташкент, Юнусабадский район, улица Кашгар 11,', 'Ташкент', '860', 'Узбекистан', NULL, TIMESTAMP '2023-03-12 00:57:56.977845', NULL, 'info@ethnologistics.asia', NULL, 'Ташкент', '+998984651');
+INSERT INTO "Branch" ("Id", "Address", "City", "Code", "Country", "CreatedBy", "DateCreated", "DateUpdated", "Email", "ModifiedBy", "Name", "Phone")
+VALUES (3, 'Киргизия, Бишкек, Жибек-Жолу д 443/1', 'Бишкек', '417', 'Киргистан', NULL, TIMESTAMP '2023-03-12 00:57:56.977846', NULL, 'info@ethnologistics.asia', NULL, 'Бишкек', '+765165498496');
+INSERT INTO "Branch" ("Id", "Address", "City", "Code", "Country", "CreatedBy", "DateCreated", "DateUpdated", "Email", "ModifiedBy", "Name", "Phone")
+VALUES (4, 'Душанбе 122', 'Душанбе', '762', 'Таджикистан', NULL, TIMESTAMP '2023-03-12 00:57:56.977846', NULL, 'info@ethnologistics.asia', NULL, 'Душанбе', '+665165498496');
+INSERT INTO "Branch" ("Id", "Address", "City", "Code", "Country", "CreatedBy", "DateCreated", "DateUpdated", "Email", "ModifiedBy", "Name", "Phone")
+VALUES (5, 'Алматы 123', 'Алматы', '398', 'Казахстан', NULL, TIMESTAMP '2023-03-12 00:57:56.977846', NULL, 'info@ethnologistics.asia', NULL, 'Алматы', '+665165498496');
+INSERT INTO "Branch" ("Id", "Address", "City", "Code", "Country", "CreatedBy", "DateCreated", "DateUpdated", "Email", "ModifiedBy", "Name", "Phone")
+VALUES (6, 'Хайдарпашша', 'Стамбул', '792', 'Турция', NULL, TIMESTAMP '2023-03-12 00:57:56.977847', NULL, 'info@ethnologistics.asia', NULL, 'Стамбул', '+665165498496');
+2023-03-12 00:58:05.680 +05:00 [INF] Executed DbCommand (183ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Currency" ("Id", "Code", "Country", "CreatedBy", "DateCreated", "DateUpdated", "ModifiedBy", "Name", "Number")
+VALUES (1, 'USD', 'Соединенные Штаты Америки', NULL, TIMESTAMP '2023-03-12 00:57:57.013016', NULL, NULL, 'Доллар', 840);
+INSERT INTO "Currency" ("Id", "Code", "Country", "CreatedBy", "DateCreated", "DateUpdated", "ModifiedBy", "Name", "Number")
+VALUES (2, 'UZS', 'Республика Узбекистан', NULL, TIMESTAMP '2023-03-12 00:57:57.013016', NULL, NULL, 'Сум', 860);
+INSERT INTO "Currency" ("Id", "Code", "Country", "CreatedBy", "DateCreated", "DateUpdated", "ModifiedBy", "Name", "Number")
+VALUES (3, 'RUB', 'Российская Федерация', NULL, TIMESTAMP '2023-03-12 00:57:57.013016', NULL, NULL, 'Рубль', 643);
+INSERT INTO "Currency" ("Id", "Code", "Country", "CreatedBy", "DateCreated", "DateUpdated", "ModifiedBy", "Name", "Number")
+VALUES (4, 'KZT', 'Республика Казахстан', NULL, TIMESTAMP '2023-03-12 00:57:57.013016', NULL, NULL, 'Тенге', 398);
+INSERT INTO "Currency" ("Id", "Code", "Country", "CreatedBy", "DateCreated", "DateUpdated", "ModifiedBy", "Name", "Number")
+VALUES (5, 'TRY', 'Турция', NULL, TIMESTAMP '2023-03-12 00:57:57.013016', NULL, NULL, 'Лира', 949);
+INSERT INTO "Currency" ("Id", "Code", "Country", "CreatedBy", "DateCreated", "DateUpdated", "ModifiedBy", "Name", "Number")
+VALUES (6, 'AED', 'Объедененные Арабские Эмираты', NULL, TIMESTAMP '2023-03-12 00:57:57.013017', NULL, NULL, 'Дирхам', 784);
+INSERT INTO "Currency" ("Id", "Code", "Country", "CreatedBy", "DateCreated", "DateUpdated", "ModifiedBy", "Name", "Number")
+VALUES (7, 'KGS', 'Кыргызская Республика', NULL, TIMESTAMP '2023-03-12 00:57:57.013017', NULL, NULL, 'Сом', 417);
+INSERT INTO "Currency" ("Id", "Code", "Country", "CreatedBy", "DateCreated", "DateUpdated", "ModifiedBy", "Name", "Number")
+VALUES (8, 'TJS', 'Республика Таджикистан', NULL, TIMESTAMP '2023-03-12 00:57:57.013017', NULL, NULL, 'Сомони', 972);
+2023-03-12 00:58:06.266 +05:00 [INF] Executed DbCommand (585ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "ExpenseType" ("Id", "CreatedBy", "DateCreated", "DateUpdated", "Description", "ModifiedBy", "Name")
+VALUES (1, NULL, TIMESTAMP '2023-03-12 00:57:56.977871', NULL, 'Зарплата', NULL, 'Зарплата');
+INSERT INTO "ExpenseType" ("Id", "CreatedBy", "DateCreated", "DateUpdated", "Description", "ModifiedBy", "Name")
+VALUES (2, NULL, TIMESTAMP '2023-03-12 00:57:56.977871', NULL, 'Аванс', NULL, 'Аванс');
+INSERT INTO "ExpenseType" ("Id", "CreatedBy", "DateCreated", "DateUpdated", "Description", "ModifiedBy", "Name")
+VALUES (3, NULL, TIMESTAMP '2023-03-12 00:57:56.977872', NULL, 'Курерам за перевозку', NULL, 'Курерам за перевозку');
+INSERT INTO "ExpenseType" ("Id", "CreatedBy", "DateCreated", "DateUpdated", "Description", "ModifiedBy", "Name")
+VALUES (4, NULL, TIMESTAMP '2023-03-12 00:57:56.977872', NULL, 'Обед', NULL, 'Обед');
+INSERT INTO "ExpenseType" ("Id", "CreatedBy", "DateCreated", "DateUpdated", "Description", "ModifiedBy", "Name")
+VALUES (5, NULL, TIMESTAMP '2023-03-12 00:57:56.977872', NULL, 'Карзи Хасана', NULL, 'Карзи Хасана');
+INSERT INTO "ExpenseType" ("Id", "CreatedBy", "DateCreated", "DateUpdated", "Description", "ModifiedBy", "Name")
+VALUES (6, NULL, TIMESTAMP '2023-03-12 00:57:56.977872', NULL, 'Депозит', NULL, 'Депозит');
+INSERT INTO "ExpenseType" ("Id", "CreatedBy", "DateCreated", "DateUpdated", "Description", "ModifiedBy", "Name")
+VALUES (7, NULL, TIMESTAMP '2023-03-12 00:57:56.977872', NULL, 'За перевозку до филиала', NULL, 'За перевозку до филиала');
+INSERT INTO "ExpenseType" ("Id", "CreatedBy", "DateCreated", "DateUpdated", "Description", "ModifiedBy", "Name")
+VALUES (8, NULL, TIMESTAMP '2023-03-12 00:57:56.977873', NULL, 'За доставку до получателя', NULL, 'За доставку до получателя');
+INSERT INTO "ExpenseType" ("Id", "CreatedBy", "DateCreated", "DateUpdated", "Description", "ModifiedBy", "Name")
+VALUES (9, NULL, TIMESTAMP '2023-03-12 00:57:56.977873', NULL, 'За забор посылки', NULL, 'За забор посылки');
+INSERT INTO "ExpenseType" ("Id", "CreatedBy", "DateCreated", "DateUpdated", "Description", "ModifiedBy", "Name")
+VALUES (10, NULL, TIMESTAMP '2023-03-12 00:57:56.977873', NULL, 'За выкуп', NULL, 'За выкуп');
+INSERT INTO "ExpenseType" ("Id", "CreatedBy", "DateCreated", "DateUpdated", "Description", "ModifiedBy", "Name")
+VALUES (11, NULL, TIMESTAMP '2023-03-12 00:57:56.977873', NULL, 'Ковертация', NULL, 'Ковертация');
+INSERT INTO "ExpenseType" ("Id", "CreatedBy", "DateCreated", "DateUpdated", "Description", "ModifiedBy", "Name")
+VALUES (12, NULL, TIMESTAMP '2023-03-12 00:57:56.977873', NULL, 'Перевод', NULL, 'Перевод');
+INSERT INTO "ExpenseType" ("Id", "CreatedBy", "DateCreated", "DateUpdated", "Description", "ModifiedBy", "Name")
+VALUES (13, NULL, TIMESTAMP '2023-03-12 00:57:56.977873', NULL, 'За мелкие расходы', NULL, 'За мелкие расходы');
+2023-03-12 00:58:06.447 +05:00 [INF] Executed DbCommand (180ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Plan" ("Id", "Cost", "CreatedBy", "DateCreated", "DateUpdated", "Description", "ModifiedBy", "Name")
+VALUES (1, 7.0, NULL, TIMESTAMP '2023-03-12 00:57:57.013012', NULL, 'Description', NULL, 'Стандарт');
+INSERT INTO "Plan" ("Id", "Cost", "CreatedBy", "DateCreated", "DateUpdated", "Description", "ModifiedBy", "Name")
+VALUES (2, 12.0, NULL, TIMESTAMP '2023-03-12 00:57:57.013012', NULL, 'Description', NULL, 'Экспресс');
+INSERT INTO "Plan" ("Id", "Cost", "CreatedBy", "DateCreated", "DateUpdated", "Description", "ModifiedBy", "Name")
+VALUES (3, 30.0, NULL, TIMESTAMP '2023-03-12 00:57:57.013012', NULL, 'Description', NULL, 'Ультра');
+INSERT INTO "Plan" ("Id", "Cost", "CreatedBy", "DateCreated", "DateUpdated", "Description", "ModifiedBy", "Name")
+VALUES (5, 5.0, NULL, TIMESTAMP '2023-03-12 00:57:57.013012', NULL, 'Description', NULL, 'Авто');
+2023-03-12 00:58:06.628 +05:00 [INF] Executed DbCommand (180ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Status" ("Id", "CreatedBy", "DateCreated", "DateUpdated", "Description", "ModifiedBy", "Name")
+VALUES (1, NULL, TIMESTAMP '2023-03-12 00:57:56.977835', NULL, 'Создан', NULL, 'Создан');
+INSERT INTO "Status" ("Id", "CreatedBy", "DateCreated", "DateUpdated", "Description", "ModifiedBy", "Name")
+VALUES (2, NULL, TIMESTAMP '2023-03-12 00:57:56.97784', NULL, 'В пути', NULL, 'В пути');
+INSERT INTO "Status" ("Id", "CreatedBy", "DateCreated", "DateUpdated", "Description", "ModifiedBy", "Name")
+VALUES (3, NULL, TIMESTAMP '2023-03-12 00:57:56.977841', NULL, 'Прибыл в пункт доставки', NULL, 'Прибыл');
+INSERT INTO "Status" ("Id", "CreatedBy", "DateCreated", "DateUpdated", "Description", "ModifiedBy", "Name")
+VALUES (4, NULL, TIMESTAMP '2023-03-12 00:57:56.977841', NULL, 'На доставке у курьера', NULL, 'У курьера');
+INSERT INTO "Status" ("Id", "CreatedBy", "DateCreated", "DateUpdated", "Description", "ModifiedBy", "Name")
+VALUES (5, NULL, TIMESTAMP '2023-03-12 00:57:56.977841', NULL, 'Доставлен', NULL, 'Доставлен');
+INSERT INTO "Status" ("Id", "CreatedBy", "DateCreated", "DateUpdated", "Description", "ModifiedBy", "Name")
+VALUES (6, NULL, TIMESTAMP '2023-03-12 00:57:56.977841', NULL, 'Выдан', NULL, 'Выдан');
+2023-03-12 00:58:06.810 +05:00 [INF] Executed DbCommand (181ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Account" ("Id", "Balance", "BranchId", "CreatedBy", "CurrencyId", "DateCreated", "DateUpdated", "ModifiedBy", "Name", "Number")
+VALUES (1, 0.0, 1, NULL, 1, TIMESTAMP '2023-03-12 00:57:56.977858', NULL, NULL, 'Валютный счет Москвы', '643840USD');
+INSERT INTO "Account" ("Id", "Balance", "BranchId", "CreatedBy", "CurrencyId", "DateCreated", "DateUpdated", "ModifiedBy", "Name", "Number")
+VALUES (2, 0.0, 1, NULL, 2, TIMESTAMP '2023-03-12 00:57:56.977859', NULL, NULL, 'Рублевый счет Москвы', '643643RUB');
+INSERT INTO "Account" ("Id", "Balance", "BranchId", "CreatedBy", "CurrencyId", "DateCreated", "DateUpdated", "ModifiedBy", "Name", "Number")
+VALUES (3, 0.0, 2, NULL, 1, TIMESTAMP '2023-03-12 00:57:56.977859', NULL, NULL, 'Валютный счет Ташкента', '860840USD');
+INSERT INTO "Account" ("Id", "Balance", "BranchId", "CreatedBy", "CurrencyId", "DateCreated", "DateUpdated", "ModifiedBy", "Name", "Number")
+VALUES (4, 0.0, 2, NULL, 2, TIMESTAMP '2023-03-12 00:57:56.977859', NULL, NULL, 'Рублевый счет Ташкента', '860643RUB');
+INSERT INTO "Account" ("Id", "Balance", "BranchId", "CreatedBy", "CurrencyId", "DateCreated", "DateUpdated", "ModifiedBy", "Name", "Number")
+VALUES (5, 0.0, 3, NULL, 1, TIMESTAMP '2023-03-12 00:57:56.977859', NULL, NULL, 'Валютный счет Бишкека', '417840USD');
+INSERT INTO "Account" ("Id", "Balance", "BranchId", "CreatedBy", "CurrencyId", "DateCreated", "DateUpdated", "ModifiedBy", "Name", "Number")
+VALUES (6, 0.0, 3, NULL, 2, TIMESTAMP '2023-03-12 00:57:56.977859', NULL, NULL, 'Рублевый счет Бишкека', '417643RUB');
+INSERT INTO "Account" ("Id", "Balance", "BranchId", "CreatedBy", "CurrencyId", "DateCreated", "DateUpdated", "ModifiedBy", "Name", "Number")
+VALUES (7, 0.0, 4, NULL, 1, TIMESTAMP '2023-03-12 00:57:56.97786', NULL, NULL, 'Валютный счет Душанбе', '972840USD');
+INSERT INTO "Account" ("Id", "Balance", "BranchId", "CreatedBy", "CurrencyId", "DateCreated", "DateUpdated", "ModifiedBy", "Name", "Number")
+VALUES (8, 0.0, 4, NULL, 2, TIMESTAMP '2023-03-12 00:57:56.97786', NULL, NULL, 'Рублевый счет Душанбе', '972843RUB');
+INSERT INTO "Account" ("Id", "Balance", "BranchId", "CreatedBy", "CurrencyId", "DateCreated", "DateUpdated", "ModifiedBy", "Name", "Number")
+VALUES (9, 0.0, 5, NULL, 1, TIMESTAMP '2023-03-12 00:57:56.97786', NULL, NULL, 'Валютный счет Алматы', '398840USD');
+INSERT INTO "Account" ("Id", "Balance", "BranchId", "CreatedBy", "CurrencyId", "DateCreated", "DateUpdated", "ModifiedBy", "Name", "Number")
+VALUES (10, 0.0, 5, NULL, 2, TIMESTAMP '2023-03-12 00:57:56.97786', NULL, NULL, 'Рублевый счет Алматы', '398643RUB');
+INSERT INTO "Account" ("Id", "Balance", "BranchId", "CreatedBy", "CurrencyId", "DateCreated", "DateUpdated", "ModifiedBy", "Name", "Number")
+VALUES (11, 0.0, 6, NULL, 1, TIMESTAMP '2023-03-12 00:57:56.97786', NULL, NULL, 'Валютный счет Стамбул', '792840USD');
+INSERT INTO "Account" ("Id", "Balance", "BranchId", "CreatedBy", "CurrencyId", "DateCreated", "DateUpdated", "ModifiedBy", "Name", "Number")
+VALUES (12, 0.0, 6, NULL, 5, TIMESTAMP '2023-03-12 00:57:56.977861', NULL, NULL, 'Лировый счет Стамбул', '792949TRY');
+2023-03-12 00:58:06.993 +05:00 [INF] Executed DbCommand (183ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AspNetUserClaims" ("Id", "ClaimType", "ClaimValue", "UserId")
+VALUES (1, 'CanGetAllBranches', 'CanGetAllBranches', 1);
+INSERT INTO "AspNetUserClaims" ("Id", "ClaimType", "ClaimValue", "UserId")
+VALUES (2, 'CanGetAllBranchesWithPagination', 'CanGetAllBranchesWithPagination', 1);
+INSERT INTO "AspNetUserClaims" ("Id", "ClaimType", "ClaimValue", "UserId")
+VALUES (3, 'CanGetBranchDetails', 'CanGetBranchDetails', 1);
+INSERT INTO "AspNetUserClaims" ("Id", "ClaimType", "ClaimValue", "UserId")
+VALUES (4, 'CanCreateBranch', 'CanCreateBranch', 1);
+INSERT INTO "AspNetUserClaims" ("Id", "ClaimType", "ClaimValue", "UserId")
+VALUES (5, 'CanUpdateBranch', 'CanUpdateBranch', 1);
+INSERT INTO "AspNetUserClaims" ("Id", "ClaimType", "ClaimValue", "UserId")
+VALUES (6, 'CanDeleteBranch', 'CanDeleteBranch', 1);
+INSERT INTO "AspNetUserClaims" ("Id", "ClaimType", "ClaimValue", "UserId")
+VALUES (7, 'CanDeleteBranches', 'CanDeleteBranches', 1);
+INSERT INTO "AspNetUserClaims" ("Id", "ClaimType", "ClaimValue", "UserId")
+VALUES (8, 'CanGetAllPlans', 'CanGetAllPlans', 1);
+INSERT INTO "AspNetUserClaims" ("Id", "ClaimType", "ClaimValue", "UserId")
+VALUES (9, 'CanGetAllPlansWithPagination', 'CanGetAllPlansWithPagination', 1);
+INSERT INTO "AspNetUserClaims" ("Id", "ClaimType", "ClaimValue", "UserId")
+VALUES (10, 'CanGetPlanDetails', 'CanGetPlanDetails', 1);
+INSERT INTO "AspNetUserClaims" ("Id", "ClaimType", "ClaimValue", "UserId")
+VALUES (11, 'CanCreatePlan', 'CanCreatePlan', 1);
+INSERT INTO "AspNetUserClaims" ("Id", "ClaimType", "ClaimValue", "UserId")
+VALUES (12, 'CanUpdatePlan', 'CanUpdatePlan', 1);
+INSERT INTO "AspNetUserClaims" ("Id", "ClaimType", "ClaimValue", "UserId")
+VALUES (13, 'CanDeletePlan', 'CanDeletePlan', 1);
+INSERT INTO "AspNetUserClaims" ("Id", "ClaimType", "ClaimValue", "UserId")
+VALUES (14, 'CanDeletePlans', 'CanDeletePlans', 1);
+INSERT INTO "AspNetUserClaims" ("Id", "ClaimType", "ClaimValue", "UserId")
+VALUES (15, 'CanGetAllStatuses', 'CanGetAllStatuses', 1);
+INSERT INTO "AspNetUserClaims" ("Id", "ClaimType", "ClaimValue", "UserId")
+VALUES (16, 'CanGetAllStatusesWithPagination', 'CanGetAllStatusesWithPagination', 1);
+INSERT INTO "AspNetUserClaims" ("Id", "ClaimType", "ClaimValue", "UserId")
+VALUES (17, 'CanGetStatusDetails', 'CanGetStatusDetails', 1);
+INSERT INTO "AspNetUserClaims" ("Id", "ClaimType", "ClaimValue", "UserId")
+VALUES (18, 'CanCreateStatus', 'CanCreateStatus', 1);
+INSERT INTO "AspNetUserClaims" ("Id", "ClaimType", "ClaimValue", "UserId")
+VALUES (19, 'CanUpdateStatus', 'CanUpdateStatus', 1);
+INSERT INTO "AspNetUserClaims" ("Id", "ClaimType", "ClaimValue", "UserId")
+VALUES (20, 'CanDeleteStatus', 'CanDeleteStatus', 1);
+INSERT INTO "AspNetUserClaims" ("Id", "ClaimType", "ClaimValue", "UserId")
+VALUES (21, 'CanDeleteStatuses', 'CanDeleteStatuses', 1);
+INSERT INTO "AspNetUserClaims" ("Id", "ClaimType", "ClaimValue", "UserId")
+VALUES (22, 'CanGetAllParcels', 'CanGetAllParcels', 1);
+INSERT INTO "AspNetUserClaims" ("Id", "ClaimType", "ClaimValue", "UserId")
+VALUES (23, 'CanGetAllParcelsWithPagination', 'CanGetAllParcelsWithPagination', 1);
+INSERT INTO "AspNetUserClaims" ("Id", "ClaimType", "ClaimValue", "UserId")
+VALUES (24, 'CanGetParcelDetails', 'CanGetParcelDetails', 1);
+INSERT INTO "AspNetUserClaims" ("Id", "ClaimType", "ClaimValue", "UserId")
+VALUES (25, 'CanCreateParcel', 'CanCreateParcel', 1);
+INSERT INTO "AspNetUserClaims" ("Id", "ClaimType", "ClaimValue", "UserId")
+VALUES (26, 'CanUpdateParcel', 'CanUpdateParcel', 1);
+INSERT INTO "AspNetUserClaims" ("Id", "ClaimType", "ClaimValue", "UserId")
+VALUES (27, 'CanDeleteParcel', 'CanDeleteParcel', 1);
+INSERT INTO "AspNetUserClaims" ("Id", "ClaimType", "ClaimValue", "UserId")
+VALUES (28, 'CanDeleteParcels', 'CanDeleteParcels', 1);
+INSERT INTO "AspNetUserClaims" ("Id", "ClaimType", "ClaimValue", "UserId")
+VALUES (29, 'CanGetAllUsers', 'CanGetAllUsers', 1);
+INSERT INTO "AspNetUserClaims" ("Id", "ClaimType", "ClaimValue", "UserId")
+VALUES (30, 'CanGetAllUsersWithPagination', 'CanGetAllUsersWithPagination', 1);
+INSERT INTO "AspNetUserClaims" ("Id", "ClaimType", "ClaimValue", "UserId")
+VALUES (31, 'CanGetUserDetails', 'CanGetUserDetails', 1);
+INSERT INTO "AspNetUserClaims" ("Id", "ClaimType", "ClaimValue", "UserId")
+VALUES (32, 'CanCreateUser', 'CanCreateUser', 1);
+INSERT INTO "AspNetUserClaims" ("Id", "ClaimType", "ClaimValue", "UserId")
+VALUES (33, 'CanUpdateUser', 'CanUpdateUser', 1);
+INSERT INTO "AspNetUserClaims" ("Id", "ClaimType", "ClaimValue", "UserId")
+VALUES (34, 'CanDeleteUser', 'CanDeleteUser', 1);
+INSERT INTO "AspNetUserClaims" ("Id", "ClaimType", "ClaimValue", "UserId")
+VALUES (35, 'CanDeleteUsers', 'CanDeleteUsers', 1);
+2023-03-12 00:58:07.174 +05:00 [INF] Executed DbCommand (180ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AspNetUserRoles" ("RoleId", "UserId")
+VALUES (1, 1);
+INSERT INTO "AspNetUserRoles" ("RoleId", "UserId")
+VALUES (2, 2);
+2023-03-12 00:58:07.355 +05:00 [INF] Executed DbCommand (181ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "UserAccount" ("Id", "Balance", "CreatedBy", "CurrencyId", "DateCreated", "DateUpdated", "ModifiedBy", "Name", "Number", "UserId", "UserId1")
+VALUES (1, 0.0, NULL, 1, TIMESTAMP '2023-03-12 00:57:56.977863', NULL, NULL, 'Валютный счет', '30a8f9cc-840USD', '1', NULL);
+INSERT INTO "UserAccount" ("Id", "Balance", "CreatedBy", "CurrencyId", "DateCreated", "DateUpdated", "ModifiedBy", "Name", "Number", "UserId", "UserId1")
+VALUES (2, 0.0, NULL, 1, TIMESTAMP '2023-03-12 00:57:56.977863', NULL, NULL, 'Валютный счет', 'cadaa51d-840USD', '2', NULL);
+INSERT INTO "UserAccount" ("Id", "Balance", "CreatedBy", "CurrencyId", "DateCreated", "DateUpdated", "ModifiedBy", "Name", "Number", "UserId", "UserId1")
+VALUES (3, 0.0, NULL, 1, TIMESTAMP '2023-03-12 00:57:56.977866', NULL, NULL, 'Валютный счет', '5a6f1681-840USD', '3', NULL);
+INSERT INTO "UserAccount" ("Id", "Balance", "CreatedBy", "CurrencyId", "DateCreated", "DateUpdated", "ModifiedBy", "Name", "Number", "UserId", "UserId1")
+VALUES (4, 0.0, NULL, 1, TIMESTAMP '2023-03-12 00:57:56.977869', NULL, NULL, 'Валютный счет', '3b9d7f21-840USD', '1', NULL);
+INSERT INTO "UserAccount" ("Id", "Balance", "CreatedBy", "CurrencyId", "DateCreated", "DateUpdated", "ModifiedBy", "Name", "Number", "UserId", "UserId1")
+VALUES (5, 0.0, NULL, 1, TIMESTAMP '2023-03-12 00:57:56.977869', NULL, NULL, 'Валютный счет', '0a1e5c27-840USD', '2', NULL);
+INSERT INTO "UserAccount" ("Id", "Balance", "CreatedBy", "CurrencyId", "DateCreated", "DateUpdated", "ModifiedBy", "Name", "Number", "UserId", "UserId1")
+VALUES (6, 0.0, NULL, 1, TIMESTAMP '2023-03-12 00:57:56.97787', NULL, NULL, 'Валютный счет', 'e13b576b-840USD', '3', NULL);
+2023-03-12 00:58:07.535 +05:00 [INF] Executed DbCommand (180ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Account_BranchId" ON "Account" ("BranchId");
+2023-03-12 00:58:07.716 +05:00 [INF] Executed DbCommand (180ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Account_CurrencyId" ON "Account" ("CurrencyId");
+2023-03-12 00:58:07.897 +05:00 [INF] Executed DbCommand (181ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_Account_Id" ON "Account" ("Id");
+2023-03-12 00:58:08.079 +05:00 [INF] Executed DbCommand (180ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_AccountHistory_BranchAccountId" ON "AccountHistory" ("BranchAccountId");
+2023-03-12 00:58:08.262 +05:00 [INF] Executed DbCommand (182ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_AccountHistory_CurrencyId" ON "AccountHistory" ("CurrencyId");
+2023-03-12 00:58:08.445 +05:00 [INF] Executed DbCommand (181ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_AccountHistory_Id" ON "AccountHistory" ("Id");
+2023-03-12 00:58:08.626 +05:00 [INF] Executed DbCommand (180ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_AccountHistory_ParcelId" ON "AccountHistory" ("ParcelId");
+2023-03-12 00:58:08.806 +05:00 [INF] Executed DbCommand (180ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_AccountHistory_PayerId1" ON "AccountHistory" ("PayerId1");
+2023-03-12 00:58:08.988 +05:00 [INF] Executed DbCommand (181ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_AspNetRoleClaims_RoleId" ON "AspNetRoleClaims" ("RoleId");
+2023-03-12 00:58:09.169 +05:00 [INF] Executed DbCommand (181ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "RoleNameIndex" ON "AspNetRoles" ("NormalizedName");
+2023-03-12 00:58:09.349 +05:00 [INF] Executed DbCommand (180ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_AspNetUserClaims_UserId" ON "AspNetUserClaims" ("UserId");
+2023-03-12 00:58:09.530 +05:00 [INF] Executed DbCommand (180ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_AspNetUserLogins_UserId" ON "AspNetUserLogins" ("UserId");
+2023-03-12 00:58:09.711 +05:00 [INF] Executed DbCommand (181ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_AspNetUserRoles_RoleId" ON "AspNetUserRoles" ("RoleId");
+2023-03-12 00:58:09.891 +05:00 [INF] Executed DbCommand (180ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "EmailIndex" ON "AspNetUsers" ("NormalizedEmail");
+2023-03-12 00:58:10.072 +05:00 [INF] Executed DbCommand (180ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_AspNetUsers_Id" ON "AspNetUsers" ("Id");
+2023-03-12 00:58:10.252 +05:00 [INF] Executed DbCommand (180ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_AspNetUsers_ParcelJobId" ON "AspNetUsers" ("ParcelJobId");
+2023-03-12 00:58:10.433 +05:00 [INF] Executed DbCommand (180ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_AspNetUsers_PhoneNumber" ON "AspNetUsers" ("PhoneNumber");
+2023-03-12 00:58:10.613 +05:00 [INF] Executed DbCommand (180ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "UserNameIndex" ON "AspNetUsers" ("NormalizedUserName");
+2023-03-12 00:58:10.794 +05:00 [INF] Executed DbCommand (180ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_Branch_Id" ON "Branch" ("Id");
+2023-03-12 00:58:10.975 +05:00 [INF] Executed DbCommand (180ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_Currency_Id" ON "Currency" ("Id");
+2023-03-12 00:58:11.157 +05:00 [INF] Executed DbCommand (181ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_Expenses_Id" ON "Expenses" ("Id");
+2023-03-12 00:58:11.339 +05:00 [INF] Executed DbCommand (181ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_Parcel_Id" ON "Parcel" ("Id");
+2023-03-12 00:58:11.522 +05:00 [INF] Executed DbCommand (182ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_ParcelBranch_FromBranchId" ON "ParcelBranch" ("FromBranchId");
+2023-03-12 00:58:11.705 +05:00 [INF] Executed DbCommand (182ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_ParcelBranch_Id" ON "ParcelBranch" ("Id");
+2023-03-12 00:58:11.889 +05:00 [INF] Executed DbCommand (181ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_ParcelBranch_ParcelId" ON "ParcelBranch" ("ParcelId");
+2023-03-12 00:58:12.070 +05:00 [INF] Executed DbCommand (180ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_ParcelBranch_ToBranchId" ON "ParcelBranch" ("ToBranchId");
+2023-03-12 00:58:12.251 +05:00 [INF] Executed DbCommand (181ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_ParcelCost_CurrencyId" ON "ParcelCost" ("CurrencyId");
+2023-03-12 00:58:12.435 +05:00 [INF] Executed DbCommand (184ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_ParcelCost_Id" ON "ParcelCost" ("Id");
+2023-03-12 00:58:12.617 +05:00 [INF] Executed DbCommand (181ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_ParcelCost_ParcelId" ON "ParcelCost" ("ParcelId");
+2023-03-12 00:58:12.799 +05:00 [INF] Executed DbCommand (182ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_ParcelDescription_Id" ON "ParcelDescription" ("Id");
+2023-03-12 00:58:12.982 +05:00 [INF] Executed DbCommand (181ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_ParcelDescription_ParcelId" ON "ParcelDescription" ("ParcelId");
+2023-03-12 00:58:13.164 +05:00 [INF] Executed DbCommand (182ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_ParcelImage_Id" ON "ParcelImage" ("Id");
+2023-03-12 00:58:13.345 +05:00 [INF] Executed DbCommand (180ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_ParcelImage_ParcelId" ON "ParcelImage" ("ParcelId");
+2023-03-12 00:58:13.535 +05:00 [INF] Executed DbCommand (189ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_ParcelItem_CurrencyId" ON "ParcelItem" ("CurrencyId");
+2023-03-12 00:58:13.715 +05:00 [INF] Executed DbCommand (180ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_ParcelItem_ParcelId" ON "ParcelItem" ("ParcelId");
+2023-03-12 00:58:13.895 +05:00 [INF] Executed DbCommand (180ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_ParcelJob_Id" ON "ParcelJob" ("Id");
+2023-03-12 00:58:14.076 +05:00 [INF] Executed DbCommand (180ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_ParcelJob_ParcelId" ON "ParcelJob" ("ParcelId");
+2023-03-12 00:58:14.257 +05:00 [INF] Executed DbCommand (180ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_ParcelOwners_Id" ON "ParcelOwners" ("Id");
+2023-03-12 00:58:14.437 +05:00 [INF] Executed DbCommand (180ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_ParcelOwners_ParcelId" ON "ParcelOwners" ("ParcelId");
+2023-03-12 00:58:14.619 +05:00 [INF] Executed DbCommand (181ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_ParcelOwners_RecepientCourierId1" ON "ParcelOwners" ("RecepientCourierId1");
+2023-03-12 00:58:14.800 +05:00 [INF] Executed DbCommand (181ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_ParcelOwners_RecepientId1" ON "ParcelOwners" ("RecepientId1");
+2023-03-12 00:58:14.981 +05:00 [INF] Executed DbCommand (180ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_ParcelOwners_RecepientStaffId1" ON "ParcelOwners" ("RecepientStaffId1");
+2023-03-12 00:58:15.163 +05:00 [INF] Executed DbCommand (182ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_ParcelOwners_SenderCourierId1" ON "ParcelOwners" ("SenderCourierId1");
+2023-03-12 00:58:15.346 +05:00 [INF] Executed DbCommand (183ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_ParcelOwners_SenderId1" ON "ParcelOwners" ("SenderId1");
+2023-03-12 00:58:15.529 +05:00 [INF] Executed DbCommand (182ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_ParcelOwners_SenderStaffId1" ON "ParcelOwners" ("SenderStaffId1");
+2023-03-12 00:58:15.711 +05:00 [INF] Executed DbCommand (182ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_ParcelPlan_Id" ON "ParcelPlan" ("Id");
+2023-03-12 00:58:15.891 +05:00 [INF] Executed DbCommand (180ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_ParcelPlan_ParcelId" ON "ParcelPlan" ("ParcelId");
+2023-03-12 00:58:16.071 +05:00 [INF] Executed DbCommand (180ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_ParcelPlan_PlanId" ON "ParcelPlan" ("PlanId");
+2023-03-12 00:58:16.252 +05:00 [INF] Executed DbCommand (180ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_ParcelSize_Id" ON "ParcelSize" ("Id");
+2023-03-12 00:58:16.432 +05:00 [INF] Executed DbCommand (180ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_ParcelSize_ParcelId" ON "ParcelSize" ("ParcelId");
+2023-03-12 00:58:16.613 +05:00 [INF] Executed DbCommand (180ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_ParcelSound_Id" ON "ParcelSound" ("Id");
+2023-03-12 00:58:16.793 +05:00 [INF] Executed DbCommand (180ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_ParcelSound_ParcelId" ON "ParcelSound" ("ParcelId");
+2023-03-12 00:58:16.981 +05:00 [INF] Executed DbCommand (186ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_ParcelStatus_Id" ON "ParcelStatus" ("Id");
+2023-03-12 00:58:17.162 +05:00 [INF] Executed DbCommand (180ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_ParcelStatus_ParcelId" ON "ParcelStatus" ("ParcelId");
+2023-03-12 00:58:17.344 +05:00 [INF] Executed DbCommand (181ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_ParcelStatus_StatusId" ON "ParcelStatus" ("StatusId");
+2023-03-12 00:58:17.526 +05:00 [INF] Executed DbCommand (182ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_Plan_Id" ON "Plan" ("Id");
+2023-03-12 00:58:17.707 +05:00 [INF] Executed DbCommand (180ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_Tokens_Id" ON "Tokens" ("Id");
+2023-03-12 00:58:17.889 +05:00 [INF] Executed DbCommand (181ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_UserAccount_CurrencyId" ON "UserAccount" ("CurrencyId");
+2023-03-12 00:58:18.089 +05:00 [INF] Executed DbCommand (199ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_UserAccount_Id" ON "UserAccount" ("Id");
+2023-03-12 00:58:18.273 +05:00 [INF] Executed DbCommand (183ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_UserAccount_UserId1" ON "UserAccount" ("UserId1");
+2023-03-12 00:58:18.454 +05:00 [INF] Executed DbCommand (180ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_UserAccountHistory_CurrencyId" ON "UserAccountHistory" ("CurrencyId");
+2023-03-12 00:58:18.634 +05:00 [INF] Executed DbCommand (180ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_UserAccountHistory_Id" ON "UserAccountHistory" ("Id");
+2023-03-12 00:58:18.815 +05:00 [INF] Executed DbCommand (181ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_UserAccountHistory_ParcelId" ON "UserAccountHistory" ("ParcelId");
+2023-03-12 00:58:18.995 +05:00 [INF] Executed DbCommand (180ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_UserAccountHistory_UserAccountId" ON "UserAccountHistory" ("UserAccountId");
+2023-03-12 00:58:19.176 +05:00 [INF] Executed DbCommand (180ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_UserAccountHistory_UserId1" ON "UserAccountHistory" ("UserId1");
+2023-03-12 00:58:19.363 +05:00 [INF] Executed DbCommand (187ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT setval(
+    pg_get_serial_sequence('"AspNetRoles"', 'Id'),
+    GREATEST(
+        (SELECT MAX("Id") FROM "AspNetRoles") + 1,
+        nextval(pg_get_serial_sequence('"AspNetRoles"', 'Id'))),
+    false);
+SELECT setval(
+    pg_get_serial_sequence('"AspNetUsers"', 'Id'),
+    GREATEST(
+        (SELECT MAX("Id") FROM "AspNetUsers") + 1,
+        nextval(pg_get_serial_sequence('"AspNetUsers"', 'Id'))),
+    false);
+SELECT setval(
+    pg_get_serial_sequence('"Branch"', 'Id'),
+    GREATEST(
+        (SELECT MAX("Id") FROM "Branch") + 1,
+        nextval(pg_get_serial_sequence('"Branch"', 'Id'))),
+    false);
+SELECT setval(
+    pg_get_serial_sequence('"Currency"', 'Id'),
+    GREATEST(
+        (SELECT MAX("Id") FROM "Currency") + 1,
+        nextval(pg_get_serial_sequence('"Currency"', 'Id'))),
+    false);
+SELECT setval(
+    pg_get_serial_sequence('"ExpenseType"', 'Id'),
+    GREATEST(
+        (SELECT MAX("Id") FROM "ExpenseType") + 1,
+        nextval(pg_get_serial_sequence('"ExpenseType"', 'Id'))),
+    false);
+SELECT setval(
+    pg_get_serial_sequence('"Plan"', 'Id'),
+    GREATEST(
+        (SELECT MAX("Id") FROM "Plan") + 1,
+        nextval(pg_get_serial_sequence('"Plan"', 'Id'))),
+    false);
+SELECT setval(
+    pg_get_serial_sequence('"Status"', 'Id'),
+    GREATEST(
+        (SELECT MAX("Id") FROM "Status") + 1,
+        nextval(pg_get_serial_sequence('"Status"', 'Id'))),
+    false);
+SELECT setval(
+    pg_get_serial_sequence('"Account"', 'Id'),
+    GREATEST(
+        (SELECT MAX("Id") FROM "Account") + 1,
+        nextval(pg_get_serial_sequence('"Account"', 'Id'))),
+    false);
+SELECT setval(
+    pg_get_serial_sequence('"AspNetUserClaims"', 'Id'),
+    GREATEST(
+        (SELECT MAX("Id") FROM "AspNetUserClaims") + 1,
+        nextval(pg_get_serial_sequence('"AspNetUserClaims"', 'Id'))),
+    false);
+SELECT setval(
+    pg_get_serial_sequence('"UserAccount"', 'Id'),
+    GREATEST(
+        (SELECT MAX("Id") FROM "UserAccount") + 1,
+        nextval(pg_get_serial_sequence('"UserAccount"', 'Id'))),
+    false);
+2023-03-12 00:58:19.641 +05:00 [INF] User profile is available. Using '/Users/a_ashurov/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-03-12 00:58:19.853 +05:00 [INF] Now listening on: https://localhost:7271
+2023-03-12 00:58:19.853 +05:00 [INF] Now listening on: http://localhost:5271
+2023-03-12 00:58:19.854 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-12 00:58:19.854 +05:00 [INF] Hosting environment: Development
+2023-03-12 00:58:19.854 +05:00 [INF] Content root path: /Users/a_ashurov/Desktop/MyFutureProjects/EDSystems.CICD.CD/EDSystems.WebApi
+2023-03-12 00:58:21.017 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/swagger/index.html - -
+2023-03-12 00:58:21.074 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/swagger/index.html - - - 200 - text/html;charset=utf-8 57.7293ms
+2023-03-12 00:58:21.125 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/swagger/v1/swagger.json - -
+2023-03-12 00:58:21.288 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 162.8348ms
+2023-03-12 00:59:30.954 +05:00 [INF] Request starting HTTP/1.1 POST https://localhost:7271/api/Authentication/Login application/json-patch+json 72
+2023-03-12 00:59:30.978 +05:00 [INF] CORS policy execution successful.
+2023-03-12 00:59:31.001 +05:00 [INF] Executing endpoint 'EDSystems.WebApi.Controllers.AuthenticationController.Login (EDSystems.WebApi)'
+2023-03-12 00:59:31.011 +05:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(EDSystems.WebApi.Models.AuthManager.UserLoginDto) on controller EDSystems.WebApi.Controllers.AuthenticationController (EDSystems.WebApi).
+2023-03-12 00:59:32.392 +05:00 [INF] Executed DbCommand (207ms) [Parameters=[@__normalizedEmail_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."Address", a."ChatId", a."ConcurrencyStamp", a."DateCreated", a."DateUpdated", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."ParcelJobId", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName", a."UserNameT"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2023-03-12 00:59:33.289 +05:00 [INF] Executed DbCommand (192ms) [Parameters=[@__user_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ClaimType", a."ClaimValue", a."UserId"
+FROM "AspNetUserClaims" AS a
+WHERE a."UserId" = @__user_Id_0
+2023-03-12 00:59:34.057 +05:00 [INF] Executed DbCommand (182ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT a0."Name"
+FROM "AspNetUserRoles" AS a
+INNER JOIN "AspNetRoles" AS a0 ON a."RoleId" = a0."Id"
+WHERE a."UserId" = @__userId_0
+2023-03-12 00:59:34.834 +05:00 [INF] Executed DbCommand (183ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2023-03-12 00:59:35.584 +05:00 [INF] Executed DbCommand (180ms) [Parameters=[@__role_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."ClaimType", a."ClaimValue"
+FROM "AspNetRoleClaims" AS a
+WHERE a."RoleId" = @__role_Id_0
+2023-03-12 00:59:36.307 +05:00 [INF] Executed DbCommand (175ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT a0."Name"
+FROM "AspNetUserRoles" AS a
+INNER JOIN "AspNetRoles" AS a0 ON a."RoleId" = a0."Id"
+WHERE a."UserId" = @__userId_0
+2023-03-12 00:59:37.030 +05:00 [INF] Executed DbCommand (179ms) [Parameters=[@__normalizedEmail_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."Address", a."ChatId", a."ConcurrencyStamp", a."DateCreated", a."DateUpdated", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."ParcelJobId", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName", a."UserNameT"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2023-03-12 00:59:37.748 +05:00 [INF] Executed DbCommand (177ms) [Parameters=[@__normalizedEmail_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."Address", a."ChatId", a."ConcurrencyStamp", a."DateCreated", a."DateUpdated", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."ParcelJobId", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName", a."UserNameT"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2023-03-12 00:59:37.834 +05:00 [INF] NotesRequest: RefreshTokenCommand {"Id":0,"UserId":1,"Token":"YH9INYNN2D2ZQHQ4RCP9L0G4IMMOFNZFK4L461c2190-1d9a-4008-b6bf-0dce93fac798","JwtId":"9c425e77-7ecf-41fb-81f1-3aff563ad315","IsUsed":false,"IsRevoked":false,"AddedDateTime":"2023-03-11T19:59:37.8265420Z","ExpiryDateTime":"2023-09-11T19:59:37.8265710Z","$type":"RefreshTokenCommand"}
+2023-03-12 00:59:38.619 +05:00 [INF] Executed DbCommand (191ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = DateTime), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?', @p5='?', @p6='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "RefreshToken" ("AddedDateTime", "ExpiryDateTime", "IsRevoked", "IsUsed", "JwtId", "Token", "UserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6)
+RETURNING "Id";
+2023-03-12 00:59:38.663 +05:00 [INF] Executing OkObjectResult, writing value of type 'EDSystems.WebApi.Models.AuthManager.AuthResult'.
+2023-03-12 00:59:38.676 +05:00 [INF] Executed action EDSystems.WebApi.Controllers.AuthenticationController.Login (EDSystems.WebApi) in 7662.4368ms
+2023-03-12 00:59:38.676 +05:00 [INF] Executed endpoint 'EDSystems.WebApi.Controllers.AuthenticationController.Login (EDSystems.WebApi)'
+2023-03-12 00:59:38.680 +05:00 [INF] Request finished HTTP/1.1 POST https://localhost:7271/api/Authentication/Login application/json-patch+json 72 - 200 2464 application/json;+charset=utf-8 7725.5906ms
+2023-03-12 00:59:59.070 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7271/api/UserManager/1 - -
+2023-03-12 00:59:59.114 +05:00 [INF] Executing endpoint 'EDSystems.WebApi.Controllers.UserManagerController.Get (EDSystems.WebApi)'
+2023-03-12 00:59:59.117 +05:00 [INF] Route matched with {action = "Get", controller = "UserManager"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EDSystems.Application.Users.Queries.GetUserDetails.UserDetailsVm]] Get(Int32) on controller EDSystems.WebApi.Controllers.UserManagerController (EDSystems.WebApi).
+2023-03-12 00:59:59.122 +05:00 [INF] NotesRequest: GetUserDetailsQuery {"Id":1,"$type":"GetUserDetailsQuery"}
+2023-03-12 00:59:59.176 +05:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2023-03-12 01:00:00.263 +05:00 [INF] Executed DbCommand (190ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."AccessFailedCount", t."Address", t."ChatId", t."ConcurrencyStamp", t."DateCreated", t."DateUpdated", t."Email", t."EmailConfirmed", t."FirstName", t."LastName", t."LockoutEnabled", t."LockoutEnd", t."NormalizedEmail", t."NormalizedUserName", t."ParcelJobId", t."PasswordHash", t."PhoneNumber", t."PhoneNumberConfirmed", t."SecurityStamp", t."TwoFactorEnabled", t."UserName", t."UserNameT", t0."UserId", t0."RoleId", t0."Id", t0."ConcurrencyStamp", t0."Name", t0."NormalizedName", a2."Id", a2."ClaimType", a2."ClaimValue", a2."UserId"
+FROM (
+    SELECT a."Id", a."AccessFailedCount", a."Address", a."ChatId", a."ConcurrencyStamp", a."DateCreated", a."DateUpdated", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."ParcelJobId", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName", a."UserNameT"
+    FROM "AspNetUsers" AS a
+    WHERE a."Id" = @__request_Id_0
+    LIMIT 1
+) AS t
+LEFT JOIN (
+    SELECT a0."UserId", a0."RoleId", a1."Id", a1."ConcurrencyStamp", a1."Name", a1."NormalizedName"
+    FROM "AspNetUserRoles" AS a0
+    INNER JOIN "AspNetRoles" AS a1 ON a0."RoleId" = a1."Id"
+) AS t0 ON t."Id" = t0."UserId"
+LEFT JOIN "AspNetUserClaims" AS a2 ON t."Id" = a2."UserId"
+ORDER BY t."Id", t0."UserId", t0."RoleId", t0."Id"
+2023-03-12 01:00:00.461 +05:00 [INF] Executing OkObjectResult, writing value of type 'EDSystems.Application.Users.Queries.GetUserDetails.UserDetailsVm'.
+2023-03-12 01:00:00.482 +05:00 [INF] Executed action EDSystems.WebApi.Controllers.UserManagerController.Get (EDSystems.WebApi) in 1364.9464ms
+2023-03-12 01:00:00.482 +05:00 [INF] Executed endpoint 'EDSystems.WebApi.Controllers.UserManagerController.Get (EDSystems.WebApi)'
+2023-03-12 01:00:00.482 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7271/api/UserManager/1 - - - 200 3405 application/json;+charset=utf-8 1412.3432ms
