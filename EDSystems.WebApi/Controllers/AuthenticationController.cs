@@ -118,6 +118,7 @@ public class AuthenticationController : BaseController
         if (ModelState.IsValid)
         {
             var user_exict = await _userManager.FindByEmailAsync(request.Email);
+            
             if (user_exict == null)
             {
                 return BadRequest(new AuthResult()
@@ -146,6 +147,7 @@ public class AuthenticationController : BaseController
             else
             {
                 var token = await GenerateJwtToken(user_exict);
+                
                 return Ok(token);
             }
         }
@@ -245,6 +247,7 @@ public class AuthenticationController : BaseController
         {
             Subject.AddClaim(new Claim(ClaimTypes.Role, roleName));
         }
+        Subject.AddClaim(new Claim(ClaimTypes.Name, _userManager.FindByEmailAsync(user.Email).Result.FirstName + " " + _userManager.FindByEmailAsync(user.Email).Result.LastName));
 
         var tokenDescription = new SecurityTokenDescriptor()
         {
