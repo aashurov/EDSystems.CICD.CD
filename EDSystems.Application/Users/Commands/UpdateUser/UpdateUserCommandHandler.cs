@@ -29,11 +29,12 @@ public class UpdateUserCommandHandler : IRequestHandler<UpdateUserCommand, Unit>
         entity.FirstName = request.FirstName;
         entity.LastName = request.LastName;
         entity.Address = request.Address;
-        entity.Email = request.Email;
+        entity.UserName = request.UserName;
+        //entity.Email = request.Email;
         entity.PhoneNumber = request.PhoneNumber;
         entity.DateUpdated = _dateTimeService.Now;
-        entity.SecurityStamp = Guid.NewGuid().ToString("D");
-        entity.ConcurrencyStamp = Guid.NewGuid().ToString("D");
+        //entity.SecurityStamp = Guid.NewGuid().ToString("D");
+        //entity.ConcurrencyStamp = Guid.NewGuid().ToString("D");
 
         var tt = await _userManager.UpdateAsync(entity);
         if (tt.Succeeded == false)

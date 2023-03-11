@@ -2899,7 +2899,7 @@
             
              </summary>
         </member>
-        <member name="P:EDSystems.WebApi.Models.UserManager.UpdateUserDto.Email">
+        <member name="P:EDSystems.WebApi.Models.UserManager.UpdateUserDto.UserName">
              <summary>
             
              </summary>
