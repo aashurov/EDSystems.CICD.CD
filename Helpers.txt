@@ -123,6 +123,7 @@ cd EDSystems.Persistence
 dotnet ef --startup-project ../EDSystems.WebApi/ migrations add myMigration01
 dotnet ef --startup-project ../EDSystems.WebApi/ database update
 
+cd EDSystems.WebApi
 dotnet publish -o ../app
 
 ssh -i "~/.ssh/EDSystems-Key.pem" ec2-user@ec2-52-91-146-83.compute-1.amazonaws.com
@@ -132,7 +133,7 @@ ssh -i "~/.ssh/EDSystems-Key.pem" ec2-user@ec2-18-234-169-142.compute-1.amazonaw
 Id AKIA2LGN27OZ6S4NQLOB
 Key 8R2CP2E2YdTc7aZi/bU3sijLlIIXxfZC+wQDPTJi
 
-
+     
 
 Migration
 

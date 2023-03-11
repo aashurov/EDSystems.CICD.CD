@@ -14,6 +14,7 @@ public class UserDetailsVm : IMapWith<User>
     public string LastName { get; set; }
     public string Address { get; set; }
     public string PhoneNumber { get; set; }
+    public string UserName { get; set; }
     public string Email { get; set; }
     public virtual ICollection<UserRole> UserRoles { get; set; }
     public virtual ICollection<UserClaim> UserClaim { get; set; }
@@ -26,6 +27,7 @@ public class UserDetailsVm : IMapWith<User>
             .ForMember(userVm => userVm.Id, opt => opt.MapFrom(customer => customer.Id))
             .ForMember(userVm => userVm.FirstName, opt => opt.MapFrom(customer => customer.FirstName))
             .ForMember(userVm => userVm.LastName, opt => opt.MapFrom(customer => customer.LastName))
+            .ForMember(userVm => userVm.UserName, opt => opt.MapFrom(customer => customer.UserName))
             .ForMember(userVm => userVm.Address, opt => opt.MapFrom(customer => customer.Address))
             .ForMember(userVm => userVm.PhoneNumber, opt => opt.MapFrom(customer => customer.PhoneNumber))
             .ForMember(userVm => userVm.Email, opt => opt.MapFrom(customer => customer.Email))
