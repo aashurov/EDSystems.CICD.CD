@@ -18,7 +18,7 @@ public static class DependencyInjection
         var connectionString = configuration["DbConnection"];
         services.AddDbContext<EDSystemsDbContext>(options =>
         {
-            //options.UseSqlite(connectionString);
+             //options.UseSqlite(connectionString);
             options.UseNpgsql(connectionString);
             AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
         });

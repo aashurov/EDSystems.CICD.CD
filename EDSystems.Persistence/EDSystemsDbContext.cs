@@ -104,11 +104,21 @@ public class EDSystemsDbContext : IdentityDbContext<User, Role, int,
         builder.Entity<User>(b =>
         {
             // Each User can have many entries in the UserRole join table
+            b.HasMany(e => e.UserClaim)
+                .WithOne(e => e.User)
+                .HasForeignKey(ur => ur.UserId)
+                .IsRequired();
+        });
+
+        builder.Entity<User>(b =>
+        {
+            // Each User can have many entries in the UserRole join table
             b.HasMany(e => e.UserRoles)
                 .WithOne(e => e.User)
                 .HasForeignKey(ur => ur.UserId)
                 .IsRequired();
         });
+
 
         builder.Entity<Role>(b =>
         {
