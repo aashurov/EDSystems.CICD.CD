@@ -29,7 +29,7 @@ public class UpdateUserCommandHandler : IRequestHandler<UpdateUserCommand, Unit>
         entity.FirstName = request.FirstName;
         entity.LastName = request.LastName;
         entity.Address = request.Address;
-        entity.UserName = request.UserName;
+        //entity.UserName = request.UserName;
         //entity.Email = request.Email;
         entity.PhoneNumber = request.PhoneNumber;
         entity.DateUpdated = _dateTimeService.Now;

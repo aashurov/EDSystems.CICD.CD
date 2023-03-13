@@ -27,7 +27,7 @@ public class UpdateUserDto : IMapWith<UpdateUserCommand>
     /// <summary>
     ///
     /// </summary>
-    public string UserName { get; set; }
+    //public string UserName { get; set; }
 
     /// <summary>
     ///
@@ -54,8 +54,8 @@ public class UpdateUserDto : IMapWith<UpdateUserCommand>
                 options => options.MapFrom(updateUserDto => updateUserDto.Id))
             .ForMember(updateUserCommand => updateUserCommand.FirstName,
                 options => options.MapFrom(updateUserDto => updateUserDto.LastName))
-            .ForMember(updateUserCommand => updateUserCommand.UserName,
-                options => options.MapFrom(updateUserDto => updateUserDto.UserName))
+            //.ForMember(updateUserCommand => updateUserCommand.UserName,
+             //   options => options.MapFrom(updateUserDto => updateUserDto.UserName))
             .ForMember(updateUserCommand => updateUserCommand.Address,
                 options => options.MapFrom(updateUserDto => updateUserDto.Address))
             //.ForMember(updateUserCommand => updateUserCommand.Email,
