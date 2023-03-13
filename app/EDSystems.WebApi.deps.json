@@ -8,7 +8,7 @@
     ".NETCoreApp,Version=v7.0": {
       "EDSystems.WebApi/1.0.0": {
         "dependencies": {
-          "AWSSDK.S3": "3.7.103.24",
+          "AWSSDK.S3": "3.7.103.25",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0",
           "EDSystems.Application": "1.0.0",
           "EDSystems.Persistence": "1.0.0",
@@ -56,22 +56,22 @@
           }
         }
       },
-      "AWSSDK.Core/3.7.105.16": {
+      "AWSSDK.Core/3.7.105.17": {
         "runtime": {
           "lib/netcoreapp3.1/AWSSDK.Core.dll": {
             "assemblyVersion": "3.3.0.0",
-            "fileVersion": "3.7.105.16"
+            "fileVersion": "3.7.105.17"
           }
         }
       },
-      "AWSSDK.S3/3.7.103.24": {
+      "AWSSDK.S3/3.7.103.25": {
         "dependencies": {
-          "AWSSDK.Core": "3.7.105.16"
+          "AWSSDK.Core": "3.7.105.17"
         },
         "runtime": {
           "lib/netcoreapp3.1/AWSSDK.S3.dll": {
             "assemblyVersion": "3.3.0.0",
-            "fileVersion": "3.7.103.24"
+            "fileVersion": "3.7.103.25"
           }
         }
       },
@@ -2071,19 +2071,19 @@
       "path": "automapper.extensions.microsoft.dependencyinjection/12.0.0",
       "hashPath": "automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512"
     },
-    "AWSSDK.Core/3.7.105.16": {
+    "AWSSDK.Core/3.7.105.17": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-a5bazeQFYqN9wQahEOYrK41AZ39y3Xxm1zfxC8sIn7zjaLk2DVCk4LDYcApM2EdRjSK5al+gBHXe7O8cS/LcaA==",
-      "path": "awssdk.core/3.7.105.16",
-      "hashPath": "awssdk.core.3.7.105.16.nupkg.sha512"
+      "sha512": "sha512-ZDEmcGiSv8qrGacPrG76v4HrINDPYS/PYlVoXPdid1hWF71KdqROA7PBXIclzJFJ06p7EY8svY9V40Dk8nbikQ==",
+      "path": "awssdk.core/3.7.105.17",
+      "hashPath": "awssdk.core.3.7.105.17.nupkg.sha512"
     },
-    "AWSSDK.S3/3.7.103.24": {
+    "AWSSDK.S3/3.7.103.25": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-hhf8Qe1N7yfZTQ9z+Ddo+9C2rZSe41NNcrhPW83I42bKRtWUJ0pxGO6hK8FMsP6sBkXRe91C8hpkcjO2sgbzjw==",
-      "path": "awssdk.s3/3.7.103.24",
-      "hashPath": "awssdk.s3.3.7.103.24.nupkg.sha512"
+      "sha512": "sha512-1mHYmyMt9j23yNrQHmEkg1pXNi1GSb7uydh7nzwKH+WAqSMccFV/lykSZEYF8IIwllXw8XOexjxlfgNUxWKgOg==",
+      "path": "awssdk.s3/3.7.103.25",
+      "hashPath": "awssdk.s3.3.7.103.25.nupkg.sha512"
     },
     "BCrypt.Net-Next/4.0.3": {
       "type": "package",
