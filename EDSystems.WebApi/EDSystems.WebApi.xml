@@ -2899,11 +2899,6 @@
             
              </summary>
         </member>
-        <member name="P:EDSystems.WebApi.Models.UserManager.UpdateUserDto.UserName">
-             <summary>
-            
-             </summary>
-        </member>
         <member name="P:EDSystems.WebApi.Models.UserManager.UpdateUserDto.Address">
              <summary>
             
